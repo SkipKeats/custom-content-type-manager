@@ -24,7 +24,6 @@
  * Licence URI: https://www.gnu.org/licenses/quick-guide-gplv3.html
  * 
  */
-
 /*------------------------------------------------------------------------------
 CONFIGURATION (for the developer): 
 
