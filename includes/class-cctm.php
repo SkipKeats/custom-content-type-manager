@@ -1,231 +1,340 @@
 <?php
+
 /**
- * CCTM  Custom Content Type Manager Classs
- * 
- * This is the main class for the Custom Content Type Manager plugin.
+ * Summary:     Custom Content Type Manager: CCTM_Class
+ * Description: The main class for the Custom Content Type Manager plugin.
  * It holds its functions hooked to WP events and utilty functions and configuration
- * settings.
- * 
- * Homepage:
- * http://code.google.com/p/wordpress-custom-content-type-manager/
- * 
- * This plugin handles the creation and management of custom post-types (also
+ * settings. This plugin handles the creation and management of custom post-types (also
  * referred to as 'content-types').
- * 
+ *
  * @package cctm
+ * @subpackage: Includes
+ * @link    http://code.google.com/p/wordpress-custom-content-type-manager/ Original Hompage.
+ * @since   Unknown
  */
 class CCTM {
-	// Name of this plugin and version data.
-	// See http://php.net/manual/en/function.version-compare.php:
-	// any string not found in this list < dev < alpha =a < beta = b < RC = rc < # < pl = p
-	const name   = 'Custom Content Type Manager';
-    const version = '0.9.8.6';
-	const version_meta = 'pl'; // dev, rc (release candidate), pl (public release)
-
+	/**
+	 * Name of this plugin and version data.
+	 * Any string not found in this list < dev < alpha =a < beta = b < RC = rc < # < pl = p
+	 *
+	 * @link    http://php.net/manual/en/function.version-compare.php
+	 * @since Unknown
+	 * @var string $NAME          Plugin name
+	 * @var string $VERSION       Plugin version
+	 * @var string $VERSION_META  Plugin metadata -- dev, rc (release candidate), pl (public release).
+	 * @var string $WP_REQ_VER    Required version of WordPress.
+	 * @var string $PHP_REQ_VER   Required PHP version
+	 * @var string $MYSQL_REQ_VER Required MySQL version
+	 */
+	const NAME          = 'Custom Content Type Manager';
+	const VERSION       = '0.9.9.0';
+	const VERSION_META  = 'pl';
 	// Required versions (referenced in the CCTMtest class).
-	const wp_req_ver  = '3.3';
-	const php_req_ver  = '5.2.6';
-	const mysql_req_ver = '4.1.2';
+	const WP_REQ_VER    = '4.9.8';  // Was 3.3.
+	const PHP_REQ_VER   = '7.0.30'; // Was 5.2.6.
+	const MYSQL_REQ_VER = '5.5.46'; // Was 4.1.2.
 
 	/**
-	 * The following constants identify the option_name in the wp_options table
+	 * The following constant identify the option_name in the wp_options table
 	 * where this plugin stores various data.
+	 * 
+	 * @since Unknown
+	 * @var string $DB_KEY Identifies option name.
 	 */
-	const db_key  = 'cctm_data';
+	const DB_KEY        = 'cctm_data';
 
 	/**
 	 * Determines where the main CCTM menu appears. WP is vulnerable to conflicts
 	 * with menu items, so the parameter is listed here for easier editing.
-	 * See http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=203
+	 * 
+	 * @link http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=203
+	 * @since Unknown
+	 * @var int $MENU_POSITION Positions menu.
 	 */
-	const menu_position = 73;
+	const MENU_POSITION  = 73;
 
-	// Each class that extends either the CCTM_FormElement class or the
-	// the CCTM_OutputFilter class must prefix this to its class name.
-	const field_prefix = 'CCTM_';
-	const filter_prefix = 'CCTM_';
-	const validator_prefix = 'CCTM_Rule_';
-	
-	// used to control the uploading of the .cctm.json files
-	const max_def_file_size = 524288; // in bytes
+	/**
+	 * Each class that extends either the CCTM_FormElement class or the
+	 * the CCTM_OutputFilter class must prefix this to its class name.
+	 * 
+	 * @since Unknown
+	 * @var string $FIELD_PREFIX Field prefix for classes above.
+	 * @var string $FILTER_PREFIX Filter prefix for classes above.
+	 * @var string $VALIDATOR_PREFIX Validator prefix for classes above.
+	 */
+	const FIELD_PREFIX     = 'CCTM_';
+	const FILTER_PREFIX    = 'CCTM_';
+	const VALIDATOR_PREFIX = 'CCTM_Rule_';
 
-	// Directory relative to wp-content/uploads/ where we can store def files
-	// Omit the trailing slash.
-	const base_storage_dir = 'cctm';
+	/**
+	 * Used to control the uploading of the `.cctm.json` files.
+	 * 
+	 * @since Unknown
+	 * @var int $MAX_DEF_FILE_SIZE Size in bytes.
+	 */
+	const MAX_DEF_FILE_SIZE = 524288;
+
+	/** 
+	 * Directory relative to wp-content/uploads/ where we can store def files.
+	 * Omit the trailing slash.
+	 * 
+	 * @since Unknown
+	 * @var string $BASE_STORAGE_DIR Directory location for uploads.
+	 */
+	const BASE_STORAGE_DIR = 'cctm';
 
 	/**
 	 * Directory relative to wp-content/uploads/{self::base_storage_dir} used to store
-	 * the .cctm.json definition files. Omit the trailing slash.
+	 * the `.cctm.json` definition files. Omit the trailing slash.
+	 * 
+	 * @since Unknown
+	 * @var string $DEF_DIF Difinition file storage.
 	 */
-	const def_dir = 'defs';
-
-
+	const DEF_DIR = 'defs';
 
 	/**
 	 * Directory relative to wp-content/uploads/{self::base_storage_dir} used to store
 	 * any 3rd-party or custom custom field types. Omit the trailing slash.
+	 * 
+	 * @since Unknown
+	 * @var string $CUSTOM_FIELDS_DIR Stores custom field types.
 	 */
-	const custom_fields_dir = 'fields';
-
+	const CUSTOM_FIELDS_DIR = 'fields';
 
 	/**
 	 * Directory relative to wp-content/uploads/{self::base_storage_dir} used to store
-	 * formatting templates (tpls)
-	 * May contain the following sub directories: fields, fieldtypes, metaboxes
+	 * formatting templates (tpls). May contain the following sub directories:
+	 * fields, fieldtypes, metaboxes.
+	 *
+	 * @since Unknown
+	 * @var string $TPLS_DIR Stores formatting templates.
 	 */
-	const tpls_dir = 'tpls';
+	const TPLS_DIR = 'tpls';
 
-	// Default permissions for dirs/files created in the base_storage_dir.
-	// These cannot be more permissive thant the system's settings: the system
-	// will automatically shave them down. E.g. if the system has a global setting
-	// of 0755, a local setting here of 0770 gets bumped down to 0750.
-	const new_dir_perms = 0755;
-	const new_file_perms = 0644;
-
-	//------------------------------------------------------------------------------
 	/**
-	 * This contains the CCTM_Ajax object, stashed here for easy reference.
+	 * Default permissions for dirs/files created in the base_storage_dir.
+	 * These cannot be more permissive than the system's settings: the system
+	 * will automatically shave them down, e.g., if the system has a global setting
+	 * of 0755, a local setting here of 0770 gets bumped down to 0750.
+	 * 
+	 * @since Unknown
+	 * @var int $NEW_DIR_PERMS Directory permissions.
+	 * @var int $NEW_FILE_PERMS File permissions.
 	 */
+	const NEW_DIR_PERMS  = 0755;
+	const NEW_FILE_PERMS = 0644;
+
+	// This contains the CCTM_Ajax object, stashed here for easy reference.
 	public static $Ajax;
-	/**
-	 * Contains the CCTM_Columns object, used for custom columns.
-	 */
+
+	// Contains the CCTM_Columns object, used for custom columns.
 	public static $Columns;
 
-	// Used to filter settings inputs (e.g. descriptions of custom fields or post-types)
+	// Used to filter settings inputs, e.g. descriptions of custom fields or post-types.
 	public static $allowed_html_tags = '<a><strong><em><code><style>';
 
-	// Data object stored in the wp_options table representing all primary data
-	// for post_types and custom fields
+	/**
+	 *  Data object stored in the wp_options table representing all primary data
+	 * for post_types and custom fields.
+	 * 
+	 * @since Unknown
+	 * @param array $data Data array.
+	 */
 	public static $data = array();
 
 	// Cached data: for a single request, e.g. custom field values.
 	public static $cache = array();
 
-	// integer iterator used to uniquely identify groups of field definitions for
-	// CSS and $_POST variables
+	/*
+	 * integer iterator used to uniquely identify groups of field definitions for
+	 * CSS and $_POST variables.
+	 */
 	public static $def_i = 0;
 
-    public static $hide_url_tab = false;
-    
-	// Optionally used for shortcodes
+	public static $hide_url_tab = false;
+	
+	// Optionally used for shortcodes.
 	public static $post_id = null;
 	
-	// This is the definition shown when a user first creates a post_type
-	public static $default_post_type_def = array
-	(
-		'supports' => array('title', 'editor'),
-		'taxonomies' => array(),
-		'post_type' => '',
-		'labels' => array
-		(
-			'menu_name' => '',
-			'singular_name' => '',
-			'add_new' => '',
-			'add_new_item' => '',
-			'edit_item' => '',
-			'new_item' => '',
-			'view_item' => '',
-			'search_items' => '',
-			'not_found' => '',
-			'not_found_in_trash' => '',
-			'parent_item_colon' => '',
+	/**
+	 * Default Post Type Definition
+	 * This is the definition shown when a user first creates a post_type.
+	 * 
+	 * @since Unknown
+	 * @param array $default_post_type_def
+	 */
+	public static $default_post_type_def = array(
+		'supports'   => array(
+    		'title', 'editor',
 		),
-		'description' => '',
-		'show_ui' => 1,
-		'public' => 1, // 0.9.4.2 tried to set this verbosely, but WP still req's this attribute
-		'menu_icon' => '',
-		'label' => '',
-		'menu_position' => '',
-		'show_in_menu' => 1,
-		'cctm_show_in_menu' => 1,
-		
-		'rewrite_with_front' => 1,
-		'permalink_action' => 'Off',
-		'rewrite_slug' => '',
-		'show_in_admin_bar' => 1,
-		'query_var' => '',
-		'capability_type' => 'post',
-		'capabilities' => '',
-		'register_meta_box_cb' => '',
-		'map_meta_cap' => 0,
-		'show_in_nav_menus' => 1,
-		'publicly_queryable' => 1,
-		'include_in_search' => 1, // this makes more sense to users than the exclude_from_search,
-		'exclude_from_search' => 0, // but this is what register_post_type expects. Boo.
-		'include_in_rss' => 1,  // this is a custom option.. should use 'cctm' prefix. Oops.
-		'can_export' => 1,
-		'use_default_menu_icon' => 1,
-		'hierarchical' => 0,
-		'rewrite' => '',
-		'has_archive' => 0,
-		'custom_order' => 'ASC',
-		'custom_orderby' => '',
+		'taxonomies' => array(),
+		'post_type'  => '',
+		'labels'     => array(
+			'menu_name'          => '',
+			'singular_name'      => '',
+			'add_new'            => '',
+			'add_new_item'       => '',
+			'edit_item'          => '',
+			'new_item'           => '',
+			'view_item'          => '',
+			'search_items'       => '',
+			'not_found'          => '',
+			'not_found_in_trash' => '',
+			'parent_item_colon'  => '',
+		),
+		'description'                 => '',
+		'show_ui'                     => 1,
+		'public'                      => 1, // 0.9.4.2 tried to set this verbosely, but WP still req's this attribute.
+		'menu_icon'                   => '',
+		'label'                       => '',
+		'menu_position'               => '',
+		'show_in_menu'                => 1,
+		'cctm_show_in_menu'           => 1,
+		'rewrite_with_front'          => 1,
+		'permalink_action'            => 'Off',
+		'rewrite_slug'                => '',
+		'show_in_admin_bar'           => 1,
+		'query_var'                   => '',
+		'capability_type'             => 'post',
+		'capabilities'                => '',
+		'register_meta_box_cb'        => '',
+		'map_meta_cap'                => 0,
+		'show_in_nav_menus'           => 1,
+		'publicly_queryable'          => 1,
+		'include_in_search'           => 1, // This makes more sense to users than the exclude_from_search.
+		'exclude_from_search'         => 0, // However, this is what register_post_type expects. Boo.
+		'include_in_rss'              => 1, // This is a custom option. Should use 'cctm' prefix. Oops.
+		'can_export'                  => 1,
+		'use_default_menu_icon'       => 1,
+		'hierarchical'                => 0,
+		'rewrite'                     => '',
+		'has_archive'                 => 0,
+		'custom_order'                => 'ASC',
+		'custom_orderby'              => '',
 		'cctm_custom_columns_enabled' => 0,
-		'cctm_enable_right_now' => 1
+		'cctm_enable_right_now'       => 1
 	);
 
 	/**
-	 * List default global settings here. (see controllers/settings.php)
+     * List default global settings here. 
+     * 
+     * @see controllers/settings.php
 	 */
 	public static $default_settings = array(
-		'delete_posts' => 0
-		, 'delete_custom_fields' => 0
-		, 'add_custom_fields' => 0
-		, 'show_custom_fields_menu' => 1
-		, 'show_settings_menu' => 1
-		, 'show_foreign_post_types' => 1
-		, 'cache_directory_scans' => 1
-		, 'cache_thumbnail_images' => 0
-		, 'save_empty_fields' => 1
-		, 'summarizeposts_tinymce' => 1
-		, 'custom_fields_tinymce' => 1
-		, 'pages_in_rss_feed'	=> 0
-		, 'enable_right_now'	=> 1
-		, 'hide_posts'	=> 0
-		, 'hide_pages'	=> 0
-		, 'hide_links'	=> 0
-		, 'hide_comments' => 0
+        'delete_posts'            => 0,
+        'delete_custom_fields'    => 0,
+        'add_custom_fields'       => 0,
+        'show_custom_fields_menu' => 1,
+        'show_settings_menu'      => 1,
+        'show_foreign_post_types' => 1,
+        'cache_directory_scans'   => 1,
+        'cache_thumbnail_images'  => 0,
+        'save_empty_fields'       => 1,
+        'summarizeposts_tinymce'  => 1,
+        'custom_fields_tinymce'   => 1,
+        'pages_in_rss_feed'       => 0,
+        'enable_right_now'	      => 1,
+        'hide_posts'              => 0,
+        'hide_pages'	          => 0,
+        'hide_links'	          => 0,
+        'hide_comments'           => 0,
 	);
 
-	// Default metabox definition
+	// Default metabox definition.
 	public static $metabox_def = array(
-		'id' => 'cctm_default',
-		'title' => 'Custom Fields',
-		'context' => 'normal',
-		'priority' => 'default',
-		'post_types' => array(),
-		'callback' => '',
-		'callback_args' => '',
+		'id'                 => 'cctm_default',
+		'title'              => 'Custom Fields',
+		'context'            => 'normal',
+		'priority'           => 'default',
+		'post_types'         => array(),
+		'callback'           => '',
+		'callback_args'      => '',
 		'visibility_control' => '',
 	);
 
 	// Where are the icons for custom images stored?
-	// TODO: let the users select their own dir in their own directory
+	// TODO: let the users select their own dir in their own directory.
 	public static $custom_field_icons_dir;
 
 	// Built-in post-types that can have custom fields, but cannot be deleted.
 	public static $built_in_post_types = array('post', 'page');
 
-	// Names that are off-limits for custom post types b/c they're already used by WP
-	// Re "preview" see http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=321
-	public static $reserved_post_types = array('post', 'page', 'attachment', 'revision'
-		, 'nav_menu', 'nav_menu_item', 'preview','portfolio');
+	/**
+     * Names that are off-limits for custom post types b/c they're already used by WP.
+	 * Re: "preview" 
+     * @see http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=321
+     * @since Unknown
+     * @param array $reserved_post_types WP reserved types.
+     */
+	public static $reserved_post_types = array(
+        'post',
+        'page',
+        'attachment',
+        'revision',
+        'nav_menu',
+        'nav_menu_item',
+        'preview',
+        'portfolio',
+    );
 	
-	// Any post-types that WP registers, but which the CCTM should ignore (can't have custom fields)
-	public static $ignored_post_types = array('attachment', 'revision', 'nav_menu', 'nav_menu_item');
+	/**
+     * Any post-types that WP registers.
+     * CCTM should ignore (can't have custom fields).
+     * 
+     * @since Unknown
+     * @param array $ignored_post_types Wp registered post types.
+     */
+	public static $ignored_post_types = array(
+        'attachment',
+        'revision',
+        'nav_menu',
+        'nav_menu_item',
+    );
 
-	// Custom field names are not allowed to use the same names as any column in wp_posts
-	public static $reserved_field_names = array('ID', 'post_author', 'post_date', 'post_date_gmt',
-		'post_content', 'post_title', 'post_excerpt', 'post_status', 'comment_status', 'ping_status',
-		'post_password', 'post_name', 'to_ping', 'pinged', 'post_modified', 'post_modified_gmt',
-		'post_content_filtered', 'post_parent', 'guid', 'menu_order', 'post_type', 'post_mime_type',
-		'comment_count');
+	/**
+     * Custom field names are not allowed to use the same names as any column in wp_posts.
+     * Checked column names and confirms non-use.
+     * 
+     * @since Unknown
+     * @param array $reserved_field_names Verifies column name is free.
+     */
+	public static $reserved_field_names = array(
+        'ID',
+        'post_author',
+        'post_date',
+        'post_date_gmt',
+        'post_content',
+        'post_title',
+        'post_excerpt',
+        'post_status',
+        'comment_status',
+        'ping_status',
+        'post_password',
+        'post_name',
+        'to_ping',
+        'pinged',
+        'post_modified',
+        'post_modified_gmt',
+        'post_content_filtered',
+        'post_parent',
+        'guid',
+        'menu_order',
+        'post_type',
+        'post_mime_type',
+        'comment_count',
+    );
 
-	// Future-proofing: post-type names cannot begin with 'wp_'
-	// See: http://codex.wordpress.org/Custom_Post_Types
-	// FUTURE: List any other reserved prefixes here (if any)
-	public static $reserved_prefixes = array('wp_');
+    /**
+     * Future-proofing: post-type names cannot begin with 'wp_'
+	 * See: http://codex.wordpress.org/Custom_Post_Types
+	 * FUTURE: List any other reserved prefixes here (if any).
+     * 
+     * @since Unknown
+     * @param array $reserved_prefixes Future
+     */
+	public static $reserved_prefixes = array(
+        'wp_',
+    );
 
 	/**
 	 * Warnings are stored as a simple array of text strings, e.g. 'You spilled your coffee!'
@@ -236,19 +345,18 @@ class CCTM {
 
 
 
-	/**
+	/*
 	 * used to store some validation errors or serious problems. The errors take this format:
 	 * self::$errors['field_name'] = 'Description of error';
 	 */
 	public static $errors;
 
-	/**
-	 * Used by the "required" fields and any custom validations on post/page fields.
-	 */
+	// Used by the "required" fields and any custom validations on post/page fields.
 	public static $post_validation_errors;
 
 	/**
-	 * Used for search parameters
+	 * Used for search parameters.
+     * @param array $search_by
 	 */
 	public static $search_by = array();
 
@@ -311,7 +419,7 @@ class CCTM {
 				__('Could not create the cache directory at %s.', CCTM_TXTDOMAIN)
 				, "<code>$cache_dir</code>. Please create the directory with permissions so PHP can write to it.");
 
-            CCTM::log('Failed to create directory '.$cache_dir.$subdir, __FILE__,__LINE__);
+			CCTM::log('Failed to create directory '.$cache_dir.$subdir, __FILE__,__LINE__);
 
 			// Failed to create the dir... now what?!?  We cram the full-sized image into the 
 			// small image tag, which is exactly what WP does (yes, seriously.)				
@@ -328,7 +436,7 @@ class CCTM {
 			CCTM::$errors['could_not_create_img'] = sprintf(
 				__('Could not create cached image: %s.', CCTM_TXTDOMAIN)
 				, "<code>$thumbnail_path</code>");
-            CCTM::log('Could not save the image '.$thumbnail_path,__FILE__,__LINE__);			
+			CCTM::log('Could not save the image '.$thumbnail_path,__FILE__,__LINE__);			
 			return $p['guid'];
 			
 		}
@@ -394,19 +502,19 @@ class CCTM {
 		if (empty($def['capabilities']) && isset($def['capability_type']) && !empty($def['capability_type'])) {
 			$capability_type = $def['capability_type'];
 			$def['capabilities'] = array(
-			    'edit_post'              => "edit_{$capability_type}",
-			    'read_post'              => "read_{$capability_type}",
-			    'delete_post'            => "delete_{$capability_type}",
-			    'edit_posts'             => "edit_{$capability_type}s",
-			    'edit_others_posts'      => "edit_others_{$capability_type}s",
-			    'publish_posts'          => "publish_{$capability_type}s",
-			    'read_private_posts'     => "read_private_{$capability_type}s",
-			    'delete_posts'           => "delete_{$capability_type}s",
-			    'delete_private_posts'   => "delete_private_{$capability_type}s",
-			    'delete_published_posts' => "delete_published_{$capability_type}s",
-			    'delete_others_posts'    => "delete_others_{$capability_type}s",
-			    'edit_private_posts'     => "edit_private_{$capability_type}s",
-			    'edit_published_posts'   => "edit_published_{$capability_type}s",
+				'edit_post'              => "edit_{$capability_type}",
+				'read_post'              => "read_{$capability_type}",
+				'delete_post'            => "delete_{$capability_type}",
+				'edit_posts'             => "edit_{$capability_type}s",
+				'edit_others_posts'      => "edit_others_{$capability_type}s",
+				'publish_posts'          => "publish_{$capability_type}s",
+				'read_private_posts'     => "read_private_{$capability_type}s",
+				'delete_posts'           => "delete_{$capability_type}s",
+				'delete_private_posts'   => "delete_private_{$capability_type}s",
+				'delete_published_posts' => "delete_published_{$capability_type}s",
+				'delete_others_posts'    => "delete_others_{$capability_type}s",
+				'edit_private_posts'     => "edit_private_{$capability_type}s",
+				'edit_published_posts'   => "edit_published_{$capability_type}s",
 			);
 		}
 		elseif (empty($def['capabilities'])) {
@@ -434,11 +542,11 @@ class CCTM {
 		}
 		unset($def['custom_orderby']);
 
-        // https://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=534
-        if (isset($def['query_var']) && empty($def['query_var']))
-        {
-            unset($def['query_var']);
-        }
+		// https://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=534
+		if (isset($def['query_var']) && empty($def['query_var']))
+		{
+			unset($def['query_var']);
+		}
 
 		return $def;
 	}
@@ -564,11 +672,11 @@ class CCTM {
 
 		// Call the _callback_pre function (if present).
 		if ($args['_callback_pre']) {
-            if (function_exists($args['_callback_pre'])) {
-                $output['content'] .= call_user_func($args['_callback_pre'], $args);
+			if (function_exists($args['_callback_pre'])) {
+				$output['content'] .= call_user_func($args['_callback_pre'], $args);
 			}
 			else {
-                return '_callback_pre function does not exist: '.$args['_callback_pre'];
+				return '_callback_pre function does not exist: '.$args['_callback_pre'];
 			}
 		}
 	
@@ -595,9 +703,9 @@ class CCTM {
 				,$post_type);
 		}
 		
-        //------------------------------
+		//------------------------------
 		// Process the form on submit
-        //------------------------------		
+		//------------------------------		
 		$nonce = CCTM::get_value($_POST, '_cctm_nonce');
 		if ( !empty($_POST)) {
 
@@ -620,12 +728,12 @@ class CCTM {
 			
 			$vals = array_merge($vals,$args);
 			
-    		if ($args['_debug']) {
-                print '<div style="background-color:orange; padding:10px;"><h3>[cctm_post_form] DEBUG MODE</h3>'
-                    .'<h4>Posted Data</h4><pre>'.print_r($vals,true).'</pre>'
-                    .'</div>';
-                return;
-    		}			
+			if ($args['_debug']) {
+				print '<div style="background-color:orange; padding:10px;"><h3>[cctm_post_form] DEBUG MODE</h3>'
+					.'<h4>Posted Data</h4><pre>'.print_r($vals,true).'</pre>'
+					.'</div>';
+				return;
+			}			
 			
 			// Save data if it was properly submitted	
 			if (empty(CCTM::$post_validation_errors)) {
@@ -644,23 +752,23 @@ class CCTM {
 				$error_wrapper_tpl = CCTM::load_tpl(array('forms/_error_wrapper.tpl'));
 				$output['errors'] = CCTM::parse($error_wrapper_tpl, $hash);
 			}
-        }
-        
-        //------------------------------
+		}
+		
+		//------------------------------
 		// Generate the form.        		
-        //------------------------------
+		//------------------------------
 		$output['_action'] = $args['_action'];
 
 		// Custom fields	
 		$explicit_fields = false;	
 		$custom_fields = array();		
 		if ($args['_fields']) {
-            $explicit_fields = true;
-            $tmp = explode(',', $args['_fields']);
-            foreach ($tmp as $t) {
-                $custom_fields[] = trim($t);
-            }
-            $args['_fields'] = $custom_fields;
+			$explicit_fields = true;
+			$tmp = explode(',', $args['_fields']);
+			foreach ($tmp as $t) {
+				$custom_fields[] = trim($t);
+			}
+			$args['_fields'] = $custom_fields;
 		}
 		elseif (isset(CCTM::$data['post_type_defs'][$post_type]['custom_fields'])) {
 		  $custom_fields = CCTM::$data['post_type_defs'][$post_type]['custom_fields'];
@@ -671,9 +779,9 @@ class CCTM {
 		if ( 
 		  !$explicit_fields && post_type_supports($args['post_type'],'title') && !isset($args['post_title']) 
 		  || ($explicit_fields && in_array('post_title', $custom_fields)) 
-        ) {
-            
-        	$FieldObj = CCTM::load_object('text','fields');
+		) {
+			
+			$FieldObj = CCTM::load_object('text','fields');
 			$post_title_def = array(
 				'label' => $args['_label_title'],
 				'name' => 'post_title',
@@ -687,17 +795,17 @@ class CCTM {
 				'type' => 'text'
 			);
 			$FieldObj->set_props($post_title_def);
-            $output_this_field = $FieldObj->get_create_field_instance();
+			$output_this_field = $FieldObj->get_create_field_instance();
 			$output['post_title'] = $output_this_field;
 			$output['content'] .= $output_this_field;
 		}
 		
 		// Post Content (editor)
 		if (
-            !$explicit_fields && post_type_supports($args['post_type'],'editor') && !isset($args['post_content'])
-            || ($explicit_fields && in_array('post_content', $custom_fields)) 
-        ) {
-        	$FieldObj = CCTM::load_object('textarea','fields'); // TODO: change to wysiwyg
+			!$explicit_fields && post_type_supports($args['post_type'],'editor') && !isset($args['post_content'])
+			|| ($explicit_fields && in_array('post_content', $custom_fields)) 
+		) {
+			$FieldObj = CCTM::load_object('textarea','fields'); // TODO: change to wysiwyg
 			$post_title_def = array(
 				'label' => $args['_label_content'],
 				'name' => 'post_content',
@@ -711,16 +819,16 @@ class CCTM {
 				'type' => 'textarea' // TODO: implement simplified WYSIWYG
 			);
 			$FieldObj->set_props($post_title_def);
-			    $output_this_field = $FieldObj->get_create_field_instance();
+				$output_this_field = $FieldObj->get_create_field_instance();
 			$output['post_content'] = $output_this_field;
 			$output['content'] .= $output_this_field;
 		}
 		// Post Excerpt
 		if (
-            !$explicit_fields && post_type_supports($args['post_type'],'excerpt') && !isset($args['post_excerpt'])
-            || ($explicit_fields && in_array('post_excerpt', $custom_fields)) 
-        ) {
-        	$FieldObj = CCTM::load_object('textarea','fields');
+			!$explicit_fields && post_type_supports($args['post_type'],'excerpt') && !isset($args['post_excerpt'])
+			|| ($explicit_fields && in_array('post_excerpt', $custom_fields)) 
+		) {
+			$FieldObj = CCTM::load_object('textarea','fields');
 			$post_title_def = array(
 				'label' => $args['_label_excerpt'],
 				'name' => 'post_excerpt',
@@ -734,7 +842,7 @@ class CCTM {
 				'type' => 'textarea'
 			);
 			$FieldObj->set_props($post_title_def);
-			    $output_this_field = $FieldObj->get_create_field_instance();
+				$output_this_field = $FieldObj->get_create_field_instance();
 			$output['post_excerpt'] = $output_this_field;
 			$output['content'] .= $output_this_field;
 		}
@@ -794,11 +902,11 @@ class CCTM {
 
 		// Add Nonce
 		$output['nonce'] = '<input type="hidden" name="_cctm_nonce" value="'.wp_create_nonce('cctm_post_form_nonce').'" />';
-        $output['content'] .= $output['nonce'];
-        
+		$output['content'] .= $output['nonce'];
+		
 		// Add Submit
 		$output['submit'] = '<input type="submit" value="'.__('Submit', CCTM_TXTDOMAIN).'" />';
-        $output['content'] .= $output['submit'];
+		$output['content'] .= $output['submit'];
 		
 		$formtpl = CCTM::load_tpl(
 			array('forms/'.$args['_tpl'].'.tpl'
@@ -808,9 +916,9 @@ class CCTM {
 		);
 		if ($args['_debug']) {
 		  $formtpl = '<div style="background-color:orange; padding:10px;"><h3>[cctm_post_form] DEBUG MODE</h3>'
-		      .'<h4>Arguments</h4><pre>'.print_r($args,true).'</pre>'
-		      .'</div>'
-		      .$formtpl;
+			  .'<h4>Arguments</h4><pre>'.print_r($args,true).'</pre>'
+			  .'</div>'
+			  .$formtpl;
 		}
 		return CCTM::parse($formtpl, $output);
 		
@@ -938,23 +1046,23 @@ class CCTM {
 			// $updates = new FilesystemIterator(CCTM_PATH.'/updates', FilesystemIterator::KEY_AS_PATHNAME);
 			$updates = scandir(CCTM_PATH.'/updates');
 			foreach ($updates as $file) {
-                // Skip the gunk
-                if ($file === '.' || $file === '..') continue;
-                if (is_dir(CCTM_PATH.'/updates/'.$file)) continue;
-                if (substr($file, 0, 1) == '.') continue;
-                // skip non-php files
-                if (pathinfo(CCTM_PATH.'/updates/'.$file, PATHINFO_EXTENSION) != 'php') continue;
-                // We don't want to re-run older updates
-                $this_update_ver = substr($file, 0, -4);
-                if ( version_compare( self::get_stored_version(), $this_update_ver, '<' ) ) {
-                        // Run the update by including the file
-                        include CCTM_PATH.'/updates/'.$file;
-                        // timestamp the update
-                        self::$data['cctm_update_timestamp'] = time(); // req's new data structure
-                        // store the new version after the update
-                        self::$data['cctm_version'] = $this_update_ver; // req's new data structure
-                        update_option( self::db_key, self::$data );
-                }
+				// Skip the gunk
+				if ($file === '.' || $file === '..') continue;
+				if (is_dir(CCTM_PATH.'/updates/'.$file)) continue;
+				if (substr($file, 0, 1) == '.') continue;
+				// skip non-php files
+				if (pathinfo(CCTM_PATH.'/updates/'.$file, PATHINFO_EXTENSION) != 'php') continue;
+				// We don't want to re-run older updates
+				$this_update_ver = substr($file, 0, -4);
+				if ( version_compare( self::get_stored_version(), $this_update_ver, '<' ) ) {
+						// Run the update by including the file
+						include CCTM_PATH.'/updates/'.$file;
+						// timestamp the update
+						self::$data['cctm_update_timestamp'] = time(); // req's new data structure
+						// store the new version after the update
+						self::$data['cctm_version'] = $this_update_ver; // req's new data structure
+						update_option( self::db_key, self::$data );
+				}
 			}
 
 			// Clear the cache and such
@@ -1033,36 +1141,36 @@ class CCTM {
 		}
 	}
 
-    /**
-     * Used to customize the tabs shown in the Media Uploader thickbox
-     * shown for relation fields.  See the media-upload.php
-     *
-     */
-    public static function customize_upload_tabs($tabs) {
-        unset($tabs['type_url']);
-        return $tabs;
-    }
+	/**
+	 * Used to customize the tabs shown in the Media Uploader thickbox
+	 * shown for relation fields.  See the media-upload.php
+	 *
+	 */
+	public static function customize_upload_tabs($tabs) {
+		unset($tabs['type_url']);
+		return $tabs;
+	}
 	/**
 	 * Delete a directoroy and its contents.
 	 * @param	string $dirPath
 	 */
 	public static function delete_dir($dirPath) {
-	    if (!is_dir($dirPath)) {
-	    	return false;
-	    }
-	    if (substr($dirPath, strlen($dirPath) - 1, 1) != '/') {
-	        $dirPath .= '/';
-	    }
-	    $files = glob($dirPath . '*', GLOB_MARK);
-	    foreach ($files as $file) {
-	        if (is_dir($file)) {
-	            self::delete_dir($file);
-	        } 
-	        else {
-	            unlink($file);
-	        }
-	    }
-	    rmdir($dirPath);
+		if (!is_dir($dirPath)) {
+			return false;
+		}
+		if (substr($dirPath, strlen($dirPath) - 1, 1) != '/') {
+			$dirPath .= '/';
+		}
+		$files = glob($dirPath . '*', GLOB_MARK);
+		foreach ($files as $file) {
+			if (is_dir($file)) {
+				self::delete_dir($file);
+			} 
+			else {
+				unlink($file);
+			}
+		}
+		rmdir($dirPath);
 	}
 
 	//------------------------------------------------------------------------------
@@ -1576,7 +1684,7 @@ class CCTM {
 		elseif ($thumbnail_id = get_post_thumbnail_id($id)) {
 			list($src, $w, $h) = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail', true, array('alt'=>__('Preview', CCTM_TXTDOMAIN)));
 			$thumbnail_url = $src;            
-        }
+		}
 		elseif (isset(CCTM::$data['post_type_defs'][$post_type]['use_default_menu_icon']) 
 				&& CCTM::$data['post_type_defs'][$post_type]['use_default_menu_icon'] == 0) {
 			$baseimg = basename(CCTM::$data['post_type_defs'][$post_type]['menu_icon']);
@@ -1714,7 +1822,7 @@ class CCTM {
 			$field_types[$fieldtype][] = $fieldname;
 		}
 		elseif ($page == 'admin.php' && $action =='duplicate_custom_field') {
-            $fieldtype = CCTM::get_value($_GET,'type');
+			$fieldtype = CCTM::get_value($_GET,'type');
 			$field_types[$fieldtype] = array(); 
 		}
 
@@ -2125,25 +2233,25 @@ class CCTM {
 		die('View file does not exist: ' .$path.$filename);
 	}
 
-    //------------------------------------------------------------------------------
-    /**
-     * Simple logging function
-     * @param string $msg to be logged
-     * 
-     */
-    public static function log($msg, $file='unknown', $line='?') {
-        if (defined('CCTM_DEBUG')) {
-            if (CCTM_DEBUG === true) {
-                error_log($msg);
-            }
-            else {	
-                $myFile = CCTM_DEBUG;
-                $fh = fopen($myFile, 'a') or die("CCTM Failure: Can't open file for appending: ".CCTM_DEBUG);
-                fwrite($fh, sprintf("[CCTM %s:%s] %s\n", $msg,$file,$line));
-                fclose($fh);
-            }
-        }    
-    }
+	//------------------------------------------------------------------------------
+	/**
+	 * Simple logging function
+	 * @param string $msg to be logged
+	 * 
+	 */
+	public static function log($msg, $file='unknown', $line='?') {
+		if (defined('CCTM_DEBUG')) {
+			if (CCTM_DEBUG === true) {
+				error_log($msg);
+			}
+			else {	
+				$myFile = CCTM_DEBUG;
+				$fh = fopen($myFile, 'a') or die("CCTM Failure: Can't open file for appending: ".CCTM_DEBUG);
+				fwrite($fh, sprintf("[CCTM %s:%s] %s\n", $msg,$file,$line));
+				fclose($fh);
+			}
+		}    
+	}
 
 	//------------------------------------------------------------------------------
 	/**
@@ -2327,7 +2435,7 @@ class CCTM {
 			}
 		}
 		else {
-            CCTM::log(print_r(debug_backtrace(), true),__FILE__,__LINE__);
+			CCTM::log(print_r(debug_backtrace(), true),__FILE__,__LINE__);
 		}
 		
 		// Remove any unparsed [+placeholders+]
@@ -2525,7 +2633,7 @@ class CCTM {
 //                else {
 //                    print 'SET'; print '<pre>'.print_r($def, true); exit;
 //                }
-                //CCTM::log(print_r($def,true));
+				//CCTM::log(print_r($def,true));
 				register_post_type( $post_type, $def );
 			}
 		}
@@ -2832,8 +2940,8 @@ class CCTM {
 	 * Adds the button to the TinyMCE 1st row.
 	 */
 	public static function tinyplugin_add_button($buttons) {
-	    array_push($buttons, '|', 'custom_fields');
-	    return $buttons;
+		array_push($buttons, '|', 'custom_fields');
+		return $buttons;
 	}
 	
 	//------------------------------------------------------------------------------
@@ -2841,9 +2949,9 @@ class CCTM {
 	 * This is for the "Custom Fields" tinyMCE button.
 	 */
 	public static function tinyplugin_register($plugin_array) {
-	    $url = CCTM_URL.'/js/plugins/custom_fields.js';
-	    $plugin_array['custom_fields'] = $url;
-	    return $plugin_array;
+		$url = CCTM_URL.'/js/plugins/custom_fields.js';
+		$plugin_array['custom_fields'] = $url;
+		return $plugin_array;
 	}
 }
 

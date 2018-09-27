@@ -25,7 +25,7 @@
  * Licence URI: https://www.gnu.org/licenses/quick-guide-gplv3.html
  */
 
-/**
+/*
  * CONFIGURATION (for the developer):
  *
  * Define the names of functions and classes used by this plugin so we can test
