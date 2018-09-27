@@ -14,7 +14,7 @@ the entire request: if it were handled by WP, headers() would be sent.
 ------------------------------------------------------------------------------*/
 //@require_once( realpath('../../../../').'/wp-load.php' );
 //include_once('../includes/constants.php');
-//include_once(CCTM_PATH.'/includes/CCTM.php');
+//include_once(CCTM_PATH.'/includes/class-cctm.php');
 include_once(CCTM_PATH.'/includes/CCTM_ImportExport.php');
 
 // Make sure a file was specified

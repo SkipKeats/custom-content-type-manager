@@ -101,7 +101,7 @@ function custom_content_type_manager_cannot_load() {
  * CCTM::$errors if errors are encountered.
  */
 function cctm_run_tests() {
-	require_once 'includes/CCTM.php';
+	require_once 'includes/class-cctm.php';
 	require_once 'includes/constants.php';
 	require_once 'tests/CCTMtests.php';
 	CCTMtests::run_tests();

@@ -1481,41 +1481,41 @@ msgstr "Wrapper"
 msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/wrapper_OutputFilter"
 msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/wrapper_OutputFilter"
 
-#: ../includes/CCTM.php:291
+#: ../includes/class-cctm.php:291
 #, php-format
 msgid "Could not create the cache directory at %s."
 msgstr "Could not create the cache directory at %s."
 
-#: ../includes/CCTM.php:314
+#: ../includes/class-cctm.php:314
 #, php-format
 msgid "Could not create cached image: %s."
 msgstr "Could not create cached image: %s."
 
-#: ../includes/CCTM.php:559
+#: ../includes/class-cctm.php:559
 msgid "This site was created in part using the Custom Content Type Manager"
 msgstr "This site was created in part using the Custom Content Type Manager"
 
-#: ../includes/CCTM.php:595
+#: ../includes/class-cctm.php:595
 msgid "custom_field shortcode requires the \"name\" parameter."
 msgstr "custom_field shortcode requires the \"name\" parameter."
 
-#: ../includes/CCTM.php:667
+#: ../includes/class-cctm.php:667
 #, php-format
 msgid "Incorrect class name in %s Output Filter. Expected class name: %s"
 msgstr "Incorrect class name in %s Output Filter. Expected class name: %s"
 
-#: ../includes/CCTM.php:680
+#: ../includes/class-cctm.php:680
 #, php-format
 msgid "Output filter not found: %s"
 msgstr "Output filter not found: %s"
 
-#: ../includes/CCTM.php:773
+#: ../includes/class-cctm.php:773
 msgid "Please correct the following errors:"
 msgstr "Please correct the following errors:"
 
-#: ../includes/CCTM.php:865
-#: ../includes/CCTM.php:929
-#: ../includes/CCTM.php:978
+#: ../includes/class-cctm.php:865
+#: ../includes/class-cctm.php:929
+#: ../includes/class-cctm.php:978
 #: ../includes/CCTM_ImportExport.php:38
 #: ../includes/CCTM_ImportExport.php:109
 #: ../includes/CCTM_ImportExport.php:182
@@ -1523,68 +1523,68 @@ msgstr "Please correct the following errors:"
 msgid "WordPress issued the following error: "
 msgstr "WordPress issued the following error: "
 
-#: ../includes/CCTM.php:1325
+#: ../includes/class-cctm.php:1325
 msgid "Field type is empty."
 msgstr "Field type is empty."
 
-#: ../includes/CCTM.php:1340
+#: ../includes/class-cctm.php:1340
 #, php-format
 msgid "Incorrect class name in %s file. Expected class name: %s"
 msgstr "Incorrect class name in %s file. Expected class name: %s"
 
-#: ../includes/CCTM.php:1348
+#: ../includes/class-cctm.php:1348
 #, php-format
 msgid "The class file for %s fields could not be found. Did you move or delete the file?"
 msgstr "The class file for %s fields could not be found. Did you move or delete the file?"
 
-#: ../includes/CCTM.php:1449
+#: ../includes/class-cctm.php:1449
 #, php-format
 msgid "Could not locate file for %s field."
 msgstr "Could not locate file for %s field."
 
-#: ../includes/CCTM.php:1658
+#: ../includes/class-cctm.php:1658
 #, php-format
 msgid "Invaid file name! %s  No directory traversing allowed!"
 msgstr "Invaid file name! %s  No directory traversing allowed!"
 
-#: ../includes/CCTM.php:1662
+#: ../includes/class-cctm.php:1662
 #, php-format
 msgid "Invaid file name! %s  Name must end with .php!"
 msgstr "Invaid file name! %s  Name must end with .php!"
 
-#: ../includes/CCTM.php:1783
+#: ../includes/class-cctm.php:1783
 #, php-format
 msgid "Invaid tpl name! %s  No directory traversing allowed!"
 msgstr "Invaid tpl name! %s  No directory traversing allowed!"
 
-#: ../includes/CCTM.php:1787
+#: ../includes/class-cctm.php:1787
 #, php-format
 msgid "Invaid tpl name! %s  Name must end with .tpl!"
 msgstr "Invaid tpl name! %s  Name must end with .tpl!"
 
-#: ../includes/CCTM.php:1827
+#: ../includes/class-cctm.php:1827
 #, php-format
 msgid "Validator not found: %s"
 msgstr "Validator not found: %s"
 
-#: ../includes/CCTM.php:1911
+#: ../includes/class-cctm.php:1911
 msgid "You do not have sufficient permissions to access this page."
 msgstr "You do not have sufficient permissions to access this page."
 
-#: ../includes/CCTM.php:2045
+#: ../includes/class-cctm.php:2045
 #, php-format
 msgid "The %s plugin encountered errors! It cannot load!"
 msgstr "The %s plugin encountered errors! It cannot load!"
 
-#: ../includes/CCTM.php:2075
+#: ../includes/class-cctm.php:2075
 msgid "Dismiss all warnings"
 msgstr "Dismiss all warnings"
 
-#: ../includes/CCTM.php:2076
+#: ../includes/class-cctm.php:2076
 msgid "Dismiss Warnings"
 msgstr "Dismiss Warnings"
 
-#: ../includes/CCTM.php:2087
+#: ../includes/class-cctm.php:2087
 msgid "The Custom Content Type Manager encountered the following warnings:"
 msgstr "The Custom Content Type Manager encountered the following warnings:"
 

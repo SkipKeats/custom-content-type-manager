@@ -445,19 +445,19 @@ msgstr "Prikazati u navigacionim menijima"
 # @ custom-content-type-mgr
 # @ default
 #: config/menus/admin_menu.php:83 config/menus/admin_menu.php:84
-#: controllers/settings.php:13 includes/CCTM.php:455
+#: controllers/settings.php:13 includes/class-cctm.php:455
 msgid "Settings"
 msgstr "Podešavanja"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1966 includes/SummarizePosts.php:383
+#: includes/class-cctm.php:1966 includes/SummarizePosts.php:383
 #: tests/CCTMtests.php:188
 #, php-format
 msgid "The %s plugin encountered errors! It cannot load!"
 msgstr "Dodatak  %s   je naišao na greške! Ne može da se učita!"
 
 # @ default
-#: includes/CCTM.php:1860
+#: includes/class-cctm.php:1860
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Nemate dovoljno ovlašćenje da pristupite ovoj stranici."
 
@@ -558,7 +558,7 @@ msgstr "Otkazati"
 # @ default
 # @ custom-content-type-mgr
 #: fields/image.php:312 fields/media.php:316 fields/relation.php:312
-#: includes/CCTM.php:1193
+#: includes/class-cctm.php:1193
 msgid "Remove"
 msgstr "Ukloniti"
 
@@ -668,8 +668,8 @@ msgstr "Dodati u post i zatvoriti"
 # @ custom-content-type-mgr
 # @ default
 #: ajax-controllers/get_posts.php:209
-#: ajax-controllers/post_content_widget.php:161 includes/CCTM.php:1192
-#: includes/CCTM.php:1220 views/import.php:69 views/import.php:111
+#: ajax-controllers/post_content_widget.php:161 includes/class-cctm.php:1192
+#: includes/class-cctm.php:1220 views/import.php:69 views/import.php:111
 msgid "Preview"
 msgstr "Pregled"
 
@@ -2560,65 +2560,65 @@ msgstr ""
 "wrapper_OutputFilter"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:288
+#: includes/class-cctm.php:288
 #, php-format
 msgid "Could not create the cache directory at %s."
 msgstr "Nije mogao da se kreira keš direktorijum u %s."
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:311
+#: includes/class-cctm.php:311
 #, php-format
 msgid "Could not create cached image: %s."
 msgstr "Nije mogla da se kreira keširana slika: %s."
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:553 updates/0.9.4.php:64
+#: includes/class-cctm.php:553 updates/0.9.4.php:64
 msgid "This site was created in part using the Custom Content Type Manager"
 msgstr ""
 "Ovaj sajt je delom kreiran uz korišćenje Custom Content Type Manager -a"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:589
+#: includes/class-cctm.php:589
 msgid "custom_field shortcode requires the \"name\" parameter."
 msgstr "custom_field kratki kod zahteva \"name\" parametar."
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:660
+#: includes/class-cctm.php:660
 #, php-format
 msgid "Incorrect class name in %s Output Filter. Expected class name: %s"
 msgstr "Nepravilno ime klase u  %s  izlaznom filteru. Očekivano ime klase: %s"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:673
+#: includes/class-cctm.php:673
 #, php-format
 msgid "Output filter not found: %s"
 msgstr "Izlazni filter nije pronađen: %s"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:729
+#: includes/class-cctm.php:729
 msgid "Please correct the following errors:"
 msgstr "Molim vas, ispravite sledeće greške:"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:821 includes/CCTM.php:885 includes/CCTM.php:934
+#: includes/class-cctm.php:821 includes/class-cctm.php:885 includes/class-cctm.php:934
 #: includes/CCTM_ImportExport.php:38 includes/CCTM_ImportExport.php:109
 #: includes/CCTM_ImportExport.php:182 includes/CCTM_ImportExport.php:228
 msgid "WordPress issued the following error: "
 msgstr "WordPress je naišao na sledeću grešku:"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1281
+#: includes/class-cctm.php:1281
 msgid "Field type is empty."
 msgstr "Tip polja je prazan."
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1296
+#: includes/class-cctm.php:1296
 #, php-format
 msgid "Incorrect class name in %s file. Expected class name: %s"
 msgstr "Nepravilno ime klase u  %s  fajlu. Očekivano ime klase:%s"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1304
+#: includes/class-cctm.php:1304
 #, php-format
 msgid ""
 "The class file for %s fields could not be found. Did you move or delete the "
@@ -2628,53 +2628,53 @@ msgstr ""
 "obrisali fajl?"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1405
+#: includes/class-cctm.php:1405
 #, php-format
 msgid "Could not locate file for %s field."
 msgstr "Fajl za polje nije mogao da se  %s locira."
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1614
+#: includes/class-cctm.php:1614
 #, php-format
 msgid "Invaid file name! %s  No directory traversing allowed!"
 msgstr "Nevažeće ime fajla!  %s Nije dozvoljeno ukrštanje direktorijuma!"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1618
+#: includes/class-cctm.php:1618
 #, php-format
 msgid "Invaid file name! %s  Name must end with .php!"
 msgstr "Nevažeće ime fajla! %s   Ime mora da završava sa .php!"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1739
+#: includes/class-cctm.php:1739
 #, php-format
 msgid "Invaid tpl name! %s  No directory traversing allowed!"
 msgstr "Nevažeće tpl ime!%s Nije dozvoljeno ukrštanje direktorijuma!"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1743
+#: includes/class-cctm.php:1743
 #, php-format
 msgid "Invaid tpl name! %s  Name must end with .tpl!"
 msgstr "Nevažeće tpl ime! %s Ime mora da završava sa .tpl!"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1783
+#: includes/class-cctm.php:1783
 #, php-format
 msgid "Validator not found: %s"
 msgstr "Proverivač nije pronađen: %s"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1996
+#: includes/class-cctm.php:1996
 msgid "Dismiss all warnings"
 msgstr "Odbaciti sva upozorenja"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1997
+#: includes/class-cctm.php:1997
 msgid "Dismiss Warnings"
 msgstr "Odbaciti upozorenja"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:2008
+#: includes/class-cctm.php:2008
 msgid "The Custom Content Type Manager encountered the following warnings:"
 msgstr "Custom Content Type Manager je naišao na sledeća upozorenja:"
 

@@ -16,7 +16,7 @@
  *      fields.
  */
 
-require_once dirname(__FILE__).'/includes/CCTM.php';
+require_once dirname(__FILE__).'/includes/class-cctm.php';
 
 CCTM::$hide_url_tab =  true;
 

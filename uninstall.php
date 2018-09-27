@@ -9,7 +9,7 @@ Perhaps related to how WP attempts (and fails) to connect to the local site.
 if ( defined('WP_UNINSTALL_PLUGIN'))
 {
 	require_once('includes/constants.php');
-	require_once('includes/CCTM.php');
+	require_once('includes/class-cctm.php');
 	require_once('includes/CCTM_FormElement.php');
 	
 	// If the custom fields modified anything, we need to give them this 

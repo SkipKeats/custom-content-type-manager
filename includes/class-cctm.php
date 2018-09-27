@@ -1,6 +1,6 @@
 <?php
 /**
- * CCTM  Custom Content Type Manager
+ * CCTM  Custom Content Type Manager Classs
  * 
  * This is the main class for the Custom Content Type Manager plugin.
  * It holds its functions hooked to WP events and utilty functions and configuration

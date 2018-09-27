@@ -15,7 +15,7 @@ Run tests only upon activation
 http://codex.wordpress.org/Function_Reference/register_activation_hook
 */
 
-require_once 'includes/CCTM.php';
+require_once 'includes/class-cctm.php';
 require_once 'includes/constants.php';
 require_once 'includes/SummarizePosts.php';
 require_once 'includes/GetPostsQuery.php';

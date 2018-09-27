@@ -123,7 +123,7 @@ function update_version {
     sed -i '' "s/Version:.*/Version: ${VERSION}/" index.php
     sed -i '' "s/Stable tag:.*/Stable tag: ${VERSION}/" readme.txt
     sed -i '' "s/Version:.*/Version: ${VERSION}/" readme.txt
-    sed -i '' "s/.*const version = .*/    const version = '${VERSION}'\;/" includes/CCTM.php
+    sed -i '' "s/.*const version = .*/    const version = '${VERSION}'\;/" includes/class-cctm.php
 }
 
 

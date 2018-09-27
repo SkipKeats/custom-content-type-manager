@@ -46,7 +46,7 @@ msgid "Post Selector configuration file not found."
 msgstr "Arquivo de configuração Post Selector não encontrado."
 
 #: ../ajax-controllers/get_posts.php:208
-#: ../ajax-controllers/post_content_widget.php:154 ../includes/CCTM.php:550
+#: ../ajax-controllers/post_content_widget.php:154 ../includes/class-cctm.php:550
 #: ../includes/CCTM_PostTypeDef.php:22 ../includes/CCTM_Post_Widget.php:109
 #: ../includes/SummarizePosts_Widget.php:59 ../views/export.php:14
 #: ../views/list_metaboxes.php:4 ../views/metabox.php:39
@@ -86,8 +86,8 @@ msgid "Add to Post and Close"
 msgstr "Adicionar ao Post e fechar"
 
 #: ../ajax-controllers/get_posts.php:226
-#: ../ajax-controllers/post_content_widget.php:169 ../includes/CCTM.php:1512
-#: ../includes/CCTM.php:1540 ../includes/CCTM_FormElement.php:144
+#: ../ajax-controllers/post_content_widget.php:169 ../includes/class-cctm.php:1512
+#: ../includes/class-cctm.php:1540 ../includes/CCTM_FormElement.php:144
 #: ../views/import.php:69 ../views/import.php:111
 msgid "Preview"
 msgstr "Pré visualizar"
@@ -300,7 +300,7 @@ msgid "Clear Cache"
 msgstr "Limpar Cache"
 
 #: ../config/menus/admin_menu.php:92 ../config/menus/admin_menu.php:93
-#: ../controllers/settings.php:13 ../includes/CCTM.php:517
+#: ../controllers/settings.php:13 ../includes/class-cctm.php:517
 msgid "Settings"
 msgstr "Configurações"
 
@@ -1633,7 +1633,7 @@ msgid "Choose Image"
 msgstr "Escolha Imagem"
 
 #: ../fields/image.php:312 ../fields/media.php:316 ../fields/relation.php:315
-#: ../fields/relationmeta.php:353 ../includes/CCTM.php:1513
+#: ../fields/relationmeta.php:353 ../includes/class-cctm.php:1513
 msgid "Remove"
 msgstr "Remover"
 
@@ -1913,7 +1913,7 @@ msgstr ""
 "ou cortar a entrada na cadeia de separador ou limitá-lo a um determinado "
 "número de palavras."
 
-#: ../filters/excerpt.php:90 ../includes/CCTM.php:552
+#: ../filters/excerpt.php:90 ../includes/class-cctm.php:552
 #: ../views/post_type.php:359
 msgid "Excerpt"
 msgstr "Excerto"
@@ -2269,105 +2269,105 @@ msgstr ""
 "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
 "wrapper_OutputFilter"
 
-#: ../includes/CCTM.php:310
+#: ../includes/class-cctm.php:310
 #, php-format
 msgid "Could not create the cache directory at %s."
 msgstr "Não foi possível criar o diretório de cache em %s."
 
-#: ../includes/CCTM.php:328
+#: ../includes/class-cctm.php:328
 #, php-format
 msgid "Could not create cached image: %s."
 msgstr "Não foi possível criar imagens em cache: %s."
 
-#: ../includes/CCTM.php:551 ../views/post_type.php:347
+#: ../includes/class-cctm.php:551 ../views/post_type.php:347
 msgid "Content"
 msgstr "Conteúdo"
 
-#: ../includes/CCTM.php:579
+#: ../includes/class-cctm.php:579
 msgid "cctm_post_form shortcode requires the \"post_type\" parameter."
 msgstr "O shortcode cctm_post_form requer o parâmetro nome \"post_type\"."
 
-#: ../includes/CCTM.php:583
+#: ../includes/class-cctm.php:583
 #, php-format
 msgid "cctm_post_form shortcode does not support that post_type: %s"
 msgstr ""
 
-#: ../includes/CCTM.php:588
+#: ../includes/class-cctm.php:588
 #, php-format
 msgid "cctm_post_form shortcode post_type not found: %s"
 msgstr ""
 
-#: ../includes/CCTM.php:625
+#: ../includes/class-cctm.php:625
 msgid "This form has validation errors."
 msgstr ""
 
-#: ../includes/CCTM.php:765
+#: ../includes/class-cctm.php:765
 msgid "Submit"
 msgstr "Enviar"
 
-#: ../includes/CCTM.php:935 ../updates/0.9.4.php:64
+#: ../includes/class-cctm.php:935 ../updates/0.9.4.php:64
 msgid "This site was created in part using the Custom Content Type Manager"
 msgstr ""
 "Este site foi criado, em parte, usando o conteúdo personalizado Type Manager"
 
-#: ../includes/CCTM.php:971
+#: ../includes/class-cctm.php:971
 msgid "custom_field shortcode requires the \"name\" parameter."
 msgstr "custom_field shortcode requires the \"name\" parameter."
 
-#: ../includes/CCTM.php:1147
+#: ../includes/class-cctm.php:1147
 msgid "Please correct the following errors:"
 msgstr "Por favor, corrija os seguintes erros:"
 
-#: ../includes/CCTM.php:1246 ../includes/CCTM_ImportExport.php:39
+#: ../includes/class-cctm.php:1246 ../includes/CCTM_ImportExport.php:39
 #: ../includes/CCTM_ImportExport.php:110 ../includes/CCTM_ImportExport.php:183
 #: ../includes/CCTM_ImportExport.php:229
 msgid "WordPress issued the following error: "
 msgstr "WordPress emitiu o seguinte erro:"
 
-#: ../includes/CCTM.php:1879
+#: ../includes/class-cctm.php:1879
 #, php-format
 msgid "Invaid file name! %s  No directory traversing allowed!"
 msgstr "Nome de arquivo inválido! %s Não travessia diretório permitido!"
 
-#: ../includes/CCTM.php:1883
+#: ../includes/class-cctm.php:1883
 #, php-format
 msgid "Invaid file name! %s  Name must end with .php!"
 msgstr "Nome de arquivo inválido! %s Nome deve terminar com. Php!"
 
-#: ../includes/CCTM.php:1982
+#: ../includes/class-cctm.php:1982
 #, php-format
 msgid "Incorrect class name in %s. Expected class name: %s"
 msgstr "Nome da classe incorreto em %s. Nome da classe esperado: %s"
 
-#: ../includes/CCTM.php:2032
+#: ../includes/class-cctm.php:2032
 #, php-format
 msgid "Invaid tpl name! %s  No directory traversing allowed!"
 msgstr "Nome inválido tpl! %s Não travessia diretório permitido!"
 
-#: ../includes/CCTM.php:2036
+#: ../includes/class-cctm.php:2036
 #, php-format
 msgid "Invaid tpl name! %s  Name must end with .tpl!"
 msgstr "Nome inválido tpl! %s Nome deve terminar com. Tpl!"
 
-#: ../includes/CCTM.php:2143
+#: ../includes/class-cctm.php:2143
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Você não tem permissões suficientes para acessar esta página."
 
-#: ../includes/CCTM.php:2333 ../includes/SummarizePosts.php:461
+#: ../includes/class-cctm.php:2333 ../includes/SummarizePosts.php:461
 #: ../tests/CCTMtests.php:109
 #, php-format
 msgid "The %s plugin encountered errors! It cannot load!"
 msgstr "O plug-in %s encontrou erros! Ele não pode carregar!"
 
-#: ../includes/CCTM.php:2363
+#: ../includes/class-cctm.php:2363
 msgid "Dismiss all warnings"
 msgstr "Demitir todos os avisos"
 
-#: ../includes/CCTM.php:2364
+#: ../includes/class-cctm.php:2364
 msgid "Dismiss Warnings"
 msgstr "Dispensar Avisos"
 
-#: ../includes/CCTM.php:2375
+#: ../includes/class-cctm.php:2375
 msgid "The Custom Content Type Manager encountered the following warnings:"
 msgstr "The Custom Content Type Manager encontrou as seguintes advertências:"
 
