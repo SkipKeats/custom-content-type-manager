@@ -1,12 +1,32 @@
 <?php
-/*------------------------------------------------------------------------------
-Plugin Name: Custom Content Type Manager : Advanced Custom Post Types
-Description: Allows users to create custom post types and custom fields, including dropdowns, checkboxes, and images. This gives WordPress CMS functionality making it easier to use WP for eCommerce or content-driven sites.
-Author: Everett Griffiths
-Version: 0.9.8.9
-Author URI: https://www.craftsmancoding.com/
-Plugin URI: https://github.com/craftsmancoding/custom-content-type-manager
-------------------------------------------------------------------------------*/
+
+/**
+ * Custom Content Type Manager: Advanced Custom Post Types
+ *
+ * @package     CustomContentTypeManager
+ * @author      Everett Griffiths; GSA Data.gov Team
+ * @copyright   Craftsman Coding et alia
+ * @license     https://www.gnu.org/licenses/quick-guide-gplv3.html GPL-3.0+
+ *
+ * @wordpress-plugin
+ * Plugin Name: Custom Content Type Manager : Advanced Custom Post Types
+ * Plugin URI: https://github.com/GSA/custom-content-type-manager
+ *
+ * Description: Allows users to create custom post types and custom fields,
+ *              including dropdowns, checkboxes, and images. This gives WordPress
+ *              CMS functionality making it easier to use WP for eCommerce or
+ *              content-driven sites.
+ *              Original plugin url: https://github.com/craftsmancoding/custom-content-type-manager
+ *              Last CC version: 0.9.8.9
+ * Version:     0.9.9.0
+ * Author:      Everett Griffiths; GSA Data.gov Team
+ * Author URI:  https://www.craftsmancoding.com/
+ * Text Domain: custom-content-type-manager
+ * Licence:     GPL-3.0+
+ * Licence URI: https://www.gnu.org/licenses/quick-guide-gplv3.html
+ *
+ */
+
 /*------------------------------------------------------------------------------
 CONFIGURATION (for the developer): 
 
