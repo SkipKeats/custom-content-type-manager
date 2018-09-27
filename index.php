@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Custom Content Type Manager: Advanced Custom Post Types
  *
@@ -69,85 +68,83 @@ $class_names_used = array(
 	'CCTM_ImportExport',
 );
 
-// Not class constants: constants declared via define():
-$constants_used = array('CCTM_PATH','CCTM_URL','CCTM_3P_PATH','CCTM_3P_URL');
+// Not class constants: constants declared via define().
+$constants_used = array(
+	'CCTM_PATH',
+	'CCTM_URL',
+	'CCTM_3P_PATH',
+	'CCTM_3P_URL',
+);
 
-// Used to store errors
+// Used to store errors.
 $error_items = '';
 
-// No point in localizing this, because we haven't loaded the textdomain yet.
-function custom_content_type_manager_cannot_load()
-{
+/**
+ * Summary: Function runs if CCTM cannot load.
+ * No point in localizing this, because we haven't loaded the textdomain yet.
+ */
+function custom_content_type_manager_cannot_load() {
 	global $error_items;
 	print '<div id="custom-post-type-manager-warning" class="error fade"><p><strong>'
-	.'The Custom Post Type Manager plugin cannot load correctly!'
-	.'</strong> '
-	.'Another plugin has declared conflicting class, function, or constant names:'
-	.'<ul style="margin-left:30px;">'.$error_items.'</ul>'
-	.'</p>'
-	.'<p>You must deactivate the plugins that are using these conflicting names.</p>'
-	.'<p>If you have the SummarizePosts plugin installed, deactivate it now: it is already included in the CCTM.</p>'
-	.'</div>';
-	
+		. 'The Custom Post Type Manager plugin cannot load correctly!'
+		. '</strong> '
+		. 'Another plugin has declared conflicting class, function, or constant names:'
+		. '<ul style="margin-left:30px;">' . $error_items . '</ul>'
+		. '</p>'
+		. '<p>You must deactivate the plugins that are using these conflicting names.</p>'
+		. '<p>If you have the SummarizePosts plugin installed, deactivate it now: it is already included in the CCTM.</p>'
+		. '</div>';
 }
 
 /**
- * Run on plugin activation or on demand.  This will populate CCTM::$errors if errors are encountered.
- */ 
+ * Summary: Run on plugin activation or on demand.  This will populate
+ * CCTM::$errors if errors are encountered.
+ */
 function cctm_run_tests() {
-	require_once('includes/CCTM.php');
-	require_once('includes/constants.php');
-	require_once('tests/CCTMtests.php');
+	require_once 'includes/CCTM.php';
+	require_once 'includes/constants.php';
+	require_once 'tests/CCTMtests.php';
 	CCTMtests::run_tests();
 }
 
-/*------------------------------------------------------------------------------
-The following code tests whether or not this plugin can be safely loaded.
-If there are no conflicts, the loader.php is included and the plugin is loaded,
-otherwise, an error is displayed in the manager.
-------------------------------------------------------------------------------*/
-// Check for conflicting function names
-foreach ($function_names_used as $f_name )
-{
-	if ( function_exists($f_name) )
-	{
-		/* translators: This refers to a PHP function e.g. my_function() { ... } */
-		$error_items .= sprintf('<li>%1$s: %2$s</li>', __('Function', 'custom-content-type-mgr'), $f_name );
-	}
-}
-// Check for conflicting Class names
-foreach ($class_names_used as $cl_name )
-{
-	if ( class_exists($cl_name) )
-	{
-		/* translators: This refers to a PHP class e.g. class MyClass { ... } */
-		$error_items .= sprintf('<li>%1$s: %2$s</li>', __('Class', 'custom-content-type-mgr'), $f_name );
-	}
-}
-// Check for conflicting Constants
-foreach ($constants_used as $c_name )
-{
-	if ( defined($c_name) )
-	{
-		/* translators: This refers to a PHP constant as defined by the define() function */
-		$error_items .= sprintf('<li>%1$s: %2$s</li>', __('Constant', 'custom-content-type-mgr'), $f_name );
+/**
+ * The following code tests whether or not this plugin can be safely loaded.
+ * If there are no conflicts, the loader.php is included and the plugin is loaded,
+ * otherwise, an error is displayed in the manager.
+ */
+// Check for conflicting function names.
+foreach ( $function_names_used as $f_name ) {
+	if ( function_exists( $f_name ) ) {
+		/* Translators: This refers to a PHP function e.g. my_function() { ... } */
+		$error_items .= sprintf( '<li>%1$s: %2$s</li>', __( 'Function', 'custom-content-type-mgr' ), $f_name );
 	}
 }
 
+// Check for conflicting Class names.
+foreach ( $class_names_used as $cl_name ) {
+	if ( class_exists( $cl_name ) ) {
+		/* Translators: This refers to a PHP class e.g. class MyClass { ... } */
+		$error_items .= sprintf( '<li>%1$s: %2$s</li>', __( 'Class', 'custom-content-type-mgr' ), $f_name );
+	}
+}
+
+// Check for conflicting Constants.
+foreach ( $constants_used as $c_name ) {
+	if ( defined( $c_name ) ) {
+		/* Translators: This refers to a PHP constant as defined by the define() function */
+		$error_items .= sprintf( '<li>%1$s: %2$s</li>', __( 'Constant', 'custom-content-type-mgr' ), $f_name );
+	}
+}
 
 // Check stuff when the plugin is activated.
-register_activation_hook(__FILE__, 'cctm_run_tests');
+register_activation_hook( __FILE__, 'cctm_run_tests' );
 
 // Fire the error, or load the plugin.
-if ($error_items)
-{
-	$error_items = '<ul>'.$error_items.'</ul>';
-	add_action('admin_notices', 'custom_content_type_manager_cannot_load');
-}
-// CLEARED FOR LAUNCH!!! ---> Load the plugin
-else
-{
-	require_once('loader.php');
+if ( $error_items ) {
+	$error_items = '<ul>' . $error_items . '</ul>';
+	add_action( 'admin_notices', 'custom_content_type_manager_cannot_load' );
+} else { // CLEARED FOR LAUNCH!!! ---> Load the plugin.
+	require_once 'loader.php';
 }
 
 /*EOF*/
