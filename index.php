@@ -24,31 +24,51 @@
  * Text Domain: custom-content-type-manager
  * Licence:     GPL-3.0+
  * Licence URI: https://www.gnu.org/licenses/quick-guide-gplv3.html
- *
  */
 
-/*------------------------------------------------------------------------------
-CONFIGURATION (for the developer): 
+/**
+ * CONFIGURATION (for the developer):
+ *
+ * Define the names of functions and classes used by this plugin so we can test
+ * for conflicts prior to loading the plugin and message the WP admins if there are
+ * any conflicts.
+ *
+ * $function_names_used -- Add any functions declared by this plugin in the
+ * main namespace (e.g. utility functions or theme functions).
+ *
+ * $class_names_used -- Add any class names that are declared by this plugin.
+ *
+ * Warning: the text-domain for the __() localization functions is hardcoded.
+ */
+$function_names_used = array(
+	'get_custom_field',
+	'get_custom_field_meta',
+	'get_custom_field_def',
+	'get_post_complete',
+	'get_posts_sharing_custom_field_value',
+	'get_relation',
+	'get_unique_values_this_custom_field',
+	'print_custom_field',
+	'print_custom_field_meta',
+	'uninstall_cctm',
+);
 
-Define the names of functions and classes used by this plugin so we can test 
-for conflicts prior to loading the plugin and message the WP admins if there are
-any conflicts.
+$class_names_used = array(
+	'CCTM',
+	'StandardizedCustomFields',
+	'CCTMtests',
+	'CCTM_FormElement',
+	'CCTM_Ajax',
+	'CCTM_OutputFilter',
+	'CCTM_Pagination',
+	'SummarizePosts',
+	'GetPostsQuery',
+	'GetPostsForm',
+	'SP_Post',
+	'CCTM_PostTypeDef',
+	'CCTM_ImportExport',
+);
 
-$function_names_used -- add any functions declared by this plugin in the 
-	main namespace (e.g. utility functions or theme functions).
-
-$class_names_used -- add any class names that are declared by this plugin.
-
-Warning: the text-domain for the __() localization functions is hardcoded.
-------------------------------------------------------------------------------*/
-$function_names_used = array('get_custom_field','get_custom_field_meta','get_custom_field_def'
-	,'get_post_complete','get_posts_sharing_custom_field_value'
-	,'get_relation','get_unique_values_this_custom_field','print_custom_field','print_custom_field_meta'
-	,'uninstall_cctm');
-$class_names_used = array('CCTM','StandardizedCustomFields'
-	,'CCTMtests','CCTM_FormElement','CCTM_Ajax', 'CCTM_OutputFilter', 'CCTM_Pagination'
-	, 'SummarizePosts', 'GetPostsQuery', 'GetPostsForm','SP_Post', 'CCTM_PostTypeDef', 'CCTM_ImportExport');
-	
 // Not class constants: constants declared via define():
 $constants_used = array('CCTM_PATH','CCTM_URL','CCTM_3P_PATH','CCTM_3P_URL');
 
