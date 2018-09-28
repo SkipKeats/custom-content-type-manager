@@ -525,7 +525,7 @@ just want to make sure that the form is presented uncorrupted.
 		<!--!Menu Position-->
 		<div class="cctm_element_wrapper" id="custom_field_wrapper_menu_position">
 			<label for="menu_position" class="cctm_label cctm_text_label" id="cctm_label_menu_position"><?php _e('Menu Position', CCTM_TXTDOMAIN); ?></label>
-			<input type="text" name="menu_position" class="cctm_text" id="menu_position" value="<?php print htmlspecialchars($data['def']['menu_position']); ?>"/>
+			<input type="text" name="menu_position" class="cctm_text" id="menu_position" value="<?php print htmlspecialchars($data['def']['MENU_POSITION']); ?>"/>
 			<span class="cctm_description"><?php _e('This setting determines where this post type should appear in the left-hand admin menu. Default: null (below Comments). E.g. "21" would cause this content type to display below Pages and above Comments.', CCTM_TXTDOMAIN); ?> 
 				<ul style="margin-left:40px;">
 					<li><strong>5</strong> - <?php _e('below Posts', CCTM_TXTDOMAIN); ?></li>

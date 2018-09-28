@@ -464,13 +464,13 @@ class CCTM_PostTypeDef {
 			$sanitized['has_archive'] = true;
 		}
 
-		// *facepalm*... Special handling req'd here for menu_position because 0
+		// *facepalm*... Special handling req'd here for MENU_POSITION because 0
 		// is handled differently than a literal null.
-		if ( (int) CCTM::get_value($raw, 'menu_position') ) {
-			$sanitized['menu_position'] = (int) CCTM::get_value($raw, 'menu_position', null);
+		if ( (int) CCTM::get_value($raw, 'MENU_POSITION') ) {
+			$sanitized['MENU_POSITION'] = (int) CCTM::get_value($raw, 'MENU_POSITION', null);
 		}
 		else {
-			$sanitized['menu_position'] = null;
+			$sanitized['MENU_POSITION'] = null;
 		}
 		$sanitized['show_in_menu']    = CCTM::get_value($raw, 'show_in_menu');
 

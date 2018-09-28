@@ -28,7 +28,7 @@ add_menu_page(
 	'cctm',								// menu-slug (should be unique)
 	'CCTM::page_main_controller',       // callback function
 	CCTM_URL .'/images/gear.png',       // Icon
-	self::menu_position					// menu position
+	self::MENU_POSITION					// menu position
 );
 
 add_submenu_page(
