@@ -121,7 +121,7 @@ class CCTMtests {
 		// Run Tests (add new tests to the CCCTMtests class as req'd)
 		self::wp_version_gt(CCTM::WP_REQ_VER);
 		self::php_version_gt(CCTM::PHP_REQ_VER);
-		self::mysql_version_gt(CCTM::mysql_req_ver);
+		self::mysql_version_gt(CCTM::MYSQL_REQ_VER);
         self::reqd_classes();
 		self::incompatible_plugins( array('Magic Fields','Custom Post Type UI','CMS Press') );
 		

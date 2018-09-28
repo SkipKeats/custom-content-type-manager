@@ -19,7 +19,7 @@ class SummarizePosts {
 
 	const WP_REQ_VER  = '4.9.8';
 	const PHP_REQ_VER  = '7.0.30';
-	const mysql_req_ver = '5.5.46';
+	const MYSQL_REQ_VER = '5.5.46';
 
 	// used in the wp_options table
 	const db_key   = 'summarize_posts';
