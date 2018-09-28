@@ -11,15 +11,15 @@
 
 
 class SummarizePosts {
-	const name    = 'Summarize Posts';
-	const version   = '0.8';
+	const NAME    = 'Summarize Posts';
+	const VERSION   = '0.9';
 	// See http://php.net/manual/en/function.version-compare.php
 	// any string not found in this list < dev < alpha =a < beta = b < RC = rc < # < pl = p
 	const VERSION_META  = 'dev'; // dev, rc (release candidate), pl (public release)
 
-	const wp_req_ver  = '3.1';
-	const php_req_ver  = '5.2.6';
-	const mysql_req_ver = '5.0.0';
+	const WP_REQ_VER  = '4.9.8';
+	const php_req_ver  = '7.0.30';
+	const mysql_req_ver = '5.5.46';
 
 	// used in the wp_options table
 	const db_key   = 'summarize_posts';
