@@ -93,7 +93,7 @@ printf( __('You can import an existing %s definition file from your computer or 
 
 <form id="cctm_import_form"  method="post" enctype="multipart/form-data">
 	<!-- MAX_FILE_SIZE must precede the file input field -->
-    <input type="hidden" name="MAX_FILE_SIZE" value="<?php print CCTM::max_def_file_size; ?>" />
+    <input type="hidden" name="MAX_FILE_SIZE" value="<?php print CCTM::MAX_DEF_FILE_SIZE; ?>" />
     
 	<?php wp_nonce_field('cctm_upload_def', 'cctm_nonce'); ?>
 

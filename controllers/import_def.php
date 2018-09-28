@@ -53,7 +53,7 @@ if ( !empty($_POST) ) { // && check_admin_referer($data['action_name'], $data['n
 			if ( empty($_FILES) || empty($_FILES['cctm_settings_file']['tmp_name'])) {
 				self::$errors['cctm_settings_file'] = sprintf( 
 					__('No file selected', CCTM_TXTDOMAIN)
-					, CCTM::max_def_file_size 
+					, CCTM::MAX_DEF_FILE_SIZE 
 				); 
 				$data['msg'] = self::format_errors();
 				$data['content'] = CCTM::load_view('import.php', $data);
@@ -61,10 +61,10 @@ if ( !empty($_POST) ) { // && check_admin_referer($data['action_name'], $data['n
 				return;
 			}
 			// Big no-no #2: file is too  big
-			if ($_FILES['cctm_settings_file']['size'] > CCTM::max_def_file_size ) {
+			if ($_FILES['cctm_settings_file']['size'] > CCTM::MAX_DEF_FILE_SIZE ) {
 				self::$errors['cctm_settings_file'] = sprintf( 
 					__('The definition filesize must not exceed %s bytes.', CCTM_TXTDOMAIN)
-					, CCTM::max_def_file_size 
+					, CCTM::MAX_DEF_FILE_SIZE 
 				); 
 				$data['msg'] = self::format_errors();
 				$data['content'] = CCTM::load_view('import.php', $data);
