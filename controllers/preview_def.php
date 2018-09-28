@@ -17,7 +17,7 @@ if ( !CCTM_ImportExport::is_valid_basename($file) ) {
 	return self::page_import();
 }
 $upload_dir = wp_upload_dir();
-$dir = $upload_dir['basedir'] .'/'.self::BASE_STORAGE_DIR . '/' . self::def_dir;
+$dir = $upload_dir['basedir'] .'/'.self::BASE_STORAGE_DIR . '/' . self::DEF_DIR;
 
 $data_raw = file_get_contents($dir.'/'.$file);
 $data = json_decode($data_raw, true);

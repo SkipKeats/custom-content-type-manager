@@ -33,7 +33,7 @@ if (!CCTM_ImportExport::is_valid_basename($filename)) {
 
 // Load up this thing... errors will be thrown
 $upload_dir = wp_upload_dir();
-$dir = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR . '/' . CCTM::def_dir .'/';
+$dir = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR . '/' . CCTM::DEF_DIR .'/';
 
 $data = CCTM_ImportExport::load_def_file($dir.$filename);
 

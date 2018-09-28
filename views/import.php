@@ -27,7 +27,7 @@ if (isset($upload_dir['basedir'])) {
 
 printf( __('You can import an existing %s definition file from your computer or choose one from your uploads directory: %s. You probably will only use this when you are first setting up your site.', CCTM_TXTDOMAIN)
 	, '<code>.cctm.json</code>'
-	, '<code>'.$upload_dir_str.'/'.self::BASE_STORAGE_DIR .'/'.self::def_dir.'</code>'
+	, '<code>'.$upload_dir_str.'/'.self::BASE_STORAGE_DIR .'/'.self::DEF_DIR.'</code>'
 	); ?></p>
 
 <h3><?php _e('Definitions on File', CCTM_TXTDOMAIN); ?></h3>

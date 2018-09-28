@@ -40,7 +40,7 @@ class CCTM_ImportExport {
 			return false;
 		}
 		
-		$dir = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR . '/' . CCTM::def_dir .'/';
+		$dir = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR . '/' . CCTM::DEF_DIR .'/';
 
 		$data = self::load_def_file($dir.$filename);
 		
@@ -113,7 +113,7 @@ class CCTM_ImportExport {
 		
 		foreach ($defs as $d) {
 			
-			$dir = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR . '/' . CCTM::def_dir;
+			$dir = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR . '/' . CCTM::DEF_DIR;
 
 			$file = $dir.'/'.$d;
 			
@@ -183,7 +183,7 @@ class CCTM_ImportExport {
 			CCTM::$errors['directory_does_not_exist'] =  __('WordPress issued the following error: ', CCTM_TXTDOMAIN) .$upload_dir['error'];	
 			return false;
 		}		
-		$dir = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR . '/' . CCTM::def_dir;
+		$dir = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR . '/' . CCTM::DEF_DIR;
 		
 		$target_file = $dir.'/'.$download_title;
 		
@@ -230,7 +230,7 @@ class CCTM_ImportExport {
 			return $available_defs;
 		}
 				
-		$dir = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR . '/' . CCTM::def_dir .'/';
+		$dir = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR . '/' . CCTM::DEF_DIR .'/';
 		
 		if ($handle = opendir($dir)) {
 			while (false !== ($file = readdir($handle))) {
