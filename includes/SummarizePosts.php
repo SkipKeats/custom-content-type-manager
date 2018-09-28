@@ -18,7 +18,7 @@ class SummarizePosts {
 	const VERSION_META  = 'dev'; // dev, rc (release candidate), pl (public release)
 
 	const WP_REQ_VER  = '4.9.8';
-	const php_req_ver  = '7.0.30';
+	const PHP_REQ_VER  = '7.0.30';
 	const mysql_req_ver = '5.5.46';
 
 	// used in the wp_options table
