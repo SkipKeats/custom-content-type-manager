@@ -124,44 +124,75 @@ class CCTM {
 	const NEW_DIR_PERMS  = 0755;
 	const NEW_FILE_PERMS = 0644;
 
-	// This contains the CCTM_Ajax object, stashed here for easy reference.
-	public static $Ajax;
+	/**
+	 * This contains the CCTM_Ajax object, stashed here for easy reference.
+	 * @since Unknown
+	 * @var object $ajax References CCTM_Ajax.
+	 */
+	public static $ajax;
 
-	// Contains the CCTM_Columns object, used for custom columns.
-	public static $Columns;
+	/**
+	 * Contains the CCTM_Columns object, used for custom columns.
+	 * @since Unknown
+	 * @var object $columns References CCTM_Columns.
+	 */
+	public static $columns;
 
-	// Used to filter settings inputs, e.g. descriptions of custom fields or post-types.
+	/**
+	 * Used to filter settings inputs, e.g. descriptions of custom fields or post-types.
+	 * 
+	 * @since Unknown
+	 * @var string $allowed_html_tags Coding.
+	 */
 	public static $allowed_html_tags = '<a><strong><em><code><style>';
 
 	/**
-	 *  Data object stored in the wp_options table representing all primary data
-	 * for post_types and custom fields.
+	 *  Data object stored in the wp_options table representing all primary data for post_types and custom fields.
 	 * 
 	 * @since Unknown
 	 * @param array $data Data array.
 	 */
 	public static $data = array();
 
-	// Cached data: for a single request, e.g. custom field values.
+	/**
+	 * Cached data
+	 * 
+	 * @since Unknown
+	 * @param array $cache Holds cached data for a single request, e.g. custom field values.
+	 */
 	public static $cache = array();
 
-	/*
-	 * integer iterator used to uniquely identify groups of field definitions for
+	/**
+	 * Integer iterator used to uniquely identify groups of field definitions for
 	 * CSS and $_POST variables.
+	 * 
+	 * @since Unknown
+	 * @var int $def_i Iterator.
 	 */
 	public static $def_i = 0;
 
+	/**
+	 * Hide tab URL
+	 * 
+	 * @since Unknown
+	 * @var bool $hide_url_tab Tab url visibility.
+	 */
 	public static $hide_url_tab = false;
-	
-	// Optionally used for shortcodes.
+
+	/**
+	 * Optionally used for shortcodes.
+	 * 
+	 * @since Unknown
+	 * @var int $post_id Post ID.
+	 */
 	public static $post_id = null;
-	
+
 	/**
 	 * Default Post Type Definition
 	 * This is the definition shown when a user first creates a post_type.
 	 * 
 	 * @since Unknown
-	 * @param array $default_post_type_def
+	 * @param array $default_post_type_def Post type definition.
 	 */
 	public static $default_post_type_def = array(
 		'supports'   => array(
@@ -240,7 +271,12 @@ class CCTM {
 		'hide_comments'           => 0,
 	);
 
-	// Default metabox definition.
+	/**
+	 * Default metabox definition.
+	 * 
+	 * @since Unknown
+	 * @param array $metabox_def Defines metaboxes.
+	 */
 	public static $metabox_def = array(
 		'id'                 => 'cctm_default',
 		'title'              => 'Custom Fields',
@@ -252,12 +288,23 @@ class CCTM {
 		'visibility_control' => '',
 	);
 
-	// Where are the icons for custom images stored?
-	// TODO: let the users select their own dir in their own directory.
+	/**
+	 * Where are the icons for custom images stored?
+	 * TODO: let the users select their own dir in their own directory.
+	 * @var string $custom_field_icons_dir Locations for custom icons.
+	 */
 	public static $custom_field_icons_dir;
 
-	// Built-in post-types that can have custom fields, but cannot be deleted.
-	public static $built_in_post_types = array('post', 'page');
+	/**
+	 * Built-in post-types that can have custom fields, but cannot be deleted.
+	 * 
+	 * @since Unknown
+	 * @param array $built_in_post_types Holds info on WP post types.
+	 */
+	public static $built_in_post_types = array(
+		'post',
+		'page',
+	);
 
 	/**
 	 * Names that are off-limits for custom post types b/c they're already used by WP.
@@ -279,7 +326,7 @@ class CCTM {
 	
 	/**
 	 * Any post-types that WP registers.
-	 * CCTM should ignore (can't have custom fields).
+	 * CCTM should ignore (cannot have custom fields).
 	 * 
 	 * @since Unknown
 	 * @param array $ignored_post_types Wp registered post types.
@@ -340,79 +387,92 @@ class CCTM {
 	 * Warnings are stored as a simple array of text strings, e.g. 'You spilled your coffee!'
 	 * Whether or not they are displayed is determined by checking against the self::$data['warnings']
 	 * array: the text of the warning is hashed and this is used as a key to identify each warning.
+	 * 
+	 * @since Unknown
+	 * @param array $warnings List of warnings
 	 */
 	public static $warnings = array();
 
-
-
-	/*
-	 * used to store some validation errors or serious problems. The errors take this format:
+	/**
+	 * Used to store some validation errors or serious problems. The errors take this format:
 	 * self::$errors['field_name'] = 'Description of error';
+	 * 
+	 * @since Unknown
+	 * @var array $errors Stores validation errors
 	 */
 	public static $errors;
 
-	// Used by the "required" fields and any custom validations on post/page fields.
+	/**
+	 * Used by the "required" fields and any custom validations on post/page fields.
+	 * 
+	 * @since Unknown
+	 * @var array $post_validation_errors List of validation errors
+	 */
 	public static $post_validation_errors;
 
 	/**
 	 * Used for search parameters.
-	 * @param array $search_by
+	 * 
+	 * @since Unknown
+	 * @param array $search_by Search items
 	 */
 	public static $search_by = array();
 
 	/**
 	 * Used by the image, media, relation post-selector.
+	 * 
+	 * @since Unknown
+	 * @param array $post_selector Selector for media
 	 */
 	public static $post_selector = array();
 
-	//! Private Functions
-	//------------------------------------------------------------------------------
-	/**
-	 * Returns a URL to a thumbnail image.  Attempts to create and cache the image;
-	 * we just return the path to the full-sized image if we fail to cache it (which
-	 * is what WP does.
-	 * See See http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=256
-	 * 
-	 * @param array $p post array from WP's get_post ARRAY_A
-	 * @return string	thumbnail_url
-	 */
-	private static function _get_create_thumbnail($p) {
-		// Custom handling of images. 
-		$WIDTH = 32;
-		$HEIGHT = 32;
-		$QUALITY = 100;
+	// Private Functional Items.
 
+	/**
+	 * Get Create Thumbnail.
+	 * Returns a URL to a thumbnail image. Attempts to create and cache the image.
+	 * We just return the path to the full-sized image if we fail to cache it (which is what WP does).
+	 * 
+	 * @see http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=256
+	 * @param array $p post array from WP's get_post ARRAY_A.
+	 * @return string thumbnail_url
+	 */
+	private static function _get_create_thumbnail( $p ) {
+		// Custom handling of images.
+		$width   = 32;
+		$height  = 32;
+		$quality = 100;
 
 		// Base image cache dir: our jumping off point.
-		$cache_dir = CCTM_3P_PATH .'/cache/images/';
-		$info = pathinfo($p['guid']);
-		//$ext = '.'.$info['extension'];
-		$ext = '.jpg';
-		
-		$hash_id = md5($p['guid'].$WIDTH.$HEIGHT.$QUALITY); //
-		//$hash_id = md5(print_r($p,true).$WIDTH.$HEIGHT.$QUALITY); //
-		
-		// atomize our image so we don't overload our directories (shell wildcards)
-		// See http://drupal.org/node/171444 for one example of this common problem
-		$subdir_array = str_split($hash_id);
-		$filename = array_pop($subdir_array); // the last letter
-		$subdir = implode('/', $subdir_array); // e.g. a/b/c/1/5/e
-		// The image location is relative to the cache/images directory
-		$image_location = $subdir.'/'.$filename.$ext; // e.g. a/b/c/1/5/e/f.jpg
-		
-		
-		$thumbnail_path = CCTM_3P_PATH .'/cache/images/'.$image_location;
-		$thumbnail_url = CCTM_3P_URL .'/cache/images/'.$image_location;
+		$cache_dir = CCTM_3P_PATH . '/cache/images/';
+		$info      = pathinfo( $p['guid'] );
+		// $ext    = '.'.$info['extension'];
+		$ext       = '.jpg';
+		$hash_id   = md5( $p['guid'] . $width . $height . $quality );
+		// $hash_id = md5( print_r( $p, true ) . $width . $height . $quality);.
+
+		/* 
+		 * Atomize our image so we don't overload our directories (shell wildcards).
+		 * See http://drupal.org/node/171444 for one example of this common problem.
+		 */
+		$subdir_array   = str_split( $hash_id );
+		$filename       = array_pop( $subdir_array ); // the last letter.
+		$subdir         = implode( '/', $subdir_array ); // e.g. a/b/c/1/5/e.
+		// The image location is relative to the cache/images directory.
+		$image_location = $subdir . '/' . $filename . $ext; // e.g. a/b/c/1/5/e/f.jpg.
+
+		$thumbnail_path = CCTM_3P_PATH . '/cache/images/' . $image_location;
+		$thumbnail_url  = CCTM_3P_URL . '/cache/images/' . $image_location;
 
 
 		// If it's already there, we're done
-		if (file_exists($thumbnail_path)) {
+		if ( file_exists( $thumbnail_path ) ) {
 			return $thumbnail_url;
 		}
 
 
 		// If it's not there, we must create it.
-		if (!file_exists($cache_dir.$subdir) && !mkdir($cache_dir.$subdir, 0777, true)) {
+		if ( ! file_exists( $cache_dir . $subdir ) && ! mkdir( $cache_dir . $subdir, 0777, true) ) {
 
 			// Notify the user
 			CCTM::$errors['could_not_create_cache_dir'] = sprintf(
@@ -431,8 +491,8 @@ class CCTM {
 		require_once(CCTM_PATH.'/includes/CCTM_SimpleImage.php');
 		$image = new CCTM_SimpleImage();
 		$image->load($p['guid']); // You may use the image URL
-		$image->resize($WIDTH, $HEIGHT);
-		if (!$image->save($thumbnail_path, IMAGETYPE_JPEG, $QUALITY)) {
+		$image->resize($width, $height);
+		if (!$image->save($thumbnail_path, IMAGETYPE_JPEG, $quality)) {
 			CCTM::$errors['could_not_create_img'] = sprintf(
 				__('Could not create cached image: %s.', CCTM_TXTDOMAIN)
 				, "<code>$thumbnail_path</code>");

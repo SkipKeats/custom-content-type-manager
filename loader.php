@@ -26,7 +26,7 @@ require_once 'includes/CCTM_FormElement.php';
 require_once 'includes/CCTM_Ajax.php';
 require_once 'includes/functions.php';
 
-CCTM::$Ajax = new CCTM_Ajax();
+CCTM::$ajax = new CCTM_Ajax();
 
 // Load up the textdomain(s) for translations
 CCTM::load_file('/config/lang/dictionaries.php');
@@ -99,15 +99,15 @@ if (empty(CCTM::$errors)) {
 
 				require_once 'includes/CCTM_Columns.php';
 				require_once 'includes/functions.php';
-				CCTM::$Columns = new CCTM_Columns();
-				CCTM::$Columns->post_type = $post_type;
+				CCTM::$columns = new CCTM_Columns();
+				CCTM::$columns->post_type = $post_type;
 
 				// Draw the column headers
-				add_filter("manage_{$post_type}_posts_columns" , array(CCTM::$Columns, $post_type));
+				add_filter("manage_{$post_type}_posts_columns" , array(CCTM::$columns, $post_type));
 
 				// Handle the data in each cell
-				add_action('manage_posts_custom_column', array(CCTM::$Columns, 'populate_custom_column_data'));
-				add_action('manage_pages_custom_column', array(CCTM::$Columns, 'populate_custom_column_data'));
+				add_action('manage_posts_custom_column', array(CCTM::$columns, 'populate_custom_column_data'));
+				add_action('manage_pages_custom_column', array(CCTM::$columns, 'populate_custom_column_data'));
 
 				// Forces custom post types to sort correctly
 				add_filter('posts_orderby', 'CCTM::order_posts');
