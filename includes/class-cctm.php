@@ -2090,7 +2090,7 @@ class CCTM {
 		$object_classname = '';
 		switch ($type) {
 			case 'fields':
-				$object_classname = self::field_prefix . $shortname;
+				$object_classname = self::FIELD_PREFIX . $shortname;
 				break;
 			case 'filters':
 				$object_classname = self::filter_prefix . $shortname;

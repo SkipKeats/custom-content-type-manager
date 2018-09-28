@@ -30,7 +30,7 @@ if (!$FieldObj = CCTM::load_object($field_type,'fields')) {
 // Get the post-types for listing associations.
 $displayable_types = self::get_post_types();
 
-$field_type_name = self::field_prefix.$field_type;
+$field_type_name = self::FIELD_PREFIX.$field_type;
 $FieldObj = new $field_type_name(); // Instantiate the field element
 
 

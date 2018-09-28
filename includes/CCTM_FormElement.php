@@ -138,7 +138,7 @@ abstract class CCTM_FormElement {
 	 */
 	public function __construct() {
 		// instantiate properties
-		$this->props['type'] = preg_replace('/^'. CCTM::field_prefix.'/', '', get_class($this));
+		$this->props['type'] = preg_replace('/^'. CCTM::FIELD_PREFIX.'/', '', get_class($this));
 		$this->props['id_prefix'] = self::css_id_prefix;
 		$this->props['name_prefix'] = self::post_name_prefix;
 		$this->props['add_to_post'] = __('Add to Post', CCTM_TXTDOMAIN);
@@ -731,7 +731,7 @@ abstract class CCTM_FormElement {
 	 */
 	public function get_icon() {
 		$field_type = str_replace(
-			CCTM::field_prefix,
+			CCTM::FIELD_PREFIX,
 			'',
 			get_class($this) );
 		// Default image
