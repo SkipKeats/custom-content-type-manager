@@ -99,7 +99,7 @@ if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_na
 
 	
 	
-		update_option( self::db_key, self::$data );
+		update_option( self::DB_KEY, self::$data );
 		unset($_POST);
 		$success_msg = sprintf('<div class="updated"><p>%s</p></div>'
 			, sprintf(__('A %s custom field has been created.', CCTM_TXTDOMAIN)

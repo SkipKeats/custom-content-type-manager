@@ -171,7 +171,7 @@ $new_data['post_type_defs'] = $data;
 
 
 //print_r($new_data); exit;
-update_option( self::db_key, $new_data ); // stick it in the db
+update_option( self::DB_KEY, $new_data ); // stick it in the db
 self::$data = $new_data; // and stick it in memory just to be sure
 delete_option('custom_content_types_mgr_data'); // legacy pre 0.9.4
 delete_option('custom_content_types_mgr_settings'); // legacy pre 0.9.4

@@ -20,7 +20,7 @@ $defs = CCTM::get_custom_field_defs();
 /*
 unset($defs['status']);
 self::$data['custom_field_defs'] = $defs;
-update_option( self::db_key, self::$data );
+update_option( self::DB_KEY, self::$data );
 exit;
 */
 $def_cnt = count($defs);

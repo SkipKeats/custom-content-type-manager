@@ -25,7 +25,7 @@ if ( defined('WP_UNINSTALL_PLUGIN'))
 		}
 	}
 	
-	delete_option( CCTM::db_key );	
+	delete_option( CCTM::DB_KEY );	
 	delete_option('custom_content_types_mgr_data'); // legacy pre 0.9.4
 	delete_option('custom_content_types_mgr_settings'); // legacy pre 0.9.4
 	global $wp_rewrite;

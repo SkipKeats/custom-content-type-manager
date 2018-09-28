@@ -27,7 +27,7 @@ if (!CCTM_PostTypeDef::is_existing_post_type($post_type, false ) ) {
 // If properly submitted, Proceed with deleting the post type
 if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_name']) ) {
 	unset(self::$data['post_type_defs'][$post_type]); // <-- Delete this node of the data structure
-	update_option( self::db_key, self::$data );
+	update_option( self::DB_KEY, self::$data );
 	
 	// Optionally delete the posts
 	if (isset(self::$data['settings']['delete_posts']) && self::$data['settings']['delete_posts']) {

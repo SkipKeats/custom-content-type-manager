@@ -54,7 +54,7 @@ class CCTM_ImportExport {
 		CCTM::$data['custom_field_defs'] = $data['custom_field_defs'];
 		CCTM::$data['export_info'] = $data['export_info'];
 		
-		update_option(CCTM::db_key, CCTM::$data);
+		update_option(CCTM::DB_KEY, CCTM::$data);
 		
 		return true;
 	}
@@ -470,7 +470,7 @@ class CCTM_ImportExport {
 				$new_data[$post_type]['menu_icon'] = self::make_img_path_abs($new_data[$post_type]['menu_icon']);
 			}
 		}
-		update_option( CCTM::db_key, $new_data );
+		update_option( CCTM::DB_KEY, $new_data );
 	}
 
 

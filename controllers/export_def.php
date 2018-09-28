@@ -42,7 +42,7 @@ if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_na
 
 		// Save the options: anything that's in the form is considered a valid "info" key.
 		self::$data['export_info'] = $sanitized;
-		update_option(self::db_key, self::$data);
+		update_option(self::DB_KEY, self::$data);
 
 		// Fire off a request to download the file:
 		//$data['msg'] .= sprintf('<script type="text/javascript" src="%s"></script>', CCTM_URL.'/js/download_def.js');
@@ -51,7 +51,7 @@ if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_na
 	elseif($_POST['export_type'] == 'to_library') {
 		// Save the options: anything that's in the form is considered a valid "info" key.
 		self::$data['export_info'] = $sanitized;
-		update_option(self::db_key, self::$data);
+		update_option(self::DB_KEY, self::$data);
 		
 		if( CCTM_ImportExport::export_to_local_webserver() ) {
 			$data['msg'] = sprintf('<div class="updated"><p>%s</p></div>'

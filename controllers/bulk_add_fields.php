@@ -147,7 +147,7 @@ if (!empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_nam
             
             $success_msg = sprintf('<div class="updated"><p>%s</p></div>'
                 , __('Your custom fields have been created.', CCTM_TXTDOMAIN));
-    		update_option( self::db_key, self::$data );
+    		update_option( self::DB_KEY, self::$data );
     		unset($_POST);
     		self::set_flash($success_msg);
             include CCTM_PATH.'/controllers/list_custom_fields.php';

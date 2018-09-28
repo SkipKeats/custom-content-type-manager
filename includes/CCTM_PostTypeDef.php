@@ -566,7 +566,7 @@ class CCTM_PostTypeDef {
 			unset(CCTM::$data['post_type_defs'][$key]['menu_icon']);
 		}
 
-		update_option( CCTM::db_key, CCTM::$data );
+		update_option( CCTM::DB_KEY, CCTM::$data );
 		
         // http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=50
 		// https://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=540

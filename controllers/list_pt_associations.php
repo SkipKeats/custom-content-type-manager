@@ -53,7 +53,7 @@ if (!empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_nam
 	}
 	//print_r(self::$data['post_type_defs'][$post_type]['map_field_metabox']); exit;
 	// print '<pre>'.print_r(self::$data,true).'</pre>'; exit;
-	update_option( self::db_key, self::$data );
+	update_option( self::DB_KEY, self::$data );
 	
 	$continue_editing = CCTM::get_value($_POST, 'continue_editing');
 	unset($_POST);

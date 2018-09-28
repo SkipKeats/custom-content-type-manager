@@ -15,7 +15,7 @@ if (isset(self::$data['warnings'])) {
 			self::$data['warnings'][$warning] = time(); // not 0 = read. (timestamped)
 		}
 	}
-	update_option(self::db_key, self::$data);
+	update_option(self::DB_KEY, self::$data);
 	$msg = '<div class="updated"><p>'
 		. __('All warnings have been dismissed.', CCTM_TXTDOMAIN)
 		. '</p></div>';

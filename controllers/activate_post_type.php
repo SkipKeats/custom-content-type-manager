@@ -21,7 +21,7 @@ else {
 	self::$data['post_type_defs'][$post_type]['is_active'] = 1;
 }
 
-update_option( self::db_key, self::$data );
+update_option( self::DB_KEY, self::$data );
 $msg = '
 		<div class="updated">
 			<p>'

@@ -45,7 +45,7 @@ if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_na
 		
 		self::$data['custom_field_defs'][$field_name]['type'] = $new_field_type;
 		
-		update_option( self::db_key, self::$data );
+		update_option( self::DB_KEY, self::$data );
 		$data['msg'] = sprintf('<div class="updated"><p>%s</p></div>'
 				, sprintf(__('The %s custom field has been converted to a %s field.', CCTM_TXTDOMAIN)
 				, '<em>'.$field_name.'</em>', $field_type_str));		

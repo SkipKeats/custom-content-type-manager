@@ -115,7 +115,7 @@ function get_custom_field($raw_fieldname, $options=null) {
 * @return	mixed	Usually a string, but some items are arrays (e.g. options)
 */
 function get_custom_field_meta($fieldname, $item=null) {
-	$data = get_option( CCTM::db_key, array() );
+	$data = get_option( CCTM::DB_KEY, array() );
 	
 	if (isset($data['custom_field_defs'][$fieldname])) {
 		if ($item && isset($data['custom_field_defs'][$fieldname][$item])) {

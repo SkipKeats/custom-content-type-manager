@@ -115,7 +115,7 @@ if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_na
 			}
 		}
 
-		update_option( self::db_key, self::$data );
+		update_option( self::DB_KEY, self::$data );
 		unset($_POST);
 		self::set_flash($success_msg);
 

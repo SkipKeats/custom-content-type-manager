@@ -1061,7 +1061,7 @@ class CCTM {
 						self::$data['cctm_update_timestamp'] = time(); // req's new data structure
 						// store the new version after the update
 						self::$data['cctm_version'] = $this_update_ver; // req's new data structure
-						update_option( self::db_key, self::$data );
+						update_option( self::DB_KEY, self::$data );
 				}
 			}
 
@@ -1070,7 +1070,7 @@ class CCTM {
 			unset(CCTM::$data['warnings']);
 			// Mark the update
 			self::$data['cctm_version'] = self::get_current_version();
-			update_option(self::db_key, self::$data);
+			update_option(self::DB_KEY, self::$data);
 		}
 
 		// If this is empty, then it is a first install, so we timestamp it
@@ -1085,7 +1085,7 @@ class CCTM {
 				'url'    => get_option('siteurl', 'http://wpcctm.com/'),
 				'description' => __('This site was created in part using the Custom Content Type Manager', CCTM_TXTDOMAIN),
 			);
-			update_option(CCTM::db_key, CCTM::$data);
+			update_option(CCTM::DB_KEY, CCTM::$data);
 		}
 	}
 
@@ -1436,7 +1436,7 @@ class CCTM {
 		
 		// write to cache
 		self::$data['cache']['helper_classes'][$type] = $files;
-		update_option(self::db_key, self::$data);
+		update_option(self::DB_KEY, self::$data);
 		
 		return $files;
 
@@ -1506,7 +1506,7 @@ class CCTM {
 		if (isset(self::$data['flash'][$key])) {
 			$output = self::$data['flash'][$key];
 			unset( self::$data['flash'][$key] );
-			update_option(self::db_key, self::$data);
+			update_option(self::DB_KEY, self::$data);
 			return html_entity_decode($output);
 		}
 	}
@@ -1988,7 +1988,7 @@ class CCTM {
 	 * Load CCTM data from database.
 	 */
 	public static function load_data() {
-		self::$data = get_option( CCTM::db_key, array() );
+		self::$data = get_option( CCTM::DB_KEY, array() );
 	}
 
 	//------------------------------------------------------------------------------
@@ -2653,7 +2653,7 @@ class CCTM {
 	public static function register_warning($str) {
 		if (!empty($str) && !isset(self::$data['warnings'][$str])) {
 			self::$data['warnings'][$str] = 0; // 0 = not read.
-			update_option(self::db_key, self::$data);
+			update_option(self::DB_KEY, self::$data);
 		}
 	}
 
@@ -2881,7 +2881,7 @@ class CCTM {
 	 */
 	public static function set_flash($msg) {
 		self::$data['flash'][ self::get_user_identifier() ] = $msg;
-		update_option(self::db_key, self::$data);
+		update_option(self::DB_KEY, self::$data);
 	}
 
 

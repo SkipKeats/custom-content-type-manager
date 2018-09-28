@@ -25,7 +25,7 @@ $submit   		= __('Reset', CCTM_TXTDOMAIN);
 if ( !empty($_POST) && check_admin_referer($action_name, $nonce_name) ) {
 
 	unset(self::$data[$post_type]['custom_fields']); // <-- Delete this node of the data structure
-	update_option( self::db_key, self::$data );
+	update_option( self::DB_KEY, self::$data );
 	$msg = '<div class="updated"><p>'
 		.sprintf( __('All custom field definitions for the %s post type have been deleted', CCTM_TXTDOMAIN), "<em>$post_type</em>")
 		. '</p></div>';

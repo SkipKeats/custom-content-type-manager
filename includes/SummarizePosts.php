@@ -22,7 +22,7 @@ class SummarizePosts {
 	const MYSQL_REQ_VER = '5.5.46';
 
 	// used in the wp_options table
-	const db_key   = 'summarize_posts';
+	const DB_KEY   = 'summarize_posts';
 	const admin_menu_slug  = 'summarize_posts';
 
 

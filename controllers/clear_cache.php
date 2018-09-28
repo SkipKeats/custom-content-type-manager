@@ -30,7 +30,7 @@ if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_na
 	// Clear the cached database components: TODO: dedicated function?
 	unset(CCTM::$data['cache']);
 	unset(CCTM::$data['warnings']);
-	update_option(self::db_key, self::$data);
+	update_option(self::DB_KEY, self::$data);
 
 	if (!$error_flag) {
 

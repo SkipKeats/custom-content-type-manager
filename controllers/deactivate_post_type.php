@@ -42,7 +42,7 @@ if (!isset(self::$data['post_type_defs'][$post_type]['post_type'])) {
 if ( ($is_foreign || $is_built_in) || !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_name']) ) {
 	// get current values from database
 	self::$data['post_type_defs'][$post_type]['is_active'] = 0;
-	update_option( self::db_key, self::$data );
+	update_option( self::DB_KEY, self::$data );
 
 	$data['msg'] = '<div class="updated"><p>'
 		. sprintf( __('The %s content type has been deactivated.', CCTM_TXTDOMAIN), $post_type )

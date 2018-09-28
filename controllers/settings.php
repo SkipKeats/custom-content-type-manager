@@ -42,7 +42,7 @@ if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_na
  	self::$data['settings']['hide_links'] 				= (int) CCTM::get_value($_POST, 'hide_links', 0);	
  	self::$data['settings']['hide_comments'] 			= (int) CCTM::get_value($_POST, 'hide_comments', 0);	
  	
-	update_option( self::db_key, self::$data );
+	update_option( self::DB_KEY, self::$data );
 
 	$data['msg'] = '<div class="updated"><p>'
 		. __('Settings have been updated.', CCTM_TXTDOMAIN )

@@ -149,7 +149,7 @@ if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_na
 		}
 
 		self::$data['custom_field_defs'][ $field_data['name'] ] = $field_data;
-		update_option( self::db_key, self::$data );
+		update_option( self::DB_KEY, self::$data );
 		$continue_editing = CCTM::get_value($_POST, 'continue_editing');
 		unset($_POST);
 		

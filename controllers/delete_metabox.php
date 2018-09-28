@@ -48,7 +48,7 @@ if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_na
 	}
 	self::$data['post_type_defs'] = $defs;
 	
-	update_option( self::db_key, self::$data );
+	update_option( self::DB_KEY, self::$data );
 		
 	$msg = '<div class="updated"><p>'
 		.sprintf( __('The Metabox %s has been deleted', CCTM_TXTDOMAIN), "<em>$id</em>")
