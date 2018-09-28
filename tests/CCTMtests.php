@@ -29,7 +29,7 @@ class CCTMtests {
 		
 		if (!empty($plugin_list)) {
 			$exit_msg = sprintf( __( '%1$s has detected that there are some active plugins that may be incompatible with it. We recommend disabling the following plugins:', CCTM_TXTDOMAIN)
-				, '<strong>'.CCTM::name.'</strong>' );
+				, '<strong>'.CCTM::NAME.'</strong>' );
 			$exit_msg .= '<ul>';
 			foreach ($plugin_list as $p ) {
 				$exit_msg .= '<li><strong>'. $p . '</strong></li>';
@@ -56,7 +56,7 @@ class CCTMtests {
 		if ( version_compare( $result[0]->ver, $ver, '<') ) 
 		{	
 			$exit_msg = sprintf( __( '%1$s requires MySQL %2$s or newer.', CCTM_TXTDOMAIN)
-			, CCTM::name, $ver );
+			, CCTM::NAME, $ver );
 			$exit_msg .= ' ';
 			$exit_msg .= __('Talk to your system administrator about upgrading.', CCTM_TXTDOMAIN);	
 
@@ -70,7 +70,7 @@ class CCTMtests {
 		
 		if (version_compare($wp_version,$ver,'<')) {
 			CCTM::$errors[] = sprintf( __('%1$s requires WordPress %2$s or newer. <a href="http://codex.wordpress.org/Upgrading_WordPress">Please update!</a>', CCTM_TXTDOMAIN)
-			, CCTM::name
+			, CCTM::NAME
 			, $ver );
 		}
 
@@ -81,7 +81,7 @@ class CCTMtests {
 		
 		if ( version_compare( phpversion(), $ver, '<') ) {
 			$exit_msg = sprintf( __('%1$s requires PHP %2$s or newer.', CCTM_TXTDOMAIN )
-				,  CCTM::name
+				,  CCTM::NAME
 				, $ver );
 			$exit_msg .= ' ';	
 			$exit_msg .= __('Talk to your system administrator about upgrading.', CCTM_TXTDOMAIN);	
@@ -127,7 +127,7 @@ class CCTMtests {
 		
 		if (!empty(CCTM::$errors)) {
 			$msg = '<h3>'. sprintf( __('The %s plugin encountered errors! It cannot load!', CCTM_TXTDOMAIN)
-				, CCTM::name) . '</h3>';
+				, CCTM::NAME) . '</h3>';
 			$msg .= '<ul>';
 			foreach (CCTM::$errors as $e) {
 				$msg .= '<li>'.$e.'</li>';

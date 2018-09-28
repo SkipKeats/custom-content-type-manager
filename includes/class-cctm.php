@@ -2491,7 +2491,7 @@ class CCTM {
 				$error_items .= "<li>$e</li>";
 			}
 			$msg = sprintf( __('The %s plugin encountered errors! It cannot load!', CCTM_TXTDOMAIN)
-				, CCTM::name);
+				, CCTM::NAME);
 			printf('<div id="custom-post-type-manager-warning" class="error">
 				<p>
 					<strong>%1$s</strong>
