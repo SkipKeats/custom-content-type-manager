@@ -17,7 +17,7 @@ $data['defs_array'] = array();
 
 // We reference this in a couple places.
 $upload_dir = wp_upload_dir();
-$dir = $upload_dir['basedir'] .'/'.self::base_storage_dir . '/' . self::def_dir;
+$dir = $upload_dir['basedir'] .'/'.self::BASE_STORAGE_DIR . '/' . self::def_dir;
 
 // Check to see if the library directory exists...
 if ( file_exists($dir) && is_dir($dir) ) {

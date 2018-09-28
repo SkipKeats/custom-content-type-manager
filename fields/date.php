@@ -94,7 +94,7 @@ class CCTM_date extends CCTM_FormElement
 	public function get_create_field_instance() {
 
         $upload_dir = wp_upload_dir();
-        $file = $upload_dir['basedir'] .'/'.CCTM::base_storage_dir.'/fields/'.$this->id.'/oncreate.php';
+        $file = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR.'/fields/'.$this->id.'/oncreate.php';
 		if (file_exists($file) ) {
 			$this->default_value = include $file;
 		}

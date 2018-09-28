@@ -18,7 +18,7 @@ $data['cancel_target_url'] = '?page=cctm_tools';
 
 
 $upload_dir = wp_upload_dir();			
-$cache_dir = $upload_dir['basedir'].'/'.CCTM::base_storage_dir .'/cache';
+$cache_dir = $upload_dir['basedir'].'/'.CCTM::BASE_STORAGE_DIR .'/cache';
 
 
 // If properly submitted, Proceed with deleting the cache

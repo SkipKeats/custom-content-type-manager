@@ -84,7 +84,7 @@ class CCTM {
 	const BASE_STORAGE_DIR = 'cctm';
 
 	/**
-	 * Directory relative to wp-content/uploads/{self::base_storage_dir} used to store
+	 * Directory relative to wp-content/uploads/{self::BASE_STORAGE_DIR} used to store
 	 * the `.cctm.json` definition files. Omit the trailing slash.
 	 * 
 	 * @since Unknown
@@ -93,7 +93,7 @@ class CCTM {
 	const DEF_DIR = 'defs';
 
 	/**
-	 * Directory relative to wp-content/uploads/{self::base_storage_dir} used to store
+	 * Directory relative to wp-content/uploads/{self::BASE_STORAGE_DIR} used to store
 	 * any 3rd-party or custom custom field types. Omit the trailing slash.
 	 * 
 	 * @since Unknown
@@ -102,7 +102,7 @@ class CCTM {
 	const CUSTOM_FIELDS_DIR = 'fields';
 
 	/**
-	 * Directory relative to wp-content/uploads/{self::base_storage_dir} used to store
+	 * Directory relative to wp-content/uploads/{self::BASE_STORAGE_DIR} used to store
 	 * formatting templates (tpls). May contain the following sub directories:
 	 * fields, fieldtypes, metaboxes.
 	 *
@@ -112,7 +112,7 @@ class CCTM {
 	const TPLS_DIR = 'tpls';
 
 	/**
-	 * Default permissions for dirs/files created in the base_storage_dir.
+	 * Default permissions for dirs/files created in the BASE_STORAGE_DIR.
 	 * These cannot be more permissive than the system's settings: the system
 	 * will automatically shave them down, e.g., if the system has a global setting
 	 * of 0755, a local setting here of 0770 gets bumped down to 0750.
@@ -1406,7 +1406,7 @@ class CCTM {
 			self::register_warning( __('WordPress issued the following error: ', CCTM_TXTDOMAIN) .$upload_dir['error']);
 		}
 		else {
-			$dir = $upload_dir['basedir'] .'/'.CCTM::base_storage_dir . '/'.$type;
+			$dir = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR . '/'.$type;
 			if (is_dir($dir)) {
 				$rawfiles = scandir($dir);
 				foreach ($rawfiles as $f) {
@@ -2028,7 +2028,7 @@ class CCTM {
 		// Populate the list of directories we will search in order. 
 		$upload_dir = wp_upload_dir();
 		$paths = array();
-		$paths[] = $upload_dir['basedir'] .'/'.CCTM::base_storage_dir;
+		$paths[] = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR;
 		$paths[] = CCTM_PATH;
 		$paths = array_merge($paths, $additional_paths);
 
@@ -2181,7 +2181,7 @@ class CCTM {
 		// Populate the list of directories we will search in order. 
 		$upload_dir = wp_upload_dir();
 		$paths = array();
-		$paths[] = $upload_dir['basedir'] .'/'.CCTM::base_storage_dir.'/tpls';
+		$paths[] = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR.'/tpls';
 		$paths[] = CCTM_PATH.'/tpls';
 		$paths = array_merge($paths, $additional_paths);
 

@@ -83,7 +83,7 @@ class CCTM_hidden extends CCTM_FormElement {
 		$this->id      = str_replace(array('[',']',' '), '_', $this->name);
 
         $upload_dir = wp_upload_dir();
-        $file = $upload_dir['basedir'] .'/'.CCTM::base_storage_dir.'/fields/'.$this->id.'/oncreate.php';
+        $file = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR.'/fields/'.$this->id.'/oncreate.php';
 
 		if (file_exists($file)) {
 			$this->value = include $file;
@@ -118,7 +118,7 @@ class CCTM_hidden extends CCTM_FormElement {
 		$this->id      = $this->name;
 
         $upload_dir = wp_upload_dir();
-        $file = $upload_dir['basedir'] .'/'.CCTM::base_storage_dir.'/fields/'.$this->id.'/onedit.php';
+        $file = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR.'/fields/'.$this->id.'/onedit.php';
 
         if (file_exists($file)) {
             $this->value = include $file;
@@ -197,7 +197,7 @@ class CCTM_hidden extends CCTM_FormElement {
 		if ( isset($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ]) ) {
 
             $upload_dir = wp_upload_dir();
-            $file = $upload_dir['basedir'] .'/'.CCTM::base_storage_dir.'/fields/'.$field_name.'/onsave.php';
+            $file = $upload_dir['basedir'] .'/'.CCTM::BASE_STORAGE_DIR.'/fields/'.$field_name.'/onsave.php';
             if (file_exists($file)) {
 
                 return include $file;
