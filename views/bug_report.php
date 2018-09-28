@@ -6,7 +6,7 @@
 <textarea rows="20" cols="60" class="sample_code_textarea" style="border: 1px solid black;">
 *SYSTEM INFO* <?php print "\n"; ?>
 ------------------------ <?php print "\n"; ?>
-Plugin Version: <?php print CCTM::version; print '-'; print CCTM::version_meta; print "\n"; ?>
+Plugin Version: <?php print CCTM::version; print '-'; print CCTM::VERSION_META; print "\n"; ?>
 WordPress Version: <?php global $wp_version; print $wp_version; print "\n";?>
 PHP Version: <?php print phpversion(); print "\n"; ?>
 MySQL Version: <?php 

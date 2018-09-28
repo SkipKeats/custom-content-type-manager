@@ -1449,7 +1449,7 @@ class CCTM {
 	 * @return string
 	 */
 	public static function get_current_version() {
-		return self::version .'-'. self::version_meta;
+		return self::version .'-'. self::VERSION_META;
 	}
 
 

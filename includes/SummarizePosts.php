@@ -15,7 +15,7 @@ class SummarizePosts {
 	const version   = '0.8';
 	// See http://php.net/manual/en/function.version-compare.php
 	// any string not found in this list < dev < alpha =a < beta = b < RC = rc < # < pl = p
-	const version_meta  = 'dev'; // dev, rc (release candidate), pl (public release)
+	const VERSION_META  = 'dev'; // dev, rc (release candidate), pl (public release)
 
 	const wp_req_ver  = '3.1';
 	const php_req_ver  = '5.2.6';

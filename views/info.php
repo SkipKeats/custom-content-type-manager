@@ -51,7 +51,7 @@ endforeach;
 </div>
 
 <p>
-	<strong>Plugin Version:</strong> <?php print CCTM::version; print '-'; print CCTM::version_meta; ?><br />
+	<strong>Plugin Version:</strong> <?php print CCTM::VERSION; print '-'; print CCTM::VERSION_META; ?><br />
 	<strong>WordPress Version:</strong> <?php global $wp_version; print $wp_version; ?><br />
 	<strong>PHP Version:</strong> <?php print phpversion(); ?><br />
 	<strong>MySQL Version:</strong> <?php 
