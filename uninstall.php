@@ -18,8 +18,8 @@ if ( defined('WP_UNINSTALL_PLUGIN'))
 	foreach ( $available_custom_field_files as $shortname => $file ) {
 
 		include_once($file);
-		if (class_exists(CCTM::filter_prefix.$shortname)){
-			$field_type_name = CCTM::filter_prefix.$shortname;
+		if (class_exists(CCTM::FILTER_PREFIX.$shortname)){
+			$field_type_name = CCTM::FILTER_PREFIX.$shortname;
 			$FieldObj = new $field_type_name();
 			$FieldObj->uninstall();
 		}

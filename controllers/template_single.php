@@ -131,7 +131,7 @@ if ( isset(self::$data['post_type_defs'][$post_type]['custom_fields'])
 			$filter_class = '';
 			if (!empty($filter)) {
 			
-				$filter_class = CCTM::filter_prefix.$filter;
+				$filter_class = CCTM::FILTER_PREFIX.$filter;
 				if (!class_exists($filter_class)) {
 					$filter_included = CCTM::load_file("/filters/$filter.php");
 				}

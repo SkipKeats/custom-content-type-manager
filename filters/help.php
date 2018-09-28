@@ -60,7 +60,7 @@ class CCTM_help extends CCTM_OutputFilter {
 			//if( CCTM::include_output_filter_class($filter) ) {
 			if($Obj = CCTM::load_object($filter,'filters')) {
 /*
-				$filter_name = CCTM::filter_prefix . $filter;
+				$filter_name = CCTM::FILTER_PREFIX . $filter;
 				$Obj = new $filter_name();
 */
 				

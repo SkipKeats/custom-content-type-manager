@@ -89,9 +89,9 @@ $flag = false;
 foreach ( $element_files as $shortname => $file ) {
 	require_once($file);
 
-	if ( class_exists(CCTM::filter_prefix.$shortname) ) {
+	if ( class_exists(CCTM::FILTER_PREFIX.$shortname) ) {
 		$d = array();
-		$field_type_name = CCTM::filter_prefix.$shortname;
+		$field_type_name = CCTM::FILTER_PREFIX.$shortname;
 		$FieldObj = new $field_type_name();
 		
 		if ($FieldObj->get_settings_page() ) {

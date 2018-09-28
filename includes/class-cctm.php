@@ -165,7 +165,7 @@ class CCTM {
 	 */
 	public static $default_post_type_def = array(
 		'supports'   => array(
-    		'title', 'editor',
+			'title', 'editor',
 		),
 		'taxonomies' => array(),
 		'post_type'  => '',
@@ -216,28 +216,28 @@ class CCTM {
 	);
 
 	/**
-     * List default global settings here. 
-     * 
-     * @see controllers/settings.php
+	 * List default global settings here. 
+	 * 
+	 * @see controllers/settings.php
 	 */
 	public static $default_settings = array(
-        'delete_posts'            => 0,
-        'delete_custom_fields'    => 0,
-        'add_custom_fields'       => 0,
-        'show_custom_fields_menu' => 1,
-        'show_settings_menu'      => 1,
-        'show_foreign_post_types' => 1,
-        'cache_directory_scans'   => 1,
-        'cache_thumbnail_images'  => 0,
-        'save_empty_fields'       => 1,
-        'summarizeposts_tinymce'  => 1,
-        'custom_fields_tinymce'   => 1,
-        'pages_in_rss_feed'       => 0,
-        'enable_right_now'	      => 1,
-        'hide_posts'              => 0,
-        'hide_pages'	          => 0,
-        'hide_links'	          => 0,
-        'hide_comments'           => 0,
+		'delete_posts'            => 0,
+		'delete_custom_fields'    => 0,
+		'add_custom_fields'       => 0,
+		'show_custom_fields_menu' => 1,
+		'show_settings_menu'      => 1,
+		'show_foreign_post_types' => 1,
+		'cache_directory_scans'   => 1,
+		'cache_thumbnail_images'  => 0,
+		'save_empty_fields'       => 1,
+		'summarizeposts_tinymce'  => 1,
+		'custom_fields_tinymce'   => 1,
+		'pages_in_rss_feed'       => 0,
+		'enable_right_now'	      => 1,
+		'hide_posts'              => 0,
+		'hide_pages'	          => 0,
+		'hide_links'	          => 0,
+		'hide_comments'           => 0,
 	);
 
 	// Default metabox definition.
@@ -260,81 +260,81 @@ class CCTM {
 	public static $built_in_post_types = array('post', 'page');
 
 	/**
-     * Names that are off-limits for custom post types b/c they're already used by WP.
+	 * Names that are off-limits for custom post types b/c they're already used by WP.
 	 * Re: "preview" 
-     * @see http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=321
-     * @since Unknown
-     * @param array $reserved_post_types WP reserved types.
-     */
+	 * @see http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=321
+	 * @since Unknown
+	 * @param array $reserved_post_types WP reserved types.
+	 */
 	public static $reserved_post_types = array(
-        'post',
-        'page',
-        'attachment',
-        'revision',
-        'nav_menu',
-        'nav_menu_item',
-        'preview',
-        'portfolio',
-    );
+		'post',
+		'page',
+		'attachment',
+		'revision',
+		'nav_menu',
+		'nav_menu_item',
+		'preview',
+		'portfolio',
+	);
 	
 	/**
-     * Any post-types that WP registers.
-     * CCTM should ignore (can't have custom fields).
-     * 
-     * @since Unknown
-     * @param array $ignored_post_types Wp registered post types.
-     */
+	 * Any post-types that WP registers.
+	 * CCTM should ignore (can't have custom fields).
+	 * 
+	 * @since Unknown
+	 * @param array $ignored_post_types Wp registered post types.
+	 */
 	public static $ignored_post_types = array(
-        'attachment',
-        'revision',
-        'nav_menu',
-        'nav_menu_item',
-    );
+		'attachment',
+		'revision',
+		'nav_menu',
+		'nav_menu_item',
+	);
 
 	/**
-     * Custom field names are not allowed to use the same names as any column in wp_posts.
-     * Checked column names and confirms non-use.
-     * 
-     * @since Unknown
-     * @param array $reserved_field_names Verifies column name is free.
-     */
+	 * Custom field names are not allowed to use the same names as any column in wp_posts.
+	 * Checked column names and confirms non-use.
+	 * 
+	 * @since Unknown
+	 * @param array $reserved_field_names Verifies column name is free.
+	 */
 	public static $reserved_field_names = array(
-        'ID',
-        'post_author',
-        'post_date',
-        'post_date_gmt',
-        'post_content',
-        'post_title',
-        'post_excerpt',
-        'post_status',
-        'comment_status',
-        'ping_status',
-        'post_password',
-        'post_name',
-        'to_ping',
-        'pinged',
-        'post_modified',
-        'post_modified_gmt',
-        'post_content_filtered',
-        'post_parent',
-        'guid',
-        'menu_order',
-        'post_type',
-        'post_mime_type',
-        'comment_count',
-    );
+		'ID',
+		'post_author',
+		'post_date',
+		'post_date_gmt',
+		'post_content',
+		'post_title',
+		'post_excerpt',
+		'post_status',
+		'comment_status',
+		'ping_status',
+		'post_password',
+		'post_name',
+		'to_ping',
+		'pinged',
+		'post_modified',
+		'post_modified_gmt',
+		'post_content_filtered',
+		'post_parent',
+		'guid',
+		'menu_order',
+		'post_type',
+		'post_mime_type',
+		'comment_count',
+	);
 
-    /**
-     * Future-proofing: post-type names cannot begin with 'wp_'
+	/**
+	 * Future-proofing: post-type names cannot begin with 'wp_'
 	 * See: http://codex.wordpress.org/Custom_Post_Types
 	 * FUTURE: List any other reserved prefixes here (if any).
-     * 
-     * @since Unknown
-     * @param array $reserved_prefixes Future
-     */
+	 * 
+	 * @since Unknown
+	 * @param array $reserved_prefixes Future
+	 */
 	public static $reserved_prefixes = array(
-        'wp_',
-    );
+		'wp_',
+	);
 
 	/**
 	 * Warnings are stored as a simple array of text strings, e.g. 'You spilled your coffee!'
@@ -356,7 +356,7 @@ class CCTM {
 
 	/**
 	 * Used for search parameters.
-     * @param array $search_by
+	 * @param array $search_by
 	 */
 	public static $search_by = array();
 
@@ -1185,7 +1185,7 @@ class CCTM {
 	 */
 	public static function filter($value, $outputfilter, $options=null) {
 	
-		$filter_class = CCTM::filter_prefix.$outputfilter;
+		$filter_class = CCTM::FILTER_PREFIX.$outputfilter;
 
 		require_once CCTM_PATH.'/includes/CCTM_OutputFilter.php';
 		
@@ -2093,7 +2093,7 @@ class CCTM {
 				$object_classname = self::FIELD_PREFIX . $shortname;
 				break;
 			case 'filters':
-				$object_classname = self::filter_prefix . $shortname;
+				$object_classname = self::FILTER_PREFIX . $shortname;
 				break;
 			case 'validators':
 				$object_classname = self::validator_prefix . $shortname;

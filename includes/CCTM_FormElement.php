@@ -311,7 +311,7 @@ abstract class CCTM_FormElement {
 		
 			require_once($filename);
 			
-			$classname = CCTM::filter_prefix . $filter;
+			$classname = CCTM::FILTER_PREFIX . $filter;
 		
 			$Obj = new $classname();
 
