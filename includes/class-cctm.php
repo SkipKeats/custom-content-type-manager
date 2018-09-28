@@ -2096,7 +2096,7 @@ class CCTM {
 				$object_classname = self::FILTER_PREFIX . $shortname;
 				break;
 			case 'validators':
-				$object_classname = self::validator_prefix . $shortname;
+				$object_classname = self::VALIDATOR_PREFIX . $shortname;
 				break;
 		}
 		
