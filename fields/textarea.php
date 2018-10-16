@@ -4,11 +4,11 @@
  *
  * Implements an HTML textarea input.
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
 
 
-class CCTM_textarea extends CCTM_FormElement
+class CCTM_textarea extends CCTM_Form_Element
 {
 
 	public $props = array(

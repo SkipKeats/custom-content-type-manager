@@ -22,8 +22,8 @@ require_once 'includes/GetPostsQuery.php';
 require_once 'includes/SummarizePosts_Widget.php';
 require_once 'includes/CCTM_Post_Widget.php';
 require_once 'includes/StandardizedCustomFields.php';
-require_once 'includes/CCTM_FormElement.php';
-require_once 'includes/CCTM_Ajax.php';
+require_once 'includes/class-cctm-form-element.php';
+require_once 'includes/class-cctm-ajax.php';
 require_once 'includes/functions.php';
 
 CCTM::$Ajax = new CCTM_Ajax();
@@ -97,7 +97,7 @@ if (empty(CCTM::$errors)) {
 				&& isset(CCTM::$data['post_type_defs'][$post_type]['cctm_custom_columns'])
 				&& !empty(CCTM::$data['post_type_defs'][$post_type]['cctm_custom_columns']) ) {
 
-				require_once 'includes/CCTM_Columns.php';
+				require_once 'includes/class-cctm-columns.php';
 				require_once 'includes/functions.php';
 				CCTM::$Columns = new CCTM_Columns();
 				CCTM::$Columns->post_type = $post_type;

@@ -14,7 +14,7 @@ if (isset($GLOBALS['wp_post_types'][$post_type]->cap->edit_posts)) {
 }
 if (!current_user_can($cap)) die('<pre>You do not have permission to do that.</pre>');
 
-require_once(CCTM_PATH.'/includes/CCTM_FormElement.php');
+require_once(CCTM_PATH.'/includes/class-cctm-form-element.php');
 
 $d = array(); // <-- Template Variables
 
@@ -24,7 +24,7 @@ if (empty($raw_fieldname)) {
 	print '<p>'.sprintf(__('Invalid fieldname: %s', CCTM_TXTDOMAIN), '<em>'. htmlspecialchars($raw_fieldname).'</em>') .'</p>';
 	return;
 }
-$fieldname = preg_replace('/^'. CCTM_FormElement::css_id_prefix . '/', '', $raw_fieldname);
+$fieldname = preg_replace('/^'. CCTM_Form_Element::css_id_prefix . '/', '', $raw_fieldname);
 
 $def = CCTM::get_value(CCTM::$data['custom_field_defs'], $fieldname);
 if (empty($def)) {

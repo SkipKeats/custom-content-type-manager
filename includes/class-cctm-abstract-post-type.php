@@ -1,18 +1,18 @@
 <?php
 /**
- * This class acts as an alias/pass-thru to the CCTM_DefaultPostType class or any
+ * This class acts as an alias/pass-thru to the CCTM_Default_Post_Type class or any
  * optional overrides.  We require a point of abstraction here so we can
  * allow for optional overriding of the default classes and their behaviors.
  *
  * Developers can specify programmatically behavior for each post-type by creating 
  * a file/class named after each post-type, e.g.
  * 		CCTM_my_post_type.php
- *		class CCTM_my_post_type extends CCTM_DefaultPostType { }
+ *		class CCTM_my_post_type extends CCTM_Default_Post_Type { }
  *
  * OR they can globally override the default behavior globally for all post-types
  * by implementing the follwing file/class:
  *		CCTM_AllPostTypes.php
- *		class CCTM_AllPostTypes extends CCTM_DefaultPostType { }
+ *		class CCTM_AllPostTypes extends CCTM_Default_Post_Type { }
  *
  * AND devlopers could do both: globally override all default behavior and possibly
  * further override behavior based on post-type by doing both the above.
@@ -23,7 +23,7 @@
  * http://www.phppatterns.com/docs/develop/php_and_variable_references
  * http://weierophinney.net/matthew/archives/131-Overloading-arrays-in-PHP-5.2.0.html
  */
-class CCTM_AbstractPostType
+class CCTM_Abstract_Post_Type
 {
 
 	private $_Instance;
@@ -41,9 +41,9 @@ class CCTM_AbstractPostType
 	public function __construct($post_type)
 	{
 		// include the parent base class (i.e. the default)
-		include_once(CCTM_PATH.'/includes/CCTM_DefaultPostType.php');
+		include_once(CCTM_PATH.'/includes/class-cctm-default-post-type.php');
 		
-		// Check for an override for the entire CCTM_DefaultPostType.php, named CCTM_AllPostTypes
+		// Check for an override for the entire class-cctm-default-post-type.php, named CCTM_AllPostTypes
 		$override = CCTM_PATH."/addons/CCTM_AllPostTypes.php";
 		if ( file_exists($override) ) 
 		{

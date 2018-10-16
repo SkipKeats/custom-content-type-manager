@@ -21,11 +21,11 @@
  * Usually the forms to create and edit a definition or element are the same, but if needed,
  * there are separate functions to create and edit a definition or value.
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
 
 
-abstract class CCTM_FormElement {
+abstract class CCTM_Form_Element {
 
 	/**
 	 * The $props array acts as a template which defines the properties for each 
@@ -33,7 +33,7 @@ abstract class CCTM_FormElement {
 	 * structure is stored in the array of custom_fields (in CCTM::$data['custom_field_defs']).
 	 *
 	 * Some properties are required of all fields, some are automatically generated (see below), 
-	 * but each type of custom field (i.e. each class that extends CCTM_FormElement) can have 
+	 * but each type of custom field (i.e. each class that extends CCTM_Form_Element) can have 
 	 * whatever properties it needs in order to work, e.g. a dropdown field uses an 'options' 
 	 * property to define a list of possible values.
 	 *
@@ -63,7 +63,7 @@ abstract class CCTM_FormElement {
 	 * The $props array acts as a template which defines the properties for each instance of this type of field.
 	 * When a custom field is created, an instance of this data structure is stored in the array of custom_fields_defs.
 	 * Some properties are required of all fields (see below), some are automatically generated (e.g. 'type'), but
-	 * each type of custom field (i.e. each class that extends CCTM_FormElement) can have whatever properties it needs
+	 * each type of custom field (i.e. each class that extends CCTM_Form_Element) can have whatever properties it needs
 	 * in order to work, e.g. a dropdown field uses an 'options' property to define a list of possible values.
 	 *
 	 * Below is a sample array that most fields will utilize.
@@ -807,9 +807,9 @@ abstract class CCTM_FormElement {
 	 * Output should be whatever string value you want to store in the wp_postmeta table
 	 * for the post and field in question. Default behavior is to simply trim the values.
 	 *
-	 * Note that the field name in the $_POST array is prefixed with CCTM_FormElement::post_name_prefix,
+	 * Note that the field name in the $_POST array is prefixed with CCTM_Form_Element::post_name_prefix,
 	 * e.g. the value for you 'my_field' custom field is stored in $_POST['cctm_my_field']
-	 * (where CCTM_FormElement::post_name_prefix = 'cctm_'). This is done to avoid name
+	 * (where CCTM_Form_Element::post_name_prefix = 'cctm_'). This is done to avoid name
 	 * collisions in the $_POST array.
 	 *
 	 * @param mixed   $posted_data $_POST data
@@ -820,26 +820,26 @@ abstract class CCTM_FormElement {
 	
 		global $wp_version;
 	
-		if ( isset($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ]) ) {
+		if ( isset($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ]) ) {
 
 			// is_array is equivalent to "is_repeatable"
-			if (is_array($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ])) {
-				foreach($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ] as &$f) {
+			if (is_array($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ])) {
+				foreach($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ] as &$f) {
 					$f = stripslashes(trim($f));
 				}
 				// This is what preserves the foreign characters while they traverse the json and WP gauntlet
 				// (yes, seriously we have to doubleslash it when we create a new post in versions
 				// of WP prior to 3.3!!!)
 				if (isset($posted_data['_cctm_is_create']) && version_compare($wp_version,'3.3','<')) {
-					return addslashes(addslashes(json_encode($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ])));
+					return addslashes(addslashes(json_encode($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ])));
 				}
 				else {
-					return addslashes(json_encode($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ]));
+					return addslashes(json_encode($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ]));
 				}				
 			}
 			// Normal single field
 			else{
-				return stripslashes(trim($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ]));
+				return stripslashes(trim($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ]));
 			}
 		}
 		else {
@@ -980,4 +980,4 @@ abstract class CCTM_FormElement {
 }
 
 
-/*EOF CCTM_FormElement.php */
+/*EOF class-cctm-form-element.php */

@@ -6,11 +6,11 @@
  * edit a value on the form instead of relying on the user to edit it.
  * Hidden fields are not repeatable, and they do not use a wrapper tpl (no point, really)
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
 
 
-class CCTM_hidden extends CCTM_FormElement {
+class CCTM_hidden extends CCTM_Form_Element {
 
 	public $props = array(
 		'label' => '',
@@ -194,7 +194,7 @@ class CCTM_hidden extends CCTM_FormElement {
 	
 		global $wp_version;
 
-		if ( isset($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ]) ) {
+		if ( isset($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ]) ) {
 
             $upload_dir = wp_upload_dir();
             $file = $upload_dir['basedir'] .'/'.CCTM::base_storage_dir.'/fields/'.$field_name.'/onsave.php';
@@ -203,7 +203,7 @@ class CCTM_hidden extends CCTM_FormElement {
                 return include $file;
             }
             else {
-                return stripslashes(trim($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ]));
+                return stripslashes(trim($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ]));
             }
 		}
 		else {

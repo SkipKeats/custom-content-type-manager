@@ -4,11 +4,11 @@
  *
  * Implements a simple HTML text input.
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
 
 
-class CCTM_text extends CCTM_FormElement
+class CCTM_text extends CCTM_Form_Element
 {
 
 	public $props = array(

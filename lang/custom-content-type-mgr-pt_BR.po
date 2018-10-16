@@ -24,7 +24,7 @@ msgstr "Função"
 
 #: ../index.php:84 ../fields/colorselector.php:87 ../fields/image.php:95
 #: ../fields/media.php:94 ../fields/relation.php:99
-#: ../fields/relationmeta.php:119 ../includes/CCTM_FormElement.php:356
+#: ../fields/relationmeta.php:119 ../includes/class-cctm-form-element.php:356
 msgid "Class"
 msgstr "Classe"
 
@@ -77,17 +77,17 @@ msgstr "Mãe"
 msgid "Post Type"
 msgstr "Tipo de Post"
 
-#: ../ajax-controllers/get_posts.php:213 ../includes/CCTM_FormElement.php:142
+#: ../ajax-controllers/get_posts.php:213 ../includes/class-cctm-form-element.php:142
 msgid "Add to Post"
 msgstr "Adicionar ao Post"
 
-#: ../ajax-controllers/get_posts.php:214 ../includes/CCTM_FormElement.php:143
+#: ../ajax-controllers/get_posts.php:214 ../includes/class-cctm-form-element.php:143
 msgid "Add to Post and Close"
 msgstr "Adicionar ao Post e fechar"
 
 #: ../ajax-controllers/get_posts.php:226
 #: ../ajax-controllers/post_content_widget.php:169 ../includes/CCTM.php:1512
-#: ../includes/CCTM.php:1540 ../includes/CCTM_FormElement.php:144
+#: ../includes/CCTM.php:1540 ../includes/class-cctm-form-element.php:144
 #: ../views/import.php:69 ../views/import.php:111
 msgid "Preview"
 msgstr "Pré visualizar"
@@ -905,7 +905,7 @@ msgstr "Editar este Campo Personalizado"
 #: ../controllers/list_post_types.php:40
 #: ../controllers/list_pt_associations.php:143
 #: ../controllers/list_pt_associations.php:203
-#: ../includes/CCTM_Columns.php:151 ../includes/CCTM_FormElement.php:145
+#: ../includes/class-cctm-columns.php:151 ../includes/class-cctm-form-element.php:145
 #: ../includes/CCTM_PostTypeDef.php:504 ../views/metabox-holder.php:8
 msgid "Edit"
 msgstr "Editar"
@@ -1271,7 +1271,7 @@ msgstr "Marcada por padrão?"
 
 #: ../fields/checkbox.php:194 ../fields/checkbox.php:197
 #: ../fields/colorselector.php:240 ../fields/date.php:348
-#: ../fields/text.php:167 ../includes/CCTM_FormElement.php:704
+#: ../fields/text.php:167 ../includes/class-cctm-form-element.php:704
 msgid "default"
 msgstr "padrão"
 
@@ -1285,19 +1285,19 @@ msgstr "Desmarcada"
 
 #: ../fields/colorselector.php:47 ../fields/image.php:55
 #: ../fields/media.php:54 ../fields/relation.php:59
-#: ../fields/relationmeta.php:79 ../includes/CCTM_FormElement.php:316
+#: ../fields/relationmeta.php:79 ../includes/class-cctm-form-element.php:316
 msgid "Standard Fields"
 msgstr "Campos padrão"
 
 #: ../fields/colorselector.php:53 ../fields/image.php:61
 #: ../fields/media.php:60 ../fields/relation.php:65
-#: ../fields/relationmeta.php:85 ../includes/CCTM_FormElement.php:322
+#: ../fields/relationmeta.php:85 ../includes/class-cctm-form-element.php:322
 msgid "Label"
 msgstr "Rótulo"
 
 #: ../fields/colorselector.php:60 ../fields/image.php:68
 #: ../fields/media.php:67 ../fields/relation.php:72
-#: ../fields/relationmeta.php:92 ../includes/CCTM_FormElement.php:329
+#: ../fields/relationmeta.php:92 ../includes/class-cctm-form-element.php:329
 msgid "Name"
 msgstr "Nome"
 
@@ -1305,25 +1305,25 @@ msgstr "Nome"
 #: ../fields/image.php:311 ../fields/media.php:76 ../fields/media.php:315
 #: ../fields/relation.php:81 ../fields/relation.php:314
 #: ../fields/relationmeta.php:101 ../fields/relationmeta.php:352
-#: ../includes/CCTM_FormElement.php:338
+#: ../includes/class-cctm-form-element.php:338
 msgid "Default Value"
 msgstr "Valor padrão"
 
 #: ../fields/colorselector.php:78 ../fields/image.php:86
 #: ../fields/media.php:85 ../fields/relation.php:90
-#: ../fields/relationmeta.php:110 ../includes/CCTM_FormElement.php:347
+#: ../fields/relationmeta.php:110 ../includes/class-cctm-form-element.php:347
 msgid "Extra"
 msgstr "Extra"
 
 #: ../fields/colorselector.php:97 ../fields/image.php:105
 #: ../fields/media.php:104 ../fields/relation.php:109
-#: ../fields/relationmeta.php:129 ../includes/CCTM_FormElement.php:366
+#: ../fields/relationmeta.php:129 ../includes/class-cctm-form-element.php:366
 msgid "Is Repeatable?"
 msgstr "É repetível?"
 
 #: ../fields/colorselector.php:107 ../fields/image.php:115
 #: ../fields/media.php:114 ../fields/relation.php:119
-#: ../fields/relationmeta.php:139 ../includes/CCTM_FormElement.php:376
+#: ../fields/relationmeta.php:139 ../includes/class-cctm-form-element.php:376
 #: ../views/export.php:27 ../views/list_custom_fields.php:8
 #: ../views/list_custom_fields.php:18 ../views/list_post_types.php:5
 #: ../views/list_post_types.php:12 ../views/post_type.php:168
@@ -2068,7 +2068,7 @@ msgstr ""
 "usá-lo para substituir o filtro de saída padrão para qualquer campo "
 "personalizado."
 
-#: ../filters/raw.php:61 ../includes/CCTM_FormElement.php:431
+#: ../filters/raw.php:61 ../includes/class-cctm-form-element.php:431
 msgid "None"
 msgstr "Nenhum"
 
@@ -2371,35 +2371,35 @@ msgstr "Dispensar Avisos"
 msgid "The Custom Content Type Manager encountered the following warnings:"
 msgstr "The Custom Content Type Manager encontrou as seguintes advertências:"
 
-#: ../includes/CCTM_Ajax.php:55 ../includes/CCTM_Ajax.php:56
+#: ../includes/class-cctm-ajax.php:55 ../includes/class-cctm-ajax.php:56
 #, php-format
 msgid "Invalid Ajax controller: %s"
 msgstr "Inválido controlador Ajax: %s"
 
-#: ../includes/CCTM_Ajax.php:61 ../includes/CCTM_Ajax.php:62
+#: ../includes/class-cctm-ajax.php:61 ../includes/class-cctm-ajax.php:62
 #, php-format
 msgid "Invalid nonce for %s"
 msgstr "Nonce inválido para %s"
 
-#: ../includes/CCTM_Columns.php:76 ../includes/CCTM_PostTypeDef.php:23
+#: ../includes/class-cctm-columns.php:76 ../includes/CCTM_PostTypeDef.php:23
 #: ../includes/GetPostsForm.php:352 ../views/export.php:17
 #: ../views/post_type.php:353 ../views/preview_def.php:12
 msgid "Author"
 msgstr "Autor"
 
-#: ../includes/CCTM_Columns.php:152
+#: ../includes/class-cctm-columns.php:152
 msgid "Quick Edit"
 msgstr "Edição Rápida"
 
-#: ../includes/CCTM_Columns.php:152
+#: ../includes/class-cctm-columns.php:152
 msgid "Trash"
 msgstr "Lixo"
 
-#: ../includes/CCTM_Columns.php:152 ../includes/CCTM_PostTypeDef.php:510
+#: ../includes/class-cctm-columns.php:152 ../includes/CCTM_PostTypeDef.php:510
 msgid "View"
 msgstr "Ver"
 
-#: ../includes/CCTM_FormElement.php:148
+#: ../includes/class-cctm-form-element.php:148
 msgid ""
 "How should the button be labeled? (Users will click this button to select "
 "the image, media, or relation)."
@@ -2407,7 +2407,7 @@ msgstr ""
 "Como o botão deve ser rotulado. (Os usuários irão clicar nesse botão para "
 "selecionar a imagem, mídia ou relação)."
 
-#: ../includes/CCTM_FormElement.php:149
+#: ../includes/class-cctm-form-element.php:149
 msgid ""
 "Add a CSS class to instances of this field. Use this to customize styling in "
 "the WP manager."
@@ -2415,12 +2415,12 @@ msgstr ""
 "Adicione uma classe CSS para instâncias desse campo. Use-o para personalizar "
 "styling no gerenciador de WP."
 
-#: ../includes/CCTM_FormElement.php:150
+#: ../includes/class-cctm-form-element.php:150
 msgid "Any extra attributes for this text field, e.g. <code>size=\"10\"</code>"
 msgstr ""
 "Any extra attributes for this text field, e.g. <code>size=\"10\"</code>"
 
-#: ../includes/CCTM_FormElement.php:151
+#: ../includes/class-cctm-form-element.php:151
 msgid ""
 "The default option will appear selected. Make sure it matches a defined "
 "option."
@@ -2428,12 +2428,12 @@ msgstr ""
 "A opção padrão aparecerá selecionado. Certifique-se que corresponde a uma "
 "opção definida."
 
-#: ../includes/CCTM_FormElement.php:152
+#: ../includes/class-cctm-form-element.php:152
 msgid "The default value is presented to users when a new post is created."
 msgstr ""
 "O valor padrão é apresentado aos usuários quando uma nova post é criado."
 
-#: ../includes/CCTM_FormElement.php:153
+#: ../includes/class-cctm-form-element.php:153
 msgid ""
 "The description is visible when you view all custom fields or when you use "
 "the <code>get_custom_field_meta()</code> function."
@@ -2441,11 +2441,11 @@ msgstr ""
 "The description is visible when you view all custom fields or when you use "
 "the <code>get_custom_field_meta()</code> function."
 
-#: ../includes/CCTM_FormElement.php:154
+#: ../includes/class-cctm-form-element.php:154
 msgid "The following html tags are allowed:"
 msgstr "As seguintes tags HTML são permitidas:"
 
-#: ../includes/CCTM_FormElement.php:156
+#: ../includes/class-cctm-form-element.php:156
 msgid ""
 "You can check this box if you want to enter a bit of PHP code into the "
 "default value field."
@@ -2453,7 +2453,7 @@ msgstr ""
 "Você pode verificar esta caixa se você quiser entrar com um pouco de código "
 "PHP no campo valor padrão."
 
-#: ../includes/CCTM_FormElement.php:158
+#: ../includes/class-cctm-form-element.php:158
 msgid ""
 "The label is displayed when users create or edit posts that use this custom "
 "field."
@@ -2461,7 +2461,7 @@ msgstr ""
 "O rótulo é exibido quando os usuários criarem ou editarem posts que utilizem "
 "este Campo Personalizado."
 
-#: ../includes/CCTM_FormElement.php:159
+#: ../includes/class-cctm-form-element.php:159
 msgid ""
 "The name identifies the meta_key in the wp_postmeta database table. The name "
 "should contain only letters, numbers, and underscores. You will use this "
@@ -2471,7 +2471,7 @@ msgstr ""
 "nome deve conter apenas letras, números e sublinhados. Você vai usar esse "
 "nome em suas funções de modelo para identificar este Campo Personalizado."
 
-#: ../includes/CCTM_FormElement.php:161
+#: ../includes/class-cctm-form-element.php:161
 msgid ""
 "WARNING: if you change the field name, you will have to update any functions "
 "that reference this field by name, e.g. <code>get_custom_field()</code>, "
@@ -2481,7 +2481,7 @@ msgstr ""
 "that reference this field by name, e.g. <code>get_custom_field()</code>, "
 "<code>print_custom_field()</code>,  or any search criteria."
 
-#: ../includes/CCTM_FormElement.php:163
+#: ../includes/class-cctm-form-element.php:163
 msgid ""
 "If selected, the user will be able to enter multiple instances of this "
 "field, e.g. multiple images. Your templates will need to handle formatting "
@@ -2493,7 +2493,7 @@ msgstr ""
 "armazenar uma array de valores, assim você terá que usar o filtro de saída "
 "\"to_array \", mesmo que você use somente uma instância do campo."
 
-#: ../includes/CCTM_FormElement.php:164
+#: ../includes/class-cctm-form-element.php:164
 msgid ""
 "If checked, users must add a value to this field before the page can be "
 "published."
@@ -2501,29 +2501,29 @@ msgstr ""
 "Se marcada, os usuários devem adicionar um valor para esse campo antes que a "
 "página possa ser publicado."
 
-#: ../includes/CCTM_FormElement.php:165
+#: ../includes/class-cctm-form-element.php:165
 msgid ""
 "What value should be stored in the database when this checkbox is checked?"
 msgstr ""
 "Que valor deve ser armazenado no banco de dados quando esta opção for "
 "assinalada?"
 
-#: ../includes/CCTM_FormElement.php:166
+#: ../includes/class-cctm-form-element.php:166
 msgid ""
 "What value should be stored in the database when this checkbox is unchecked?"
 msgstr ""
 "Que valor deve ser armazenado no banco de dados quando esta opção está "
 "desmarcada?"
 
-#: ../includes/CCTM_FormElement.php:167
+#: ../includes/class-cctm-form-element.php:167
 msgid "Should this field be checked by default?"
 msgstr "Este campo deve estar marcada por padrão?"
 
-#: ../includes/CCTM_FormElement.php:168
+#: ../includes/class-cctm-form-element.php:168
 msgid "How should values be displayed in your theme files?"
 msgstr "Como devem ser exibidos os valores em seus arquivos de tema?"
 
-#: ../includes/CCTM_FormElement.php:169
+#: ../includes/class-cctm-form-element.php:169
 msgid ""
 "Check this to make the stored values distinct from the options displayed to "
 "the user, e.g. Option:\"Red\", Stored Value:\"#ff0000;\""
@@ -2531,23 +2531,23 @@ msgstr ""
 "Check this to make the stored values distinct from the options displayed to "
 "the user, e.g. Option:\"Red\", Stored Value:\"#ff0000;\""
 
-#: ../includes/CCTM_FormElement.php:260
+#: ../includes/class-cctm-form-element.php:260
 msgid "Output Filter"
 msgstr "Filtro de saída"
 
-#: ../includes/CCTM_FormElement.php:264
+#: ../includes/class-cctm-form-element.php:264
 msgid "Default Output Filter"
 msgstr "Filtro de saída padrão"
 
-#: ../includes/CCTM_FormElement.php:269
+#: ../includes/class-cctm-form-element.php:269
 msgid "None (raw)"
 msgstr "None (raw)"
 
-#: ../includes/CCTM_FormElement.php:426
+#: ../includes/class-cctm-form-element.php:426
 msgid "Validation Rule"
 msgstr "Regra de Validação"
 
-#: ../includes/CCTM_FormElement.php:428
+#: ../includes/class-cctm-form-element.php:428
 msgid ""
 "A validation rule can ensure that any data entered into this field meets a "
 "specific criteria."
@@ -2555,23 +2555,23 @@ msgstr ""
 "Uma regra de validação pode garantir que todos os dados inseridos neste "
 "campo atende um critério específico."
 
-#: ../includes/CCTM_FormElement.php:441
+#: ../includes/class-cctm-form-element.php:441
 msgid "Validation"
 msgstr "Validação"
 
-#: ../includes/CCTM_FormElement.php:450
+#: ../includes/class-cctm-form-element.php:450
 msgid "Required?"
 msgstr "Obrigatório?"
 
-#: ../includes/CCTM_FormElement.php:663
+#: ../includes/class-cctm-form-element.php:663
 msgid "There were errors in your custom field definition."
 msgstr "Houve erros em sua definição de Campo Personalizado."
 
-#: ../includes/CCTM_FormElement.php:820 ../includes/CCTM_PostTypeDef.php:292
+#: ../includes/class-cctm-form-element.php:820 ../includes/CCTM_PostTypeDef.php:292
 msgid "Name is required."
 msgstr "Nome é obrigatório."
 
-#: ../includes/CCTM_FormElement.php:826
+#: ../includes/class-cctm-form-element.php:826
 #, php-format
 msgid ""
 "%s contains invalid characters. The name may only contain letters, numbers, "
@@ -2580,25 +2580,25 @@ msgstr ""
 " %s contém caracteres inválidos. O nome pode conter apenas letras, números e "
 "sublinhados, e deve começar com uma letra."
 
-#: ../includes/CCTM_FormElement.php:833
+#: ../includes/class-cctm-form-element.php:833
 msgid "The name is too long. Names must not exceed 255 characters."
 msgstr "O nome é muito longo. Os nomes não devem exceder 255 caracteres."
 
-#: ../includes/CCTM_FormElement.php:838 ../includes/CCTM_PostTypeDef.php:324
+#: ../includes/class-cctm-form-element.php:838 ../includes/CCTM_PostTypeDef.php:324
 #, php-format
 msgid "%s is a reserved name."
 msgstr " %s é um nome reservado."
 
-#: ../includes/CCTM_FormElement.php:849 ../includes/CCTM_FormElement.php:858
+#: ../includes/class-cctm-form-element.php:849 ../includes/class-cctm-form-element.php:858
 #, php-format
 msgid "The name %s is already in use. Please choose another name."
 msgstr "O nome %s já está em uso. Por favor, escolha outro nome."
 
-#: ../includes/CCTM_FormElement.php:900
+#: ../includes/class-cctm-form-element.php:900
 msgid "Improper input to the set_prop() function."
 msgstr "Entrada imprópria para a função set_props()."
 
-#: ../includes/CCTM_FormElement.php:911
+#: ../includes/class-cctm-form-element.php:911
 msgid "Improper input to the set_props() function."
 msgstr "Improper input to the set_props() function."
 

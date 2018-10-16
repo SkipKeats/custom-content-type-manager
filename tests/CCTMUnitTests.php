@@ -23,9 +23,9 @@
 require_once(dirname(__FILE__) . '/simpletest/autorun.php');
 require_once(dirname(__FILE__) . '/../../../../wp-config.php');
 //require_once(CCTM_PATH .'/includes/CCTM_Validator.php');
-//require_once(CCTM_PATH .'/validators/CCTM_FormElement.php');
+//require_once(CCTM_PATH .'/validators/class-cctm-form-element.php');
 
-//require_once(CCTM_PATH .'/includes/CCTM_FormElement.php');
+//require_once(CCTM_PATH .'/includes/class-cctm-form-element.php');
 require_once(CCTM_PATH .'/includes/SP_Post.php');
 require_once(CCTM_PATH .'/includes/CCTM_Pagination.php');
 require_once('functions.php');
@@ -213,20 +213,20 @@ class CCTMUnitTests extends UnitTestCase {
 	// excerpt
 	function testFilter9() {
 		$val = ' trans. put, lay, or stand (something) in a specified place or position : Dana set the mug of tea down | Catherine set a chair by the bed. ||SPLITHERE||
-¥ ( be set) be situated or fixed in a specified place or position : the village was set among olive groves on a hill.';
+ï¿½ ( be set) be situated or fixed in a specified place or position : the village was set among olive groves on a hill.';
 		$actual = CCTM::filter($val,'excerpt', 5);
 		$this->assertTrue($actual == 'trans. put, lay, or stand&#0133;');
 	}
 	function testFilter10() {
 		$val = ' trans. put, lay, or stand (something) in a specified place or position : Dana set the mug of tea down | Catherine set a chair by the bed. ||SPLITHERE||
-¥ ( be set) be situated or fixed in a specified place or position : the village was set among olive groves on a hill.';
+ï¿½ ( be set) be situated or fixed in a specified place or position : the village was set among olive groves on a hill.';
 		$actual = CCTM::filter($val,'excerpt', '||SPLITHERE||');
 		$this->assertTrue($actual == 'trans. put, lay, or stand (something) in a specified place or position : Dana set the mug of tea down | Catherine set a chair by the bed.&#0133;');
 	}
 	function testFilter11() {
 		$vals = array(
 			' trans. put, lay, or stand (something) in a specified place or position : Dana set the mug of tea down | Catherine set a chair by the bed. ||SPLITHERE||
-¥ ( be set) be situated or fixed in a specified place or position : the village was set among ',
+ï¿½ ( be set) be situated or fixed in a specified place or position : the village was set among ',
 			'adjective
 1 an unspecified amount or number of : I made some money running errands | he played some records for me.'
 		);

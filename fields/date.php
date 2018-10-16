@@ -9,11 +9,11 @@
  * Datetime: based on http://razum.si/jQuery-calendar/TimeCalendar.html 
  * Time: based on https://github.com/perifer/timePicker
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
 
 
-class CCTM_date extends CCTM_FormElement
+class CCTM_date extends CCTM_Form_Element
 {
 	public $props = array(
 		'label' => '',
