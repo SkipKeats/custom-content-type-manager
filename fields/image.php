@@ -4,11 +4,11 @@
  *
  * Implements an field that stores a reference to an image (i.e. an attachment post that is an image)
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
 
 
-class CCTM_image extends CCTM_FormElement
+class CCTM_image extends CCTM_Form_Element
 {
 	public $props = array(
 		'label' => '',

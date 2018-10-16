@@ -6,7 +6,7 @@
  *
  *
  */
-class CCTM_DefaultPostType {
+class CCTM_Default_Post_Type {
 	
 	public $post_type;
 	

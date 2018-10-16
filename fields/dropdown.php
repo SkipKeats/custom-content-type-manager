@@ -4,9 +4,9 @@
  *
  * Implements an HTML select element with options (single select).
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
-class CCTM_dropdown extends CCTM_FormElement
+class CCTM_dropdown extends CCTM_Form_Element
 {
 	public $props = array(
 		'label' => '',

@@ -40,7 +40,7 @@ class CCTM {
 	 */
 	const menu_position = 73;
 
-	// Each class that extends either the CCTM_FormElement class or the
+	// Each class that extends either the CCTM_Form_Element class or the
 	// the CCTM_OutputFilter class must prefix this to its class name.
 	const field_prefix = 'CCTM_';
 	const filter_prefix = 'CCTM_';
@@ -2015,7 +2015,7 @@ class CCTM {
 		
 		switch ($type) {
 			case 'fields':				
-				require_once(CCTM_PATH.'/includes/CCTM_FormElement.php');
+				require_once(CCTM_PATH.'/includes/class-cctm-form-element.php');
 				break;
 			case 'filters':
 				require_once(CCTM_PATH.'/includes/CCTM_OutputFilter.php');

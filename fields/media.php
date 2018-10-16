@@ -4,11 +4,11 @@
  *
  * Implements an field that stores a reference to a media item (i.e. any attachment post)
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
 
 
-class CCTM_media extends CCTM_FormElement
+class CCTM_media extends CCTM_Form_Element
 {
 	public $props = array(
 		'label' => '',

@@ -1623,137 +1623,137 @@ msgstr "Trash"
 msgid "View"
 msgstr "View"
 
-#: ../includes/CCTM_FormElement.php:153
+#: ../includes/class-cctm-form-element.php:153
 msgid "How should the button be labeled? (Users will click this button to select the image, media, or relation)."
 msgstr "How should the button be labeled? (Users will click this button to select the image, media, or relation)."
 
-#: ../includes/CCTM_FormElement.php:154
+#: ../includes/class-cctm-form-element.php:154
 msgid "Add a CSS class to instances of this field. Use this to customize styling in the WP manager."
 msgstr "Add a CSS class to instances of this field. Use this to customize styling in the WP manager."
 
-#: ../includes/CCTM_FormElement.php:155
+#: ../includes/class-cctm-form-element.php:155
 msgid "Any extra attributes for this text field, e.g. <code>size=\"10\"</code>"
 msgstr "Any extra attributes for this text field, e.g. <code>size=\"10\"</code>"
 
-#: ../includes/CCTM_FormElement.php:156
+#: ../includes/class-cctm-form-element.php:156
 msgid "The default option will appear selected. Make sure it matches a defined option."
 msgstr "The default option will appear selected. Make sure it matches a defined option."
 
-#: ../includes/CCTM_FormElement.php:157
+#: ../includes/class-cctm-form-element.php:157
 msgid "The default value is presented to users when a new post is created."
 msgstr "The default value is presented to users when a new post is created."
 
-#: ../includes/CCTM_FormElement.php:158
+#: ../includes/class-cctm-form-element.php:158
 msgid "The description is visible when you view all custom fields or when you use the <code>get_custom_field_meta()</code> function."
 msgstr "The description is visible when you view all custom fields or when you use the <code>get_custom_field_meta()</code> function."
 
-#: ../includes/CCTM_FormElement.php:159
+#: ../includes/class-cctm-form-element.php:159
 msgid "The following html tags are allowed:"
 msgstr "The following html tags are allowed:"
 
-#: ../includes/CCTM_FormElement.php:161
+#: ../includes/class-cctm-form-element.php:161
 msgid "You can check this box if you want to enter a bit of PHP code into the default value field."
 msgstr "You can check this box if you want to enter a bit of PHP code into the default value field."
 
-#: ../includes/CCTM_FormElement.php:162
+#: ../includes/class-cctm-form-element.php:162
 msgid "The label is displayed when users create or edit posts that use this custom field."
 msgstr "The label is displayed when users create or edit posts that use this custom field."
 
-#: ../includes/CCTM_FormElement.php:163
+#: ../includes/class-cctm-form-element.php:163
 msgid "The name identifies the meta_key in the wp_postmeta database table. The name should contain only letters, numbers, and underscores. You will use this name in your template functions to identify this custom field."
 msgstr "The name identifies the meta_key in the wp_postmeta database table. The name should contain only letters, numbers, and underscores. You will use this name in your template functions to identify this custom field."
 
-#: ../includes/CCTM_FormElement.php:165
+#: ../includes/class-cctm-form-element.php:165
 msgid "WARNING: if you change the field name, you will have to update any functions that reference this field by name, e.g. <code>get_custom_field()</code>, <code>print_custom_field()</code>,  or any search criteria."
 msgstr "WARNING: if you change the field name, you will have to update any functions that reference this field by name, e.g. <code>get_custom_field()</code>, <code>print_custom_field()</code>,  or any search criteria."
 
-#: ../includes/CCTM_FormElement.php:167
+#: ../includes/class-cctm-form-element.php:167
 msgid "If selected, the user will be able to enter multiple instances of this field, e.g. multiple images. Storing multiple values infers storing an array of values, so you will have to use the \"to_array\" output filter, even if you only use one instance of the field."
 msgstr "If selected, the user will be able to enter multiple instances of this field, e.g. multiple images. Storing multiple values infers storing an array of values, so you will have to use the \"to_array\" output filter, even if you only use one instance of the field."
 
-#: ../includes/CCTM_FormElement.php:168
+#: ../includes/class-cctm-form-element.php:168
 msgid "If checked, users must add a value to this field before the page can be published."
 msgstr "If checked, users must add a value to this field before the page can be published."
 
-#: ../includes/CCTM_FormElement.php:169
+#: ../includes/class-cctm-form-element.php:169
 msgid "What value should be stored in the database when this checkbox is checked?"
 msgstr "What value should be stored in the database when this checkbox is checked?"
 
-#: ../includes/CCTM_FormElement.php:170
+#: ../includes/class-cctm-form-element.php:170
 msgid "What value should be stored in the database when this checkbox is unchecked?"
 msgstr "What value should be stored in the database when this checkbox is unchecked?"
 
-#: ../includes/CCTM_FormElement.php:171
+#: ../includes/class-cctm-form-element.php:171
 msgid "Should this field be checked by default?"
 msgstr "Should this field be checked by default?"
 
-#: ../includes/CCTM_FormElement.php:172
+#: ../includes/class-cctm-form-element.php:172
 msgid "How should values be displayed in your theme files?"
 msgstr "How should values be displayed in your theme files?"
 
-#: ../includes/CCTM_FormElement.php:173
+#: ../includes/class-cctm-form-element.php:173
 msgid "Check this to make the stored values distinct from the options displayed to the user, e.g. Option:\"Red\", Stored Value:\"#ff0000;\""
 msgstr "Check this to make the stored values distinct from the options displayed to the user, e.g. Option:\"Red\", Stored Value:\"#ff0000;\""
 
-#: ../includes/CCTM_FormElement.php:247
+#: ../includes/class-cctm-form-element.php:247
 msgid "Output Filter"
 msgstr "Output Filter"
 
-#: ../includes/CCTM_FormElement.php:251
+#: ../includes/class-cctm-form-element.php:251
 msgid "Default Output Filter"
 msgstr "Default Output Filter"
 
-#: ../includes/CCTM_FormElement.php:256
+#: ../includes/class-cctm-form-element.php:256
 msgid "None (raw)"
 msgstr "None (raw)"
 
-#: ../includes/CCTM_FormElement.php:414
+#: ../includes/class-cctm-form-element.php:414
 msgid "Validation Rule"
 msgstr "Validation Rule"
 
-#: ../includes/CCTM_FormElement.php:416
+#: ../includes/class-cctm-form-element.php:416
 msgid "A validation rule can ensure that any data entered into this field meets a specific criteria."
 msgstr "A validation rule can ensure that any data entered into this field meets a specific criteria."
 
-#: ../includes/CCTM_FormElement.php:429
+#: ../includes/class-cctm-form-element.php:429
 msgid "Validation"
 msgstr "Validation"
 
-#: ../includes/CCTM_FormElement.php:438
+#: ../includes/class-cctm-form-element.php:438
 msgid "Required?"
 msgstr "Required?"
 
-#: ../includes/CCTM_FormElement.php:645
+#: ../includes/class-cctm-form-element.php:645
 msgid "There were errors in your custom field definition."
 msgstr "There were errors in your custom field definition."
 
-#: ../includes/CCTM_FormElement.php:786
+#: ../includes/class-cctm-form-element.php:786
 #: ../includes/CCTM_PostTypeDef.php:290
 msgid "Name is required."
 msgstr "Name is required."
 
-#: ../includes/CCTM_FormElement.php:792
+#: ../includes/class-cctm-form-element.php:792
 #, php-format
 msgid "%s contains invalid characters. The name may only contain letters, numbers, and underscores, and it must begin with a letter."
 msgstr "%s contains invalid characters. The name may only contain letters, numbers, and underscores, and it must begin with a letter."
 
-#: ../includes/CCTM_FormElement.php:799
+#: ../includes/class-cctm-form-element.php:799
 msgid "The name is too long. Names must not exceed 255 characters."
 msgstr "The name is too long. Names must not exceed 255 characters."
 
-#: ../includes/CCTM_FormElement.php:804
+#: ../includes/class-cctm-form-element.php:804
 #: ../includes/CCTM_PostTypeDef.php:322
 #, php-format
 msgid "%s is a reserved name."
 msgstr "%s is a reserved name."
 
-#: ../includes/CCTM_FormElement.php:814
-#: ../includes/CCTM_FormElement.php:822
+#: ../includes/class-cctm-form-element.php:814
+#: ../includes/class-cctm-form-element.php:822
 #, php-format
 msgid "The name %s is already in use. Please choose another name."
 msgstr "The name %s is already in use. Please choose another name."
 
-#: ../includes/CCTM_FormElement.php:850
+#: ../includes/class-cctm-form-element.php:850
 msgid "Improper input to the set_props() function."
 msgstr "Improper input to the set_props() function."
 

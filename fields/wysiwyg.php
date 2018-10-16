@@ -4,11 +4,11 @@
  *
  * Implements an WYSIWYG textarea input (a textarea with formatting controls).
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
 
 
-class CCTM_wysiwyg extends CCTM_FormElement
+class CCTM_wysiwyg extends CCTM_Form_Element
 {
 	public $props = array(
 		'label' => '',

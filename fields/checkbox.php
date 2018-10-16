@@ -4,11 +4,11 @@
  *
  * Implements an HTML text input.
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
 
 
-class CCTM_checkbox extends CCTM_FormElement
+class CCTM_checkbox extends CCTM_Form_Element
 {
 	public $props = array(
 		'label' => '',
@@ -234,7 +234,7 @@ class CCTM_checkbox extends CCTM_FormElement
 	 * @return string whatever value you want to store in the wp_postmeta table where meta_key = $field_name
 	 */
 	public function save_post_filter($posted_data, $field_name) {
-		if ( isset($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ]) ) {
+		if ( isset($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ]) ) {
 			return $this->checked_value;
 		}
 		else {

@@ -4,9 +4,9 @@
  *
  * Lists the contents of a directory (an optionally all sub-dirs) for selection in a dropdown.
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
-class CCTM_directory extends CCTM_FormElement
+class CCTM_directory extends CCTM_Form_Element
 {
 	public $props = array(
 		'label' => '',

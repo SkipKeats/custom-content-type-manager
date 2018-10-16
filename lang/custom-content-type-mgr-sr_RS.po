@@ -28,7 +28,7 @@ msgstr "Funkcija"
 # @ custom-content-type-mgr
 #. translators: This refers to a PHP class e.g. class MyClass { ... }
 #: fields/colorselector.php:87 fields/image.php:95 fields/media.php:94
-#: fields/relation.php:96 includes/CCTM_FormElement.php:341 index.php:84
+#: fields/relation.php:96 includes/class-cctm-form-element.php:341 index.php:84
 msgid "Class"
 msgstr "Klasa"
 
@@ -149,7 +149,7 @@ msgid "Settings for %s have been updated."
 msgstr "Die Einstellungen für %s wurden aktualisiert"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:802 includes/CCTM_PostTypeDef.php:323
+#: includes/class-cctm-form-element.php:802 includes/CCTM_PostTypeDef.php:323
 #, php-format
 msgid "%s is a reserved name."
 msgstr "%s je rezervisano ime."
@@ -175,7 +175,7 @@ msgid ""
 msgstr "Trenutno koristite  %1$s temu. Snimite fajl u %2$s direktorijum."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:784 includes/CCTM_PostTypeDef.php:291
+#: includes/class-cctm-form-element.php:784 includes/CCTM_PostTypeDef.php:291
 msgid "Name is required."
 msgstr "Ime je potrebno."
 
@@ -200,19 +200,19 @@ msgstr "%s ist bereits als Taxonomiename in Verwendung."
 
 # @ custom-content-type-mgr
 #: fields/colorselector.php:53 fields/image.php:61 fields/media.php:60
-#: fields/relation.php:62 includes/CCTM_FormElement.php:307
+#: fields/relation.php:62 includes/class-cctm-form-element.php:307
 msgid "Label"
 msgstr "Natpis"
 
 # @ custom-content-type-mgr
 #: fields/colorselector.php:60 fields/image.php:68 fields/media.php:67
-#: fields/relation.php:69 includes/CCTM_FormElement.php:314
+#: fields/relation.php:69 includes/class-cctm-form-element.php:314
 msgid "Name"
 msgstr "Ime"
 
 # @ custom-content-type-mgr
 #: fields/colorselector.php:107 fields/image.php:115 fields/media.php:114
-#: fields/relation.php:116 includes/CCTM_FormElement.php:361
+#: fields/relation.php:116 includes/class-cctm-form-element.php:361
 #: views/export.php:27 views/list_custom_fields.php:6
 #: views/list_custom_fields.php:14 views/post_type.php:474
 #: views/post_type.php:483 views/sortable-list.php:25
@@ -656,12 +656,12 @@ msgid "Post Type"
 msgstr "Tip posta"
 
 # @ custom-content-type-mgr
-#: ajax-controllers/get_posts.php:196 includes/CCTM_FormElement.php:147
+#: ajax-controllers/get_posts.php:196 includes/class-cctm-form-element.php:147
 msgid "Add to Post"
 msgstr "Dodati u post"
 
 # @ custom-content-type-mgr
-#: ajax-controllers/get_posts.php:197 includes/CCTM_FormElement.php:148
+#: ajax-controllers/get_posts.php:197 includes/class-cctm-form-element.php:148
 msgid "Add to Post and Close"
 msgstr "Dodati u post i zatvoriti"
 
@@ -722,7 +722,7 @@ msgstr "Šablon za formatiranje nije pronađen!"
 #: fields/date.php:283 fields/dropdown.php:226 fields/dropdown.php:248
 #: fields/image.php:302 fields/media.php:306 fields/multiselect.php:222
 #: fields/multiselect.php:244 fields/relation.php:302
-#: includes/CCTM_FormElement.php:404
+#: includes/class-cctm-form-element.php:404
 msgid "Options"
 msgstr "Opcije"
 
@@ -1716,26 +1716,26 @@ msgstr "Čekirano po definiciji?"
 
 # @ custom-content-type-mgr
 #: fields/colorselector.php:47 fields/image.php:55 fields/media.php:54
-#: fields/relation.php:56 includes/CCTM_FormElement.php:301
+#: fields/relation.php:56 includes/class-cctm-form-element.php:301
 msgid "Standard Fields"
 msgstr "Standardna polja"
 
 # @ custom-content-type-mgr
 #: fields/colorselector.php:69 fields/image.php:77 fields/image.php:311
 #: fields/media.php:76 fields/media.php:315 fields/relation.php:78
-#: fields/relation.php:311 includes/CCTM_FormElement.php:323
+#: fields/relation.php:311 includes/class-cctm-form-element.php:323
 msgid "Default Value"
 msgstr "Podrazumevana vrednost"
 
 # @ custom-content-type-mgr
 #: fields/colorselector.php:78 fields/image.php:86 fields/media.php:85
-#: fields/relation.php:87 includes/CCTM_FormElement.php:332
+#: fields/relation.php:87 includes/class-cctm-form-element.php:332
 msgid "Extra"
 msgstr "Dodatno"
 
 # @ custom-content-type-mgr
 #: fields/colorselector.php:97 fields/image.php:105 fields/media.php:104
-#: fields/relation.php:106 includes/CCTM_FormElement.php:351
+#: fields/relation.php:106 includes/class-cctm-form-element.php:351
 msgid "Is Repeatable?"
 msgstr "Je ponovljivo?"
 
@@ -2343,7 +2343,7 @@ msgstr ""
 "bilo koje prilagođeno polje."
 
 # @ custom-content-type-mgr
-#: filters/raw.php:51 includes/CCTM_FormElement.php:417
+#: filters/raw.php:51 includes/class-cctm-form-element.php:417
 msgid "None"
 msgstr "Ni jedno"
 
@@ -2696,7 +2696,7 @@ msgid "Comments"
 msgstr "Komentari"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:153
+#: includes/class-cctm-form-element.php:153
 msgid ""
 "How should the button be labeled? (Users will click this button to select "
 "the image, media, or relation)."
@@ -2705,7 +2705,7 @@ msgstr ""
 "da biraju sliku, medijski fajl, ili odnos)."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:154
+#: includes/class-cctm-form-element.php:154
 msgid ""
 "Add a CSS class to instances of this field. Use this to customize styling in "
 "the WP manager."
@@ -2714,14 +2714,14 @@ msgstr ""
 "WP menadžeru."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:155
+#: includes/class-cctm-form-element.php:155
 msgid "Any extra attributes for this text field, e.g. <code>size=\"10\"</code>"
 msgstr ""
 "Bilo koji dodatni atributi za ovo tekstualno polje, npr. <code>size=\"10\"</"
 "code>"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:156
+#: includes/class-cctm-form-element.php:156
 msgid ""
 "The default option will appear selected. Make sure it matches a defined "
 "option."
@@ -2730,13 +2730,13 @@ msgstr ""
 "sa definisanom opcijom."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:157
+#: includes/class-cctm-form-element.php:157
 msgid "The default value is presented to users when a new post is created."
 msgstr ""
 "Podrazumevana vrednost se prikazuje korisnicima kada se kreira novi post."
 
 # @ default
-#: includes/CCTM_FormElement.php:158
+#: includes/class-cctm-form-element.php:158
 msgid ""
 "The description is visible when you view all custom fields or when you use "
 "the <code>get_custom_field_meta()</code> function."
@@ -2745,12 +2745,12 @@ msgstr ""
 "<code> get_custom_field_meta() </code> funkciju."
 
 # @ default
-#: includes/CCTM_FormElement.php:159
+#: includes/class-cctm-form-element.php:159
 msgid "The following html tags are allowed:"
 msgstr "Dozvoljeni su sledeći html tagovi:"
 
 # @ default
-#: includes/CCTM_FormElement.php:161
+#: includes/class-cctm-form-element.php:161
 msgid ""
 "You can check this box if you want to enter a bit of PHP code into the "
 "default value field."
@@ -2759,7 +2759,7 @@ msgstr ""
 "podrazumevanom vrednoću."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:162
+#: includes/class-cctm-form-element.php:162
 msgid ""
 "The label is displayed when users create or edit posts that use this custom "
 "field."
@@ -2768,7 +2768,7 @@ msgstr ""
 "ovo prilagođeno polje."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:163
+#: includes/class-cctm-form-element.php:163
 msgid ""
 "The name identifies the meta_key in the wp_postmeta database table. The name "
 "should contain only letters, numbers, and underscores. You will use this "
@@ -2779,7 +2779,7 @@ msgstr ""
 "funkcijama da identifikujete prilagođeno polje."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:165
+#: includes/class-cctm-form-element.php:165
 msgid ""
 "WARNING: if you change the field name, you will have to update any functions "
 "that reference this field by name, e.g. <code>get_custom_field()</code>, "
@@ -2790,7 +2790,7 @@ msgstr ""
 "<code>print_custom_field()</code>, odnosno sve kriterijume pretrage."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:167
+#: includes/class-cctm-form-element.php:167
 msgid ""
 "If selected, the user will be able to enter multiple instances of this "
 "field, e.g. multiple images. Storing multiple values infers storing an array "
@@ -2803,7 +2803,7 @@ msgstr ""
 "izlazni filter, čak i kada koristite samo jednu instancu datog polja."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:168
+#: includes/class-cctm-form-element.php:168
 msgid ""
 "If checked, users must add a value to this field before the page can be "
 "published."
@@ -2812,7 +2812,7 @@ msgstr ""
 "što stranica može da se objavi."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:169
+#: includes/class-cctm-form-element.php:169
 msgid ""
 "What value should be stored in the database when this checkbox is checked?"
 msgstr ""
@@ -2820,7 +2820,7 @@ msgstr ""
 "čekirana?"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:170
+#: includes/class-cctm-form-element.php:170
 msgid ""
 "What value should be stored in the database when this checkbox is unchecked?"
 msgstr ""
@@ -2828,17 +2828,17 @@ msgstr ""
 "čekirana?"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:171
+#: includes/class-cctm-form-element.php:171
 msgid "Should this field be checked by default?"
 msgstr "Da li ovo polje po definiciji treba da bude čekirano?"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:172
+#: includes/class-cctm-form-element.php:172
 msgid "How should values be displayed in your theme files?"
 msgstr "Kako vrednosti treba da se prikazuju u fajlovima vaše teme?"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:173
+#: includes/class-cctm-form-element.php:173
 msgid ""
 "Check this to make the stored values distinct from the options displayed to "
 "the user, e.g. Option:\"Red\", Stored Value:\"#ff0000;\""
@@ -2847,27 +2847,27 @@ msgstr ""
 "prikazuju korisniku, npr. Opcija: \"Crveno\", Sačuvana vrednost:\"#ff0000;\""
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:247
+#: includes/class-cctm-form-element.php:247
 msgid "Output Filter"
 msgstr "Izlazni filter"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:251
+#: includes/class-cctm-form-element.php:251
 msgid "Default Output Filter"
 msgstr "Podrazumevani izlazni filter"
 
 # @ default
-#: includes/CCTM_FormElement.php:256
+#: includes/class-cctm-form-element.php:256
 msgid "None (raw)"
 msgstr "Ni jedan (neobrađeno)"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:412
+#: includes/class-cctm-form-element.php:412
 msgid "Validation Rule"
 msgstr "Validaciono pravilo"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:414
+#: includes/class-cctm-form-element.php:414
 msgid ""
 "A validation rule can ensure that any data entered into this field meets a "
 "specific criteria."
@@ -2876,22 +2876,22 @@ msgstr ""
 "odgovaraju određenom kriterijumu."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:427
+#: includes/class-cctm-form-element.php:427
 msgid "Validation"
 msgstr "Validacija"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:436
+#: includes/class-cctm-form-element.php:436
 msgid "Required?"
 msgstr "Potrebno?"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:643
+#: includes/class-cctm-form-element.php:643
 msgid "There were errors in your custom field definition."
 msgstr "Bilo je grešaka u vašoj definiciji prilagođenog polja."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:790
+#: includes/class-cctm-form-element.php:790
 #, php-format
 msgid ""
 "%s contains invalid characters. The name may only contain letters, numbers, "
@@ -2901,18 +2901,18 @@ msgstr ""
 "crte, i mora počinjati slovom."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:797
+#: includes/class-cctm-form-element.php:797
 msgid "The name is too long. Names must not exceed 255 characters."
 msgstr "Ime je predugačko. Imena ne smeju biti duža od 255 karaktera."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:812 includes/CCTM_FormElement.php:820
+#: includes/class-cctm-form-element.php:812 includes/class-cctm-form-element.php:820
 #, php-format
 msgid "The name %s is already in use. Please choose another name."
 msgstr "Ime %s se već koristi. Molim vas, izaberite drugo ime."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_FormElement.php:848
+#: includes/class-cctm-form-element.php:848
 msgid "Improper input to the set_props() function."
 msgstr "Neodgovarajući unos u set_props() funkciju."
 

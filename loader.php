@@ -22,7 +22,7 @@ require_once 'includes/GetPostsQuery.php';
 require_once 'includes/SummarizePosts_Widget.php';
 require_once 'includes/CCTM_Post_Widget.php';
 require_once 'includes/StandardizedCustomFields.php';
-require_once 'includes/CCTM_FormElement.php';
+require_once 'includes/class-cctm-form-element.php';
 require_once 'includes/class-cctm-ajax.php';
 require_once 'includes/functions.php';
 

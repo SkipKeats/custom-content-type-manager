@@ -15,7 +15,7 @@ if (isset($GLOBALS['wp_post_types'][$post_type]->cap->edit_posts)) {
 	$cap = $GLOBALS['wp_post_types'][$post_type]->cap->edit_posts; 
 }
 if (!current_user_can($cap)) die('<pre>You do not have permission to do that.</pre>');
-require_once CCTM_PATH.'/includes/CCTM_FormElement.php';
+require_once CCTM_PATH.'/includes/class-cctm-form-element.php';
 require_once CCTM_PATH.'/includes/SummarizePosts.php';
 require_once CCTM_PATH.'/includes/GetPostsQuery.php';
 require_once CCTM_PATH.'/includes/GetPostsForm.php';
@@ -51,7 +51,7 @@ if (empty($raw_fieldname) && empty($d['fieldtype'])) {
 // More Template Variables
 $d['fieldname'] = $raw_fieldname;
 
-$fieldname = preg_replace('/^'. CCTM_FormElement::css_id_prefix . '/', '', $raw_fieldname);
+$fieldname = preg_replace('/^'. CCTM_Form_Element::css_id_prefix . '/', '', $raw_fieldname);
 
 $def = CCTM::get_value(CCTM::$data['custom_field_defs'], $fieldname);
 //print '<pre>'.print_r($def, true).'</pre>';

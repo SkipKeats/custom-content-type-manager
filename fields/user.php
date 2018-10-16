@@ -12,11 +12,11 @@
  * 7    editor
  * 10    admin
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
 
 
-class CCTM_user extends CCTM_FormElement {
+class CCTM_user extends CCTM_Form_Element {
 
 	public $props = array(
 		'label' => '',

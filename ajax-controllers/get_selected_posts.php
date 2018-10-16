@@ -27,7 +27,7 @@ if (isset($GLOBALS['wp_post_types'][$post_type]->cap->edit_posts)) {
 }
 if (!current_user_can($cap)) die('<pre>You do not have permission to do that.</pre>');
 
-require_once(CCTM_PATH.'/includes/CCTM_FormElement.php');
+require_once(CCTM_PATH.'/includes/class-cctm-form-element.php');
 require_once(CCTM_PATH.'/includes/SummarizePosts.php');
 require_once(CCTM_PATH.'/includes/GetPostsQuery.php');
 
@@ -41,7 +41,7 @@ if (empty($raw_fieldname)) {
 	print '<p>'.sprintf(__('Invalid fieldname: %s', CCTM_TXTDOMAIN), '<em>'. htmlspecialchars($raw_fieldname).'</em>') .'</p>';
 	return;
 }
-$fieldname = preg_replace('/^'. CCTM_FormElement::css_id_prefix . '/', '', $raw_fieldname);
+$fieldname = preg_replace('/^'. CCTM_Form_Element::css_id_prefix . '/', '', $raw_fieldname);
 
 $def = CCTM::get_value(CCTM::$data['custom_field_defs'], $fieldname);
 if (empty($def)) {
@@ -128,8 +128,8 @@ foreach($results as $r) {
 	$r['thumbnail_url'] = CCTM::get_thumbnail($r['ID']);
 	$r['id'] = $fieldname;
 	$r['name'] = $fieldname;	
-	$r['id_prefix'] = CCTM_FormElement::css_id_prefix;
-	$r['name_prefix'] = CCTM_FormElement::post_name_prefix;
+	$r['id_prefix'] = CCTM_Form_Element::css_id_prefix;
+	$r['name_prefix'] = CCTM_Form_Element::post_name_prefix;
 
 	// Translate stuff (issue 279)
 	$r['post_title'] = __($r['post_title']);
@@ -137,7 +137,7 @@ foreach($results as $r) {
 	$r['post_excerpt'] = __($r['post_excerpt']);
 	
 	// Special Stuff for RelationMeta fields: generate the other form elements
-	// TODO: put this as a method in CCTM_FormElement to make it extendable? 
+	// TODO: put this as a method in CCTM_Form_Element to make it extendable? 
 	if ($def['type']=='relationmeta') {
 	   
         $r['metafields'] = '';

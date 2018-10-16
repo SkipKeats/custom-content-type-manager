@@ -4,10 +4,10 @@
  *
  * Implements an HTML multi-select element with options (multiple select).
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
  
-class CCTM_multiselect extends CCTM_FormElement
+class CCTM_multiselect extends CCTM_Form_Element
 {
 	public $props = array(
 		'label' => '',
@@ -77,7 +77,7 @@ class CCTM_multiselect extends CCTM_FormElement
 	 *
 	 * This is hands-down the most complex field due to the way we have to do 
 	 * literal comparisions of foreign comparisons.  Whereas the other fields 
-	 * are fine if we store a "&agrave;" or "ˆ" so long as it displays correctly,
+	 * are fine if we store a "&agrave;" or "ï¿½" so long as it displays correctly,
 	 * the multiselect fields must get the $current_value to be EXACTLY equal
 	 * to the available options, otherwise we won't know whether or not 
 	 * to check the checkbox.

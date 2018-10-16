@@ -7,7 +7,7 @@ Lets users configure global options.
 ------------------------------------------------------------------------------*/
 if ( ! defined('CCTM_PATH')) exit('No direct script access allowed');
 if (!current_user_can('administrator')) exit('Admins only.');
-require_once(CCTM_PATH.'/includes/CCTM_FormElement.php');
+require_once(CCTM_PATH.'/includes/class-cctm-form-element.php');
 
 $data 				= array();
 $data['page_title']	= __('Settings', CCTM_TXTDOMAIN);

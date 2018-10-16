@@ -5,11 +5,11 @@
  * Implements a special AJAX form element used to store a wp_posts.ID representing
  * another post of some kind
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
 
 
-class CCTM_relation extends CCTM_FormElement
+class CCTM_relation extends CCTM_Form_Element
 {
 	public $props = array(
 		'label' => '',

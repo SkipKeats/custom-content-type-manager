@@ -5,9 +5,9 @@
  * Implements a color selector input (a text field with special javascript attached).
  * http://blog.meta100.com/post/600571131/mcolorpicker
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
-class CCTM_colorselector extends CCTM_FormElement
+class CCTM_colorselector extends CCTM_Form_Element
 {
 	public $props = array(
 		'label' => '',

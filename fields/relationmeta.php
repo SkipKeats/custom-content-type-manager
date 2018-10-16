@@ -5,11 +5,11 @@
  * Implements a special AJAX form element used to store a wp_posts.ID representing
  * another post of some kind
  *
- * @package CCTM_FormElement
+ * @package CCTM_Form_Element
  */
 
 
-class CCTM_relationmeta extends CCTM_FormElement
+class CCTM_relationmeta extends CCTM_Form_Element
 {
 	public $props = array(
 		'label' => '',
@@ -481,8 +481,8 @@ class CCTM_relationmeta extends CCTM_FormElement
 	 * @return string whatever JSON to store in wp_postmeta where meta_key = $field_name
 	 */
 	public function save_post_filter($posted_data, $field_name) {
-		if ( isset($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ]) ) {
-			return addslashes(json_encode($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ]));
+		if ( isset($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ]) ) {
+			return addslashes(json_encode($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ]));
 		}
 		else {
 			return '';
