@@ -273,7 +273,7 @@ msgstr "Hijerarhijski"
 # @ custom-content-type-mgr
 # @ default
 #: ajax-controllers/get_posts.php:191
-#: ajax-controllers/post_content_widget.php:146 includes/CCTM_Columns.php:34
+#: ajax-controllers/post_content_widget.php:146 includes/class-cctm-columns.php:34
 #: includes/CCTM_PostTypeDef.php:20 includes/CCTM_Post_Widget.php:110
 #: includes/SummarizePosts_Widget.php:59 views/export.php:14
 #: views/widgets/post_content_form.php:24
@@ -299,7 +299,7 @@ msgstr "Glavni blok sadržaja."
 
 # @ default
 # @ custom-content-type-mgr
-#: includes/CCTM_Columns.php:35 includes/CCTM_PostTypeDef.php:21
+#: includes/class-cctm-columns.php:35 includes/CCTM_PostTypeDef.php:21
 #: includes/GetPostsForm.php:340 views/export.php:17 views/post_type.php:353
 #: views/preview_def.php:12
 msgid "Author"
@@ -631,7 +631,7 @@ msgstr "Konfiguracioni fajl birača posta nije pronađen."
 # @ default
 #: ajax-controllers/get_posts.php:192
 #: ajax-controllers/post_content_widget.php:147 fields/date.php:301
-#: includes/CCTM_Columns.php:37 includes/CCTM_PostTypeDef.php:23
+#: includes/class-cctm-columns.php:37 includes/CCTM_PostTypeDef.php:23
 msgid "Date"
 msgstr "Datum"
 
@@ -2679,19 +2679,19 @@ msgid "The Custom Content Type Manager encountered the following warnings:"
 msgstr "Custom Content Type Manager je naišao na sledeća upozorenja:"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_Ajax.php:59 includes/CCTM_Ajax.php:62
+#: includes/class-cctm-ajax.php:59 includes/class-cctm-ajax.php:62
 #, php-format
 msgid "Invalid Ajax controller: %s"
 msgstr "Nevažeći Ajax kontroler: %s"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_Ajax.php:71 includes/CCTM_Ajax.php:74
+#: includes/class-cctm-ajax.php:71 includes/class-cctm-ajax.php:74
 #, php-format
 msgid "Invalid nonce for %s"
 msgstr "Nevažeći jednokratni uzorak za %s"
 
 # @ default
-#: includes/CCTM_Columns.php:36 includes/CCTM_PostTypeDef.php:22
+#: includes/class-cctm-columns.php:36 includes/CCTM_PostTypeDef.php:22
 msgid "Comments"
 msgstr "Komentari"
 

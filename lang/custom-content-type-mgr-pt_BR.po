@@ -905,7 +905,7 @@ msgstr "Editar este Campo Personalizado"
 #: ../controllers/list_post_types.php:40
 #: ../controllers/list_pt_associations.php:143
 #: ../controllers/list_pt_associations.php:203
-#: ../includes/CCTM_Columns.php:151 ../includes/CCTM_FormElement.php:145
+#: ../includes/class-cctm-columns.php:151 ../includes/CCTM_FormElement.php:145
 #: ../includes/CCTM_PostTypeDef.php:504 ../views/metabox-holder.php:8
 msgid "Edit"
 msgstr "Editar"
@@ -2371,31 +2371,31 @@ msgstr "Dispensar Avisos"
 msgid "The Custom Content Type Manager encountered the following warnings:"
 msgstr "The Custom Content Type Manager encontrou as seguintes advertências:"
 
-#: ../includes/CCTM_Ajax.php:55 ../includes/CCTM_Ajax.php:56
+#: ../includes/class-cctm-ajax.php:55 ../includes/class-cctm-ajax.php:56
 #, php-format
 msgid "Invalid Ajax controller: %s"
 msgstr "Inválido controlador Ajax: %s"
 
-#: ../includes/CCTM_Ajax.php:61 ../includes/CCTM_Ajax.php:62
+#: ../includes/class-cctm-ajax.php:61 ../includes/class-cctm-ajax.php:62
 #, php-format
 msgid "Invalid nonce for %s"
 msgstr "Nonce inválido para %s"
 
-#: ../includes/CCTM_Columns.php:76 ../includes/CCTM_PostTypeDef.php:23
+#: ../includes/class-cctm-columns.php:76 ../includes/CCTM_PostTypeDef.php:23
 #: ../includes/GetPostsForm.php:352 ../views/export.php:17
 #: ../views/post_type.php:353 ../views/preview_def.php:12
 msgid "Author"
 msgstr "Autor"
 
-#: ../includes/CCTM_Columns.php:152
+#: ../includes/class-cctm-columns.php:152
 msgid "Quick Edit"
 msgstr "Edição Rápida"
 
-#: ../includes/CCTM_Columns.php:152
+#: ../includes/class-cctm-columns.php:152
 msgid "Trash"
 msgstr "Lixo"
 
-#: ../includes/CCTM_Columns.php:152 ../includes/CCTM_PostTypeDef.php:510
+#: ../includes/class-cctm-columns.php:152 ../includes/CCTM_PostTypeDef.php:510
 msgid "View"
 msgstr "Ver"
 

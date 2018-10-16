@@ -23,7 +23,7 @@
  * http://www.phppatterns.com/docs/develop/php_and_variable_references
  * http://weierophinney.net/matthew/archives/131-Overloading-arrays-in-PHP-5.2.0.html
  */
-class CCTM_AbstractPostType
+class CCTM_Abstract_Post_Type
 {
 
 	private $_Instance;

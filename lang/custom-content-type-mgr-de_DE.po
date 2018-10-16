@@ -288,7 +288,7 @@ msgstr "Hierarchisch"
 #@ default
 #: ajax-controllers/get_posts.php:191
 #: ajax-controllers/post_content_widget.php:146
-#: includes/CCTM_Columns.php:34
+#: includes/class-cctm-columns.php:34
 #: includes/CCTM_PostTypeDef.php:20
 #: includes/CCTM_Post_Widget.php:110
 #: includes/SummarizePosts_Widget.php:59
@@ -317,7 +317,7 @@ msgstr "Haupt-Inhaltsblock."
 
 #@ default
 #@ custom-content-type-mgr
-#: includes/CCTM_Columns.php:35
+#: includes/class-cctm-columns.php:35
 #: includes/CCTM_PostTypeDef.php:21
 #: includes/GetPostsForm.php:340
 #: views/export.php:17
@@ -662,7 +662,7 @@ msgstr "Inhaltstyp-Auswahl-Einstellung wurde nicht gefunden."
 #: ajax-controllers/get_posts.php:192
 #: ajax-controllers/post_content_widget.php:147
 #: fields/date.php:301
-#: includes/CCTM_Columns.php:37
+#: includes/class-cctm-columns.php:37
 #: includes/CCTM_PostTypeDef.php:23
 msgid "Date"
 msgstr "Datum"
@@ -2391,21 +2391,21 @@ msgid "The Custom Content Type Manager encountered the following warnings:"
 msgstr "Der Custom Content Type Manager stieß auf folgende Warnungen:"
 
 #@ custom-content-type-mgr
-#: includes/CCTM_Ajax.php:59
-#: includes/CCTM_Ajax.php:62
+#: includes/class-cctm-ajax.php:59
+#: includes/class-cctm-ajax.php:62
 #, php-format
 msgid "Invalid Ajax controller: %s"
 msgstr "Ungültiger Ajax Controller: %s."
 
 #@ custom-content-type-mgr
-#: includes/CCTM_Ajax.php:71
-#: includes/CCTM_Ajax.php:74
+#: includes/class-cctm-ajax.php:71
+#: includes/class-cctm-ajax.php:74
 #, php-format
 msgid "Invalid nonce for %s"
 msgstr "Vorübergehend ungültig %s"
 
 #@ default
-#: includes/CCTM_Columns.php:36
+#: includes/class-cctm-columns.php:36
 #: includes/CCTM_PostTypeDef.php:22
 msgid "Comments"
 msgstr ""

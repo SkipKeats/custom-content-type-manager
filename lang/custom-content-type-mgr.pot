@@ -1588,37 +1588,37 @@ msgstr "Dismiss Warnings"
 msgid "The Custom Content Type Manager encountered the following warnings:"
 msgstr "The Custom Content Type Manager encountered the following warnings:"
 
-#: ../includes/CCTM_Ajax.php:59
-#: ../includes/CCTM_Ajax.php:62
+#: ../includes/class-cctm-ajax.php:59
+#: ../includes/class-cctm-ajax.php:62
 #, php-format
 msgid "Invalid Ajax controller: %s"
 msgstr "Invalid Ajax controller: %s"
 
-#: ../includes/CCTM_Ajax.php:71
+#: ../includes/class-cctm-ajax.php:71
 #: ../includes/CCTM_Ajax.php:74
 #, php-format
 msgid "Invalid nonce for %s"
 msgstr "Invalid nonce for %s"
 
-#: ../includes/CCTM_Columns.php:44
+#: ../includes/class-cctm-columns.php:44
 #: ../includes/CCTM_PostTypeDef.php:21
 msgid "Author"
 msgstr "Author"
 
-#: ../includes/CCTM_Columns.php:45
+#: ../includes/class-cctm-columns.php:45
 #: ../includes/CCTM_PostTypeDef.php:22
 msgid "Comments"
 msgstr "Comments"
 
-#: ../includes/CCTM_Columns.php:102
+#: ../includes/class-cctm-columns.php:102
 msgid "Quick Edit"
 msgstr "Quick Edit"
 
-#: ../includes/CCTM_Columns.php:102
+#: ../includes/class-cctm-columns.php:102
 msgid "Trash"
 msgstr "Trash"
 
-#: ../includes/CCTM_Columns.php:102
+#: ../includes/class-cctm-columns.php:102
 #: ../includes/CCTM_PostTypeDef.php:507
 msgid "View"
 msgstr "View"
