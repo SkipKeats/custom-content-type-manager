@@ -19,7 +19,7 @@
  * Or execute them via php on the command line:
  *	php /full/path/to/SP_PostUnitTests.php
  *
- * @package SummarizePosts
+ * @package Summarize_Posts
  * @author Everett Griffiths
  * @url http://craftsmancoding.com/
  */
@@ -28,7 +28,7 @@
 require_once(dirname(__FILE__) . '/simpletest/autorun.php');
 require_once(dirname(__FILE__) . '/../../../../wp-config.php');
 require_once('functions.php');
-require_once(CCTM_PATH.'/includes/SP_Post.php');
+require_once(CCTM_PATH.'/includes/class-sp-post.php');
 class SP_PostUnitTests extends UnitTestCase {
 
     public $post_id; // used to store last-insert-id

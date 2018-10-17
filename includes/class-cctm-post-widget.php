@@ -38,7 +38,7 @@ class CCTM_Post_Widget extends WP_Widget {
 	 */
 	public function form($instance) {
 				
-		require_once(CCTM_PATH.'/includes/GetPostsQuery.php');
+		require_once(CCTM_PATH.'/includes/class-get-posts-query.php');
 
 		$formatted_post = ''; // Formatted post
 		
@@ -126,7 +126,7 @@ class CCTM_Post_Widget extends WP_Widget {
 			return;
 		} 
 		
-		require_once(CCTM_PATH.'/includes/GetPostsQuery.php');
+		require_once(CCTM_PATH.'/includes/class-get-posts-query.php');
 
 		$post_id = (int) $instance['post_id'];
 		

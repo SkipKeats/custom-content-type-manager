@@ -13,19 +13,19 @@
  * RUNNING TESTS
  *
  * To run these tests, simply navigate to this file in your browser, e.g. 
- * http://cctm:8888/wp-content/plugins/custom-content-type-manager/tests/GetPostsFormUnitTests.php
+ * http://cctm:8888/wp-content/plugins/custom-content-type-manager/tests/Get_Posts_FormUnitTests.php
  *
  * Or execute them via php on the command line:
- *	php /full/path/to/GetPostsFormUnitTests.php
+ *	php /full/path/to/Get_Posts_FormUnitTests.php
  *
- * @package SummarizePosts
+ * @package Summarize_Posts
  * @author Everett Griffiths
  * @url http://craftsmancoding.com/
  */
 
 require_once(dirname(__FILE__) . '/simpletest/autorun.php');
 require_once(dirname(__FILE__) . '/../../../../wp-config.php');
-require_once(CCTM_PATH .'/includes/GetPostsForm.php');
+require_once(CCTM_PATH .'/includes/class-get-posts-form.php');
 require_once('functions.php');
 
 
@@ -41,9 +41,9 @@ class GetPostsFormUnitTests extends UnitTestCase {
 	
 
 /*
-	// SummarizePosts loaded
+	// Summarize_Posts loaded
 	function testSP() {
-		$this->assertTrue(class_exists('SummarizePosts'));
+		$this->assertTrue(class_exists('Summarize_Posts'));
 		$this->assertTrue(class_exists('GetPostsQuery'));
 		$this->assertTrue(class_exists('GetPostsForm'));
 	}

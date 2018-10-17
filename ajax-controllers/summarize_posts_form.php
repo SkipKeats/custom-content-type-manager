@@ -1,16 +1,16 @@
 <?php
 /*------------------------------------------------------------------------------
-This powers the TinyMCE thumbtack button that displays a SummarizePosts search
+This powers the TinyMCE thumbtack button that displays a Summarize_Posts search
 form.
 
 Remember: the output here MUST be wrapped in HTML tags, otherwise jQuery's .html()
 method will kack.
 ------------------------------------------------------------------------------*/
-require_once(CCTM_PATH.'/includes/SummarizePosts.php');
-require_once(CCTM_PATH.'/includes/GetPostsQuery.php');
-require_once(CCTM_PATH.'/includes/GetPostsForm.php');
+require_once(CCTM_PATH.'/includes/class-summarize-posts.php');
+require_once(CCTM_PATH.'/includes/class-get-posts-query.php');
+require_once(CCTM_PATH.'/includes/class-get-posts-form.php');
 
-$Form = new GetPostsForm();
+$Form = new Get_Posts_Form();
 
 // What options should be displayed on the form that defines the search?  
 // Load up the config...

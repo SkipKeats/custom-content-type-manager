@@ -22,12 +22,12 @@
 
 require_once(dirname(__FILE__) . '/simpletest/autorun.php');
 require_once(dirname(__FILE__) . '/../../../../wp-config.php');
-//require_once(CCTM_PATH .'/includes/CCTM_Validator.php');
+//require_once(CCTM_PATH .'/includes/class-cctm-validator.php');
 //require_once(CCTM_PATH .'/validators/class-cctm-form-element.php');
 
 //require_once(CCTM_PATH .'/includes/class-cctm-form-element.php');
-require_once(CCTM_PATH .'/includes/SP_Post.php');
-require_once(CCTM_PATH .'/includes/CCTM_Pagination.php');
+require_once(CCTM_PATH .'/includes/class-sp-post.php');
+require_once(CCTM_PATH .'/includes/class-cctm-pagination.php');
 require_once('functions.php');
 
 class CCTMUnitTests extends UnitTestCase {

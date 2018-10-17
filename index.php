@@ -54,17 +54,17 @@ $function_names_used = array(
 
 $class_names_used = array(
 	'CCTM',
-	'StandardizedCustomFields',
+	'Standardized_Custom_Fields',
 	'CCTMtests',
 	'CCTM_Form_Element',
 	'CCTM_Ajax',
 	'CCTM_Output_Filter',
 	'CCTM_Pagination',
-	'SummarizePosts',
+	'Summarize_Posts',
 	'GetPostsQuery',
-	'GetPostsForm',
+	'Get_Posts_Form',
 	'SP_Post',
-	'CCTM_PostTypeDef',
+	'CCTM_Post_Type_Def',
 	'CCTM_Import_Export',
 );
 
@@ -92,7 +92,7 @@ function custom_content_type_manager_cannot_load() {
 		. '<ul style="margin-left:30px;">' . $error_items . '</ul>'
 		. '</p>'
 		. '<p>You must deactivate the plugins that are using these conflicting names.</p>'
-		. '<p>If you have the SummarizePosts plugin installed, deactivate it now: it is already included in the CCTM.</p>'
+		. '<p>If you have the Summarize_Posts plugin installed, deactivate it now: it is already included in the CCTM.</p>'
 		. '</div>';
 }
 

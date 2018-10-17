@@ -3,7 +3,7 @@
 This plugin standardizes the custom fields for specified content types, e.g.
 post, page, and any other custom post-type you register via a plugin.
 ------------------------------------------------------------------------------*/
-class StandardizedCustomFields {
+class Standardized_Custom_Fields {
 	//------------------------------------------------------------------------------
 	//! Private Functions
 	//------------------------------------------------------------------------------
@@ -92,7 +92,7 @@ class StandardizedCustomFields {
 					$m = CCTM::$data['metabox_defs'][$m_id];
 				}
 
-				$callback = 'StandardizedCustomFields::print_custom_fields';
+				$callback = 'Standardized_Custom_Fields::print_custom_fields';
 				$callback_args = array('metabox_id'=>$m_id,'fields'=>$fields);
 				if (isset($m['callback']) && !empty($m['callback'])) {
 					$callback = $m['callback'];
@@ -126,7 +126,7 @@ class StandardizedCustomFields {
 			// get orphaned custom fields: fields without an explicit metabox
 			if (!empty($all_fields)) {
 				$m = CCTM::$metabox_def; // default
-				$callback = 'StandardizedCustomFields::print_custom_fields';
+				$callback = 'Standardized_Custom_Fields::print_custom_fields';
 				$callback_args = array('metabox_id'=>'cctm_default','fields'=>$all_fields);
 				add_meta_box($m['id'],$m['title'],$callback,$post_type,$m['context'],$m['priority'],$callback_args);
 			}

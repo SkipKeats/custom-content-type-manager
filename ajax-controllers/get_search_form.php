@@ -47,11 +47,11 @@ $existing_values = array();
 parse_str($search_parameters_str, $existing_values);
 
 //print '<pre>'.print_r($existing_values, true) . '</pre>'; 
-require_once(CCTM_PATH.'/includes/SummarizePosts.php');
-require_once(CCTM_PATH.'/includes/GetPostsQuery.php');
-require_once(CCTM_PATH.'/includes/GetPostsForm.php');
+require_once(CCTM_PATH.'/includes/class-summarize-posts.php');
+require_once(CCTM_PATH.'/includes/class-get-posts-query.php');
+require_once(CCTM_PATH.'/includes/class-get-posts-form.php');
 
-$Form = new GetPostsForm();
+$Form = new Get_Posts_Form();
 
 // What options should be displayed on the form that defines the search?  
 // Load up the config...

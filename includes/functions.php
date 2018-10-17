@@ -156,8 +156,8 @@ function get_custom_image($fieldname) {
  */
 function get_incoming_links($post_types_filter=array(), $post_id=null) {
 	
-	require_once(CCTM_PATH.'/includes/SummarizePosts.php');
-	require_once(CCTM_PATH.'/includes/GetPostsQuery.php');
+	require_once(CCTM_PATH.'/includes/class-summarize-posts.php');
+	require_once(CCTM_PATH.'/includes/class-get-posts-query.php');
 	
 	global $post;
 	global $wpdb;

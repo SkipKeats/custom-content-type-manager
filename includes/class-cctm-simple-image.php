@@ -4,7 +4,7 @@
  * I'm using it to compensate for WordPress' erratic image resizing API.
  * Sorry, WP, but your API sucks.
  *
- * File: CCTM_SimpleImage.php
+ * File: class-cctm-simple-image.php
  * Author: Simon Jarvis
  * Copyright: 2006 Simon Jarvis
  * Date: 08/11/06
@@ -26,7 +26,7 @@
  */
 
 
-class CCTM_SimpleImage {
+class CCTM_Simple_Image {
 
 	public $image;
 	public $image_type;

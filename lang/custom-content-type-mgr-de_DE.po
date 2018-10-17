@@ -164,7 +164,7 @@ msgstr "Die Einstellungen für %s wurden aktualisiert"
 
 #@ custom-content-type-mgr
 #: includes/class-cctm-form-element.php:802
-#: includes/CCTM_PostTypeDef.php:323
+#: includes/class-cctm-post-type-def.php:323
 #, php-format
 msgid "%s is a reserved name."
 msgstr "%s ist ein reservierter Name."
@@ -183,24 +183,24 @@ msgstr "Sie benutzen aktuell das %1$s Theme. Speichern Sie die Datei in den %2$s
 
 #@ custom-content-type-mgr
 #: includes/class-cctm-form-element.php:784
-#: includes/CCTM_PostTypeDef.php:291
+#: includes/class-cctm-post-type-def.php:291
 msgid "Name is required."
 msgstr "Name ist erforderlich."
 
 #@ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:300
+#: includes/class-cctm-post-type-def.php:300
 #, php-format
 msgid "The post type name cannot begin with %s because that is a reserved prefix."
 msgstr "Der Post type Name kann nicht mit %s beginnen, da es ein reserviertes Präfix ist."
 
 #@ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:321
-#: includes/CCTM_PostTypeDef.php:329
+#: includes/class-cctm-post-type-def.php:321
+#: includes/class-cctm-post-type-def.php:329
 msgid "Please choose another name."
 msgstr "Bitte wählen Sie einen anderen Namen."
 
 #@ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:331
+#: includes/class-cctm-post-type-def.php:331
 #, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
 msgid "%s is already in use as a registered taxonomy name."
 msgstr "%s ist bereits als Taxonomiename in Verwendung."
@@ -289,9 +289,9 @@ msgstr "Hierarchisch"
 #: ajax-controllers/get_posts.php:191
 #: ajax-controllers/post_content_widget.php:146
 #: includes/class-cctm-columns.php:34
-#: includes/CCTM_PostTypeDef.php:20
-#: includes/CCTM_Post_Widget.php:110
-#: includes/SummarizePosts_Widget.php:59
+#: includes/class-cctm-post-type-def.php:20
+#: includes/class-cctm-post-widget.php:110
+#: includes/class-summarize-posts-widget.php:59
 #: views/export.php:14
 #: views/widgets/post_content_form.php:24
 msgid "Title"
@@ -300,7 +300,7 @@ msgstr "Titel"
 #@ custom-content-type-mgr
 #: ajax-controllers/summarize_posts_form.php:40
 #: ajax-controllers/summarize_posts_widget.php:61
-#: includes/GetPostsForm.php:874
+#: includes/class-get-posts-form.php:874
 #: views/post_type.php:340
 msgid "Post Title"
 msgstr "Inhaltstyp-Überschrift"
@@ -318,8 +318,8 @@ msgstr "Haupt-Inhaltsblock."
 #@ default
 #@ custom-content-type-mgr
 #: includes/class-cctm-columns.php:35
-#: includes/CCTM_PostTypeDef.php:21
-#: includes/GetPostsForm.php:340
+#: includes/class-cctm-post-type-def.php:21
+#: includes/class-get-posts-form.php:340
 #: views/export.php:17
 #: views/post_type.php:353
 #: views/preview_def.php:12
@@ -457,20 +457,20 @@ msgstr "Zeige in Navigations-Menüs"
 #: config/menus/admin_menu.php:83
 #: config/menus/admin_menu.php:84
 #: controllers/settings.php:13
-#: includes/CCTM.php:455
+#: includes/class-cctm.php:455
 msgid "Settings"
 msgstr "Einstellungen"
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:1966
-#: includes/SummarizePosts.php:383
+#: includes/class-cctm.php:1966
+#: includes/class-summarize-posts.php:383
 #: tests/CCTMtests.php:188
 #, php-format
 msgid "The %s plugin encountered errors! It cannot load!"
 msgstr "Das %s Plugin ist auf einen Fehler gestoßen! Es kann nicht geladen werden!"
 
 #@ default
-#: includes/CCTM.php:1860
+#: includes/class-cctm.php:1860
 msgid "You do not have sufficient permissions to access this page."
 msgstr "You do not have sufficient permissions to access this page."
 
@@ -492,8 +492,8 @@ msgstr "Ungültiger Inhaltstyp"
 
 #@ default
 #@ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:507
-#: includes/GetPostsForm.php:203
+#: includes/class-cctm-post-type-def.php:507
+#: includes/class-get-posts-form.php:203
 msgid "Search"
 msgstr "Suche"
 
@@ -535,7 +535,7 @@ msgstr "Aktivieren"
 #: controllers/list_post_types.php:40
 #: controllers/list_pt_associations.php:110
 #: controllers/list_pt_associations.php:142
-#: includes/CCTM_PostTypeDef.php:498
+#: includes/class-cctm-post-type-def.php:498
 msgid "Edit"
 msgstr "Bearbeiten"
 
@@ -557,7 +557,7 @@ msgstr "Lösche diesen Inhaltstyp"
 #: config/menus/admin_menu.php:65
 #: config/menus/admin_menu.php:66
 #: controllers/settings.php:107
-#: includes/StandardizedCustomFields.php:190
+#: includes/class-standardized-custom-fields.php:190
 #: views/preview_def.php:52
 #: views/templates/default.php:50
 msgid "Custom Fields"
@@ -588,7 +588,7 @@ msgstr "Abbrechen"
 #: fields/image.php:312
 #: fields/media.php:316
 #: fields/relation.php:312
-#: includes/CCTM.php:1193
+#: includes/class-cctm.php:1193
 msgid "Remove"
 msgstr "Entfernen"
 
@@ -663,7 +663,7 @@ msgstr "Inhaltstyp-Auswahl-Einstellung wurde nicht gefunden."
 #: ajax-controllers/post_content_widget.php:147
 #: fields/date.php:301
 #: includes/class-cctm-columns.php:37
-#: includes/CCTM_PostTypeDef.php:23
+#: includes/class-cctm-post-type-def.php:23
 msgid "Date"
 msgstr "Datum"
 
@@ -705,8 +705,8 @@ msgstr "Dem Inhalt hinzufügen und schließen"
 #@ default
 #: ajax-controllers/get_posts.php:209
 #: ajax-controllers/post_content_widget.php:161
-#: includes/CCTM.php:1192
-#: includes/CCTM.php:1220
+#: includes/class-cctm.php:1192
+#: includes/class-cctm.php:1220
 #: views/import.php:69
 #: views/import.php:111
 msgid "Preview"
@@ -716,7 +716,7 @@ msgstr "Vorschau"
 #: ajax-controllers/get_posts.php:214
 #: ajax-controllers/get_selected_posts.php:115
 #: filters/gallery.php:42
-#: includes/GetPostsQuery.php:2159
+#: includes/class-get-posts-query.php:2159
 msgid "post_title"
 msgstr ""
 
@@ -724,7 +724,7 @@ msgstr ""
 #: ajax-controllers/get_posts.php:215
 #: ajax-controllers/get_selected_posts.php:116
 #: filters/gallery.php:43
-#: includes/GetPostsQuery.php:2161
+#: includes/class-get-posts-query.php:2161
 msgid "post_content"
 msgstr ""
 
@@ -732,7 +732,7 @@ msgstr ""
 #: ajax-controllers/get_posts.php:216
 #: ajax-controllers/get_selected_posts.php:117
 #: filters/gallery.php:44
-#: includes/GetPostsQuery.php:2162
+#: includes/class-get-posts-query.php:2162
 msgid "post_excerpt"
 msgstr ""
 
@@ -782,7 +782,7 @@ msgstr "Fehler beim Laden des Validators."
 
 #@ custom-content-type-mgr
 #: ajax-controllers/get_widget_post_tpl.php:31
-#: includes/CCTM_Post_Widget.php:56
+#: includes/class-cctm-post-widget.php:56
 msgid "Edit Selected Post"
 msgstr "Bearbeite den ausgewählten Inhaltstyp"
 
@@ -1683,13 +1683,13 @@ msgstr "PHP Test zur Berechnung der Grundwerte gebrauchen? (Gibt PHP Tags aus, Z
 
 #@ custom-content-type-mgr
 #: fields/date.php:299
-#: includes/GetPostsForm.php:387
+#: includes/class-get-posts-form.php:387
 msgid "Date Format"
 msgstr "Datumsformat"
 
 #@ custom-content-type-mgr
 #: fields/date.php:302
-#: includes/CCTM_PostTypeDef.php:158
+#: includes/class-cctm-post-type-def.php:158
 msgid "Default"
 msgstr "Standard"
 
@@ -2272,49 +2272,49 @@ msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/wrapp
 msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/wrapper_OutputFilter"
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:288
+#: includes/class-cctm.php:288
 #, php-format
 msgid "Could not create the cache directory at %s."
 msgstr "Konnte keinee Cache-Pfad erzeugen unter%s."
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:311
+#: includes/class-cctm.php:311
 #, php-format
 msgid "Could not create cached image: %s."
 msgstr "Konnte kein Cached Image erzeugen unter %s."
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:553
+#: includes/class-cctm.php:553
 #: updates/0.9.4.php:64
 msgid "This site was created in part using the Custom Content Type Manager"
 msgstr "Diese Site wurde teilweise mit dem Custom Content Type Manager eryeugt."
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:589
+#: includes/class-cctm.php:589
 msgid "custom_field shortcode requires the \"name\" parameter."
 msgstr "custom_field shortcode ben;tigt den Parameter \"name\"."
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:660
+#: includes/class-cctm.php:660
 #, php-format
 msgid "Incorrect class name in %s Output Filter. Expected class name: %s"
 msgstr "Unkorrekter Class Name in %s Ausgabe Filter. Erwarteter Class Name %s."
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:673
+#: includes/class-cctm.php:673
 #, php-format
 msgid "Output filter not found: %s"
 msgstr "Ausgabe Filter nicht gefunden: %s."
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:729
+#: includes/class-cctm.php:729
 msgid "Please correct the following errors:"
 msgstr "Bitte die folgenden Fehler korrigieren:"
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:821
-#: includes/CCTM.php:885
-#: includes/CCTM.php:934
+#: includes/class-cctm.php:821
+#: includes/class-cctm.php:885
+#: includes/class-cctm.php:934
 #: includes/class-cctm-import-export.php:38
 #: includes/class-cctm-import-export.php:109
 #: includes/class-cctm-import-export.php:182
@@ -2323,70 +2323,70 @@ msgid "WordPress issued the following error: "
 msgstr "WordPress stellte folgenden Fehler fest:"
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:1281
+#: includes/class-cctm.php:1281
 msgid "Field type is empty."
 msgstr "Feld-Typ ist leer."
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:1296
+#: includes/class-cctm.php:1296
 #, php-format
 msgid "Incorrect class name in %s file. Expected class name: %s"
 msgstr "Unkorrekter Class Name in Datei %s. Erwarteter Class Name: %s."
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:1304
+#: includes/class-cctm.php:1304
 #, php-format
 msgid "The class file for %s fields could not be found. Did you move or delete the file?"
 msgstr "Die Class-Datei für %s Felder konnte nicht gefunden werden. Haben Sie es verschoben oder gelöscht?"
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:1405
+#: includes/class-cctm.php:1405
 #, php-format
 msgid "Could not locate file for %s field."
 msgstr "Konnte Datei für das %s-Feld nicht finden."
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:1614
+#: includes/class-cctm.php:1614
 #, php-format
 msgid "Invaid file name! %s  No directory traversing allowed!"
 msgstr "Ungültiger Name! %s Das verschieben von Ordnern ist unzulässig!"
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:1618
+#: includes/class-cctm.php:1618
 #, php-format
 msgid "Invaid file name! %s  Name must end with .php!"
 msgstr "Ungültigr Dateiname! %s Name muss mit .php enden!"
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:1739
+#: includes/class-cctm.php:1739
 #, php-format
 msgid "Invaid tpl name! %s  No directory traversing allowed!"
 msgstr "Ungültiger tpl-Name! %s Das verschieben von Ordnern ist unzulässig!"
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:1743
+#: includes/class-cctm.php:1743
 #, php-format
 msgid "Invaid tpl name! %s  Name must end with .tpl!"
 msgstr "Ungültiger tpl-Name! Name muss mit .tpl enden!"
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:1783
+#: includes/class-cctm.php:1783
 #, php-format
 msgid "Validator not found: %s"
 msgstr "Validator nicht gefunden: %s"
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:1996
+#: includes/class-cctm.php:1996
 msgid "Dismiss all warnings"
 msgstr "Alle Warnungen ignorieren"
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:1997
+#: includes/class-cctm.php:1997
 msgid "Dismiss Warnings"
 msgstr "Warnungen ignorieren"
 
 #@ custom-content-type-mgr
-#: includes/CCTM.php:2008
+#: includes/class-cctm.php:2008
 msgid "The Custom Content Type Manager encountered the following warnings:"
 msgstr "Der Custom Content Type Manager stieß auf folgende Warnungen:"
 
@@ -2406,7 +2406,7 @@ msgstr "Vorübergehend ungültig %s"
 
 #@ default
 #: includes/class-cctm-columns.php:36
-#: includes/CCTM_PostTypeDef.php:22
+#: includes/class-cctm-post-type-def.php:22
 msgid "Comments"
 msgstr ""
 
@@ -2681,723 +2681,723 @@ msgid "The description cannot exceed 1024 characters."
 msgstr "Die Beschreibung darf 1024 Buchstaben nicht überschreiten."
 
 #@ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:49
-#: includes/CCTM_PostTypeDef.php:88
+#: includes/class-cctm-post-type-def.php:49
+#: includes/class-cctm-post-type-def.php:88
 msgid "Built-in WordPress column."
 msgstr "Eingabaute WordPress-Columne."
 
 #@ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:57
-#: includes/CCTM_PostTypeDef.php:124
+#: includes/class-cctm-post-type-def.php:57
+#: includes/class-cctm-post-type-def.php:124
 msgid "WordPress Taxonomy"
 msgstr "WordPress Taxonomy"
 
 #@ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:295
+#: includes/class-cctm-post-type-def.php:295
 msgid "Menu Name is required."
 msgstr "Menü-name ist erforderlich."
 
 #@ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:341
+#: includes/class-cctm-post-type-def.php:341
 #, php-format
 msgid "The name %s is already in use."
 msgstr "Dieser Name ist bereits in Benutzung."
 
 #@ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:345
+#: includes/class-cctm-post-type-def.php:345
 #, php-format
 msgid "The name %s has been registered by some other plugin."
 msgstr "Der Name %s wurde bereits von einem anderen PlugIn registriert."
 
 #@ default
 #@ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:492
-#: includes/CCTM_PostTypeDef.php:495
+#: includes/class-cctm-post-type-def.php:492
+#: includes/class-cctm-post-type-def.php:495
 #: views/post_type.php:223
 msgid "Add New"
 msgstr "Füge neue hinzu."
 
 #@ default
-#: includes/CCTM_PostTypeDef.php:501
+#: includes/class-cctm-post-type-def.php:501
 msgid "New"
 msgstr ""
 
 #@ default
-#: includes/CCTM_PostTypeDef.php:504
+#: includes/class-cctm-post-type-def.php:504
 msgid "View"
 msgstr ""
 
 #@ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:510
+#: includes/class-cctm-post-type-def.php:510
 #, php-format
 msgid "No %s found"
 msgstr "Kein %s gefunden."
 
 #@ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:513
+#: includes/class-cctm-post-type-def.php:513
 #, php-format
 msgid "No %s found in trash"
 msgstr "Kein %s im Papierkorb gefunden."
 
 #@ default
-#: includes/CCTM_PostTypeDef.php:516
+#: includes/class-cctm-post-type-def.php:516
 msgid "Parent Page"
 msgstr ""
 
 #@ custom-content-type-mgr
-#: includes/CCTM_Post_Widget.php:16
+#: includes/class-cctm-post-widget.php:16
 msgid "Post Content"
 msgstr "Post Content"
 
 #@ custom-content-type-mgr
-#: includes/CCTM_Post_Widget.php:17
+#: includes/class-cctm-post-widget.php:17
 msgid "Show a post's content inside of a widget."
 msgstr "Zeige den Inhalt eines Posts in einem Widget."
 
 #@ custom-content-type-mgr
-#: includes/CCTM_Post_Widget.php:99
+#: includes/class-cctm-post-widget.php:99
 #: views/widgets/post_content_form.php:12
 msgid "Choose Post"
 msgstr "Wähle Post"
 
 #@ custom-content-type-mgr
-#: includes/CCTM_Post_Widget.php:109
+#: includes/class-cctm-post-widget.php:109
 msgid "Override Post Title"
 msgstr "Überschreibe Post Titel"
 
 #@ custom-content-type-mgr
-#: includes/CCTM_Post_Widget.php:114
-#: includes/SummarizePosts_Widget.php:73
+#: includes/class-cctm-post-widget.php:114
+#: includes/class-summarize-posts-widget.php:73
 #: views/widgets/post_content_form.php:28
 msgid "Formatting String"
 msgstr "Formatiere Zeichenkette"
 
 #@ custom-content-type-mgr
-#: includes/CCTM_Validator.php:85
+#: includes/class-cctm-validator.php:85
 msgid "No configurable options."
 msgstr "Keine konfigurierbaren Optionen."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:180
+#: includes/class-get-posts-form.php:180
 #, php-format
 msgid "Retrieve posts with this exact %s."
 msgstr "Frage Posts mit exakt diesem %s."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:200
+#: includes/class-get-posts-form.php:200
 msgid "Sorry, no results matched your search criteria."
 msgstr "Leider keine Ergebnisse, die Ihren Suchkriterien entsprechen."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:204
+#: includes/class-get-posts-form.php:204
 msgid "Filter"
 msgstr "Filter"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:205
+#: includes/class-get-posts-form.php:205
 msgid "Show All"
 msgstr "Zeige alle"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:206
+#: includes/class-get-posts-form.php:206
 msgid "Show all dates"
 msgstr "Zeige alle Termine."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:207
+#: includes/class-get-posts-form.php:207
 msgid "Show all post-types"
 msgstr "Zeige alle Post-Typen."
 
 #@ default
-#: includes/GetPostsForm.php:244
+#: includes/class-get-posts-form.php:244
 msgid "Invalid parameter:"
 msgstr ""
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:305
+#: includes/class-get-posts-form.php:305
 msgid "Append"
 msgstr "Anfügen"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:306
+#: includes/class-get-posts-form.php:306
 msgid "List posts by their ID that you wish to include on every search. Comma-separate multiple values."
 msgstr "Liste Posts  nach ihrer ID auf, die Sie in jede Suche mit einbeziehen wollen. Komma-getrennte, mehrfache Werte möglich."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:326
+#: includes/class-get-posts-form.php:326
 msgid "All Authors"
 msgstr "Alle Autoren."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:341
+#: includes/class-get-posts-form.php:341
 msgid "Select an author whose posts you want to see."
 msgstr "Wählen Sie den Autor, dessen Posts Sie sehen möchten."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:361
+#: includes/class-get-posts-form.php:361
 msgid "Date Columns"
 msgstr "Datums-Spalte"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:362
+#: includes/class-get-posts-form.php:362
 msgid "Which column should be used for date comparisons? Select one, or write in a custom field."
 msgstr "Welche Spalte soll für den Datumsabgleich gebraucht werden? Wähle eine oder schreibe in ein benutzerdefiniertes Feld."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:388
+#: includes/class-get-posts-form.php:388
 msgid "How do you want the dates in the results formatted? Use one of the shortcuts, or supply a use any value valid for the <a href=\"http://php.net/manual/en/function.date-format.php\">date_format()</a>"
 msgstr "Wie möchten Sie die Daten in den Ergebnissen formatiert haben? Gebrauchen Sie einen der Shortcuts oder geben Sie einen gültigen Wert für <a href=\"http://php.net/manual/en/function.date-format.php\">date_format()</a> ein."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:414
+#: includes/class-get-posts-form.php:414
 msgid "Date Maximum"
 msgstr "Datums-Höchstwert."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:415
+#: includes/class-get-posts-form.php:415
 msgid "Only results from this date or before will be returned"
 msgstr "Ausschliesslich Ergebnisse diesen Datums oder davor werden ausgegeben."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:442
+#: includes/class-get-posts-form.php:442
 msgid "Date Minimum"
 msgstr "Datums-Minimum"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:443
+#: includes/class-get-posts-form.php:443
 msgid "Only results from this date or after will be returned."
 msgstr "Ausschliesslich Ergebnisse diesen Datums oder danach werden ausgegeben."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:470
+#: includes/class-get-posts-form.php:470
 msgid "Exclude"
 msgstr "Exkludiere"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:471
+#: includes/class-get-posts-form.php:471
 msgid "List posts by their ID that you wish to exclude from search results. Comma-separate multiple values."
 msgstr "Liste Posts nach ihrer ID auf, die Sie bei Ihrer Suche ausschliessen wollen. Komma-getrennte, mehrfache Werte möglich."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:488
+#: includes/class-get-posts-form.php:488
 msgid "Include"
 msgstr "Inkludiere"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:489
+#: includes/class-get-posts-form.php:489
 msgid "List posts by their ID that you wish to return.  Usually this option is not used with any other search options. Comma-separate multiple values."
 msgstr "Liste Beiträge nach ihrer ID, ​​die Sie zurückgeben möchten. In der Regel wird diese Option nicht mit anderen Suchoptionen verwendet. Mehrere Werte durch Kommata getrennt."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:508
+#: includes/class-get-posts-form.php:508
 msgid "Limit"
 msgstr "Limit"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:509
+#: includes/class-get-posts-form.php:509
 msgid "Limit the number of results returned. If pagination is enabled, this number will be the number of results shown per page."
 msgstr "Limitiere die ausgegebenden Ergebnisse. Falls die Seitennummerierung eingeschaltet ist, werden die Ergebnisse Seitenweise angezeigt."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:527
+#: includes/class-get-posts-form.php:527
 msgid "Match Rule"
 msgstr "Der Regel entsprechen"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:528
+#: includes/class-get-posts-form.php:528
 msgid "Define how your search term should match."
 msgstr "Definiere, wie Ihre Suchergebnisse entsprechen."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:532
+#: includes/class-get-posts-form.php:532
 msgid "Contains"
 msgstr "Enthält"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:533
+#: includes/class-get-posts-form.php:533
 msgid "Starts with"
 msgstr "Beginnt mit"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:534
+#: includes/class-get-posts-form.php:534
 msgid "Ends with"
 msgstr "Endet mit"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:558
+#: includes/class-get-posts-form.php:558
 msgid "Meta Key"
 msgstr "Meta Key"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:559
+#: includes/class-get-posts-form.php:559
 msgid "Name of a custom field, to be used in conjuncture with <em>meta_value</em>."
 msgstr "Namen eines benutzerdefinierten Feldes, in Konjunktur mit <em>meta_value</em> genutzt werden."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:576
+#: includes/class-get-posts-form.php:576
 msgid "Meta Value"
 msgstr "Meta-Wert"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:577
+#: includes/class-get-posts-form.php:577
 msgid "Value of a custom field, to be used in conjuncture with <em>meta_key</em>."
 msgstr "Namen eines benutzerdefinierten Feldes, in Konjunktur mit <em>meta_key</em> genutzt werden."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:594
+#: includes/class-get-posts-form.php:594
 msgid "Offset"
 msgstr "Offset"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:595
+#: includes/class-get-posts-form.php:595
 msgid "Number of results to skip.  Usually this is used only programmatically when pagination is enabled."
 msgstr "Anzahl der zu überspringenden Ergebnisse. Normalerweise ist diese Funktion nur programmatisch genutzt, wenn die Seitennummerierung eingeschaltet ist."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:610
+#: includes/class-get-posts-form.php:610
 msgid "Omit Post Types"
 msgstr "Gib Post Typen aus."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:614
+#: includes/class-get-posts-form.php:614
 msgid "Check which post-types you wish to omit from search results."
 msgstr "Überprüfe, welche Post-Typen Sie als Suchergebnisse ausgeben wollen."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:649
+#: includes/class-get-posts-form.php:649
 msgid "Order"
 msgstr "Sortierung"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:650
+#: includes/class-get-posts-form.php:650
 msgid "What order should search results be returned in? See also the <em>orderby</em> parameter."
 msgstr "In welcher Sortier-Reihenfolge sollen die Suchergebnisse ausgegeben werden? Siehe auch den <em>orderby</em> Parameter."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:661
+#: includes/class-get-posts-form.php:661
 msgid "Ascending"
 msgstr "Aufsteigend"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:676
+#: includes/class-get-posts-form.php:676
 msgid "Descending"
 msgstr "Absteigend"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:701
+#: includes/class-get-posts-form.php:701
 #: views/post_type.php:699
 msgid "Order By"
 msgstr "Sortiere nach"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:702
+#: includes/class-get-posts-form.php:702
 msgid "Which column should results be sorted by. This can be any column from the wp_posts table or any custom field. Default: ID"
 msgstr "Welcher Spalte nach die Ergebnisse sortiert werden. Das kann jede Spalte aus der wp_posts Tabelle oder jedes andere benutzerdefinierte Feld sein. Standard: ID"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:720
+#: includes/class-get-posts-form.php:720
 msgid "Paginate Results"
 msgstr "Seitennummerierungs-Ergebnisse"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:725
+#: includes/class-get-posts-form.php:725
 msgid "Pagination"
 msgstr "Seitennummerierung"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:742
+#: includes/class-get-posts-form.php:742
 msgid "Post Date"
 msgstr "Post Datum"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:743
+#: includes/class-get-posts-form.php:743
 msgid "Find posts from this date.  Use the <em>date_column</em> parameter to determine which column should be considered."
 msgstr "Finde Inhalte diesen Datums. Gebrauche das <em>date_column</em> Parameter, um zu entscheiden, welche Spalte ausgewählt wird."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:769
+#: includes/class-get-posts-form.php:769
 msgid "Post MIME Type"
 msgstr "Post MIME Type"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:770
+#: includes/class-get-posts-form.php:770
 msgid "Specify either the full MIME type (e.g. image/jpeg) or just the beginning (e.g. application, image, audio, video)."
 msgstr "Spezifiziere entweder den vollen MIME Type (z.B. Bild/jpeg) oder einfach den Beginn (z.B. Applikation, Bild, Audio, Video)."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:787
+#: includes/class-get-posts-form.php:787
 msgid "Post Modified"
 msgstr "Post modifiziert"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:788
+#: includes/class-get-posts-form.php:788
 msgid "Find posts modified on this date."
 msgstr "Finde Posts, die an diesem Datum modifiziert wurden."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:817
+#: includes/class-get-posts-form.php:817
 msgid "Post Parent"
 msgstr "Eltern Post"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:818
+#: includes/class-get-posts-form.php:818
 msgid "Retrieve all posts that are children of the post ID(s) specified. Comma-separate multiple values."
 msgstr "Abfrage aller Posts, die Kinder von den Post genannten IDs sind. Komma-separierter Mehrfach-Werte möglich."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:836
+#: includes/class-get-posts-form.php:836
 msgid "Post Status"
 msgstr "Post Status"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:837
+#: includes/class-get-posts-form.php:837
 msgid "Most searches will be for published posts."
 msgstr "Die meisten Suchanfragen werden für veröffentlichte Posts sein."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:875
+#: includes/class-get-posts-form.php:875
 msgid "Retrieve posts with this exact title."
 msgstr "Frage Posts  mit exakt diesem Title ab."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:891
+#: includes/class-get-posts-form.php:891
 msgid "Post Types"
 msgstr "Post Typen"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:895
+#: includes/class-get-posts-form.php:895
 msgid "Check which post-types you wish to search."
 msgstr "Überprüfe, welche Post-Typen Sie zu suchen wünschen."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:904
+#: includes/class-get-posts-form.php:904
 msgid "Select post-type"
 msgstr "Wähle Post-Typen"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:952
+#: includes/class-get-posts-form.php:952
 msgid "Search Columns"
 msgstr "Durchsuche Spalten"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:953
+#: includes/class-get-posts-form.php:953
 msgid "When searching by a <em>search_term</em>, which define columns should be searched. Comma-separate multiple values. You can specify custom-fields as column names."
 msgstr "Wenn Sie nach <em>search_term</em> suchen, die Spalten definieren gesucht werden soll. Durch Komma getrennte, mehrere Werte. Sie können benutzerdefinierte Felder als Spaltennamen angeben."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:970
+#: includes/class-get-posts-form.php:970
 msgid "Search Term"
 msgstr "Suchbegriff"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:971
+#: includes/class-get-posts-form.php:971
 msgid "Search posts for this term. Use the <em>search_columns</em> parameter to specify which columns are searched for the term."
 msgstr "Suche Posts mit diesem Begrif. Gebrauche den <em>search_columns</em>, um die Spalten zu spezifizieren, in denen gesucht werden soll."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:989
+#: includes/class-get-posts-form.php:989
 msgid "Select taxonomy"
 msgstr "Wähle die Taxonomie"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:1006
+#: includes/class-get-posts-form.php:1006
 msgid "Taxonomy"
 msgstr "Taxonomie"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:1007
+#: includes/class-get-posts-form.php:1007
 msgid "Choose which taxonomy to search in. Used in conjunction with <em>taxonomy_term</em>."
 msgstr "Wählen Sie, in welcher Taxonomie Sie suchen möchten. Gebrauch in Verbindung mit <em>taxonomy_term</em>."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:1026
+#: includes/class-get-posts-form.php:1026
 msgid "Taxonomy Depth"
 msgstr "Taxonomie-Tiefe"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:1027
+#: includes/class-get-posts-form.php:1027
 msgid "When doing a hierarchical taxonomical search (e.g. by sub-categories), increase this number to reflect how many levels down the hierarchical tree should be searched. For example, 1 = return posts classified with the given taxonomical term (e.g. mammals), 2 = return posts classified with the given term or with the sub-taxonomies (e.g. mammals or dogs). (default: 1)."
 msgstr "Wenn Sie eine hirarchische, taxonomische Suche durchführen (z.B. in sub-categories), erhöhen Sie diese Zahl, um so die Tiefe der hierarchischen Suche zu definieren. Zum Beipiel: 1 = Gibt Posts aus, die den taxonomischen Begriff \"Säugetiere\" enthalten, 2 = Gibt sowohl Posts aus, die den Suchbegriff beinhalten, aber auch solche, die in der Sub-Kategorie enthalten sind. Also sowohl \"Säugetiere\" als auch \"Hunde\". Standard-Einstellung: 1"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:1045
+#: includes/class-get-posts-form.php:1045
 msgid "Taxonomy Slug"
 msgstr "Taxonomie-Brocken"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:1046
+#: includes/class-get-posts-form.php:1046
 msgid "The taxonomy slug is the URL-friendly taxonomy term."
 msgstr "Der Taxonomie-Brocken ist ein URL-freundlicher taxonomischer Begriff"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:1067
+#: includes/class-get-posts-form.php:1067
 msgid "Taxonomy Term"
 msgstr "Taxonomixscher Begriff"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:1068
+#: includes/class-get-posts-form.php:1068
 msgid "Set a specific category(ies) or tag(s) to include in search results. Comma-separate multiple values."
 msgstr "Bestimme (eine) spezifische Kategorie(n) oder Tag(s), um darin zu suchen. Komma-separierte Mehrfach-Werte möglich."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:1109
+#: includes/class-get-posts-form.php:1109
 msgid "Month"
 msgstr "Monat"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:1110
+#: includes/class-get-posts-form.php:1110
 msgid "Choose which month's posts you wish to view. This relies on the <em>date_column</em> parameter."
 msgstr "Wählen Sie die monatlichen Beiträge, die Sie anzeigen möchten. Dies beruht auf dem <em> date_column </em>-Parameter."
 
 #@ default
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:1137
-#: includes/GetPostsQuery.php:1993
-#: includes/SP_Post.php:213
+#: includes/class-get-posts-form.php:1137
+#: includes/class-get-posts-query.php:1993
+#: includes/class-sp-post.php:213
 msgid "There were no errors."
 msgstr "Es wurden keine Fehler festgestellt."
 
 #@ default
-#: includes/GetPostsForm.php:1184
+#: includes/class-get-posts-form.php:1184
 msgid "Possible invalid search_by parameter:"
 msgstr ""
 
 #@ default
-#: includes/GetPostsForm.php:1330
+#: includes/class-get-posts-form.php:1330
 #, php-format
 msgid "CSS file not found %s"
 msgstr ""
 
 #@ custom-content-type-mgr
-#: includes/GetPostsForm.php:1351
-#: includes/GetPostsForm.php:1369
-#: includes/GetPostsForm.php:1385
-#: includes/GetPostsForm.php:1403
+#: includes/class-get-posts-form.php:1351
+#: includes/class-get-posts-form.php:1369
+#: includes/class-get-posts-form.php:1385
+#: includes/class-get-posts-form.php:1403
 #, php-format
 msgid "Invalid data type passed to %s function. Input must be a string."
 msgstr "Ungültiger Datentyp %s an Funktion übergeben. Die Eingabe muss ein String sein."
 
 #@ default
-#: includes/GetPostsForm.php:1429
+#: includes/class-get-posts-form.php:1429
 msgid "Invalid input to set_tpl() function. Input must be a string."
 msgstr ""
 
 #@ default
-#: includes/GetPostsForm.php:1433
+#: includes/class-get-posts-form.php:1433
 msgid "set_tpl(): Formatting string must not be empty!"
 msgstr ""
 
 #@ default
-#: includes/GetPostsQuery.php:429
+#: includes/class-get-posts-query.php:429
 msgid "Invalid alpha input:"
 msgstr ""
 
 #@ default
-#: includes/GetPostsQuery.php:434
+#: includes/class-get-posts-query.php:434
 msgid "Invalid post_type:"
 msgstr ""
 
 #@ default
-#: includes/GetPostsQuery.php:440
+#: includes/class-get-posts-query.php:440
 msgid "Invalid post_status:"
 msgstr ""
 
 #@ default
-#: includes/GetPostsQuery.php:446
+#: includes/class-get-posts-query.php:446
 msgid "Invalid column name. Column names may only contain alphanumeric characters and underscores: "
 msgstr ""
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:677
+#: includes/class-get-posts-query.php:677
 msgid "Invalid input argument.  Arrays not allowed as argument names."
 msgstr "Ungültiges Eingabe-Argument. Arrays sind als Argument-Namen nicht erlaubt."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:682
+#: includes/class-get-posts-query.php:682
 msgid "Empty input argument."
 msgstr "Leeres Eingabe-Argument."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:779
+#: includes/class-get-posts-query.php:779
 #, php-format
 msgid "Empty input for %s. Using default parameters."
 msgstr "Leere Eingabe für% s. Gebrauche Standard-Parameter."
 
 #@ default
-#: includes/GetPostsQuery.php:800
+#: includes/class-get-posts-query.php:800
 #, php-format
 msgid "Invalid order: %s. Order may only be \"ASC\" or \"DESC\"."
 msgstr ""
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:812
+#: includes/class-get-posts-query.php:812
 #, php-format
 msgid "orderby column not a default post column: %s"
 msgstr "Nach Spalten ordnen. Keine Standard-Post-Spalte: %s"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:816
+#: includes/class-get-posts-query.php:816
 #, php-format
 msgid "Invalid column name supplied for orderby: %s"
 msgstr "Ungültiger Spaltenname angegeben für die Sortierung durch %s"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:841
+#: includes/class-get-posts-query.php:841
 #, php-format
 msgid "Invalid date argument: %s"
 msgstr "Ungültige Datum: %s"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:853
+#: includes/class-get-posts-query.php:853
 #, php-format
 msgid "Invalid datetime argument: %s"
 msgstr "Ungültiges Datum-Zeit Argument: %s"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:906
+#: includes/class-get-posts-query.php:906
 #, php-format
 msgid "Taxonomy does not exist: %s"
 msgstr "Taxonomie nicht existent: %s"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:931
+#: includes/class-get-posts-query.php:931
 msgid "Invalid parameter for join_rule. join_rule must be \"AND\" or \"OR\""
 msgstr "Ungültige Parameter für join_rule. join_rule muss \"AND\" or \"OR\" sein"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:942
+#: includes/class-get-posts-query.php:942
 msgid "Invalid parameter for match_rule. match_rule may be \"contains\", \"starts_with\", or \"ends_with\""
 msgstr "Ungültige Parameter für match_rule. match_rule kann  \"contains\", \"starts_with\", oder \"ends_with\" enthalten."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:954
+#: includes/class-get-posts-query.php:954
 msgid "Invalid date column."
 msgstr "Ungültige Daten-Spalte"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:968
+#: includes/class-get-posts-query.php:968
 msgid "post_mime_type contains illegal characters.  Input ignored."
 msgstr "post_mime_type enthält ungültige Character.  Eingabe ignoriert."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:980
+#: includes/class-get-posts-query.php:980
 #, php-format
 msgid "Invalid argument name %s.  Input ignored."
 msgstr "Ungültiger Argument-Name %s. Eingabe ignoriert."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:993
+#: includes/class-get-posts-query.php:993
 #, php-format
 msgid "Filtering on direct column/value: %s"
 msgstr "Filterung auf direkte Spalte/Wert:% s"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1484
-#: includes/GetPostsQuery.php:1613
+#: includes/class-get-posts-query.php:1484
+#: includes/class-get-posts-query.php:1613
 #, php-format
 msgid "The %s operator cannot operate on an array of values."
 msgstr "Der %s-Operator kann nicht auf einem Array von Werten angewandt werden."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1700
+#: includes/class-get-posts-query.php:1700
 msgid "Search parameters ignored: search_term and search_columns must be set."
 msgstr "Such-Parameter ignoriert: search_term und search_columns müssen eingestellt werden."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1894
+#: includes/class-get-posts-query.php:1894
 msgid "Arguments"
 msgstr "Argumente"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1896
+#: includes/class-get-posts-query.php:1896
 msgid "For more information on how to use this function, see the documentation for the <a href=\"http://code.google.com/p/wordpress-summarize-posts/wiki/get_posts\">GetPostsQuery::get_posts()</a> function."
 msgstr "Für weitere Informationen, wie Sie diese Funktion verwenden, finden Sie in der Dokumentation der  <a href=\"http://code.google.com/p/wordpress-summarize-posts/wiki/get_posts\">GetPostsQuery::get_posts()</a> Funktion."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1897
+#: includes/class-get-posts-query.php:1897
 msgid "Raw Database Queries"
 msgstr "Raw Datenanfragen an die Datenbank"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1901
+#: includes/class-get-posts-query.php:1901
 msgid "Comparable Shortcode"
 msgstr "Vergleichbare Shortcodes"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1903
+#: includes/class-get-posts-query.php:1903
 msgid "Results"
 msgstr "Ergebnisse"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1917
+#: includes/class-get-posts-query.php:1917
 msgid "No arguments supplied."
 msgstr "Keine Argumente geliefert."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1969
+#: includes/class-get-posts-query.php:1969
 msgid "Execution Time"
 msgstr "Laufzeit"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1970
+#: includes/class-get-posts-query.php:1970
 #, php-format
 msgid "%s seconds"
 msgstr "%s Sekunden"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1996
-#: includes/SP_Post.php:216
+#: includes/class-get-posts-query.php:1996
+#: includes/class-sp-post.php:216
 msgid "Errors"
 msgstr "Fehler"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:2029
+#: includes/class-get-posts-query.php:2029
 msgid "There were no notices."
 msgstr "Es gab keine Hinweise."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:2032
+#: includes/class-get-posts-query.php:2032
 msgid "Notices"
 msgstr "Notizen"
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:2270
+#: includes/class-get-posts-query.php:2270
 msgid "There were no warnings."
 msgstr "Es gab keine Warnungen."
 
 #@ custom-content-type-mgr
-#: includes/GetPostsQuery.php:2273
+#: includes/class-get-posts-query.php:2273
 msgid "Warnings"
 msgstr "Warnungen"
 
 #@ custom-content-type-mgr
-#: includes/StandardizedCustomFields.php:113
+#: includes/class-standardized-custom-fields.php:113
 #, php-format
 msgid "The %s field is required."
 msgstr "Das Feld %s ist erforderlich."
 
 #@ custom-content-type-mgr
-#: includes/StandardizedCustomFields.php:146
+#: includes/class-standardized-custom-fields.php:146
 msgid "This post has validation errors.  The post will remain in draft status until they are corrected."
 msgstr "Dieser Beitrag hat Validierungsfehler. Der Beitrag wird im Entwurf-Status bleiben, bis sie korrigiert werden."
 
 #@ custom-content-type-mgr
-#: includes/SummarizePosts_Widget.php:11
+#: includes/class-summarize-posts-widget.php:11
 msgid "Summarize Posts"
 msgstr "Beiträge zusammenfassen"
 
 #@ custom-content-type-mgr
-#: includes/SummarizePosts_Widget.php:12
+#: includes/class-summarize-posts-widget.php:12
 msgid "List posts according to flexible search criteria."
 msgstr "Liste Beiträge nach flexiblen Suchkriterien."
 
 #@ custom-content-type-mgr
-#: includes/SummarizePosts_Widget.php:62
+#: includes/class-summarize-posts-widget.php:62
 msgid "Search Criteria"
 msgstr "Such-Kriterien."
 
 #@ custom-content-type-mgr
-#: includes/SummarizePosts_Widget.php:62
+#: includes/class-summarize-posts-widget.php:62
 msgid "Define Search"
 msgstr "Suche definieren."
 

@@ -21,7 +21,7 @@
  *      are advantages to doing things this way, and that makes this compatible with
  *      the CCTM, for which it was written.
  *
- * @pacakge SummarizePosts
+ * @pacakge Summarize_Posts
  */
 class SP_Post {
 

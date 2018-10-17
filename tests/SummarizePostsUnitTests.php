@@ -14,12 +14,12 @@
  *
  * To run these tests, make sure you have THE test database loaded, then navigate 
  * to this file in your browser, e.g. 
- * http://cctm:8888/wp-content/plugins/custom-content-type-manager/tests/SummarizePostsUnitTests.php
+ * http://cctm:8888/wp-content/plugins/custom-content-type-manager/tests/Summarize_PostsUnitTests.php
  *
  * Or execute them via php on the command line:
- *	php /full/path/to/SummarizePostsUnitTests.php
+ *	php /full/path/to/Summarize_PostsUnitTests.php
  *
- * @package SummarizePosts
+ * @package Summarize_Posts
  * @author Everett Griffiths
  * @url http://craftsmancoding.com/
  */
@@ -28,7 +28,7 @@
 require_once(dirname(__FILE__) . '/simpletest/autorun.php');
 require_once(dirname(__FILE__) . '/../../../../wp-config.php');
 require_once('functions.php');
-class SummarizePostsUnitTests extends UnitTestCase {
+class Summarize_PostsUnitTests extends UnitTestCase {
 
 
 //	function setUp() { }
@@ -43,9 +43,9 @@ class SummarizePostsUnitTests extends UnitTestCase {
 		$this->assertTrue(defined('CCTM_PATH'));
 	}
 	
-	// SummarizePosts loaded
+	// Summarize_Posts loaded
 	function testSP() {
-		$this->assertTrue(class_exists('SummarizePosts'));
+		$this->assertTrue(class_exists('Summarize_Posts'));
 		$this->assertTrue(class_exists('GetPostsQuery'));
 	}
 

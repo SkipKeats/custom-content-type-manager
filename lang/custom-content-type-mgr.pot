@@ -1481,41 +1481,41 @@ msgstr "Wrapper"
 msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/wrapper_OutputFilter"
 msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/wrapper_OutputFilter"
 
-#: ../includes/CCTM.php:291
+#: ../includes/class-cctm.php:291
 #, php-format
 msgid "Could not create the cache directory at %s."
 msgstr "Could not create the cache directory at %s."
 
-#: ../includes/CCTM.php:314
+#: ../includes/class-cctm.php:314
 #, php-format
 msgid "Could not create cached image: %s."
 msgstr "Could not create cached image: %s."
 
-#: ../includes/CCTM.php:559
+#: ../includes/class-cctm.php:559
 msgid "This site was created in part using the Custom Content Type Manager"
 msgstr "This site was created in part using the Custom Content Type Manager"
 
-#: ../includes/CCTM.php:595
+#: ../includes/class-cctm.php:595
 msgid "custom_field shortcode requires the \"name\" parameter."
 msgstr "custom_field shortcode requires the \"name\" parameter."
 
-#: ../includes/CCTM.php:667
+#: ../includes/class-cctm.php:667
 #, php-format
 msgid "Incorrect class name in %s Output Filter. Expected class name: %s"
 msgstr "Incorrect class name in %s Output Filter. Expected class name: %s"
 
-#: ../includes/CCTM.php:680
+#: ../includes/class-cctm.php:680
 #, php-format
 msgid "Output filter not found: %s"
 msgstr "Output filter not found: %s"
 
-#: ../includes/CCTM.php:773
+#: ../includes/class-cctm.php:773
 msgid "Please correct the following errors:"
 msgstr "Please correct the following errors:"
 
-#: ../includes/CCTM.php:865
-#: ../includes/CCTM.php:929
-#: ../includes/CCTM.php:978
+#: ../includes/class-cctm.php:865
+#: ../includes/class-cctm.php:929
+#: ../includes/class-cctm.php:978
 #: ../includes/class-cctm-import-export.php:38
 #: ../includes/class-cctm-import-export.php:109
 #: ../includes/class-cctm-import-export.php:182
@@ -1523,68 +1523,68 @@ msgstr "Please correct the following errors:"
 msgid "WordPress issued the following error: "
 msgstr "WordPress issued the following error: "
 
-#: ../includes/CCTM.php:1325
+#: ../includes/class-cctm.php:1325
 msgid "Field type is empty."
 msgstr "Field type is empty."
 
-#: ../includes/CCTM.php:1340
+#: ../includes/class-cctm.php:1340
 #, php-format
 msgid "Incorrect class name in %s file. Expected class name: %s"
 msgstr "Incorrect class name in %s file. Expected class name: %s"
 
-#: ../includes/CCTM.php:1348
+#: ../includes/class-cctm.php:1348
 #, php-format
 msgid "The class file for %s fields could not be found. Did you move or delete the file?"
 msgstr "The class file for %s fields could not be found. Did you move or delete the file?"
 
-#: ../includes/CCTM.php:1449
+#: ../includes/class-cctm.php:1449
 #, php-format
 msgid "Could not locate file for %s field."
 msgstr "Could not locate file for %s field."
 
-#: ../includes/CCTM.php:1658
+#: ../includes/class-cctm.php:1658
 #, php-format
 msgid "Invaid file name! %s  No directory traversing allowed!"
 msgstr "Invaid file name! %s  No directory traversing allowed!"
 
-#: ../includes/CCTM.php:1662
+#: ../includes/class-cctm.php:1662
 #, php-format
 msgid "Invaid file name! %s  Name must end with .php!"
 msgstr "Invaid file name! %s  Name must end with .php!"
 
-#: ../includes/CCTM.php:1783
+#: ../includes/class-cctm.php:1783
 #, php-format
 msgid "Invaid tpl name! %s  No directory traversing allowed!"
 msgstr "Invaid tpl name! %s  No directory traversing allowed!"
 
-#: ../includes/CCTM.php:1787
+#: ../includes/class-cctm.php:1787
 #, php-format
 msgid "Invaid tpl name! %s  Name must end with .tpl!"
 msgstr "Invaid tpl name! %s  Name must end with .tpl!"
 
-#: ../includes/CCTM.php:1827
+#: ../includes/class-cctm.php:1827
 #, php-format
 msgid "Validator not found: %s"
 msgstr "Validator not found: %s"
 
-#: ../includes/CCTM.php:1911
+#: ../includes/class-cctm.php:1911
 msgid "You do not have sufficient permissions to access this page."
 msgstr "You do not have sufficient permissions to access this page."
 
-#: ../includes/CCTM.php:2045
+#: ../includes/class-cctm.php:2045
 #, php-format
 msgid "The %s plugin encountered errors! It cannot load!"
 msgstr "The %s plugin encountered errors! It cannot load!"
 
-#: ../includes/CCTM.php:2075
+#: ../includes/class-cctm.php:2075
 msgid "Dismiss all warnings"
 msgstr "Dismiss all warnings"
 
-#: ../includes/CCTM.php:2076
+#: ../includes/class-cctm.php:2076
 msgid "Dismiss Warnings"
 msgstr "Dismiss Warnings"
 
-#: ../includes/CCTM.php:2087
+#: ../includes/class-cctm.php:2087
 msgid "The Custom Content Type Manager encountered the following warnings:"
 msgstr "The Custom Content Type Manager encountered the following warnings:"
 
@@ -1601,12 +1601,12 @@ msgid "Invalid nonce for %s"
 msgstr "Invalid nonce for %s"
 
 #: ../includes/class-cctm-columns.php:44
-#: ../includes/CCTM_PostTypeDef.php:21
+#: ../includes/class-cctm-post-type-def.php:21
 msgid "Author"
 msgstr "Author"
 
 #: ../includes/class-cctm-columns.php:45
-#: ../includes/CCTM_PostTypeDef.php:22
+#: ../includes/class-cctm-post-type-def.php:22
 msgid "Comments"
 msgstr "Comments"
 
@@ -1619,7 +1619,7 @@ msgid "Trash"
 msgstr "Trash"
 
 #: ../includes/class-cctm-columns.php:102
-#: ../includes/CCTM_PostTypeDef.php:507
+#: ../includes/class-cctm-post-type-def.php:507
 msgid "View"
 msgstr "View"
 
@@ -1728,7 +1728,7 @@ msgid "There were errors in your custom field definition."
 msgstr "There were errors in your custom field definition."
 
 #: ../includes/class-cctm-form-element.php:786
-#: ../includes/CCTM_PostTypeDef.php:290
+#: ../includes/class-cctm-post-type-def.php:290
 msgid "Name is required."
 msgstr "Name is required."
 
@@ -1742,7 +1742,7 @@ msgid "The name is too long. Names must not exceed 255 characters."
 msgstr "The name is too long. Names must not exceed 255 characters."
 
 #: ../includes/class-cctm-form-element.php:804
-#: ../includes/CCTM_PostTypeDef.php:322
+#: ../includes/class-cctm-post-type-def.php:322
 #, php-format
 msgid "%s is a reserved name."
 msgstr "%s is a reserved name."
@@ -1852,93 +1852,93 @@ msgstr "Description is required."
 msgid "The description cannot exceed 1024 characters."
 msgstr "The description cannot exceed 1024 characters."
 
-#: ../includes/CCTM_Post_Widget.php:16
+#: ../includes/class-cctm-post-widget.php:16
 msgid "Post Content"
 msgstr "Post Content"
 
-#: ../includes/CCTM_Post_Widget.php:17
+#: ../includes/class-cctm-post-widget.php:17
 msgid "Show a post's content inside of a widget."
 msgstr "Show a post's content inside of a widget."
 
-#: ../includes/CCTM_Post_Widget.php:99
+#: ../includes/class-cctm-post-widget.php:99
 msgid "Choose Post"
 msgstr "Choose Post"
 
-#: ../includes/CCTM_Post_Widget.php:109
+#: ../includes/class-cctm-post-widget.php:109
 msgid "Override Post Title"
 msgstr "Override Post Title"
 
-#: ../includes/CCTM_Post_Widget.php:114
+#: ../includes/class-cctm-post-widget.php:114
 msgid "Formatting String"
 msgstr "Formatting String"
 
-#: ../includes/CCTM_PostTypeDef.php:49
-#: ../includes/CCTM_PostTypeDef.php:88
+#: ../includes/class-cctm-post-type-def.php:49
+#: ../includes/class-cctm-post-type-def.php:88
 msgid "Built-in WordPress column."
 msgstr "Built-in WordPress column."
 
-#: ../includes/CCTM_PostTypeDef.php:57
-#: ../includes/CCTM_PostTypeDef.php:124
+#: ../includes/class-cctm-post-type-def.php:57
+#: ../includes/class-cctm-post-type-def.php:124
 msgid "WordPress Taxonomy"
 msgstr "WordPress Taxonomy"
 
-#: ../includes/CCTM_PostTypeDef.php:294
+#: ../includes/class-cctm-post-type-def.php:294
 msgid "Menu Name is required."
 msgstr "Menu Name is required."
 
-#: ../includes/CCTM_PostTypeDef.php:299
+#: ../includes/class-cctm-post-type-def.php:299
 #, php-format
 msgid "The post type name cannot begin with %s because that is a reserved prefix."
 msgstr "The post type name cannot begin with %s because that is a reserved prefix."
 
-#: ../includes/CCTM_PostTypeDef.php:320
-#: ../includes/CCTM_PostTypeDef.php:328
+#: ../includes/class-cctm-post-type-def.php:320
+#: ../includes/class-cctm-post-type-def.php:328
 msgid "Please choose another name."
 msgstr "Please choose another name."
 
-#: ../includes/CCTM_PostTypeDef.php:330
+#: ../includes/class-cctm-post-type-def.php:330
 #, php-format
 msgid "%s is already in use as a registered taxonomy name."
 msgstr "%s is already in use as a registered taxonomy name."
 
-#: ../includes/CCTM_PostTypeDef.php:340
+#: ../includes/class-cctm-post-type-def.php:340
 #, php-format
 msgid "The name %s is already in use."
 msgstr "The name %s is already in use."
 
-#: ../includes/CCTM_PostTypeDef.php:344
+#: ../includes/class-cctm-post-type-def.php:344
 #, php-format
 msgid "The name %s has been registered by some other plugin."
 msgstr "The name %s has been registered by some other plugin."
 
-#: ../includes/CCTM_PostTypeDef.php:495
-#: ../includes/CCTM_PostTypeDef.php:498
+#: ../includes/class-cctm-post-type-def.php:495
+#: ../includes/class-cctm-post-type-def.php:498
 msgid "Add New"
 msgstr "Add New"
 
-#: ../includes/CCTM_PostTypeDef.php:504
+#: ../includes/class-cctm-post-type-def.php:504
 msgid "New"
 msgstr "New"
 
-#: ../includes/CCTM_PostTypeDef.php:510
+#: ../includes/class-cctm-post-type-def.php:510
 msgid "Search"
 msgstr "Search"
 
-#: ../includes/CCTM_PostTypeDef.php:513
+#: ../includes/class-cctm-post-type-def.php:513
 #, php-format
 msgid "No %s found"
 msgstr "No %s found"
 
-#: ../includes/CCTM_PostTypeDef.php:516
+#: ../includes/class-cctm-post-type-def.php:516
 #, php-format
 msgid "No %s found in trash"
 msgstr "No %s found in trash"
 
-#: ../includes/CCTM_PostTypeDef.php:519
+#: ../includes/class-cctm-post-type-def.php:519
 msgid "Parent Page"
 msgstr "Parent Page"
 
-#: ../includes/CCTM_Validator.php:85
+#: ../includes/class-cctm-validator.php:85
 msgid "No configurable options."
 msgstr "No configurable options."
 
@@ -1956,505 +1956,505 @@ msgstr "The name %s is already in use."
 msgid "Invalid field name: %s"
 msgstr "Invalid field name: %s"
 
-#: ../includes/GetPostsForm.php:193
+#: ../includes/class-get-posts-form.php:193
 #, php-format
 msgid "Retrieve posts with this exact %s."
 msgstr "Retrieve posts with this exact %s."
 
-#: ../includes/GetPostsForm.php:210
+#: ../includes/class-get-posts-form.php:210
 msgid "Sorry, no results matched your search criteria."
 msgstr "Sorry, no results matched your search criteria."
 
-#: ../includes/GetPostsForm.php:214
+#: ../includes/class-get-posts-form.php:214
 msgid "Filter"
 msgstr "Filter"
 
-#: ../includes/GetPostsForm.php:215
+#: ../includes/class-get-posts-form.php:215
 msgid "Show All"
 msgstr "Show All"
 
-#: ../includes/GetPostsForm.php:216
+#: ../includes/class-get-posts-form.php:216
 msgid "Show all dates"
 msgstr "Show all dates"
 
-#: ../includes/GetPostsForm.php:217
+#: ../includes/class-get-posts-form.php:217
 msgid "Show all post-types"
 msgstr "Show all post-types"
 
-#: ../includes/GetPostsForm.php:254
+#: ../includes/class-get-posts-form.php:254
 msgid "Invalid parameter:"
 msgstr "Invalid parameter:"
 
-#: ../includes/GetPostsForm.php:316
+#: ../includes/class-get-posts-form.php:316
 msgid "Append"
 msgstr "Append"
 
-#: ../includes/GetPostsForm.php:317
+#: ../includes/class-get-posts-form.php:317
 msgid "List posts by their ID that you wish to include on every search. Comma-separate multiple values."
 msgstr "List posts by their ID that you wish to include on every search. Comma-separate multiple values."
 
-#: ../includes/GetPostsForm.php:338
+#: ../includes/class-get-posts-form.php:338
 msgid "All Authors"
 msgstr "All Authors"
 
-#: ../includes/GetPostsForm.php:353
+#: ../includes/class-get-posts-form.php:353
 msgid "Select an author whose posts you want to see."
 msgstr "Select an author whose posts you want to see."
 
-#: ../includes/GetPostsForm.php:374
+#: ../includes/class-get-posts-form.php:374
 msgid "Date Columns"
 msgstr "Date Columns"
 
-#: ../includes/GetPostsForm.php:375
+#: ../includes/class-get-posts-form.php:375
 msgid "Which column should be used for date comparisons? Select one, or write in a custom field."
 msgstr "Which column should be used for date comparisons? Select one, or write in a custom field."
 
-#: ../includes/GetPostsForm.php:402
+#: ../includes/class-get-posts-form.php:402
 msgid "How do you want the dates in the results formatted? Use one of the shortcuts, or supply a use any value valid for the <a href=\"http://php.net/manual/en/function.date-format.php\">date_format()</a>"
 msgstr "How do you want the dates in the results formatted? Use one of the shortcuts, or supply a use any value valid for the <a href=\"http://php.net/manual/en/function.date-format.php\">date_format()</a>"
 
-#: ../includes/GetPostsForm.php:429
+#: ../includes/class-get-posts-form.php:429
 msgid "Date Maximum"
 msgstr "Date Maximum"
 
-#: ../includes/GetPostsForm.php:430
+#: ../includes/class-get-posts-form.php:430
 msgid "Only results from this date or before will be returned"
 msgstr "Only results from this date or before will be returned"
 
-#: ../includes/GetPostsForm.php:458
+#: ../includes/class-get-posts-form.php:458
 msgid "Date Minimum"
 msgstr "Date Minimum"
 
-#: ../includes/GetPostsForm.php:459
+#: ../includes/class-get-posts-form.php:459
 msgid "Only results from this date or after will be returned."
 msgstr "Only results from this date or after will be returned."
 
-#: ../includes/GetPostsForm.php:488
+#: ../includes/class-get-posts-form.php:488
 msgid "Exclude"
 msgstr "Exclude"
 
-#: ../includes/GetPostsForm.php:489
+#: ../includes/class-get-posts-form.php:489
 msgid "List posts by their ID that you wish to exclude from search results. Comma-separate multiple values."
 msgstr "List posts by their ID that you wish to exclude from search results. Comma-separate multiple values."
 
-#: ../includes/GetPostsForm.php:508
+#: ../includes/class-get-posts-form.php:508
 msgid "Include"
 msgstr "Include"
 
-#: ../includes/GetPostsForm.php:509
+#: ../includes/class-get-posts-form.php:509
 msgid "List posts by their ID that you wish to return.  Usually this option is not used with any other search options. Comma-separate multiple values."
 msgstr "List posts by their ID that you wish to return.  Usually this option is not used with any other search options. Comma-separate multiple values."
 
-#: ../includes/GetPostsForm.php:529
+#: ../includes/class-get-posts-form.php:529
 msgid "Limit"
 msgstr "Limit"
 
-#: ../includes/GetPostsForm.php:530
+#: ../includes/class-get-posts-form.php:530
 msgid "Limit the number of results returned. If pagination is enabled, this number will be the number of results shown per page."
 msgstr "Limit the number of results returned. If pagination is enabled, this number will be the number of results shown per page."
 
-#: ../includes/GetPostsForm.php:549
+#: ../includes/class-get-posts-form.php:549
 msgid "Match Rule"
 msgstr "Match Rule"
 
-#: ../includes/GetPostsForm.php:550
+#: ../includes/class-get-posts-form.php:550
 msgid "Define how your search term should match."
 msgstr "Define how your search term should match."
 
-#: ../includes/GetPostsForm.php:554
+#: ../includes/class-get-posts-form.php:554
 msgid "Contains"
 msgstr "Contains"
 
-#: ../includes/GetPostsForm.php:555
+#: ../includes/class-get-posts-form.php:555
 msgid "Starts with"
 msgstr "Starts with"
 
-#: ../includes/GetPostsForm.php:556
+#: ../includes/class-get-posts-form.php:556
 msgid "Ends with"
 msgstr "Ends with"
 
-#: ../includes/GetPostsForm.php:582
+#: ../includes/class-get-posts-form.php:582
 msgid "Meta Key"
 msgstr "Meta Key"
 
-#: ../includes/GetPostsForm.php:583
+#: ../includes/class-get-posts-form.php:583
 msgid "Name of a custom field, to be used in conjuncture with <em>meta_value</em>."
 msgstr "Name of a custom field, to be used in conjuncture with <em>meta_value</em>."
 
-#: ../includes/GetPostsForm.php:602
+#: ../includes/class-get-posts-form.php:602
 msgid "Meta Value"
 msgstr "Meta Value"
 
-#: ../includes/GetPostsForm.php:603
+#: ../includes/class-get-posts-form.php:603
 msgid "Value of a custom field, to be used in conjuncture with <em>meta_key</em>."
 msgstr "Value of a custom field, to be used in conjuncture with <em>meta_key</em>."
 
-#: ../includes/GetPostsForm.php:622
+#: ../includes/class-get-posts-form.php:622
 msgid "Offset"
 msgstr "Offset"
 
-#: ../includes/GetPostsForm.php:623
+#: ../includes/class-get-posts-form.php:623
 msgid "Number of results to skip.  Usually this is used only programmatically when pagination is enabled."
 msgstr "Number of results to skip.  Usually this is used only programmatically when pagination is enabled."
 
-#: ../includes/GetPostsForm.php:639
+#: ../includes/class-get-posts-form.php:639
 msgid "Omit Post Types"
 msgstr "Omit Post Types"
 
-#: ../includes/GetPostsForm.php:644
+#: ../includes/class-get-posts-form.php:644
 msgid "Check which post-types you wish to omit from search results."
 msgstr "Check which post-types you wish to omit from search results."
 
-#: ../includes/GetPostsForm.php:680
+#: ../includes/class-get-posts-form.php:680
 msgid "Order"
 msgstr "Order"
 
-#: ../includes/GetPostsForm.php:681
+#: ../includes/class-get-posts-form.php:681
 msgid "What order should search results be returned in? See also the <em>orderby</em> parameter."
 msgstr "What order should search results be returned in? See also the <em>orderby</em> parameter."
 
-#: ../includes/GetPostsForm.php:692
+#: ../includes/class-get-posts-form.php:692
 msgid "Ascending"
 msgstr "Ascending"
 
-#: ../includes/GetPostsForm.php:707
+#: ../includes/class-get-posts-form.php:707
 msgid "Descending"
 msgstr "Descending"
 
-#: ../includes/GetPostsForm.php:734
+#: ../includes/class-get-posts-form.php:734
 msgid "Order By"
 msgstr "Order By"
 
-#: ../includes/GetPostsForm.php:735
+#: ../includes/class-get-posts-form.php:735
 msgid "Which column should results be sorted by. This can be any column from the wp_posts table or any custom field. Default: ID"
 msgstr "Which column should results be sorted by. This can be any column from the wp_posts table or any custom field. Default: ID"
 
-#: ../includes/GetPostsForm.php:754
+#: ../includes/class-get-posts-form.php:754
 msgid "Paginate Results"
 msgstr "Paginate Results"
 
-#: ../includes/GetPostsForm.php:759
+#: ../includes/class-get-posts-form.php:759
 msgid "Pagination"
 msgstr "Pagination"
 
-#: ../includes/GetPostsForm.php:778
+#: ../includes/class-get-posts-form.php:778
 msgid "Post Date"
 msgstr "Post Date"
 
-#: ../includes/GetPostsForm.php:779
+#: ../includes/class-get-posts-form.php:779
 msgid "Find posts from this date.  Use the <em>date_column</em> parameter to determine which column should be considered."
 msgstr "Find posts from this date.  Use the <em>date_column</em> parameter to determine which column should be considered."
 
-#: ../includes/GetPostsForm.php:807
+#: ../includes/class-get-posts-form.php:807
 msgid "Post MIME Type"
 msgstr "Post MIME Type"
 
-#: ../includes/GetPostsForm.php:808
+#: ../includes/class-get-posts-form.php:808
 msgid "Specify either the full MIME type (e.g. image/jpeg) or just the beginning (e.g. application, image, audio, video)."
 msgstr "Specify either the full MIME type (e.g. image/jpeg) or just the beginning (e.g. application, image, audio, video)."
 
-#: ../includes/GetPostsForm.php:827
+#: ../includes/class-get-posts-form.php:827
 msgid "Post Modified"
 msgstr "Post Modified"
 
-#: ../includes/GetPostsForm.php:828
+#: ../includes/class-get-posts-form.php:828
 msgid "Find posts modified on this date."
 msgstr "Find posts modified on this date."
 
-#: ../includes/GetPostsForm.php:859
+#: ../includes/class-get-posts-form.php:859
 msgid "Post Parent"
 msgstr "Post Parent"
 
-#: ../includes/GetPostsForm.php:860
+#: ../includes/class-get-posts-form.php:860
 msgid "Retrieve all posts that are children of the post ID(s) specified. Comma-separate multiple values."
 msgstr "Retrieve all posts that are children of the post ID(s) specified. Comma-separate multiple values."
 
-#: ../includes/GetPostsForm.php:881
+#: ../includes/class-get-posts-form.php:881
 msgid "Post Status"
 msgstr "Post Status"
 
-#: ../includes/GetPostsForm.php:882
+#: ../includes/class-get-posts-form.php:882
 msgid "Most searches will be for published posts."
 msgstr "Most searches will be for published posts."
 
-#: ../includes/GetPostsForm.php:921
+#: ../includes/class-get-posts-form.php:921
 msgid "Retrieve posts with this exact title."
 msgstr "Retrieve posts with this exact title."
 
-#: ../includes/GetPostsForm.php:938
+#: ../includes/class-get-posts-form.php:938
 msgid "Post Types"
 msgstr "Post Types"
 
-#: ../includes/GetPostsForm.php:942
+#: ../includes/class-get-posts-form.php:942
 msgid "Check which post-types you wish to search."
 msgstr "Check which post-types you wish to search."
 
-#: ../includes/GetPostsForm.php:951
+#: ../includes/class-get-posts-form.php:951
 msgid "Select post-type"
 msgstr "Select post-type"
 
-#: ../includes/GetPostsForm.php:1002
+#: ../includes/class-get-posts-form.php:1002
 msgid "Search Columns"
 msgstr "Search Columns"
 
-#: ../includes/GetPostsForm.php:1003
+#: ../includes/class-get-posts-form.php:1003
 msgid "When searching by a <em>search_term</em>, which define columns should be searched. Comma-separate multiple values. You can specify custom-fields as column names."
 msgstr "When searching by a <em>search_term</em>, which define columns should be searched. Comma-separate multiple values. You can specify custom-fields as column names."
 
-#: ../includes/GetPostsForm.php:1022
+#: ../includes/class-get-posts-form.php:1022
 msgid "Search Term"
 msgstr "Search Term"
 
-#: ../includes/GetPostsForm.php:1023
+#: ../includes/class-get-posts-form.php:1023
 msgid "Search posts for this term. Use the <em>search_columns</em> parameter to specify which columns are searched for the term."
 msgstr "Search posts for this term. Use the <em>search_columns</em> parameter to specify which columns are searched for the term."
 
-#: ../includes/GetPostsForm.php:1043
+#: ../includes/class-get-posts-form.php:1043
 msgid "Select taxonomy"
 msgstr "Select taxonomy"
 
-#: ../includes/GetPostsForm.php:1060
+#: ../includes/class-get-posts-form.php:1060
 msgid "Taxonomy"
 msgstr "Taxonomy"
 
-#: ../includes/GetPostsForm.php:1061
+#: ../includes/class-get-posts-form.php:1061
 msgid "Choose which taxonomy to search in. Used in conjunction with <em>taxonomy_term</em>."
 msgstr "Choose which taxonomy to search in. Used in conjunction with <em>taxonomy_term</em>."
 
-#: ../includes/GetPostsForm.php:1081
+#: ../includes/class-get-posts-form.php:1081
 msgid "Taxonomy Depth"
 msgstr "Taxonomy Depth"
 
-#: ../includes/GetPostsForm.php:1082
+#: ../includes/class-get-posts-form.php:1082
 msgid "When doing a hierarchical taxonomical search (e.g. by sub-categories), increase this number to reflect how many levels down the hierarchical tree should be searched. For example, 1 = return posts classified with the given taxonomical term (e.g. mammals), 2 = return posts classified with the given term or with the sub-taxonomies (e.g. mammals or dogs). (default: 1)."
 msgstr "When doing a hierarchical taxonomical search (e.g. by sub-categories), increase this number to reflect how many levels down the hierarchical tree should be searched. For example, 1 = return posts classified with the given taxonomical term (e.g. mammals), 2 = return posts classified with the given term or with the sub-taxonomies (e.g. mammals or dogs). (default: 1)."
 
-#: ../includes/GetPostsForm.php:1101
+#: ../includes/class-get-posts-form.php:1101
 msgid "Taxonomy Slug"
 msgstr "Taxonomy Slug"
 
-#: ../includes/GetPostsForm.php:1102
+#: ../includes/class-get-posts-form.php:1102
 msgid "The taxonomy slug is the URL-friendly taxonomy term."
 msgstr "The taxonomy slug is the URL-friendly taxonomy term."
 
-#: ../includes/GetPostsForm.php:1125
+#: ../includes/class-get-posts-form.php:1125
 msgid "Taxonomy Term"
 msgstr "Taxonomy Term"
 
-#: ../includes/GetPostsForm.php:1126
+#: ../includes/class-get-posts-form.php:1126
 msgid "Set a specific category(ies) or tag(s) to include in search results. Comma-separate multiple values."
 msgstr "Set a specific category(ies) or tag(s) to include in search results. Comma-separate multiple values."
 
-#: ../includes/GetPostsForm.php:1169
+#: ../includes/class-get-posts-form.php:1169
 msgid "Month"
 msgstr "Month"
 
-#: ../includes/GetPostsForm.php:1170
+#: ../includes/class-get-posts-form.php:1170
 msgid "Choose which month's posts you wish to view. This relies on the <em>date_column</em> parameter."
 msgstr "Choose which month's posts you wish to view. This relies on the <em>date_column</em> parameter."
 
-#: ../includes/GetPostsForm.php:1204
-#: ../includes/GetPostsQuery.php:2009
-#: ../includes/SP_Post.php:213
+#: ../includes/class-get-posts-form.php:1204
+#: ../includes/class-get-posts-query.php:2009
+#: ../includes/class-sp-post.php:213
 msgid "There were no errors."
 msgstr "There were no errors."
 
-#: ../includes/GetPostsForm.php:1259
+#: ../includes/class-get-posts-form.php:1259
 msgid "Possible invalid search_by parameter:"
 msgstr "Possible invalid search_by parameter:"
 
-#: ../includes/GetPostsForm.php:1398
+#: ../includes/class-get-posts-form.php:1398
 #, php-format
 msgid "CSS file not found %s"
 msgstr "CSS file not found %s"
 
-#: ../includes/GetPostsForm.php:1419
-#: ../includes/GetPostsForm.php:1437
-#: ../includes/GetPostsForm.php:1453
-#: ../includes/GetPostsForm.php:1471
+#: ../includes/class-get-posts-form.php:1419
+#: ../includes/class-get-posts-form.php:1437
+#: ../includes/class-get-posts-form.php:1453
+#: ../includes/class-get-posts-form.php:1471
 #, php-format
 msgid "Invalid data type passed to %s function. Input must be a string."
 msgstr "Invalid data type passed to %s function. Input must be a string."
 
-#: ../includes/GetPostsForm.php:1497
+#: ../includes/class-get-posts-form.php:1497
 msgid "Invalid input to set_tpl() function. Input must be a string."
 msgstr "Invalid input to set_tpl() function. Input must be a string."
 
-#: ../includes/GetPostsForm.php:1501
+#: ../includes/class-get-posts-form.php:1501
 msgid "set_tpl(): Formatting string must not be empty!"
 msgstr "set_tpl(): Formatting string must not be empty!"
 
-#: ../includes/GetPostsQuery.php:427
+#: ../includes/class-get-posts-query.php:427
 msgid "Invalid alpha input:"
 msgstr "Invalid alpha input:"
 
-#: ../includes/GetPostsQuery.php:432
+#: ../includes/class-get-posts-query.php:432
 msgid "Invalid post_type:"
 msgstr "Invalid post_type:"
 
-#: ../includes/GetPostsQuery.php:438
+#: ../includes/class-get-posts-query.php:438
 msgid "Invalid post_status:"
 msgstr "Invalid post_status:"
 
-#: ../includes/GetPostsQuery.php:444
+#: ../includes/class-get-posts-query.php:444
 msgid "Invalid column name. Column names may only contain alphanumeric characters and underscores: "
 msgstr "Invalid column name. Column names may only contain alphanumeric characters and underscores: "
 
-#: ../includes/GetPostsQuery.php:675
+#: ../includes/class-get-posts-query.php:675
 msgid "Invalid input argument.  Arrays not allowed as argument names."
 msgstr "Invalid input argument.  Arrays not allowed as argument names."
 
-#: ../includes/GetPostsQuery.php:680
+#: ../includes/class-get-posts-query.php:680
 msgid "Empty input argument."
 msgstr "Empty input argument."
 
-#: ../includes/GetPostsQuery.php:777
+#: ../includes/class-get-posts-query.php:777
 #, php-format
 msgid "Empty input for %s. Using default parameters."
 msgstr "Empty input for %s. Using default parameters."
 
-#: ../includes/GetPostsQuery.php:798
+#: ../includes/class-get-posts-query.php:798
 #, php-format
 msgid "Invalid order: %s. Order may only be \"ASC\" or \"DESC\"."
 msgstr "Invalid order: %s. Order may only be \"ASC\" or \"DESC\"."
 
-#: ../includes/GetPostsQuery.php:810
+#: ../includes/class-get-posts-query.php:810
 #, php-format
 msgid "orderby column not a default post column: %s"
 msgstr "orderby column not a default post column: %s"
 
-#: ../includes/GetPostsQuery.php:814
+#: ../includes/class-get-posts-query.php:814
 #, php-format
 msgid "Invalid column name supplied for orderby: %s"
 msgstr "Invalid column name supplied for orderby: %s"
 
-#: ../includes/GetPostsQuery.php:843
+#: ../includes/class-get-posts-query.php:843
 #, php-format
 msgid "Invalid date argument: %s"
 msgstr "Invalid date argument: %s"
 
-#: ../includes/GetPostsQuery.php:855
+#: ../includes/class-get-posts-query.php:855
 #, php-format
 msgid "Invalid datetime argument: %s"
 msgstr "Invalid datetime argument: %s"
 
-#: ../includes/GetPostsQuery.php:908
+#: ../includes/class-get-posts-query.php:908
 #, php-format
 msgid "Taxonomy does not exist: %s"
 msgstr "Taxonomy does not exist: %s"
 
-#: ../includes/GetPostsQuery.php:933
+#: ../includes/class-get-posts-query.php:933
 msgid "Invalid parameter for join_rule. join_rule must be \"AND\" or \"OR\""
 msgstr "Invalid parameter for join_rule. join_rule must be \"AND\" or \"OR\""
 
-#: ../includes/GetPostsQuery.php:944
+#: ../includes/class-get-posts-query.php:944
 msgid "Invalid parameter for match_rule. match_rule may be \"contains\", \"starts_with\", or \"ends_with\""
 msgstr "Invalid parameter for match_rule. match_rule may be \"contains\", \"starts_with\", or \"ends_with\""
 
-#: ../includes/GetPostsQuery.php:956
+#: ../includes/class-get-posts-query.php:956
 msgid "Invalid date column."
 msgstr "Invalid date column."
 
-#: ../includes/GetPostsQuery.php:970
+#: ../includes/class-get-posts-query.php:970
 msgid "post_mime_type contains illegal characters.  Input ignored."
 msgstr "post_mime_type contains illegal characters.  Input ignored."
 
-#: ../includes/GetPostsQuery.php:982
+#: ../includes/class-get-posts-query.php:982
 #, php-format
 msgid "Invalid argument name %s.  Input ignored."
 msgstr "Invalid argument name %s.  Input ignored."
 
-#: ../includes/GetPostsQuery.php:995
+#: ../includes/class-get-posts-query.php:995
 #, php-format
 msgid "Filtering on direct column/value: %s"
 msgstr "Filtering on direct column/value: %s"
 
-#: ../includes/GetPostsQuery.php:1500
-#: ../includes/GetPostsQuery.php:1629
+#: ../includes/class-get-posts-query.php:1500
+#: ../includes/class-get-posts-query.php:1629
 #, php-format
 msgid "The %s operator cannot operate on an array of values."
 msgstr "The %s operator cannot operate on an array of values."
 
-#: ../includes/GetPostsQuery.php:1716
+#: ../includes/class-get-posts-query.php:1716
 msgid "Search parameters ignored: search_term and search_columns must be set."
 msgstr "Search parameters ignored: search_term and search_columns must be set."
 
-#: ../includes/GetPostsQuery.php:1910
+#: ../includes/class-get-posts-query.php:1910
 msgid "Arguments"
 msgstr "Arguments"
 
-#: ../includes/GetPostsQuery.php:1912
+#: ../includes/class-get-posts-query.php:1912
 msgid "For more information on how to use this function, see the documentation for the <a href=\"http://code.google.com/p/wordpress-summarize-posts/wiki/get_posts\">GetPostsQuery::get_posts()</a> function."
 msgstr "For more information on how to use this function, see the documentation for the <a href=\"http://code.google.com/p/wordpress-summarize-posts/wiki/get_posts\">GetPostsQuery::get_posts()</a> function."
 
-#: ../includes/GetPostsQuery.php:1913
+#: ../includes/class-get-posts-query.php:1913
 msgid "Raw Database Queries"
 msgstr "Raw Database Queries"
 
-#: ../includes/GetPostsQuery.php:1917
+#: ../includes/class-get-posts-query.php:1917
 msgid "Comparable Shortcode"
 msgstr "Comparable Shortcode"
 
-#: ../includes/GetPostsQuery.php:1919
+#: ../includes/class-get-posts-query.php:1919
 msgid "Results"
 msgstr "Results"
 
-#: ../includes/GetPostsQuery.php:1933
+#: ../includes/class-get-posts-query.php:1933
 msgid "No arguments supplied."
 msgstr "No arguments supplied."
 
-#: ../includes/GetPostsQuery.php:1985
+#: ../includes/class-get-posts-query.php:1985
 msgid "Execution Time"
 msgstr "Execution Time"
 
-#: ../includes/GetPostsQuery.php:1986
+#: ../includes/class-get-posts-query.php:1986
 #, php-format
 msgid "%s seconds"
 msgstr "%s seconds"
 
-#: ../includes/GetPostsQuery.php:2012
-#: ../includes/SP_Post.php:216
+#: ../includes/class-get-posts-query.php:2012
+#: ../includes/class-sp-post.php:216
 msgid "Errors"
 msgstr "Errors"
 
-#: ../includes/GetPostsQuery.php:2045
+#: ../includes/class-get-posts-query.php:2045
 msgid "There were no notices."
 msgstr "There were no notices."
 
-#: ../includes/GetPostsQuery.php:2048
+#: ../includes/class-get-posts-query.php:2048
 msgid "Notices"
 msgstr "Notices"
 
-#: ../includes/GetPostsQuery.php:2259
+#: ../includes/class-get-posts-query.php:2259
 msgid "There were no warnings."
 msgstr "There were no warnings."
 
-#: ../includes/GetPostsQuery.php:2262
+#: ../includes/class-get-posts-query.php:2262
 msgid "Warnings"
 msgstr "Warnings"
 
-#: ../includes/StandardizedCustomFields.php:114
+#: ../includes/class-standardized-custom-fields.php:114
 #, php-format
 msgid "The %s field is required."
 msgstr "The %s field is required."
 
-#: ../includes/StandardizedCustomFields.php:147
+#: ../includes/class-standardized-custom-fields.php:147
 msgid "This post has validation errors.  The post will remain in draft status until they are corrected."
 msgstr "This post has validation errors.  The post will remain in draft status until they are corrected."
 
-#: ../includes/SummarizePosts_Widget.php:11
+#: ../includes/class-summarize-posts-widget.php:11
 msgid "Summarize Posts"
 msgstr "Summarize Posts"
 
-#: ../includes/SummarizePosts_Widget.php:12
+#: ../includes/class-summarize-posts-widget.php:12
 msgid "List posts according to flexible search criteria."
 msgstr "List posts according to flexible search criteria."
 
-#: ../includes/SummarizePosts_Widget.php:62
+#: ../includes/class-summarize-posts-widget.php:62
 msgid "Search Criteria"
 msgstr "Search Criteria"
 
-#: ../includes/SummarizePosts_Widget.php:62
+#: ../includes/class-summarize-posts-widget.php:62
 msgid "Define Search"
 msgstr "Define Search"
 

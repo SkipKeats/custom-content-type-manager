@@ -5,7 +5,7 @@
 */
 if ( ! defined('CCTM_PATH')) exit('No direct script access allowed');
 if (!current_user_can('administrator')) exit('Admins only.');
-require_once(CCTM_PATH.'/includes/CCTM_PostTypeDef.php');
+require_once(CCTM_PATH.'/includes/class-cctm-post-type-def.php');
 
 // Variables for our template
 $data = array();
@@ -62,7 +62,7 @@ $d['msg']    = '';  // Any validation errors
 
 // Save data if it was properly submitted
 if ( !empty($_POST) && check_admin_referer($d['action_name'], $d['nonce_name']) ) {
-	$sanitized_vals = CCTM_PostTypeDef::sanitize_post_type_def($_POST);
+	$sanitized_vals = CCTM_Post_Type_Def::sanitize_post_type_def($_POST);
 	if (isset($d['def']['custom_fields'])) {
 		$sanitized_vals['custom_fields'] = $d['def']['custom_fields'];
 	}
@@ -70,10 +70,10 @@ if ( !empty($_POST) && check_admin_referer($d['action_name'], $d['nonce_name']) 
 		$sanitized_vals['custom_fields'] = array();
 	}
 	
-	$error_msg 		= CCTM_PostTypeDef::post_type_name_has_errors($sanitized_vals, true);
+	$error_msg 		= CCTM_Post_Type_Def::post_type_name_has_errors($sanitized_vals, true);
 
 	if ( empty($error_msg) ) {
-		CCTM_PostTypeDef::save_post_type_settings($sanitized_vals);
+		CCTM_Post_Type_Def::save_post_type_settings($sanitized_vals);
 		$data['msg'] = '
 		<div class="updated">
 			<p>'
@@ -93,7 +93,7 @@ if ( !empty($_POST) && check_admin_referer($d['action_name'], $d['nonce_name']) 
 	}
 }
 
-$d['icons'] = CCTM_PostTypeDef::get_post_type_icons();
+$d['icons'] = CCTM_Post_Type_Def::get_post_type_icons();
 $data['content'] = CCTM::load_view('post_type.php', $d);
 print CCTM::load_view('templates/default.php', $data);
 /*EOF*/

@@ -15,13 +15,13 @@ Run tests only upon activation
 http://codex.wordpress.org/Function_Reference/register_activation_hook
 */
 
-require_once 'includes/CCTM.php';
+require_once 'includes/class-cctm.php';
 require_once 'includes/constants.php';
-require_once 'includes/SummarizePosts.php';
-require_once 'includes/GetPostsQuery.php';
-require_once 'includes/SummarizePosts_Widget.php';
-require_once 'includes/CCTM_Post_Widget.php';
-require_once 'includes/StandardizedCustomFields.php';
+require_once 'includes/class-summarize-posts.php';
+require_once 'includes/class-get-posts-query.php';
+require_once 'includes/class-summarize-posts-widget.php';
+require_once 'includes/class-cctm-post-widget.php';
+require_once 'includes/class-standardized-custom-fields.php';
 require_once 'includes/class-cctm-form-element.php';
 require_once 'includes/class-cctm-ajax.php';
 require_once 'includes/functions.php';
@@ -40,15 +40,15 @@ if (empty(CCTM::$errors)) {
 	CCTM::load_data();
 
 	// Shortcodes
-	add_shortcode('summarize-posts', 'SummarizePosts::get_posts');
-	add_shortcode('summarize_posts', 'SummarizePosts::get_posts');
+	add_shortcode('summarize-posts', 'Summarize_Posts::get_posts');
+	add_shortcode('summarize_posts', 'Summarize_Posts::get_posts');
 	add_shortcode('custom_field', 'CCTM::custom_field');
 	add_shortcode('cctm_post_form', 'CCTM::cctm_post_form');
 
 	// Summarize Posts Tiny MCE button
 	if (CCTM::get_setting('summarizeposts_tinymce')) {
-		add_filter('mce_external_plugins', 'SummarizePosts::tinyplugin_register');
-		add_filter('mce_buttons', 'SummarizePosts::tinyplugin_add_button', 0);
+		add_filter('mce_external_plugins', 'Summarize_Posts::tinyplugin_register');
+		add_filter('mce_buttons', 'Summarize_Posts::tinyplugin_add_button', 0);
 	}
 	// Custom Fields Tiny MCE button
 	if (CCTM::get_setting('custom_fields_tinymce')) {
@@ -62,7 +62,7 @@ if (empty(CCTM::$errors)) {
 
 	// Register any custom post-types (a.k.a. content types)
 	add_action('init', 'CCTM::register_custom_post_types', 11 );
-	add_action('widgets_init', 'SummarizePosts_Widget::register_this_widget');
+	add_action('widgets_init', 'Summarize_Posts_Widget::register_this_widget');
 	add_action('widgets_init', 'CCTM_Post_Widget::register_this_widget');
 
 	if ( is_admin()) {
@@ -74,19 +74,19 @@ if (empty(CCTM::$errors)) {
 		add_filter('plugin_action_links', 'CCTM::add_plugin_settings_link', 10, 2 );
 
 		// Standardize Fields
-		add_action('do_meta_boxes', 'StandardizedCustomFields::remove_default_custom_fields', 10, 3 );
-		add_action('add_meta_boxes', 'StandardizedCustomFields::create_meta_box' );
-		add_action('save_post', 'StandardizedCustomFields::save_custom_fields', 1, 2 ); //! TODO: register this action conditionally
+		add_action('do_meta_boxes', 'Standardized_Custom_Fields::remove_default_custom_fields', 10, 3 );
+		add_action('add_meta_boxes', 'Standardized_Custom_Fields::create_meta_box' );
+		add_action('save_post', 'Standardized_Custom_Fields::save_custom_fields', 1, 2 ); //! TODO: register this action conditionally
 
 		// Customize the page-attribute box for custom page hierarchies
-		add_filter('wp_dropdown_pages', 'StandardizedCustomFields::customized_hierarchical_post_types', 100, 1);
+		add_filter('wp_dropdown_pages', 'Standardized_Custom_Fields::customized_hierarchical_post_types', 100, 1);
 
 		// FUTURE: Highlght which themes are CCTM-compatible (if any)
 		// add_filter('theme_action_links', 'CCTM::highlight_cctm_compatible_themes');
 		add_action('admin_notices', 'CCTM::print_warnings');
 
 		// Used to modify the large post icon
-		add_action('in_admin_header', 'StandardizedCustomFields::print_admin_header');
+		add_action('in_admin_header', 'Standardized_Custom_Fields::print_admin_header');
 
 		// Handle Custom Columns: this is only relevant for the edit.php?post_type=xxxx pages (i.e. the list view)
 		if ( substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], '/')+1) == 'edit.php' ) {

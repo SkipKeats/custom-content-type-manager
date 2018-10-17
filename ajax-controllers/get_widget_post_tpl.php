@@ -13,7 +13,7 @@ if (isset($GLOBALS['wp_post_types'][$post_type]->cap->edit_posts)) {
 	$cap = $GLOBALS['wp_post_types'][$post_type]->cap->edit_posts; 
 }
 if (!current_user_can($cap)) die('<pre>You do not have permission to do that.</pre>');
-require_once(CCTM_PATH.'/includes/GetPostsQuery.php');
+require_once(CCTM_PATH.'/includes/class-get-posts-query.php');
 
 //print '<div>'. print_r($_POST, true).'</div>';
 $post_id = CCTM::get_value($_POST, 'post_id');
