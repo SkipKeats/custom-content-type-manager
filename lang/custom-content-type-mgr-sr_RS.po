@@ -2601,8 +2601,8 @@ msgstr "Molim vas, ispravite sledeće greške:"
 
 # @ custom-content-type-mgr
 #: includes/CCTM.php:821 includes/CCTM.php:885 includes/CCTM.php:934
-#: includes/CCTM_ImportExport.php:38 includes/CCTM_ImportExport.php:109
-#: includes/CCTM_ImportExport.php:182 includes/CCTM_ImportExport.php:228
+#: includes/class-cctm-import-export.php:38 includes/class-cctm-import-export.php:109
+#: includes/class-cctm-import-export.php:182 includes/class-cctm-import-export.php:228
 msgid "WordPress issued the following error: "
 msgstr "WordPress je naišao na sledeću grešku:"
 
@@ -2917,34 +2917,34 @@ msgid "Improper input to the set_props() function."
 msgstr "Neodgovarajući unos u set_props() funkciju."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:103
+#: includes/class-cctm-import-export.php:103
 msgid "Please specify at least one definition."
 msgstr "Molim vas, navedite bar jednu definiciju."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:121
+#: includes/class-cctm-import-export.php:121
 msgid "Directory traversing not allowed."
 msgstr "Ukrštanje direktorijuma nije dozvoljeno."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:127
+#: includes/class-cctm-import-export.php:127
 #, php-format
 msgid "Could not delete file: %s"
 msgstr "Fajl nije mogao biti obrisan:%s"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:132
+#: includes/class-cctm-import-export.php:132
 #, php-format
 msgid "File does not exist: %s"
 msgstr "Polje ne postoji: %s"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:164
+#: includes/class-cctm-import-export.php:164
 msgid "There was a problem exporting your CCTM definition."
 msgstr "Došlo je do problema pri izvoženju vaše CCTM definicije."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:190
+#: includes/class-cctm-import-export.php:190
 #, php-format
 msgid ""
 "A file named %s already exists in the definition library.  Please choose "
@@ -2954,7 +2954,7 @@ msgstr ""
 "drugi naslov."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:204
+#: includes/class-cctm-import-export.php:204
 #, php-format
 msgid ""
 "An error was encountered while trying to write to the definition library "
@@ -2964,19 +2964,19 @@ msgstr ""
 "(%s). Molim vas, proverite dozvole na vašem serveru."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:494
+#: includes/class-cctm-import-export.php:494
 #, php-format
 msgid "The definition file could not be found: %s"
 msgstr "Fajl sa definicijom nije mogao biti pronađen:%s"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:500
+#: includes/class-cctm-import-export.php:500
 #, php-format
 msgid "There was a problem with the JSON decoding of the definition file: %s"
 msgstr "Došlo je do problema pri JSON dekodiranju fajla sa definicijom: %s"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:506
+#: includes/class-cctm-import-export.php:506
 #, php-format
 msgid ""
 "The data structure in the file was not in the correct format: %s. This could "
@@ -2990,64 +2990,64 @@ msgstr ""
 "\" target=\"_new\"> Wiki</a> za više informacija."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:592
+#: includes/class-cctm-import-export.php:592
 msgid "Title is required."
 msgstr "Naslov je potreban"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:595
+#: includes/class-cctm-import-export.php:595
 msgid "Only basic text characters are allowed for the title."
 msgstr "U naslovu su dozvoljeni samo osnovni karakteri."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:598
+#: includes/class-cctm-import-export.php:598
 msgid "The title cannot exceed 64 characters."
 msgstr "Naslov ne sme biti duži od 64 karaktera."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:603
+#: includes/class-cctm-import-export.php:603
 msgid "Author is required."
 msgstr "Autor je potreban."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:606
+#: includes/class-cctm-import-export.php:606
 msgid "Only basic characters are allowed for the author field."
 msgstr "U polju sa imenom autora su dozvoljeni samo osnovni karakteri."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:609
+#: includes/class-cctm-import-export.php:609
 msgid "The author name cannot exceed 32 characters."
 msgstr "Ima autora ne sme biti duže od 32 karaktera."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:617
+#: includes/class-cctm-import-export.php:617
 msgid "The URL must be in a standard format, e.g. http://yoursite.com."
 msgstr "URL mora biti u standardnom formatu, npr. http://yoursite.com."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:620
+#: includes/class-cctm-import-export.php:620
 msgid "The URL cannot exceed 255 characters."
 msgstr "URL ne sme biti duži od 255 karaktera."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:628
+#: includes/class-cctm-import-export.php:628
 msgid ""
 "The template URL must be in a standard format, e.g. http://themeforest.com."
 msgstr ""
 "URL šablona mora biti u standardnom formatu, npr. http://themeforest.com."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:631
+#: includes/class-cctm-import-export.php:631
 msgid "The template URL cannot exceed 255 characters."
 msgstr "URL šablona ne sme biti duži od 255 karaktera."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:636
+#: includes/class-cctm-import-export.php:636
 msgid "Description is required."
 msgstr "Opis je potreban."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_ImportExport.php:639
+#: includes/class-cctm-import-export.php:639
 msgid "The description cannot exceed 1024 characters."
 msgstr "Opis ne sme biti duži od 1024 znaka."
 

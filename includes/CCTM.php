@@ -41,7 +41,7 @@ class CCTM {
 	const menu_position = 73;
 
 	// Each class that extends either the CCTM_Form_Element class or the
-	// the CCTM_OutputFilter class must prefix this to its class name.
+	// the CCTM_Output_Filter class must prefix this to its class name.
 	const field_prefix = 'CCTM_';
 	const filter_prefix = 'CCTM_';
 	const validator_prefix = 'CCTM_Rule_';
@@ -1079,7 +1079,7 @@ class CCTM {
 	
 		$filter_class = CCTM::filter_prefix.$outputfilter;
 
-		require_once CCTM_PATH.'/includes/CCTM_OutputFilter.php';
+		require_once CCTM_PATH.'/includes/class-cctm-output-filter.php';
 		
 		if ($OutputFilter = CCTM::load_object($outputfilter,'filters')) {
 			return $OutputFilter->filter($value, $options);		
@@ -2018,7 +2018,7 @@ class CCTM {
 				require_once(CCTM_PATH.'/includes/class-cctm-form-element.php');
 				break;
 			case 'filters':
-				require_once(CCTM_PATH.'/includes/CCTM_OutputFilter.php');
+				require_once(CCTM_PATH.'/includes/class-cctm-output-filter.php');
 				break;
 			case 'validators':
 				require_once(CCTM_PATH.'/includes/CCTM_Validator.php');

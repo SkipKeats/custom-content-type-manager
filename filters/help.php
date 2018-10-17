@@ -1,12 +1,12 @@
 <?php
 /**
- * @package CCTM_OutputFilter
+ * @package CCTM_Output_Filter
  * 
  * Shows all available Output Filters by their name.  This shouldn't show up in any dropdown lists
  * as a viable default output filter!
  */
 
-class CCTM_help extends CCTM_OutputFilter {
+class CCTM_help extends CCTM_Output_Filter {
 
 	/**
 	 * Don't show this filter in any dropdown menus for a Default Output Filter

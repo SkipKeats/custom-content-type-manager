@@ -1,11 +1,11 @@
 <?php
 /**
- * @package CCTM_OutputFilter
+ * @package CCTM_Output_Filter
  * 
  * Converts an array of image ids to HTML.
  */
 
-class CCTM_gallery extends CCTM_OutputFilter {
+class CCTM_gallery extends CCTM_Output_Filter {
 
 	/**
 	 * Apply the filter.

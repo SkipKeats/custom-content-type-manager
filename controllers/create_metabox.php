@@ -4,7 +4,7 @@ if (!current_user_can('administrator')) exit('Admins only.');
 /*------------------------------------------------------------------------------
 Create a Metabox
 ------------------------------------------------------------------------------*/
-require_once(CCTM_PATH .'/includes/CCTM_Metabox.php');
+require_once(CCTM_PATH .'/includes/class-cctm-metabox.php');
 
 // Page variables
 $data = array();

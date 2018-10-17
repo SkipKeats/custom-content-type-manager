@@ -58,14 +58,14 @@ $class_names_used = array(
 	'CCTMtests',
 	'CCTM_Form_Element',
 	'CCTM_Ajax',
-	'CCTM_OutputFilter',
+	'CCTM_Output_Filter',
 	'CCTM_Pagination',
 	'SummarizePosts',
 	'GetPostsQuery',
 	'GetPostsForm',
 	'SP_Post',
 	'CCTM_PostTypeDef',
-	'CCTM_ImportExport',
+	'CCTM_Import_Export',
 );
 
 // Not class constants: constants declared via define().

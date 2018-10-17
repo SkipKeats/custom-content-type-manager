@@ -7,7 +7,7 @@
  */
 
 
-class CCTM_ImportExport {
+class CCTM_Import_Export {
 
 	/**
 	 * API for dedicated CCTM pastebin user.

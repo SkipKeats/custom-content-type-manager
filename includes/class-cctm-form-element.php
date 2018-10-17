@@ -290,7 +290,7 @@ abstract class CCTM_Form_Element {
 	public function format_available_output_filters($def) {
 		$available_output_filters = CCTM::get_available_helper_classes('filters');
 
-		require_once(CCTM_PATH.'/includes/CCTM_OutputFilter.php');
+		require_once(CCTM_PATH.'/includes/class-cctm-output-filter.php');
 
 		$out = '
 		<div class="postbox">

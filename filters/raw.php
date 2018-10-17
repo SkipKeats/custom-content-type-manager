@@ -1,13 +1,13 @@
 <?php
 /**
- * @package CCTM_OutputFilter
+ * @package CCTM_Output_Filter
  * 
  * The raw filter returns the input back out unadulterated. By itself, it does
  * nothing, but forcing a field to use the raw filter will override the default
  * Output Filter set for a field.
  */
 
-class CCTM_raw extends CCTM_OutputFilter {
+class CCTM_raw extends CCTM_Output_Filter {
 
 	/**
 	 * Don't show this filter in any dropdown menus for a Default Output Filter

@@ -5,7 +5,7 @@ if (!current_user_can('administrator')) exit('Admins only.');
 * Confirm Delete/Deletes a metabox definition
 * @param string $id (unique name of metabox)
 ------------------------------------------------------------------------------*/
-require_once(CCTM_PATH .'/includes/CCTM_Metabox.php');
+require_once(CCTM_PATH .'/includes/class-cctm-metabox.php');
 //print_r(CCTM::$data['metabox_defs']); exit;
 // Page variables
 $data = array();

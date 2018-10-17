@@ -15,7 +15,7 @@
 if ( ! defined('CCTM_PATH')) exit('No direct script access allowed');
 if (!current_user_can('administrator')) exit('Admins only.');
 require_once(CCTM_PATH.'/includes/CCTM_PostTypeDef.php');
-require_once(CCTM_PATH.'/includes/CCTM_OutputFilter.php');
+require_once(CCTM_PATH.'/includes/class-cctm-output-filter.php');
 
 
 $data     = array();
