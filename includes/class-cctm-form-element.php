@@ -227,7 +227,7 @@ abstract class CCTM_Form_Element {
      * @return string
      */
     protected function _get_search_parameters_visible($search_parameters_str) {
-        require_once CCTM_PATH.'/includes/GetPostsQuery.php';
+        require_once CCTM_PATH.'/includes/class-get-posts-query.php';
 		$Q = new GetPostsQuery();
 		parse_str($search_parameters_str, $args);
 		$Q = new GetPostsQuery($args);

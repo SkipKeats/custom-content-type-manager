@@ -320,8 +320,8 @@ class CCTM {
 		}
 		
 		// the cache directory exits; create the cached image
-		require_once(CCTM_PATH.'/includes/CCTM_SimpleImage.php');
-		$image = new CCTM_SimpleImage();
+		require_once(CCTM_PATH.'/includes/class-cctm-simple-image.php');
+		$image = new CCTM_Simple_Image();
 		$image->load($p['guid']); // You may use the image URL
 		$image->resize($WIDTH, $HEIGHT);
 		if (!$image->save($thumbnail_path, IMAGETYPE_JPEG, $QUALITY)) {
@@ -616,7 +616,7 @@ class CCTM {
 			}
 
 			// Validate fields
-			StandardizedCustomFields::validate_fields($post_type,$vals);
+			Standardized_Custom_Fields::validate_fields($post_type,$vals);
 			
 			$vals = array_merge($vals,$args);
 			
@@ -836,7 +836,7 @@ class CCTM {
 		// Insert into Database
 		$email_only = CCTM::get_value($args, '_email_only');
 		if (!$email_only) {
-			require_once(CCTM_PATH.'/includes/SP_Post.php');
+			require_once(CCTM_PATH.'/includes/class-sp-post.php');
 			$P = new SP_Post();
 			CCTM::$post_id = $P->insert($vals);
 		}
@@ -2021,7 +2021,7 @@ class CCTM {
 				require_once(CCTM_PATH.'/includes/class-cctm-output-filter.php');
 				break;
 			case 'validators':
-				require_once(CCTM_PATH.'/includes/CCTM_Validator.php');
+				require_once(CCTM_PATH.'/includes/class-cctm-validator.php');
 				break;
 		}
 		// Include the file whose path was cached
@@ -2529,7 +2529,7 @@ class CCTM {
 				register_post_type( $post_type, $def );
 			}
 		}
-		// flush_rules moved to CCTM_PostTypeDef
+		// flush_rules moved to CCTM_Post_Type_Def
 	}
 
 
@@ -2848,4 +2848,4 @@ class CCTM {
 }
 
 
-/*EOF CCTM.php*/
+/*EOF class-cctm.php*/

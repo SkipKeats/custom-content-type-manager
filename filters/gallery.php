@@ -23,8 +23,8 @@ class CCTM_gallery extends CCTM_Output_Filter {
 			}
 		}
 		
-		require_once(CCTM_PATH.'/includes/SummarizePosts.php');
-		require_once(CCTM_PATH.'/includes/GetPostsQuery.php');
+		require_once(CCTM_PATH.'/includes/class-summarize-posts.php');
+		require_once(CCTM_PATH.'/includes/class-get-posts-query.php');
 		
 		$tpl = '<div class="cctm_gallery" id="cctm_gallery_[+i+]"><img height="[+height+]" width="[+width+]" src="[+guid+]" title="[+post_title+]" alt="[+alt+]" class="cctm_image" id="cctm_image_[+i+]"/></div>';
 		if (!empty($options)) {

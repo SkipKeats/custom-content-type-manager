@@ -8,7 +8,7 @@ There are 2 ways to identify page numbers during pagination. The most obvious on
 is that we number each page: 1,2,3.  This corresponds to pagination links
 like mypage.php?page=3 for example.
 
-		require_once('CCTM_Pagination.php');
+		require_once('class-cctm-pagination.php');
 		$p = new CCTM_Pagination();
 		$offset = $p->page_to_offset($_GET['page'], $_GET['rpp']);
 		$p->set_offset($offset); //

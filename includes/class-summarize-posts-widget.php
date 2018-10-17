@@ -1,5 +1,5 @@
 <?php
-class SummarizePosts_Widget extends WP_Widget {
+class Summarize_Posts_Widget extends WP_Widget {
 
 	public $name;
 	public $description;
@@ -33,7 +33,7 @@ class SummarizePosts_Widget extends WP_Widget {
 	 */
 	public function form($instance) {
 		
-		require_once(CCTM_PATH.'/includes/GetPostsQuery.php');
+		require_once(CCTM_PATH.'/includes/class-get-posts-query.php');
 
 		$args_str = ''; // formatted args for the user to look at so they remember what they searched for.
 		
@@ -85,7 +85,7 @@ class SummarizePosts_Widget extends WP_Widget {
 			return; // don't do anything until the search is defined.
 		}
 		
-		require_once(CCTM_PATH.'/includes/GetPostsQuery.php');
+		require_once(CCTM_PATH.'/includes/class-get-posts-query.php');
 
 		$q_args = array();
 		$search_parameters_str = $instance['parameters'];

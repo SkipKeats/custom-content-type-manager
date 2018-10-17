@@ -8,8 +8,8 @@
  * post_type%5B%5D=attachment&taxonomy=&taxonomy_term=&post_parent=&meta_key=model&meta_value=Ford
  *
  */
-require_once(CCTM_PATH.'/includes/SummarizePosts.php');
-require_once(CCTM_PATH.'/includes/GetPostsQuery.php');
+require_once(CCTM_PATH.'/includes/class-summarize-posts.php');
+require_once(CCTM_PATH.'/includes/class-get-posts-query.php');
 
 $args = array(); // initialize
 

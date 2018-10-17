@@ -1,0 +1,7 @@
+{
+	"name": "skipkeats/custom-content-type-manager",
+	"type": "wordpress-plugin",
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}

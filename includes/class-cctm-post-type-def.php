@@ -4,7 +4,7 @@
  * I've offloaded functions from the main CCTM class to here because they're only
  * used in these certain situations.
  */
-class CCTM_PostTypeDef {
+class CCTM_Post_Type_Def {
 
 	/**
 	 * Get all available columns (i.e. fields) for this post_type, used for 

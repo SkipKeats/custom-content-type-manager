@@ -7,9 +7,9 @@ Widget: Appearance --> Widgets --> (add a Summarize Posts Widget to a widget are
 Remember: the output here MUST be wrapped in HTML tags, otherwise jQuery's .html()
 method will kack.
 ------------------------------------------------------------------------------*/
-require_once(CCTM_PATH.'/includes/SummarizePosts.php');
-require_once(CCTM_PATH.'/includes/GetPostsQuery.php');
-require_once(CCTM_PATH.'/includes/GetPostsForm.php');
+require_once(CCTM_PATH.'/includes/class-summarize-posts.php');
+require_once(CCTM_PATH.'/includes/class-get-posts-query.php');
+require_once(CCTM_PATH.'/includes/class-get-posts-form.php');
 
 // Id of the field that will store the values (we need to pass it through here
 // because it is not static: there may be multiple instances of the widget)
@@ -24,7 +24,7 @@ $existing_values = array();
 parse_str($search_parameters_str, $existing_values);
 
 
-$Form = new GetPostsForm();
+$Form = new Get_Posts_Form();
 
 // What options should be displayed on the form that defines the search?  
 // Load up the config...

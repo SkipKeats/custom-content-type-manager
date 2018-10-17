@@ -20,7 +20,7 @@
  * This approach allows for pagination and it still performs respectibly when used on large data sets
  * because the 2nd and 3rd queries rely on the indexed post IDs.
  *
- * @package SummarizePosts
+ * @package Summarize_Posts
  */
 
 
@@ -2192,7 +2192,7 @@ class GetPostsQuery {
 		if ( $this->paginate ) {
 
 			$this->found_rows = $this->_count_posts();
-			require_once 'CCTM_Pagination.php';
+			require_once 'class-cctm-pagination.php';
 			$this->P = new CCTM_Pagination();
 			$this->P->set_base_url( self::get_current_page_url() );
 			$this->P->set_offset($this->offset); 

@@ -14,7 +14,7 @@
  
 if ( ! defined('CCTM_PATH')) exit('No direct script access allowed');
 if (!current_user_can('administrator')) exit('Admins only.');
-require_once(CCTM_PATH.'/includes/CCTM_PostTypeDef.php');
+require_once(CCTM_PATH.'/includes/class-cctm-post-type-def.php');
 require_once(CCTM_PATH.'/includes/class-cctm-output-filter.php');
 
 
@@ -27,7 +27,7 @@ $data['msg']  = '';
 $data['post_type'] = $post_type;
 
 // Validate post type
-if (!CCTM_PostTypeDef::is_existing_post_type($post_type) ) {
+if (!CCTM_Post_Type_Def::is_existing_post_type($post_type) ) {
 	include(CCTM_PATH.'/controllers/error.php');
 	return;
 }

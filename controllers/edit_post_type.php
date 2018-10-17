@@ -6,7 +6,7 @@
 
 if ( ! defined('CCTM_PATH')) exit('No direct script access allowed');
 if (!current_user_can('administrator')) exit('Admins only.');
-require_once(CCTM_PATH.'/includes/CCTM_PostTypeDef.php');
+require_once(CCTM_PATH.'/includes/class-cctm-post-type-def.php');
 
 // Variables for our template
 $data = array();
@@ -54,8 +54,8 @@ $d['msg']    = '';  // Any validation errors
 // Save data if it was properly submitted
 if ( !empty($_POST) && check_admin_referer($d['action_name'], $d['nonce_name']) ) {
 
-	$sanitized_vals	= CCTM_PostTypeDef::sanitize_post_type_def($_POST);
-	$error_msg 		= CCTM_PostTypeDef::post_type_name_has_errors($sanitized_vals);
+	$sanitized_vals	= CCTM_Post_Type_Def::sanitize_post_type_def($_POST);
+	$error_msg 		= CCTM_Post_Type_Def::post_type_name_has_errors($sanitized_vals);
 	
 	if ( empty($error_msg) ) {
 
@@ -101,7 +101,7 @@ if ( !empty($_POST) && check_admin_referer($d['action_name'], $d['nonce_name']) 
 			}
 		}
 		
-		CCTM_PostTypeDef::save_post_type_settings($sanitized_vals);
+		CCTM_Post_Type_Def::save_post_type_settings($sanitized_vals);
 		
 
 		$data['msg'] .= '<div class="updated"><p>'
@@ -123,9 +123,9 @@ if ( !empty($_POST) && check_admin_referer($d['action_name'], $d['nonce_name']) 
 	}		
 }
 
-$d['icons'] = CCTM_PostTypeDef::get_post_type_icons();
-$d['orderby_options'] = CCTM_PostTypeDef::get_orderby_options($post_type);
-$d['columns'] = CCTM_PostTypeDef::get_columns($post_type);
+$d['icons'] = CCTM_Post_Type_Def::get_post_type_icons();
+$d['orderby_options'] = CCTM_Post_Type_Def::get_orderby_options($post_type);
+$d['columns'] = CCTM_Post_Type_Def::get_columns($post_type);
 $data['content'] = CCTM::load_view('post_type.php', $d);
 print CCTM::load_view('templates/default.php', $data);
 

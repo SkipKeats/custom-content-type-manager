@@ -171,7 +171,7 @@ class CCTM_media extends CCTM_Form_Element
 	public function get_edit_field_instance($current_value) {
 
 
-		require_once CCTM_PATH.'/includes/GetPostsQuery.php';
+		require_once CCTM_PATH.'/includes/class-get-posts-query.php';
 
 		$Q = new GetPostsQuery();
 
@@ -292,7 +292,7 @@ class CCTM_media extends CCTM_Form_Element
 	public function get_edit_field_definition($def) {
 
 		// Used to fetch the default value.
-		require_once CCTM_PATH.'/includes/GetPostsQuery.php';
+		require_once CCTM_PATH.'/includes/class-get-posts-query.php';
 
 		// Standard
 		$out = $this->format_standard_fields($def);

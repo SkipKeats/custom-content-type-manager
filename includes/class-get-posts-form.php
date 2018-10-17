@@ -21,11 +21,11 @@
  * Form element names will correspond exactly to the arguments accepted by the
  * get_posts() function so that this will work: GetPostsQuery::get_posts($_POST);
  *
- * @package SummarizePosts
+ * @package Summarize_Posts
  */
 
 
-class GetPostsForm {
+class Get_Posts_Form {
 
 	// Stores instance of GetPostsQuery
 	public $Q;

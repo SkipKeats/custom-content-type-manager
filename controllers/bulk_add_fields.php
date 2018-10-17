@@ -1,7 +1,7 @@
 <?php
 if ( ! defined('CCTM_PATH')) exit('No direct script access allowed');
 if (!current_user_can('administrator')) exit('Admins only.');
-require_once CCTM_PATH.'/includes/GetPostsQuery.php';
+require_once CCTM_PATH.'/includes/class-get-posts-query.php';
 //------------------------------------------------------------------------------
 /**
  * Show all available types of Custom Fields for bulk adding.

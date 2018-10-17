@@ -12,9 +12,9 @@ if (isset($GLOBALS['wp_post_types'][$post_type]->cap->edit_posts)) {
 if (!current_user_can($cap)) die('<pre>You do not have permission to do that.</pre>');
 
 require_once(CCTM_PATH.'/includes/class-cctm-form-element.php');
-require_once(CCTM_PATH.'/includes/SummarizePosts.php');
-require_once(CCTM_PATH.'/includes/GetPostsQuery.php');
-require_once(CCTM_PATH.'/includes/GetPostsForm.php');
+require_once(CCTM_PATH.'/includes/class-summarize-posts.php');
+require_once(CCTM_PATH.'/includes/class-get-posts-query.php');
+require_once(CCTM_PATH.'/includes/class-get-posts-form.php');
 
 
 // Template Variables Initialization
@@ -34,7 +34,7 @@ $d['order'] 			= 'ASC';
 
 // Generate a search form
 // we do this AFTER the get_posts() function so the form can access the GetPostsQuery->args/defaults
-$Form = new GetPostsForm();
+$Form = new Get_Posts_Form();
 
 
 //$d['content'] = '<pre>'.print_r($_POST, true) . '</pre>';

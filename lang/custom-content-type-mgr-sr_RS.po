@@ -149,7 +149,7 @@ msgid "Settings for %s have been updated."
 msgstr "Die Einstellungen für %s wurden aktualisiert"
 
 # @ custom-content-type-mgr
-#: includes/class-cctm-form-element.php:802 includes/CCTM_PostTypeDef.php:323
+#: includes/class-cctm-form-element.php:802 includes/class-cctm-post-type-def.php:323
 #, php-format
 msgid "%s is a reserved name."
 msgstr "%s je rezervisano ime."
@@ -175,12 +175,12 @@ msgid ""
 msgstr "Trenutno koristite  %1$s temu. Snimite fajl u %2$s direktorijum."
 
 # @ custom-content-type-mgr
-#: includes/class-cctm-form-element.php:784 includes/CCTM_PostTypeDef.php:291
+#: includes/class-cctm-form-element.php:784 includes/class-cctm-post-type-def.php:291
 msgid "Name is required."
 msgstr "Ime je potrebno."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:300
+#: includes/class-cctm-post-type-def.php:300
 #, php-format
 msgid ""
 "The post type name cannot begin with %s because that is a reserved prefix."
@@ -188,12 +188,12 @@ msgstr ""
 "Ime tipa posta ne može da počinje sa  %s jer je to rezervisani prefiks."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:321 includes/CCTM_PostTypeDef.php:329
+#: includes/class-cctm-post-type-def.php:321 includes/class-cctm-post-type-def.php:329
 msgid "Please choose another name."
 msgstr "Molim vas, odaberite drugo ime."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:331
+#: includes/class-cctm-post-type-def.php:331
 #, fuzzy, php-format
 msgid "%s is already in use as a registered taxonomy name."
 msgstr "%s ist bereits als Taxonomiename in Verwendung."
@@ -274,8 +274,8 @@ msgstr "Hijerarhijski"
 # @ default
 #: ajax-controllers/get_posts.php:191
 #: ajax-controllers/post_content_widget.php:146 includes/class-cctm-columns.php:34
-#: includes/CCTM_PostTypeDef.php:20 includes/CCTM_Post_Widget.php:110
-#: includes/SummarizePosts_Widget.php:59 views/export.php:14
+#: includes/class-cctm-post-type-def.php:20 includes/class-cctm-post-widget.php:110
+#: includes/class-summarize-posts-widget.php:59 views/export.php:14
 #: views/widgets/post_content_form.php:24
 msgid "Title"
 msgstr "Naslov"
@@ -283,7 +283,7 @@ msgstr "Naslov"
 # @ custom-content-type-mgr
 #: ajax-controllers/summarize_posts_form.php:40
 #: ajax-controllers/summarize_posts_widget.php:61
-#: includes/GetPostsForm.php:874 views/post_type.php:340
+#: includes/class-get-posts-form.php:874 views/post_type.php:340
 msgid "Post Title"
 msgstr "Naslov posta"
 
@@ -299,8 +299,8 @@ msgstr "Glavni blok sadržaja."
 
 # @ default
 # @ custom-content-type-mgr
-#: includes/class-cctm-columns.php:35 includes/CCTM_PostTypeDef.php:21
-#: includes/GetPostsForm.php:340 views/export.php:17 views/post_type.php:353
+#: includes/class-cctm-columns.php:35 includes/class-cctm-post-type-def.php:21
+#: includes/class-get-posts-form.php:340 views/export.php:17 views/post_type.php:353
 #: views/preview_def.php:12
 msgid "Author"
 msgstr "Autor"
@@ -445,19 +445,19 @@ msgstr "Prikazati u navigacionim menijima"
 # @ custom-content-type-mgr
 # @ default
 #: config/menus/admin_menu.php:83 config/menus/admin_menu.php:84
-#: controllers/settings.php:13 includes/CCTM.php:455
+#: controllers/settings.php:13 includes/class-cctm.php:455
 msgid "Settings"
 msgstr "Podešavanja"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1966 includes/SummarizePosts.php:383
+#: includes/class-cctm.php:1966 includes/class-summarize-posts.php:383
 #: tests/CCTMtests.php:188
 #, php-format
 msgid "The %s plugin encountered errors! It cannot load!"
 msgstr "Dodatak  %s   je naišao na greške! Ne može da se učita!"
 
 # @ default
-#: includes/CCTM.php:1860
+#: includes/class-cctm.php:1860
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Nemate dovoljno ovlašćenje da pristupite ovoj stranici."
 
@@ -479,7 +479,7 @@ msgstr "Nevažeći post_type (tip posta)."
 
 # @ default
 # @ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:507 includes/GetPostsForm.php:203
+#: includes/class-cctm-post-type-def.php:507 includes/class-get-posts-form.php:203
 msgid "Search"
 msgstr "Pretraga"
 
@@ -517,7 +517,7 @@ msgstr "Aktivieren"
 # @ custom-content-type-mgr
 #: controllers/list_custom_fields.php:53 controllers/list_custom_fields.php:60
 #: controllers/list_post_types.php:40 controllers/list_pt_associations.php:110
-#: controllers/list_pt_associations.php:142 includes/CCTM_PostTypeDef.php:498
+#: controllers/list_pt_associations.php:142 includes/class-cctm-post-type-def.php:498
 msgid "Edit"
 msgstr "Urediti"
 
@@ -536,7 +536,7 @@ msgstr "Lösche diesen Inhaltstyp"
 # @ custom-content-type-mgr
 #: ajax-controllers/list_custom_fields.php:25 config/menus/admin_menu.php:32
 #: config/menus/admin_menu.php:65 config/menus/admin_menu.php:66
-#: controllers/settings.php:107 includes/StandardizedCustomFields.php:190
+#: controllers/settings.php:107 includes/class-standardized-custom-fields.php:190
 #: views/preview_def.php:52 views/templates/default.php:50
 msgid "Custom Fields"
 msgstr "Prilagođena polja"
@@ -558,7 +558,7 @@ msgstr "Otkazati"
 # @ default
 # @ custom-content-type-mgr
 #: fields/image.php:312 fields/media.php:316 fields/relation.php:312
-#: includes/CCTM.php:1193
+#: includes/class-cctm.php:1193
 msgid "Remove"
 msgstr "Ukloniti"
 
@@ -631,7 +631,7 @@ msgstr "Konfiguracioni fajl birača posta nije pronađen."
 # @ default
 #: ajax-controllers/get_posts.php:192
 #: ajax-controllers/post_content_widget.php:147 fields/date.php:301
-#: includes/class-cctm-columns.php:37 includes/CCTM_PostTypeDef.php:23
+#: includes/class-cctm-columns.php:37 includes/class-cctm-post-type-def.php:23
 msgid "Date"
 msgstr "Datum"
 
@@ -668,29 +668,29 @@ msgstr "Dodati u post i zatvoriti"
 # @ custom-content-type-mgr
 # @ default
 #: ajax-controllers/get_posts.php:209
-#: ajax-controllers/post_content_widget.php:161 includes/CCTM.php:1192
-#: includes/CCTM.php:1220 views/import.php:69 views/import.php:111
+#: ajax-controllers/post_content_widget.php:161 includes/class-cctm.php:1192
+#: includes/class-cctm.php:1220 views/import.php:69 views/import.php:111
 msgid "Preview"
 msgstr "Pregled"
 
 # @ default
 #: ajax-controllers/get_posts.php:214
 #: ajax-controllers/get_selected_posts.php:115 filters/gallery.php:42
-#: includes/GetPostsQuery.php:2159
+#: includes/class-get-posts-query.php:2159
 msgid "post_title"
 msgstr "post_title (naslov posta)"
 
 # @ default
 #: ajax-controllers/get_posts.php:215
 #: ajax-controllers/get_selected_posts.php:116 filters/gallery.php:43
-#: includes/GetPostsQuery.php:2161
+#: includes/class-get-posts-query.php:2161
 msgid "post_content"
 msgstr "post_content (sadržaj posta)"
 
 # @ default
 #: ajax-controllers/get_posts.php:216
 #: ajax-controllers/get_selected_posts.php:117 filters/gallery.php:44
-#: includes/GetPostsQuery.php:2162
+#: includes/class-get-posts-query.php:2162
 msgid "post_excerpt"
 msgstr "post_excert (izvod iz sadržaja posta)"
 
@@ -733,7 +733,7 @@ msgstr "Greška pri učitavanju validatora."
 
 # @ custom-content-type-mgr
 #: ajax-controllers/get_widget_post_tpl.php:31
-#: includes/CCTM_Post_Widget.php:56
+#: includes/class-cctm-post-widget.php:56
 msgid "Edit Selected Post"
 msgstr "Urediti izabrani post"
 
@@ -1779,12 +1779,12 @@ msgstr ""
 "php tagove, npr.<code>date('Y-m-d')</code>)."
 
 # @ custom-content-type-mgr
-#: fields/date.php:299 includes/GetPostsForm.php:387
+#: fields/date.php:299 includes/class-get-posts-form.php:387
 msgid "Date Format"
 msgstr "Format datuma"
 
 # @ custom-content-type-mgr
-#: fields/date.php:302 includes/CCTM_PostTypeDef.php:158
+#: fields/date.php:302 includes/class-cctm-post-type-def.php:158
 msgid "Default"
 msgstr "Podrazumevano"
 
@@ -2560,65 +2560,65 @@ msgstr ""
 "wrapper_OutputFilter"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:288
+#: includes/class-cctm.php:288
 #, php-format
 msgid "Could not create the cache directory at %s."
 msgstr "Nije mogao da se kreira keš direktorijum u %s."
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:311
+#: includes/class-cctm.php:311
 #, php-format
 msgid "Could not create cached image: %s."
 msgstr "Nije mogla da se kreira keširana slika: %s."
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:553 updates/0.9.4.php:64
+#: includes/class-cctm.php:553 updates/0.9.4.php:64
 msgid "This site was created in part using the Custom Content Type Manager"
 msgstr ""
 "Ovaj sajt je delom kreiran uz korišćenje Custom Content Type Manager -a"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:589
+#: includes/class-cctm.php:589
 msgid "custom_field shortcode requires the \"name\" parameter."
 msgstr "custom_field kratki kod zahteva \"name\" parametar."
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:660
+#: includes/class-cctm.php:660
 #, php-format
 msgid "Incorrect class name in %s Output Filter. Expected class name: %s"
 msgstr "Nepravilno ime klase u  %s  izlaznom filteru. Očekivano ime klase: %s"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:673
+#: includes/class-cctm.php:673
 #, php-format
 msgid "Output filter not found: %s"
 msgstr "Izlazni filter nije pronađen: %s"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:729
+#: includes/class-cctm.php:729
 msgid "Please correct the following errors:"
 msgstr "Molim vas, ispravite sledeće greške:"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:821 includes/CCTM.php:885 includes/CCTM.php:934
+#: includes/class-cctm.php:821 includes/class-cctm.php:885 includes/class-cctm.php:934
 #: includes/class-cctm-import-export.php:38 includes/class-cctm-import-export.php:109
 #: includes/class-cctm-import-export.php:182 includes/class-cctm-import-export.php:228
 msgid "WordPress issued the following error: "
 msgstr "WordPress je naišao na sledeću grešku:"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1281
+#: includes/class-cctm.php:1281
 msgid "Field type is empty."
 msgstr "Tip polja je prazan."
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1296
+#: includes/class-cctm.php:1296
 #, php-format
 msgid "Incorrect class name in %s file. Expected class name: %s"
 msgstr "Nepravilno ime klase u  %s  fajlu. Očekivano ime klase:%s"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1304
+#: includes/class-cctm.php:1304
 #, php-format
 msgid ""
 "The class file for %s fields could not be found. Did you move or delete the "
@@ -2628,53 +2628,53 @@ msgstr ""
 "obrisali fajl?"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1405
+#: includes/class-cctm.php:1405
 #, php-format
 msgid "Could not locate file for %s field."
 msgstr "Fajl za polje nije mogao da se  %s locira."
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1614
+#: includes/class-cctm.php:1614
 #, php-format
 msgid "Invaid file name! %s  No directory traversing allowed!"
 msgstr "Nevažeće ime fajla!  %s Nije dozvoljeno ukrštanje direktorijuma!"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1618
+#: includes/class-cctm.php:1618
 #, php-format
 msgid "Invaid file name! %s  Name must end with .php!"
 msgstr "Nevažeće ime fajla! %s   Ime mora da završava sa .php!"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1739
+#: includes/class-cctm.php:1739
 #, php-format
 msgid "Invaid tpl name! %s  No directory traversing allowed!"
 msgstr "Nevažeće tpl ime!%s Nije dozvoljeno ukrštanje direktorijuma!"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1743
+#: includes/class-cctm.php:1743
 #, php-format
 msgid "Invaid tpl name! %s  Name must end with .tpl!"
 msgstr "Nevažeće tpl ime! %s Ime mora da završava sa .tpl!"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1783
+#: includes/class-cctm.php:1783
 #, php-format
 msgid "Validator not found: %s"
 msgstr "Proverivač nije pronađen: %s"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1996
+#: includes/class-cctm.php:1996
 msgid "Dismiss all warnings"
 msgstr "Odbaciti sva upozorenja"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:1997
+#: includes/class-cctm.php:1997
 msgid "Dismiss Warnings"
 msgstr "Odbaciti upozorenja"
 
 # @ custom-content-type-mgr
-#: includes/CCTM.php:2008
+#: includes/class-cctm.php:2008
 msgid "The Custom Content Type Manager encountered the following warnings:"
 msgstr "Custom Content Type Manager je naišao na sledeća upozorenja:"
 
@@ -2691,7 +2691,7 @@ msgid "Invalid nonce for %s"
 msgstr "Nevažeći jednokratni uzorak za %s"
 
 # @ default
-#: includes/class-cctm-columns.php:36 includes/CCTM_PostTypeDef.php:22
+#: includes/class-cctm-columns.php:36 includes/class-cctm-post-type-def.php:22
 msgid "Comments"
 msgstr "Komentari"
 
@@ -3052,140 +3052,140 @@ msgid "The description cannot exceed 1024 characters."
 msgstr "Opis ne sme biti duži od 1024 znaka."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:49 includes/CCTM_PostTypeDef.php:88
+#: includes/class-cctm-post-type-def.php:49 includes/class-cctm-post-type-def.php:88
 msgid "Built-in WordPress column."
 msgstr "Ugrađena WordPress kolona."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:57 includes/CCTM_PostTypeDef.php:124
+#: includes/class-cctm-post-type-def.php:57 includes/class-cctm-post-type-def.php:124
 msgid "WordPress Taxonomy"
 msgstr "WordPress taksonomija"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:295
+#: includes/class-cctm-post-type-def.php:295
 msgid "Menu Name is required."
 msgstr "Ime menija je potrebno."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:341
+#: includes/class-cctm-post-type-def.php:341
 #, php-format
 msgid "The name %s is already in use."
 msgstr "Ime  %s se već koristi."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:345
+#: includes/class-cctm-post-type-def.php:345
 #, php-format
 msgid "The name %s has been registered by some other plugin."
 msgstr "Ime  %s  je već registrovano od strane drugog dodatka."
 
 # @ default
 # @ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:492 includes/CCTM_PostTypeDef.php:495
+#: includes/class-cctm-post-type-def.php:492 includes/class-cctm-post-type-def.php:495
 #: views/post_type.php:223
 msgid "Add New"
 msgstr "Dodati novo"
 
 # @ default
-#: includes/CCTM_PostTypeDef.php:501
+#: includes/class-cctm-post-type-def.php:501
 msgid "New"
 msgstr "Novo"
 
 # @ default
-#: includes/CCTM_PostTypeDef.php:504
+#: includes/class-cctm-post-type-def.php:504
 msgid "View"
 msgstr "Pregled"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:510
+#: includes/class-cctm-post-type-def.php:510
 #, php-format
 msgid "No %s found"
 msgstr "Nema  %s pronađenih"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_PostTypeDef.php:513
+#: includes/class-cctm-post-type-def.php:513
 #, php-format
 msgid "No %s found in trash"
 msgstr "Nema  %s  pronađenih u smeću"
 
 # @ default
-#: includes/CCTM_PostTypeDef.php:516
+#: includes/class-cctm-post-type-def.php:516
 msgid "Parent Page"
 msgstr "Roditeljska stranica"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_Post_Widget.php:16
+#: includes/class-cctm-post-widget.php:16
 msgid "Post Content"
 msgstr "Sadržaj posta"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_Post_Widget.php:17
+#: includes/class-cctm-post-widget.php:17
 msgid "Show a post's content inside of a widget."
 msgstr "Prikazati sadržaj posta unutar vidžeta."
 
 # @ custom-content-type-mgr
-#: includes/CCTM_Post_Widget.php:99 views/widgets/post_content_form.php:12
+#: includes/class-cctm-post-widget.php:99 views/widgets/post_content_form.php:12
 msgid "Choose Post"
 msgstr "Odabrati post"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_Post_Widget.php:109
+#: includes/class-cctm-post-widget.php:109
 msgid "Override Post Title"
 msgstr "Zameniti naslov posta"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_Post_Widget.php:114 includes/SummarizePosts_Widget.php:73
+#: includes/class-cctm-post-widget.php:114 includes/class-summarize-posts-widget.php:73
 #: views/widgets/post_content_form.php:28
 msgid "Formatting String"
 msgstr "String za formatiranje"
 
 # @ custom-content-type-mgr
-#: includes/CCTM_Validator.php:85
+#: includes/class-cctm-validator.php:85
 msgid "No configurable options."
 msgstr "Nema opcija koje se mogu konfigurisati."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:180
+#: includes/class-get-posts-form.php:180
 #, php-format
 msgid "Retrieve posts with this exact %s."
 msgstr "Vratiti postove sa ovim tačnim  %s."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:200
+#: includes/class-get-posts-form.php:200
 msgid "Sorry, no results matched your search criteria."
 msgstr "Žao mi je, nema rezultata koji odgovaraju kriterijumu vaše pretrage."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:204
+#: includes/class-get-posts-form.php:204
 msgid "Filter"
 msgstr "Filter"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:205
+#: includes/class-get-posts-form.php:205
 msgid "Show All"
 msgstr "Prikazati sve"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:206
+#: includes/class-get-posts-form.php:206
 msgid "Show all dates"
 msgstr "Prikazati sve datume"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:207
+#: includes/class-get-posts-form.php:207
 msgid "Show all post-types"
 msgstr "Prikazati sve tipove postova"
 
 # @ default
-#: includes/GetPostsForm.php:244
+#: includes/class-get-posts-form.php:244
 msgid "Invalid parameter:"
 msgstr "Nevažeći parametar:"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:305
+#: includes/class-get-posts-form.php:305
 msgid "Append"
 msgstr "Dodati"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:306
+#: includes/class-get-posts-form.php:306
 msgid ""
 "List posts by their ID that you wish to include on every search. Comma-"
 "separate multiple values."
@@ -3194,22 +3194,22 @@ msgstr ""
 "u. Višestruke vrednosti razdvojite zapetom."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:326
+#: includes/class-get-posts-form.php:326
 msgid "All Authors"
 msgstr "Svi autori"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:341
+#: includes/class-get-posts-form.php:341
 msgid "Select an author whose posts you want to see."
 msgstr "Odaberite autora čije postove želite da vidite."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:361
+#: includes/class-get-posts-form.php:361
 msgid "Date Columns"
 msgstr "Datumske kolone"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:362
+#: includes/class-get-posts-form.php:362
 msgid ""
 "Which column should be used for date comparisons? Select one, or write in a "
 "custom field."
@@ -3218,7 +3218,7 @@ msgstr ""
 "upišite prilagođeno polje."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:388
+#: includes/class-get-posts-form.php:388
 msgid ""
 "How do you want the dates in the results formatted? Use one of the "
 "shortcuts, or supply a use any value valid for the <a href=\"http://php.net/"
@@ -3229,32 +3229,32 @@ msgstr ""
 "date_format()</a>"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:414
+#: includes/class-get-posts-form.php:414
 msgid "Date Maximum"
 msgstr "Maksimalan datum"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:415
+#: includes/class-get-posts-form.php:415
 msgid "Only results from this date or before will be returned"
 msgstr "Biće vraćeni samo rezultati od ovog datuma, ili raniji"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:442
+#: includes/class-get-posts-form.php:442
 msgid "Date Minimum"
 msgstr "Minimalan datum"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:443
+#: includes/class-get-posts-form.php:443
 msgid "Only results from this date or after will be returned."
 msgstr "Biće vraćeni samo rezultati od ovog datuma, ili kasniji"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:470
+#: includes/class-get-posts-form.php:470
 msgid "Exclude"
 msgstr "Isključiti"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:471
+#: includes/class-get-posts-form.php:471
 msgid ""
 "List posts by their ID that you wish to exclude from search results. Comma-"
 "separate multiple values."
@@ -3263,12 +3263,12 @@ msgstr ""
 "njihovim ID –u. Višestruke vrednosti razdvojite zapetom."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:488
+#: includes/class-get-posts-form.php:488
 msgid "Include"
 msgstr "Uključiti"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:489
+#: includes/class-get-posts-form.php:489
 msgid ""
 "List posts by their ID that you wish to return.  Usually this option is not "
 "used with any other search options. Comma-separate multiple values."
@@ -3278,12 +3278,12 @@ msgstr ""
 "razdvojite zapetama."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:508
+#: includes/class-get-posts-form.php:508
 msgid "Limit"
 msgstr "Ograničenje"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:509
+#: includes/class-get-posts-form.php:509
 msgid ""
 "Limit the number of results returned. If pagination is enabled, this number "
 "will be the number of results shown per page."
@@ -3292,49 +3292,49 @@ msgstr ""
 "broj će biti broj prikazanih rezultata po strani."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:527
+#: includes/class-get-posts-form.php:527
 msgid "Match Rule"
 msgstr "Pravilo upoređivanja"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:528
+#: includes/class-get-posts-form.php:528
 msgid "Define how your search term should match."
 msgstr "Definišite kako vaš pojam za pretragu treba da se upoređuje"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:532
+#: includes/class-get-posts-form.php:532
 msgid "Contains"
 msgstr "Sadrži"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:533
+#: includes/class-get-posts-form.php:533
 msgid "Starts with"
 msgstr "Počinje sa"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:534
+#: includes/class-get-posts-form.php:534
 msgid "Ends with"
 msgstr "Završava sa"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:558
+#: includes/class-get-posts-form.php:558
 msgid "Meta Key"
 msgstr "Meta ključ"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:559
+#: includes/class-get-posts-form.php:559
 msgid ""
 "Name of a custom field, to be used in conjuncture with <em>meta_value</em>."
 msgstr ""
 "Ime prilagođenog polja koje treba koristiti zajedno sa<em> meta_value</em>."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:576
+#: includes/class-get-posts-form.php:576
 msgid "Meta Value"
 msgstr "Meta vrednost"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:577
+#: includes/class-get-posts-form.php:577
 msgid ""
 "Value of a custom field, to be used in conjuncture with <em>meta_key</em>."
 msgstr ""
@@ -3342,12 +3342,12 @@ msgstr ""
 "em>."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:594
+#: includes/class-get-posts-form.php:594
 msgid "Offset"
 msgstr "Odstupanje"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:595
+#: includes/class-get-posts-form.php:595
 msgid ""
 "Number of results to skip.  Usually this is used only programmatically when "
 "pagination is enabled."
@@ -3356,23 +3356,23 @@ msgstr ""
 "kada je ostraničavanje uključeno."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:610
+#: includes/class-get-posts-form.php:610
 msgid "Omit Post Types"
 msgstr "Izostaviti tipove postova"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:614
+#: includes/class-get-posts-form.php:614
 msgid "Check which post-types you wish to omit from search results."
 msgstr ""
 "Označite koje tipove postova želite da isključite iz rezultata pretrage."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:649
+#: includes/class-get-posts-form.php:649
 msgid "Order"
 msgstr "Redosled"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:650
+#: includes/class-get-posts-form.php:650
 msgid ""
 "What order should search results be returned in? See also the <em>orderby</"
 "em> parameter."
@@ -3381,22 +3381,22 @@ msgstr ""
 "parametar poređati po <em>(order by)</em>."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:661
+#: includes/class-get-posts-form.php:661
 msgid "Ascending"
 msgstr "Rastuće"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:676
+#: includes/class-get-posts-form.php:676
 msgid "Descending"
 msgstr "Opadajuće"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:701 views/post_type.php:699
+#: includes/class-get-posts-form.php:701 views/post_type.php:699
 msgid "Order By"
 msgstr "Poređati po"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:702
+#: includes/class-get-posts-form.php:702
 msgid ""
 "Which column should results be sorted by. This can be any column from the "
 "wp_posts table or any custom field. Default: ID"
@@ -3405,22 +3405,22 @@ msgstr ""
 "kolona iz tabele wp_posts, ili bilo koje prilagođeno polje. Podrazumevano: ID"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:720
+#: includes/class-get-posts-form.php:720
 msgid "Paginate Results"
 msgstr "Ostraničiti rezultate"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:725
+#: includes/class-get-posts-form.php:725
 msgid "Pagination"
 msgstr "Ostraničavanje"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:742
+#: includes/class-get-posts-form.php:742
 msgid "Post Date"
 msgstr "Datum posta"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:743
+#: includes/class-get-posts-form.php:743
 msgid ""
 "Find posts from this date.  Use the <em>date_column</em> parameter to "
 "determine which column should be considered."
@@ -3429,12 +3429,12 @@ msgstr ""
 "da odredite koju kolonu treba razmotriti."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:769
+#: includes/class-get-posts-form.php:769
 msgid "Post MIME Type"
 msgstr "MIME tip posta"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:770
+#: includes/class-get-posts-form.php:770
 msgid ""
 "Specify either the full MIME type (e.g. image/jpeg) or just the beginning (e."
 "g. application, image, audio, video)."
@@ -3443,22 +3443,22 @@ msgstr ""
 "aplikacija, slika, audio, video)."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:787
+#: includes/class-get-posts-form.php:787
 msgid "Post Modified"
 msgstr "Post je izmenjen"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:788
+#: includes/class-get-posts-form.php:788
 msgid "Find posts modified on this date."
 msgstr "Pronaći postove izmenjene na ovaj datum"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:817
+#: includes/class-get-posts-form.php:817
 msgid "Post Parent"
 msgstr "Roditeljski post"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:818
+#: includes/class-get-posts-form.php:818
 msgid ""
 "Retrieve all posts that are children of the post ID(s) specified. Comma-"
 "separate multiple values."
@@ -3467,42 +3467,42 @@ msgstr ""
 "vrednosti razdvojiti zapetama."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:836
+#: includes/class-get-posts-form.php:836
 msgid "Post Status"
 msgstr "Status posta"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:837
+#: includes/class-get-posts-form.php:837
 msgid "Most searches will be for published posts."
 msgstr "Većina pretraga će biti za objavljene postove."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:875
+#: includes/class-get-posts-form.php:875
 msgid "Retrieve posts with this exact title."
 msgstr "Vraćanje postova sa tačno ovim naslovom."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:891
+#: includes/class-get-posts-form.php:891
 msgid "Post Types"
 msgstr "Tipovi postova"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:895
+#: includes/class-get-posts-form.php:895
 msgid "Check which post-types you wish to search."
 msgstr "Označite koje tipove postova želite da pretražite."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:904
+#: includes/class-get-posts-form.php:904
 msgid "Select post-type"
 msgstr "Biranje tipa posta"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:952
+#: includes/class-get-posts-form.php:952
 msgid "Search Columns"
 msgstr "Kolone za pretraživanje"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:953
+#: includes/class-get-posts-form.php:953
 msgid ""
 "When searching by a <em>search_term</em>, which define columns should be "
 "searched. Comma-separate multiple values. You can specify custom-fields as "
@@ -3513,12 +3513,12 @@ msgstr ""
 "prilagođena polja kao imena kolona."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:970
+#: includes/class-get-posts-form.php:970
 msgid "Search Term"
 msgstr "Pojam za pretraživanje"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:971
+#: includes/class-get-posts-form.php:971
 msgid ""
 "Search posts for this term. Use the <em>search_columns</em> parameter to "
 "specify which columns are searched for the term."
@@ -3527,17 +3527,17 @@ msgstr ""
 "em>parametar da navedete koje kolone se pretražuju po pojmu."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:989
+#: includes/class-get-posts-form.php:989
 msgid "Select taxonomy"
 msgstr "Biranje taksonomije"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:1006
+#: includes/class-get-posts-form.php:1006
 msgid "Taxonomy"
 msgstr "Taksonomija"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:1007
+#: includes/class-get-posts-form.php:1007
 msgid ""
 "Choose which taxonomy to search in. Used in conjunction with "
 "<em>taxonomy_term</em>."
@@ -3546,12 +3546,12 @@ msgstr ""
 "taxonomy_term</em>."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:1026
+#: includes/class-get-posts-form.php:1026
 msgid "Taxonomy Depth"
 msgstr "Dubina taksonomije"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:1027
+#: includes/class-get-posts-form.php:1027
 msgid ""
 "When doing a hierarchical taxonomical search (e.g. by sub-categories), "
 "increase this number to reflect how many levels down the hierarchical tree "
@@ -3566,22 +3566,22 @@ msgstr ""
 "pojmom ili sa pod-taksonomijama (npr. sisari ili psi). (podrazumevano: 1)"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:1045
+#: includes/class-get-posts-form.php:1045
 msgid "Taxonomy Slug"
 msgstr "Poveznica taksonomije"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:1046
+#: includes/class-get-posts-form.php:1046
 msgid "The taxonomy slug is the URL-friendly taxonomy term."
 msgstr "Poveznica taksonomije je URL-pogodan taksonomski pojam."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:1067
+#: includes/class-get-posts-form.php:1067
 msgid "Taxonomy Term"
 msgstr "Taksonomski pojam"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:1068
+#: includes/class-get-posts-form.php:1068
 msgid ""
 "Set a specific category(ies) or tag(s) to include in search results. Comma-"
 "separate multiple values."
@@ -3590,12 +3590,12 @@ msgstr ""
 "rezultate pretrage. Višestruke vrednosti razdvojite zapetom."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:1109
+#: includes/class-get-posts-form.php:1109
 msgid "Month"
 msgstr "Mesec"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:1110
+#: includes/class-get-posts-form.php:1110
 msgid ""
 "Choose which month's posts you wish to view. This relies on the "
 "<em>date_column</em> parameter."
@@ -3605,56 +3605,56 @@ msgstr ""
 
 # @ default
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:1137 includes/GetPostsQuery.php:1993
-#: includes/SP_Post.php:213
+#: includes/class-get-posts-form.php:1137 includes/class-get-posts-query.php:1993
+#: includes/class-sp-post.php:213
 msgid "There were no errors."
 msgstr "Nije bilo grešaka"
 
 # @ default
-#: includes/GetPostsForm.php:1184
+#: includes/class-get-posts-form.php:1184
 msgid "Possible invalid search_by parameter:"
 msgstr "Moguće je da search_by parametar nije važeći:"
 
 # @ default
-#: includes/GetPostsForm.php:1330
+#: includes/class-get-posts-form.php:1330
 #, php-format
 msgid "CSS file not found %s"
 msgstr "CSS fajl nije pronađen %s"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsForm.php:1351 includes/GetPostsForm.php:1369
-#: includes/GetPostsForm.php:1385 includes/GetPostsForm.php:1403
+#: includes/class-get-posts-form.php:1351 includes/class-get-posts-form.php:1369
+#: includes/class-get-posts-form.php:1385 includes/class-get-posts-form.php:1403
 #, php-format
 msgid "Invalid data type passed to %s function. Input must be a string."
 msgstr "Funkciji je prosleđen nevažeći %s tip podatka. Unos mora biti string."
 
 # @ default
-#: includes/GetPostsForm.php:1429
+#: includes/class-get-posts-form.php:1429
 msgid "Invalid input to set_tpl() function. Input must be a string."
 msgstr "Nevažeći unos u set_tpl() funkciju. Unos mora biti string."
 
 # @ default
-#: includes/GetPostsForm.php:1433
+#: includes/class-get-posts-form.php:1433
 msgid "set_tpl(): Formatting string must not be empty!"
 msgstr "set_tpl(): String za formatiranje ne sme biti prazan!"
 
 # @ default
-#: includes/GetPostsQuery.php:429
+#: includes/class-get-posts-query.php:429
 msgid "Invalid alpha input:"
 msgstr "Nevažeći alpha unos:"
 
 # @ default
-#: includes/GetPostsQuery.php:434
+#: includes/class-get-posts-query.php:434
 msgid "Invalid post_type:"
 msgstr "Nevažeći post_type:"
 
 # @ default
-#: includes/GetPostsQuery.php:440
+#: includes/class-get-posts-query.php:440
 msgid "Invalid post_status:"
 msgstr "Nevažeći post_status:"
 
 # @ default
-#: includes/GetPostsQuery.php:446
+#: includes/class-get-posts-query.php:446
 msgid ""
 "Invalid column name. Column names may only contain alphanumeric characters "
 "and underscores: "
@@ -3663,66 +3663,66 @@ msgstr ""
 "karaktere i donje crte:"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:677
+#: includes/class-get-posts-query.php:677
 msgid "Invalid input argument.  Arrays not allowed as argument names."
 msgstr "Nevažeći ulazni argument. Nizovi nisu dozvoljeni kao imena argumenata."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:682
+#: includes/class-get-posts-query.php:682
 msgid "Empty input argument."
 msgstr "Prazan ulazni argument."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:779
+#: includes/class-get-posts-query.php:779
 #, php-format
 msgid "Empty input for %s. Using default parameters."
 msgstr "Prazan unos za %s. Koriste se podrazumevani parametri."
 
 # @ default
-#: includes/GetPostsQuery.php:800
+#: includes/class-get-posts-query.php:800
 #, php-format
 msgid "Invalid order: %s. Order may only be \"ASC\" or \"DESC\"."
 msgstr "Nevažeći redosled: %s. Redosled može biti samo \"ASC\" ili \"DESC\"."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:812
+#: includes/class-get-posts-query.php:812
 #, php-format
 msgid "orderby column not a default post column: %s"
 msgstr "kolona po kojoj se sortira nije podrazumevana kolona postova: %s"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:816
+#: includes/class-get-posts-query.php:816
 #, php-format
 msgid "Invalid column name supplied for orderby: %s"
 msgstr "Navedeno je nevažeće ime za kolonu po kojoj se sortira:%s"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:841
+#: includes/class-get-posts-query.php:841
 #, php-format
 msgid "Invalid date argument: %s"
 msgstr "Nevažeći argument datum: %s"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:853
+#: includes/class-get-posts-query.php:853
 #, php-format
 msgid "Invalid datetime argument: %s"
 msgstr "Nevažeći argument datum vreme: %s"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:906
+#: includes/class-get-posts-query.php:906
 #, php-format
 msgid "Taxonomy does not exist: %s"
 msgstr "Taksonomija ne postoji: %s"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:931
+#: includes/class-get-posts-query.php:931
 msgid "Invalid parameter for join_rule. join_rule must be \"AND\" or \"OR\""
 msgstr ""
 "Nevažeći parametar za join_rule. join_rule mora biti \"AND\" (i) ili \"OR"
 "\" (ili)"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:942
+#: includes/class-get-posts-query.php:942
 msgid ""
 "Invalid parameter for match_rule. match_rule may be \"contains\", "
 "\"starts_with\", or \"ends_with\""
@@ -3731,47 +3731,47 @@ msgstr ""
 "\" (sadrži), \"starts_with\" (počinje sa), ili \"ends_with\" (završava sa)"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:954
+#: includes/class-get-posts-query.php:954
 msgid "Invalid date column."
 msgstr "Nevažeća datumska kolona."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:968
+#: includes/class-get-posts-query.php:968
 msgid "post_mime_type contains illegal characters.  Input ignored."
 msgstr "post_mime_type sadrži nedozvoljene karaktere. Unos je ignorisan."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:980
+#: includes/class-get-posts-query.php:980
 #, php-format
 msgid "Invalid argument name %s.  Input ignored."
 msgstr "Nevažeće ime argumenta%s. Unos ignorisan."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:993
+#: includes/class-get-posts-query.php:993
 #, php-format
 msgid "Filtering on direct column/value: %s"
 msgstr "Filtriranje po direktnoj koloni/vrednosti: %s"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1484 includes/GetPostsQuery.php:1613
+#: includes/class-get-posts-query.php:1484 includes/class-get-posts-query.php:1613
 #, php-format
 msgid "The %s operator cannot operate on an array of values."
 msgstr "%s Operator ne može da izvodi operaciju nad nizom vrednosti."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1700
+#: includes/class-get-posts-query.php:1700
 msgid "Search parameters ignored: search_term and search_columns must be set."
 msgstr ""
 "Parametri pretrage su ignorisani: search_term i search_columns moraju da "
 "budu zadati."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1894
+#: includes/class-get-posts-query.php:1894
 msgid "Arguments"
 msgstr "Argumenti"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1896
+#: includes/class-get-posts-query.php:1896
 msgid ""
 "For more information on how to use this function, see the documentation for "
 "the <a href=\"http://code.google.com/p/wordpress-summarize-posts/wiki/"
@@ -3782,69 +3782,69 @@ msgstr ""
 "posts/wiki/get_posts\">GetPostsQuery::get_posts()</a> funkciju."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1897
+#: includes/class-get-posts-query.php:1897
 msgid "Raw Database Queries"
 msgstr "Sirovi upiti baze podataka"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1901
+#: includes/class-get-posts-query.php:1901
 msgid "Comparable Shortcode"
 msgstr "Uporedni kratki kod"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1903
+#: includes/class-get-posts-query.php:1903
 msgid "Results"
 msgstr "Rezultati"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1917
+#: includes/class-get-posts-query.php:1917
 msgid "No arguments supplied."
 msgstr "Ni jedan argument nije dat."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1969
+#: includes/class-get-posts-query.php:1969
 msgid "Execution Time"
 msgstr "Vreme"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1970
+#: includes/class-get-posts-query.php:1970
 #, php-format
 msgid "%s seconds"
 msgstr "%s sekundi"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:1996 includes/SP_Post.php:216
+#: includes/class-get-posts-query.php:1996 includes/class-sp-post.php:216
 msgid "Errors"
 msgstr "Greške"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:2029
+#: includes/class-get-posts-query.php:2029
 msgid "There were no notices."
 msgstr "Nije bilo napomena."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:2032
+#: includes/class-get-posts-query.php:2032
 msgid "Notices"
 msgstr "Napomene"
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:2270
+#: includes/class-get-posts-query.php:2270
 msgid "There were no warnings."
 msgstr "Nije bilo upozorenja."
 
 # @ custom-content-type-mgr
-#: includes/GetPostsQuery.php:2273
+#: includes/class-get-posts-query.php:2273
 msgid "Warnings"
 msgstr "Upozorenja"
 
 # @ custom-content-type-mgr
-#: includes/StandardizedCustomFields.php:113
+#: includes/class-standardized-custom-fields.php:113
 #, php-format
 msgid "The %s field is required."
 msgstr "%s Polje je potrebno."
 
 # @ custom-content-type-mgr
-#: includes/StandardizedCustomFields.php:146
+#: includes/class-standardized-custom-fields.php:146
 msgid ""
 "This post has validation errors.  The post will remain in draft status until "
 "they are corrected."
@@ -3853,22 +3853,22 @@ msgstr ""
 "dok se one ne isprave."
 
 # @ custom-content-type-mgr
-#: includes/SummarizePosts_Widget.php:11
+#: includes/class-summarize-posts-widget.php:11
 msgid "Summarize Posts"
 msgstr "Sumirati postove"
 
 # @ custom-content-type-mgr
-#: includes/SummarizePosts_Widget.php:12
+#: includes/class-summarize-posts-widget.php:12
 msgid "List posts according to flexible search criteria."
 msgstr "Ispisati listu postova prema fleksibilnom kriterijumu pretrage."
 
 # @ custom-content-type-mgr
-#: includes/SummarizePosts_Widget.php:62
+#: includes/class-summarize-posts-widget.php:62
 msgid "Search Criteria"
 msgstr "Kriterijum pretrage"
 
 # @ custom-content-type-mgr
-#: includes/SummarizePosts_Widget.php:62
+#: includes/class-summarize-posts-widget.php:62
 msgid "Define Search"
 msgstr "Definisati pretragu"
 

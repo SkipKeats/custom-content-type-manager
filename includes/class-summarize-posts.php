@@ -1,16 +1,16 @@
 <?php
 /**
- * SummarizePosts
+ * Summarize_Posts
  *
  * Handles the 'summarize-posts' shortcode and related template tags.  This is a 
  * convenience class that wraps the GetPostsQuery class.  It's used to handle
  * shortcodes and other simplified interpretations of the powerful GetPostsquery class.
  *
- * @package SummarizePosts
+ * @package Summarize_Posts
  */
 
 
-class SummarizePosts {
+class Summarize_Posts {
 	const name    = 'Summarize Posts';
 	const version   = '0.8';
 	// See http://php.net/manual/en/function.version-compare.php
@@ -92,7 +92,7 @@ class SummarizePosts {
 			'Summarize Posts',      // menu title
 			'manage_options',      // capability
 			self::admin_menu_slug,     // menu slug
-			'SummarizePosts::get_admin_page' // callback
+			'Summarize_Posts::get_admin_page' // callback
 		);
 	}
 
@@ -305,7 +305,7 @@ class SummarizePosts {
 		$args = array_merge($Q->defaults, $raw_args);
 
         if ($args['paginate']) {
-            require_once dirname(__FILE__).'/CCTM_Pagination.conf.php';
+            require_once dirname(__FILE__).'/class-cctm-pagination-configuration.php';
             $C = new CCTM_Pagination_Configuration();
             $tpls = $C->tpls['default'];
             $args['offset'] = (int) (isset($_GET['offset'])) ? $_GET['offset'] : '';
@@ -457,10 +457,10 @@ class SummarizePosts {
 	 * @return void  errors are printed if present.
 	 */
 	public static function print_notices() {
-		if ( !empty(SummarizePostsTests::$errors) ) {
+		if ( !empty(Summarize_PostsTests::$errors) ) {
 
 			$error_items = '';
-			foreach ( SummarizePostsTests::$errors as $e ) {
+			foreach ( Summarize_PostsTests::$errors as $e ) {
 				$error_items .= "<li>$e</li>";
 			}
 
@@ -484,7 +484,7 @@ class SummarizePosts {
 
 	//------------------------------------------------------------------------------
 	/**
-	 * This is the tie-into the GetPostsForm object: it returns (not prints) a form
+	 * This is the tie-into the Get_Posts_Form object: it returns (not prints) a form
 	 * OR it handles form submissions and returns results.
 	 * 
 	 * @param array $args        (optional) defines which controls should be displayed
@@ -492,7 +492,7 @@ class SummarizePosts {
 	 * @return string HTML form, or HTML results if the form was property submitted.
 	 */
 	public static function search($args=array(), $content_tpl = null) {
-		$Form = new GetPostsForm($args);
+		$Form = new Get_Posts_Form($args);
 
 		$nonce = self::get_from_array($_POST, $Form->nonce_name);
 		// Draw the search form
