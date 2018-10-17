@@ -5,7 +5,7 @@
  * Wraps an input string when it isn't empty.
  */
 
-class CCTM_wrapper extends CCTM_OutputFilter {
+class CCTM_wrapper extends CCTM_Output_Filter {
 
 	/**
 	 * Apply the filter.

@@ -19,9 +19,9 @@ $data['content'] = '';
 // If properly submitted, Proceed with saving settings and exporting def.
 if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_name']) ) {
 	
-	require_once(CCTM_PATH . '/includes/CCTM_ImportExport.php');
+	require_once(CCTM_PATH . '/includes/class-cctm-import-export.php');
 	
-	$sanitized = CCTM_ImportExport::sanitize_export_params($_POST, $data['nonce_name']);
+	$sanitized = CCTM_Import_Export::sanitize_export_params($_POST, $data['nonce_name']);
 	
 	// Any errors?
 	if ( !empty(CCTM::$errors) ) {
@@ -31,12 +31,12 @@ if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_na
 	elseif ($_POST['export_type'] == 'download') {
 		$nonce = wp_create_nonce('cctm_download_definition');
 		
-		$save_me = CCTM_ImportExport::get_payload_from_data(CCTM::$data);
+		$save_me = CCTM_Import_Export::get_payload_from_data(CCTM::$data);
 		$save_me = json_encode($save_me);
 		
 		$data['msg'] = sprintf('<div class="updated"><p>%s</p></div>'
 			, sprintf(__('Your Custom Content Type definition %s should begin downloading shortly.  If there is a problem downloading, you can copy the text below into a text editor and save it with a <code>.cctm.json</code> extension.', CCTM_TXTDOMAIN)
-			, '<strong>'.CCTM_ImportExport::get_download_title($sanitized['title']).'</strong>')
+			, '<strong>'.CCTM_Import_Export::get_download_title($sanitized['title']).'</strong>')
 		);
 		$data['msg'] .= "<textarea rows='10' cols='100'>$save_me</textarea>";
 
@@ -53,7 +53,7 @@ if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_na
 		self::$data['export_info'] = $sanitized;
 		update_option(self::db_key, self::$data);
 		
-		if( CCTM_ImportExport::export_to_local_webserver() ) {
+		if( CCTM_Import_Export::export_to_local_webserver() ) {
 			$data['msg'] = sprintf('<div class="updated"><p>%s</p></div>'
 					, __('Your Custom Content Type definition has been saved to your library. <a href="?page=cctm_tools&a=import_def">Click here</a> to view your library.', CCTM_TXTDOMAIN)
 				);

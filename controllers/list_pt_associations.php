@@ -10,7 +10,7 @@
 if ( ! defined('CCTM_PATH')) exit('No direct script access allowed');
 if (!current_user_can('administrator')) exit('Admins only.');
 require_once(CCTM_PATH.'/includes/CCTM_PostTypeDef.php');
-require_once(CCTM_PATH.'/includes/CCTM_Metabox.php');
+require_once(CCTM_PATH.'/includes/class-cctm-metabox.php');
 
 $is_foreign = (int) CCTM::get_value($_GET, 'f');
 

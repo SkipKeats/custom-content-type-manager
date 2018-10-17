@@ -4,7 +4,7 @@ if (!current_user_can('administrator')) exit('Admins only.');
 /*------------------------------------------------------------------------------
 Export a content type definition to a .json file
 ------------------------------------------------------------------------------*/
-require_once(CCTM_PATH . '/includes/CCTM_ImportExport.php');
+require_once(CCTM_PATH . '/includes/class-cctm-import-export.php');
 
 $data 				= array();
 $data['page_title']	= __('Import Definition', CCTM_TXTDOMAIN);
@@ -23,7 +23,7 @@ $dir = $upload_dir['basedir'] .'/'.self::base_storage_dir . '/' . self::def_dir;
 if ( file_exists($dir) && is_dir($dir) ) {
 //	$data['msg'] = ''; // do nothing
 	// Read the files
-	$data['defs_array'] = CCTM_ImportExport::get_defs();
+	$data['defs_array'] = CCTM_Import_Export::get_defs();
 	
 } 
 elseif (!@mkdir($dir, self::new_dir_perms, true)) {
@@ -77,7 +77,7 @@ if ( !empty($_POST) ) { // && check_admin_referer($data['action_name'], $data['n
 			$data_from_file = json_decode( $raw_file_contents, true);
 
 			// Let's check that this thing is legit
-			if ( !CCTM_ImportExport::is_valid_def_structure($data_from_file) ) {
+			if ( !CCTM_Import_Export::is_valid_def_structure($data_from_file) ) {
 				self::$errors['format'] = __('The uploaded file is not in the correct format.', CCTM_TXTDOMAIN);
 				$data['msg'] = self::format_errors();
 				$data['content'] = CCTM::load_view('import.php', $data);
@@ -89,10 +89,10 @@ if ( !empty($_POST) ) { // && check_admin_referer($data['action_name'], $data['n
 			// to let the user know that we can't interface with the library dir 
 			$basename = basename($_FILES['cctm_settings_file']['name']);
 			// Sometimes you can get filenames that look lie "your_def.cctm (1).json"
-			if ( !CCTM_ImportExport::is_valid_basename($basename) ) {
+			if ( !CCTM_Import_Export::is_valid_basename($basename) ) {
 				// grab anything left of the first period, then re-create the .cctm.json extension
 				list($basename) = explode('.', $basename);
-				$basename .= CCTM_ImportExport::extension;
+				$basename .= CCTM_Import_Export::extension;
 			}
 
 			if ( !@move_uploaded_file($_FILES['cctm_settings_file']['tmp_name'], $dir.'/'.$basename )) {
@@ -114,7 +114,7 @@ if ( !empty($_POST) ) { // && check_admin_referer($data['action_name'], $data['n
 		// Delete definitions
 		elseif (wp_verify_nonce($nonce, 'cctm_delete_defs')) {
 			$defs = CCTM::get_value($_POST, 'defs', array());
-			if (CCTM_ImportExport::delete_defs($defs)) {
+			if (CCTM_Import_Export::delete_defs($defs)) {
 				$data['msg'] = sprintf('<div class="updated"><p>%s</p></div>'
 					, __('Files have been removed from your library.', CCTM_TXTDOMAIN)
 				);
@@ -129,7 +129,7 @@ if ( !empty($_POST) ) { // && check_admin_referer($data['action_name'], $data['n
 		}
 		// Activate the previewed definition
 		elseif(wp_verify_nonce($nonce, 'cctm_activate_def')) {
-			if (CCTM_ImportExport::activate_def($_POST['def'])) {
+			if (CCTM_Import_Export::activate_def($_POST['def'])) {
 				$data['msg'] = sprintf('<div class="updated"><p>%s</p></div>'
 					, __('The definition was imported successfully!', CCTM_TXTDOMAIN)
 				);

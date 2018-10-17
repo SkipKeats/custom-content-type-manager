@@ -187,7 +187,7 @@ msgstr ""
 #: ../ajax-controllers/list_custom_fields.php:25
 #: ../config/menus/admin_menu.php:32 ../config/menus/admin_menu.php:74
 #: ../config/menus/admin_menu.php:75 ../controllers/settings.php:114
-#: ../includes/CCTM_Metabox.php:19 ../views/preview_def.php:52
+#: ../includes/class-cctm-metabox.php:19 ../views/preview_def.php:52
 #: ../views/templates/default.php:51
 msgid "Custom Fields"
 msgstr "Campos Personalizados"
@@ -2318,9 +2318,9 @@ msgstr "custom_field shortcode requires the \"name\" parameter."
 msgid "Please correct the following errors:"
 msgstr "Por favor, corrija os seguintes erros:"
 
-#: ../includes/CCTM.php:1246 ../includes/CCTM_ImportExport.php:39
-#: ../includes/CCTM_ImportExport.php:110 ../includes/CCTM_ImportExport.php:183
-#: ../includes/CCTM_ImportExport.php:229
+#: ../includes/CCTM.php:1246 ../includes/class-cctm-import-export.php:39
+#: ../includes/class-cctm-import-export.php:110 ../includes/class-cctm-import-export.php:183
+#: ../includes/class-cctm-import-export.php:229
 msgid "WordPress issued the following error: "
 msgstr "WordPress emitiu o seguinte erro:"
 
@@ -2602,29 +2602,29 @@ msgstr "Entrada imprópria para a função set_props()."
 msgid "Improper input to the set_props() function."
 msgstr "Improper input to the set_props() function."
 
-#: ../includes/CCTM_ImportExport.php:104
+#: ../includes/class-cctm-import-export.php:104
 msgid "Please specify at least one definition."
 msgstr "Especifique pelo menos uma definição."
 
-#: ../includes/CCTM_ImportExport.php:122
+#: ../includes/class-cctm-import-export.php:122
 msgid "Directory traversing not allowed."
 msgstr "Diretório de atravessar não é permitido."
 
-#: ../includes/CCTM_ImportExport.php:128
+#: ../includes/class-cctm-import-export.php:128
 #, php-format
 msgid "Could not delete file: %s"
 msgstr "Não foi possível excluir o arquivo: %s"
 
-#: ../includes/CCTM_ImportExport.php:133
+#: ../includes/class-cctm-import-export.php:133
 #, php-format
 msgid "File does not exist: %s"
 msgstr "O arquivo não existe: %s"
 
-#: ../includes/CCTM_ImportExport.php:165
+#: ../includes/class-cctm-import-export.php:165
 msgid "There was a problem exporting your CCTM definition."
 msgstr "Houve um problema ao exportar sua definição CCTM."
 
-#: ../includes/CCTM_ImportExport.php:191
+#: ../includes/class-cctm-import-export.php:191
 #, php-format
 msgid ""
 "A file named %s already exists in the definition library.  Please choose "
@@ -2633,7 +2633,7 @@ msgstr ""
 "Um arquivo chamado %s já existe na biblioteca definição. Por favor escolha "
 "outro título."
 
-#: ../includes/CCTM_ImportExport.php:205
+#: ../includes/class-cctm-import-export.php:205
 #, php-format
 msgid ""
 "An error was encountered while trying to write to the definition library "
@@ -2642,17 +2642,17 @@ msgstr ""
 "Foi encontrado um erro ao tentar escrever no diretório da biblioteca de "
 "definição (%s). Por favor verifique as permissões do arquivo em seu servidor."
 
-#: ../includes/CCTM_ImportExport.php:495
+#: ../includes/class-cctm-import-export.php:495
 #, php-format
 msgid "The definition file could not be found: %s"
 msgstr "O arquivo de definição não poderia ser encontrado: %s"
 
-#: ../includes/CCTM_ImportExport.php:501
+#: ../includes/class-cctm-import-export.php:501
 #, php-format
 msgid "There was a problem with the JSON decoding of the definition file: %s"
 msgstr "Houve um problema com a decodificação JSON do arquivo de definição: %s"
 
-#: ../includes/CCTM_ImportExport.php:507
+#: ../includes/class-cctm-import-export.php:507
 #, php-format
 msgid ""
 "The data structure in the file was not in the correct format: %s. This could "
@@ -2665,79 +2665,79 @@ msgstr ""
 "href=\"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
 "Import\" target=\"_new\">Wiki</a> for more information."
 
-#: ../includes/CCTM_ImportExport.php:598
+#: ../includes/class-cctm-import-export.php:598
 msgid "Title is required."
 msgstr "O título é obrigatório."
 
-#: ../includes/CCTM_ImportExport.php:601
+#: ../includes/class-cctm-import-export.php:601
 msgid "Only basic text characters are allowed for the title."
 msgstr "Apenas os caracteres de texto básicas são permitidas para o título."
 
-#: ../includes/CCTM_ImportExport.php:604
+#: ../includes/class-cctm-import-export.php:604
 msgid "The title cannot exceed 64 characters."
 msgstr "O título não pode exceder 64 caracteres."
 
-#: ../includes/CCTM_ImportExport.php:609
+#: ../includes/class-cctm-import-export.php:609
 msgid "Author is required."
 msgstr "Autor é necessária."
 
-#: ../includes/CCTM_ImportExport.php:612
+#: ../includes/class-cctm-import-export.php:612
 msgid "Only basic characters are allowed for the author field."
 msgstr "Somente caracteres básicos são permitidos para o campo autor."
 
-#: ../includes/CCTM_ImportExport.php:615
+#: ../includes/class-cctm-import-export.php:615
 msgid "The author name cannot exceed 32 characters."
 msgstr "O nome do autor não pode exceder 32 caracteres."
 
-#: ../includes/CCTM_ImportExport.php:623
+#: ../includes/class-cctm-import-export.php:623
 msgid "The URL must be in a standard format, e.g. http://yoursite.com."
 msgstr ""
 "O URL deve estar em um formato padrão, por exemplo, http://yoursite.com."
 
-#: ../includes/CCTM_ImportExport.php:626
+#: ../includes/class-cctm-import-export.php:626
 msgid "The URL cannot exceed 255 characters."
 msgstr "O URL não pode exceder 255 caracteres."
 
-#: ../includes/CCTM_ImportExport.php:634
+#: ../includes/class-cctm-import-export.php:634
 msgid ""
 "The template URL must be in a standard format, e.g. http://themeforest.com."
 msgstr ""
 "A URL modelo deve estar em um formato padrão, por exemplo, http://"
 "themeforest.com."
 
-#: ../includes/CCTM_ImportExport.php:637
+#: ../includes/class-cctm-import-export.php:637
 msgid "The template URL cannot exceed 255 characters."
 msgstr "A URL modelo não pode exceder 255 caracteres."
 
-#: ../includes/CCTM_ImportExport.php:642
+#: ../includes/class-cctm-import-export.php:642
 msgid "Description is required."
 msgstr "Descrição é necessária."
 
-#: ../includes/CCTM_ImportExport.php:645
+#: ../includes/class-cctm-import-export.php:645
 msgid "The description cannot exceed 1024 characters."
 msgstr "A descrição não pode exceder 1024 caracteres."
 
-#: ../includes/CCTM_Metabox.php:38
+#: ../includes/class-cctm-metabox.php:38
 msgid "ID is a required field."
 msgstr "ID é um campo obrigatório."
 
-#: ../includes/CCTM_Metabox.php:45 ../includes/CCTM_Metabox.php:53
+#: ../includes/class-cctm-metabox.php:45 ../includes/class-cctm-metabox.php:53
 msgid "That ID is already taken. Please choose another."
 msgstr "Este ID já está em uso. Por favor, escolha outro."
 
-#: ../includes/CCTM_Metabox.php:48 ../includes/CCTM_Metabox.php:56
+#: ../includes/class-cctm-metabox.php:48 ../includes/class-cctm-metabox.php:56
 msgid "ID contains invalid characters."
 msgstr "O ID contém caracteres inválidos."
 
-#: ../includes/CCTM_Metabox.php:61
+#: ../includes/class-cctm-metabox.php:61
 msgid "Title is a required field."
 msgstr "Este é um campo obrigatório."
 
-#: ../includes/CCTM_Metabox.php:67
+#: ../includes/class-cctm-metabox.php:67
 msgid "You cannot use a CCTM function as your callback."
 msgstr ""
 
-#: ../includes/CCTM_Metabox.php:71
+#: ../includes/class-cctm-metabox.php:71
 msgid "The callback function does not exist."
 msgstr ""
 

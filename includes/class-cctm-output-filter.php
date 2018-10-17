@@ -1,10 +1,10 @@
 <?php
 /**
- * @package CCTM_OutputFilter
+ * @package CCTM_Output_Filter
  *
  * Abstract class for standardizing output filters.
  */
-abstract class CCTM_OutputFilter {
+abstract class CCTM_Output_Filter {
 
 	/**
 	 * Most filters should be publicly visible, but some should only be used via direct invocation 

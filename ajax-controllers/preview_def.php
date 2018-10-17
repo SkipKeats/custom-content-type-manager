@@ -15,7 +15,7 @@ the entire request: if it were handled by WP, headers() would be sent.
 //@require_once( realpath('../../../../').'/wp-load.php' );
 //include_once('../includes/constants.php');
 //include_once(CCTM_PATH.'/includes/CCTM.php');
-include_once(CCTM_PATH.'/includes/CCTM_ImportExport.php');
+include_once(CCTM_PATH.'/includes/class-cctm-import-export.php');
 
 // Make sure a file was specified
 $filename = CCTM::get_value($_REQUEST,'file');
@@ -26,7 +26,7 @@ if (empty($filename)) {
 }
 
 // Make sure the filename is legit
-if (!CCTM_ImportExport::is_valid_basename($filename)) {
+if (!CCTM_Import_Export::is_valid_basename($filename)) {
 	print CCTM::format_error_msg( __('Invalid filename: the definition filename should not contain spaces and should use an extension of <code>.cctm.json</code>.', CCTM_TXTDOMAIN));
 	exit;
 }
@@ -35,7 +35,7 @@ if (!CCTM_ImportExport::is_valid_basename($filename)) {
 $upload_dir = wp_upload_dir();
 $dir = $upload_dir['basedir'] .'/'.CCTM::base_storage_dir . '/' . CCTM::def_dir .'/';
 
-$data = CCTM_ImportExport::load_def_file($dir.$filename);
+$data = CCTM_Import_Export::load_def_file($dir.$filename);
 
 $data['filename'] = $filename;
 
