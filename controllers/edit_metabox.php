@@ -42,9 +42,9 @@ $field_data = array(); // Data object we will save
 $data['id.error'] = '';
 $data['title.error'] = '';
 $data['callback.error'] = '';
-$data['id.error_class'] = '';
-$data['title.error_class'] = '';
-$data['callback.error_class'] = '';
+$data['id.ERROR_CLASS'] = '';
+$data['title.ERROR_CLASS'] = '';
+$data['callback.ERROR_CLASS'] = '';
 
 $data['style'] = file_get_contents(CCTM_PATH.'/css/validation.css');
 
@@ -84,7 +84,7 @@ if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_na
 		$data['msg'] = CCTM::format_error_msg(CCTM_Metabox::$errors, __('Please correct the following problems.',CCTM_TXTDOMAIN));
 		foreach (CCTM_Metabox::$errors as $field => $error) {
 			$data[$field.'.error'] = sprintf('<span class="cctm_validation_error">%s</span>',$error);
-			$data[$field.'.error_class'] = 'cctm_validation_error';
+			$data[$field.'.ERROR_CLASS'] = 'cctm_validation_error';
 		}
 	}
 

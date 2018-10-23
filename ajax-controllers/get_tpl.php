@@ -24,7 +24,7 @@ if (empty($raw_fieldname)) {
 	print '<p>'.sprintf(__('Invalid fieldname: %s', CCTM_TXTDOMAIN), '<em>'. htmlspecialchars($raw_fieldname).'</em>') .'</p>';
 	return;
 }
-$fieldname = preg_replace('/^'. CCTM_Form_Element::css_id_prefix . '/', '', $raw_fieldname);
+$fieldname = preg_replace('/^'. CCTM_Form_Element::CSS_ID_PREFIX . '/', '', $raw_fieldname);
 
 $def = CCTM::get_value(CCTM::$data['custom_field_defs'], $fieldname);
 if (empty($def)) {

@@ -283,7 +283,7 @@ class CCTM_date extends CCTM_Form_Element
 				<div class="inside">';
 
 		// Evaluate Default Value (use PHP eval)
-		$out .= '<div class="'.self::wrapper_css_class .'" id="evaluate_default_value_wrapper">
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="evaluate_default_value_wrapper">
 				 <label for="evaluate_default_value" class="cctm_label cctm_checkbox_label" id="evaluate_default_value_label">'
 			. __('Use PHP eval to calculate the default value? (Omit the php tags, e.g. <code>date(\'Y-m-d\')</code>).', CCTM_TXTDOMAIN) .
 			'</label>
@@ -293,8 +293,8 @@ class CCTM_date extends CCTM_Form_Element
 			 	</div>';
 
 		// Date Format
-		$out .= '<div class="'.self::wrapper_css_class .'" id="date_format_wrapper">
-			 		<label for="date_format" class="'.self::label_css_class.'">'
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="date_format_wrapper">
+			 		<label for="date_format" class="'.self::LABEL_CSS_CLASS.'">'
 			.__('Date Format', CCTM_TXTDOMAIN) .'</label>
 					<select id="date_format" name="date_format">
 						<optgroup label="'.__('Date', CCTM_TXTDOMAIN).'">

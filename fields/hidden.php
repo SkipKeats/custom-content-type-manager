@@ -157,7 +157,7 @@ class CCTM_hidden extends CCTM_Form_Element {
 			<div class="handlediv" title="Click to toggle"><br /></div>
 			<h3 class="hndle"><span>'. __('Special', CCTM_TXTDOMAIN).'</span></h3>
 			<div class="inside">
-			<div class="'.self::wrapper_css_class .'" id="evaluate_default_value_wrapper">
+			<div class="'.self::WRAPPER_CSS_CLASS .'" id="evaluate_default_value_wrapper">
 				 <p>'
 			. __('EXPERIMENTAL USE ONLY. You can add .php files to  <code>wp-content/uploads/cctm/fields/{fieldname}/</code> to dynamically calculate or modify values, e.g. <code>&lt;?php return date("Y-m-d"); ?&gt;</code>. The allowed file names are listed below.', CCTM_TXTDOMAIN) .
 			'</p>
@@ -194,7 +194,7 @@ class CCTM_hidden extends CCTM_Form_Element {
 	
 		global $wp_version;
 
-		if ( isset($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ]) ) {
+		if ( isset($posted_data[ CCTM_Form_Element::POST_NAME_PREFIX . $field_name ]) ) {
 
             $upload_dir = wp_upload_dir();
             $file = $upload_dir['basedir'] .'/'.CCTM::base_storage_dir.'/fields/'.$field_name.'/onsave.php';
@@ -203,7 +203,7 @@ class CCTM_hidden extends CCTM_Form_Element {
                 return include $file;
             }
             else {
-                return stripslashes(trim($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ]));
+                return stripslashes(trim($posted_data[ CCTM_Form_Element::POST_NAME_PREFIX . $field_name ]));
             }
 		}
 		else {

@@ -56,14 +56,14 @@ class CCTM_image extends CCTM_Form_Element
 			<div class="inside">';
 			
 		// Label
-		$out .= '<div class="'.self::wrapper_css_class .'" id="label_wrapper">
-			 		<label for="label" class="'.self::label_css_class.'">'
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="label_wrapper">
+			 		<label for="label" class="'.self::LABEL_CSS_CLASS.'">'
 			.__('Label', CCTM_TXTDOMAIN).'</label>
-			 		<input type="text" name="label" class="'.self::css_class_prefix.'text" id="label" value="'.htmlspecialchars($def['label']) .'"/>
+			 		<input type="text" name="label" class="'.self::CSS_CLASS_PREFIX.'text" id="label" value="'.htmlspecialchars($def['label']) .'"/>
 			 		' . $this->get_translation('label').'
 			 	</div>';
 		// Name
-		$out .= '<div class="'.self::wrapper_css_class .'" id="name_wrapper">
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="name_wrapper">
 				 <label for="name" class="cctm_label cctm_text_label" id="name_label">'
 			. __('Name', CCTM_TXTDOMAIN) .
 			'</label>
@@ -72,7 +72,7 @@ class CCTM_image extends CCTM_Form_Element
 			 	</div>';
 
 		// Default Value
-		$out .= '<div class="'.self::wrapper_css_class .'" id="default_value_wrapper">
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="default_value_wrapper">
 			 	<label for="default_value" class="cctm_label cctm_text_label" id="default_value_label">'
 			.__('Default Value', CCTM_TXTDOMAIN) .'</label>
 			 		<input type="text" name="default_value" class="cctm_text" id="default_value" value="'. htmlspecialchars($def['default_value'])
@@ -81,8 +81,8 @@ class CCTM_image extends CCTM_Form_Element
 			 	</div>';
 
 		// Extra
-		$out .= '<div class="'.self::wrapper_css_class .'" id="extra_wrapper">
-			 		<label for="extra" class="'.self::label_css_class.'">'
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="extra_wrapper">
+			 		<label for="extra" class="'.self::LABEL_CSS_CLASS.'">'
 			.__('Extra', CCTM_TXTDOMAIN) .'</label>
 			 		<input type="text" name="extra" class="cctm_text" id="extra" value="'
 			.htmlspecialchars($def['extra']).'"/>
@@ -90,8 +90,8 @@ class CCTM_image extends CCTM_Form_Element
 			 	</div>';
 
 		// Class
-		$out .= '<div class="'.self::wrapper_css_class .'" id="class_wrapper">
-			 	<label for="class" class="'.self::label_css_class.'">'
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="class_wrapper">
+			 	<label for="class" class="'.self::LABEL_CSS_CLASS.'">'
 			.__('Class', CCTM_TXTDOMAIN) .'</label>
 			 		<input type="text" name="class" class="cctm_text" id="class" value="'
 			.htmlspecialchars($def['class']).'"/>
@@ -100,7 +100,7 @@ class CCTM_image extends CCTM_Form_Element
 
 		if ($show_repeatable) {
 			// Is Repeatable?
-			$out .= '<div class="'.self::wrapper_css_class .'" id="is_repeatable_wrapper">
+			$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="is_repeatable_wrapper">
 					 <label for="is_repeatable" class="cctm_label cctm_checkbox_label" id="is_repeatable_label">'
 				. __('Is Repeatable?', CCTM_TXTDOMAIN) .
 				'</label>
@@ -110,8 +110,8 @@ class CCTM_image extends CCTM_Form_Element
 		}
 
 		// Description
-		$out .= '<div class="'.self::wrapper_css_class .'" id="description_wrapper">
-			 	<label for="description" class="'.self::label_css_class.'">'
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="description_wrapper">
+			 	<label for="description" class="'.self::LABEL_CSS_CLASS.'">'
 			.__('Description', CCTM_TXTDOMAIN) .'</label>
 			 	<textarea name="description" class="cctm_textarea" id="description" rows="5" cols="60">'. htmlspecialchars($def['description']).'</textarea>
 			 	' . $this->get_translation('description').'
@@ -327,10 +327,10 @@ class CCTM_image extends CCTM_Form_Element
 		}
 
 		// Button Label
-		$out .= '<div class="'.self::wrapper_css_class .'" id="button_label_wrapper">
-			 		<label for="button_label" class="'.self::label_css_class.'">'
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="button_label_wrapper">
+			 		<label for="button_label" class="'.self::LABEL_CSS_CLASS.'">'
 			.__('Button Label', CCTM_TXTDOMAIN).'</label>
-			 		<input type="text" name="button_label" class="'.self::css_class_prefix.'text" id="button_label" value="'.htmlspecialchars($def['button_label']) .'"/>
+			 		<input type="text" name="button_label" class="'.self::CSS_CLASS_PREFIX.'text" id="button_label" value="'.htmlspecialchars($def['button_label']) .'"/>
 			 		' . $this->get_translation('button_label').'
 			 	</div>';
 

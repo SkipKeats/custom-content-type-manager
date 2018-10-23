@@ -28,7 +28,7 @@
 				<label for="id_label" class="cctm_label cctm_text_label" id="id">
 					<?php _e('ID', CCTM_TXTDOMAIN); ?> *
 				</label>
-				<input type="text" name="id" class="cctm_text <?php print $data['id.error_class']; ?>" id="id" value="<?php print htmlspecialchars($data['id']); ?>"/>
+				<input type="text" name="id" class="cctm_text <?php print $data['id.ERROR_CLASS']; ?>" id="id" value="<?php print htmlspecialchars($data['id']); ?>"/>
 				<?php print $data['id.error']; ?>
 				<span class="cctm_description"><?php _e('Unique CSS ID for the metabox. No special characters allowed.', CCTM_TXTDOMAIN); ?></span>
 			</div>
@@ -38,7 +38,7 @@
 				<label for="title_label" class="cctm_label cctm_text_label" id="cctm_label_title">
 					<?php _e('Title', CCTM_TXTDOMAIN); ?> *
 				</label>
-				<input type="text" name="title" class="cctm_text <?php print $data['title.error_class']; ?>" id="title" value="<?php print htmlspecialchars($data['title']); ?>"/>
+				<input type="text" name="title" class="cctm_text <?php print $data['title.ERROR_CLASS']; ?>" id="title" value="<?php print htmlspecialchars($data['title']); ?>"/>
 				<?php print $data['title.error']; ?>
 				<span class="cctm_description"><?php _e('Title of the Metabox', CCTM_TXTDOMAIN); ?></span>
 			</div>
@@ -72,7 +72,7 @@
 				<label for="callback_label" class="cctm_label cctm_text_label" id="cctm_label_callback">
 					<?php _e('Callback Function', CCTM_TXTDOMAIN); ?>
 				</label>
-				<input type="text" name="callback" class="cctm_text <?php print $data['callback.error_class']; ?>" id="callback" value="<?php print htmlspecialchars($data['callback']); ?>"/>
+				<input type="text" name="callback" class="cctm_text <?php print $data['callback.ERROR_CLASS']; ?>" id="callback" value="<?php print htmlspecialchars($data['callback']); ?>"/>
 				<?php print $data['callback.error']; ?>
 				<span class="cctm_description"><?php _e('Use this only if you want to override the standard CCTM behavior.', CCTM_TXTDOMAIN); ?></span>
 			</div>				
