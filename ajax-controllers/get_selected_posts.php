@@ -41,7 +41,7 @@ if (empty($raw_fieldname)) {
 	print '<p>'.sprintf(__('Invalid fieldname: %s', CCTM_TXTDOMAIN), '<em>'. htmlspecialchars($raw_fieldname).'</em>') .'</p>';
 	return;
 }
-$fieldname = preg_replace('/^'. CCTM_Form_Element::css_id_prefix . '/', '', $raw_fieldname);
+$fieldname = preg_replace('/^'. CCTM_Form_Element::CSS_ID_PREFIX . '/', '', $raw_fieldname);
 
 $def = CCTM::get_value(CCTM::$data['custom_field_defs'], $fieldname);
 if (empty($def)) {
@@ -128,8 +128,8 @@ foreach($results as $r) {
 	$r['thumbnail_url'] = CCTM::get_thumbnail($r['ID']);
 	$r['id'] = $fieldname;
 	$r['name'] = $fieldname;	
-	$r['id_prefix'] = CCTM_Form_Element::css_id_prefix;
-	$r['name_prefix'] = CCTM_Form_Element::post_name_prefix;
+	$r['id_prefix'] = CCTM_Form_Element::CSS_ID_PREFIX;
+	$r['name_prefix'] = CCTM_Form_Element::POST_NAME_PREFIX;
 
 	// Translate stuff (issue 279)
 	$r['post_title'] = __($r['post_title']);

@@ -284,7 +284,7 @@ class CCTM_dropdown extends CCTM_Form_Element
 		// Use Key => Value Pairs?  (if not, the simple usage is simple options)
 		$out .= '
 			<input type="hidden" name="use_key_values" value="0"/>
-			<div class="'.self::wrapper_css_class .'" id="use_key_values_wrapper">
+			<div class="'.self::WRAPPER_CSS_CLASS .'" id="use_key_values_wrapper">
 				 <label for="use_key_values" class="cctm_label cctm_checkbox_label" id="use_key_values_label">'
 			. __('Distinct options/values?', CCTM_TXTDOMAIN) .
 			'</label>
@@ -374,7 +374,7 @@ class CCTM_dropdown extends CCTM_Form_Element
 		</table>'; // close id="dropdown_options"
 
 		// Display as Radio Button or as Dropdown?
-		$out .= '<div class="'.self::wrapper_css_class .'" id="display_type_wrapper">
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="display_type_wrapper">
 				 <label class="cctm_label cctm_checkbox_label" id="display_type_label">'
 			. __('How should the field display?', CCTM_TXTDOMAIN) .
 			'</label>
@@ -403,7 +403,7 @@ class CCTM_dropdown extends CCTM_Form_Element
 			.'</textarea>';
 
 		// Execute as MySQL?
-		$out .= '<div class="'.self::wrapper_css_class .'" id="is_sql_wrapper">
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="is_sql_wrapper">
 				<input type="hidden" name="is_sql" value="0"/>
 				 <input type="checkbox" name="is_sql" class="cctm_checkbox" id="is_sql" value="1"'. $is_sql_checked.'/> 				 <label for="is_sql" class="cctm_label cctm_checkbox_label" id="is_sql_label">'
 				 .__('Execute as a MySQL query?', CCTM_TXTDOMAIN).'</label> <span>'.__('Select up to 2 columns: the 1st column will be the visible label and the 2nd column (if present) will represent the value stored in the database.

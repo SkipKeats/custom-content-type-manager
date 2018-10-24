@@ -146,7 +146,7 @@ class CCTM_checkbox extends CCTM_Form_Element
 				<h3 class="hndle"><span>'. __('Options', CCTM_TXTDOMAIN).'</span></h3>
 				<div class="inside">';
 				
-		$out .= '<div class="'.self::wrapper_css_class .'" id="checked_value_wrapper">
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="checked_value_wrapper">
 				 <label for="checked_value" class="cctm_label cctm_text_label" id="checked_value_label">'
 			. __('Value when checked', CCTM_TXTDOMAIN) .
 			'</label>
@@ -155,7 +155,7 @@ class CCTM_checkbox extends CCTM_Form_Element
 			 	</div>';
 
 		// Value when Unchecked
-		$out .= '<div class="'.self::wrapper_css_class .'" id="unchecked_value_wrapper">
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="unchecked_value_wrapper">
 				 <label for="unchecked_value" class="cctm_label cctm_text_label" id="unchecked_value_label">'
 			. __('Value when Unchecked', CCTM_TXTDOMAIN) .
 			'</label>
@@ -163,7 +163,7 @@ class CCTM_checkbox extends CCTM_Form_Element
 			. $this->get_translation('unchecked_value') .'
 			 	</div>';
 		// Is Checked by Default?
-		$out .= '<div class="'.self::wrapper_css_class .'" id="checked_by_default_wrapper">
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="checked_by_default_wrapper">
 				 <label for="checked_by_default" class="cctm_label cctm_checkbox_label" id="checked_by_default_label">'
 			. __('Checked by default?', CCTM_TXTDOMAIN) .
 			'</label>
@@ -234,7 +234,7 @@ class CCTM_checkbox extends CCTM_Form_Element
 	 * @return string whatever value you want to store in the wp_postmeta table where meta_key = $field_name
 	 */
 	public function save_post_filter($posted_data, $field_name) {
-		if ( isset($posted_data[ CCTM_Form_Element::post_name_prefix . $field_name ]) ) {
+		if ( isset($posted_data[ CCTM_Form_Element::POST_NAME_PREFIX . $field_name ]) ) {
 			return $this->checked_value;
 		}
 		else {

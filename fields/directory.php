@@ -217,7 +217,7 @@ class CCTM_directory extends CCTM_Form_Element
 				<h3 class="hndle"><span>'. __('Options', CCTM_TXTDOMAIN).'</span></h3>
 				<div class="inside">';
 				
-		$out .= '<div class="'.self::wrapper_css_class .'" id="source_dir_wrapper">
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="source_dir_wrapper">
 				 <label for="source_dir" class="cctm_label cctm_text_label" id="source_dir_label">'
 			. __('Source Directory', CCTM_TXTDOMAIN) .
 			'</label>
@@ -226,7 +226,7 @@ class CCTM_directory extends CCTM_Form_Element
 			 	</div>';
 
 		// pattern
-		$out .= '<div class="'.self::wrapper_css_class .'" id="pattern_wrapper">
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="pattern_wrapper">
 				 <label for="pattern" class="cctm_label cctm_text_label" id="pattern_label">'
 			. __('Extensions', CCTM_TXTDOMAIN) .
 			'</label>
@@ -234,7 +234,7 @@ class CCTM_directory extends CCTM_Form_Element
 			. __('File extensions you want returned. Use comas to separate possible matches, e.g. <code>.jpg,.jpeg</code>.  The case does not matter.',CCTM_TXTDOMAIN) .'</span>
 			 	</div>';
 		// Traverse Directories?
-		$out .= '<div class="'.self::wrapper_css_class .'" id="traverse_dirs_wrapper">
+		$out .= '<div class="'.self::WRAPPER_CSS_CLASS .'" id="traverse_dirs_wrapper">
 				 <label for="traverse_dirs" class="cctm_label cctm_checkbox_label" id="traverse_dirs_label">'
 			. __('Traverse Directories?', CCTM_TXTDOMAIN) .
 			'</label>

@@ -51,7 +51,7 @@ if (empty($raw_fieldname) && empty($d['fieldtype'])) {
 // More Template Variables
 $d['fieldname'] = $raw_fieldname;
 
-$fieldname = preg_replace('/^'. CCTM_Form_Element::css_id_prefix . '/', '', $raw_fieldname);
+$fieldname = preg_replace('/^'. CCTM_Form_Element::CSS_ID_PREFIX . '/', '', $raw_fieldname);
 
 $def = CCTM::get_value(CCTM::$data['custom_field_defs'], $fieldname);
 //print '<pre>'.print_r($def, true).'</pre>';
