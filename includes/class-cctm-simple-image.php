@@ -1,15 +1,28 @@
 <?php
 /**
- * This file was damn useful, so I adapted it from Mr. Jarvis.  Thanks!
+ * CCTM Simple Image file
+ *
+ * PHP 7.2+
+ *
+ * @category Component
+ * @package CCTM
+ * @subpackage CCTM_Simple_Image
+ * @author Simon Jarvis and others
+ * @copyright 2006 Simon Jarvis
+ * @license https://www.gnu.org/licenses/gpl-3.0.txt GNU/GPLv3
+ * @link https://github.com/GSA/custom-content-type-manager
+ * @since 0.8.0.0
+ */
+
+/**
+ * CCTM Form Element Class
+ *
+ * This file was damn useful, so I adapted it from Mr. Jarvis. Thanks!
  * I'm using it to compensate for WordPress' erratic image resizing API.
  * Sorry, WP, but your API sucks.
  *
- * File: class-cctm-simple-image.php
- * Author: Simon Jarvis
  * Copyright: 2006 Simon Jarvis
  * Date: 08/11/06
- * http://www.white-hat-web-design.co.uk/blog/resizing-images-with-php/
- * Link: http://www.white-hat-web-design.co.uk/articles/php-image-resizing.php
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -18,170 +31,197 @@
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details:
- * http://www.gnu.org/licenses/gpl.html
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @package
+ * @category Component
+ * @package CCTM
+ * @subpackage CCTM_Form_Element
+ * @author Simon Jarvis and others
+ * @license http://www.gnu.org/licenses/gpl.html GPL
+ * @link http://www.white-hat-web-design.co.uk/articles/php-image-resizing.php
+ * @see http://www.white-hat-web-design.co.uk/blog/resizing-images-with-php/
+ * @since 0.8.0.0
  */
-
-
 class CCTM_Simple_Image {
 
+	/**
+	 * Image
+	 *
+	 * Image information.
+	 *
+	 * @var string $image Image name (probably).
+	 */
 	public $image;
+
+	/**
+	 * Image Type
+	 *
+	 * Type of image being resized.
+	 *
+	 * @var string $image_type Image type: png, jpg, etc.
+	 */
 	public $image_type;
 
-	//------------------------------------------------------------------------------
+	// -----------------------------------------------------------------------------!
 	/**
-	 * Full path to image, also takes a URL
+	 * Load Image
 	 *
-	 * @param string  $filename
+	 * Full path to image, also takes a URL.
+	 *
+	 * @param string $filename Name of file.
 	 */
-	function load($filename) {
+	function load( $filename ) {
 
-		$image_info = getimagesize($filename);
+		$image_info       = getimagesize( $filename );
 		$this->image_type = $image_info[2];
-		if ( $this->image_type == IMAGETYPE_JPEG ) {
-			$this->image = imagecreatefromjpeg($filename);
-		} elseif ( $this->image_type == IMAGETYPE_GIF ) {
-			$this->image = imagecreatefromgif($filename);
-		} elseif ( $this->image_type == IMAGETYPE_PNG ) {
-			$this->image = imagecreatefrompng($filename);
+
+		if ( IMAGETYPE_JPEG === $this->image_type ) {
+			$this->image = imagecreatefromjpeg( $filename );
+		} elseif ( IMAGETYPE_GIF === $this->image_type ) {
+			$this->image = imagecreatefromgif( $filename );
+		} elseif ( IMAGETYPE_PNG === $this->image_type ) {
+			$this->image = imagecreatefrompng( $filename );
 		}
 	}
 
 
-	//------------------------------------------------------------------------------
+	// -----------------------------------------------------------------------------!
 	/**
+	 * Save the Image
+	 *
 	 * Save the new image.
 	 *
-	 * @param string  $filename full path to file
-	 * @param string  (optional) $image_type
-	 * @param integer (optional) $compression
-	 * @param string  (optional) $permissions passed to chmod, e.g. 775
-	 * @return	boolean	TRUE on success or FALSE on failure.
+	 * @param string  $filename Full path to file.
+	 * @param string  $image_type (optional) Image type: GIF, JPEG, or PNG.
+	 * @param integer $compression (optional) Compression rate.
+	 * @param string  $permissions (optional) passed to chmod, e.g. 775.
+	 * @return bool TRUE on success or FALSE on failure.
 	 */
-	function save($filename, $image_type=IMAGETYPE_JPEG, $compression=75, $permissions=null) {
+	function save( $filename, $image_type = IMAGETYPE_JPEG, $compression = 75, $permissions = null ) {
 		$success = '';
-		if ( $image_type == IMAGETYPE_JPEG ) {
-			$success = imagejpeg($this->image, $filename, $compression);
+		if ( IMAGETYPE_JPEG === $image_type ) {
+			$success = imagejpeg( $this->image, $filename, $compression );
+		} elseif ( IMAGETYPE_GIF === $image_type ) {
+			$success = imagegif( $this->image, $filename );
+		} elseif ( IMAGETYPE_PNG === $image_type ) {
+			$success = imagepng( $this->image, $filename );
 		}
-		elseif ( $image_type == IMAGETYPE_GIF ) {
-			$success = imagegif($this->image, $filename);
+
+		if ( null !== $permissions ) {
+			chmod( $filename, $permissions );
 		}
-		elseif ( $image_type == IMAGETYPE_PNG ) {
-			$success = imagepng($this->image, $filename);
-		}
-		
-		if ( $permissions != null) {
-			chmod($filename, $permissions);
-		}
-		
+
 		// Free memory
-		// http://www.binarytides.com/blog/php-resize-large-images-with-imagemagick/
-		imagedestroy($this->image);
-		
+		// http://www.binarytides.com/blog/php-resize-large-images-with-imagemagick/.
+		imagedestroy( $this->image );
+
 		return $success;
 	}
 
-
-	//------------------------------------------------------------------------------
+	// -----------------------------------------------------------------------------!
 	/**
+	 * Output
 	 *
+	 * The output from the conversion.
 	 *
-	 * @param string  $image_type (optional)
+	 * @param string $image_type (optional).
 	 */
-	function output($image_type=IMAGETYPE_JPEG) {
+	function output( $image_type = IMAGETYPE_JPEG ) {
 
-		if ( $image_type == IMAGETYPE_JPEG ) {
-			imagejpeg($this->image);
-		} 
-		elseif ( $image_type == IMAGETYPE_GIF ) {
-			imagegif($this->image);
-		} 
-		elseif ( $image_type == IMAGETYPE_PNG ) {
-			imagepng($this->image);
+		if ( IMAGETYPE_JPEG === $image_type ) {
+			imagejpeg( $this->image );
+		} elseif ( IMAGETYPE_GIF === $image_type ) {
+			imagegif( $this->image );
+		} elseif ( IMAGETYPE_PNG === $image_type ) {
+			imagepng( $this->image );
 		}
 	}
 
-
 	/**
+	 * Get Image Width
+	 *
 	 * Get the image's width, in pixels
 	 *
 	 * @return integer
 	 */
-	function getWidth() {
-		return imagesx($this->image);
+	function get_width() {
+		return imagesx( $this->image );
 	}
 
-
 	/**
+	 * Get Image Height
+	 *
 	 * Get the image's height, in pixels
 	 *
 	 * @return integer
 	 */
-	function getHeight() {
-		return imagesy($this->image);
+	function get_height() {
+		return imagesy( $this->image );
 	}
 
-
 	/**
+	 * Resize Height
+	 *
 	 * Alter the image height to the new $height.
 	 *
-	 * @param integer $height
+	 * @param integer $height Reset image height.
 	 */
-	function resizeToHeight($height) {
+	function resize_to_height( $height ) {
 		$height = (int) $height;
-		$ratio = $height / $this->getHeight();
-		$width = $this->getWidth() * $ratio;
-		$this->resize($width, $height);
+		$ratio  = $height / $this->get_height();
+		$width  = $this->get_width() * $ratio;
+		$this->resize( $width, $height );
 	}
 
 
 	/**
+	 * Resize Width
+	 *
 	 * Resize the image width to the new $width.
 	 *
-	 * @param integer $width
+	 * @param integer $width Reset image width.
 	 */
-	function resizeToWidth($width) {
-		$with = (int) $width;
-		$ratio = $width / $this->getWidth();
+	function resize_to_width( $width ) {
+		$with   = (int) $width;
+		$ratio  = $width / $this->get_width();
 		$height = $this->getheight() * $ratio;
-		$this->resize($width, $height);
+		$this->resize( $width, $height );
 	}
 
-
 	/**
+	 * Scale the Image
+	 *
 	 * An integer 1 to 100.
 	 *
-	 * @param integer $scale
+	 * @param integer $scale Resize via scaling.
 	 */
-	function scale($scale) {
-		$scale = (int) $scale;
-		$width = $this->getWidth() * $scale/100;
+	function scale( $scale ) {
+		$scale  = (int) $scale;
+		$width  = $this->get_width() * $scale/100;
 		$height = $this->getheight() * $scale/100;
-		$this->resize($width, $height);
+		$this->resize( $width, $height );
 	}
 
 
 	/**
+	 * Adjust Dimensions
+	 *
 	 * Adjust the image dimensions.
 	 *
-	 * @param integer $width
-	 * @param integer $height
+	 * @param integer $width Width.
+	 * @param integer $height Height.
 	 */
-	function resize($width, $height) {
-		$with = (int) $width;
-		$height = (int) $height;
-		$new_image = imagecreatetruecolor($width, $height);
-		if (!imagecopyresampled($new_image, $this->image, 0, 0, 0, 0, $width, $height, $this->getWidth(), $this->getHeight())) {
-			die('Resampling failed for '. $new_image);
+	function resize( $width, $height ) {
+		$with      = (int) $width;
+		$height    = (int) $height;
+		$new_image = imagecreatetruecolor( $width, $height );
+
+		if ( ! imagecopyresampled( $new_image, $this->image, 0, 0, 0, 0, $width, $height, $this->get_width(), $this->get_height() ) ) {
+			die( 'Resampling failed for ' . $new_image );
 		}
+
 		$this->image = $new_image;
 	}
-
-
 }
-
 
 /*EOF*/
